@@ -1,0 +1,1443 @@
+# Webalizer V2.23-08 Incremental Data - 06/06/2021 02:43:39
+2021 6 6 2 43 39
+16906 14786 151 277 113 41 180008981 13076 166 1 0 0
+4 298 1861 1 6
+1450 1195 30297691 22 843 21 0 0
+3153 2799 36385537 49 2760 44 0 0
+6039 5456 51738431 42 4735 41 0 0
+4662 4034 46337209 35 3691 39 0 0
+865 591 8263510 19 603 18 0 0
+737 711 6986603 4 444 6 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+1924 1545 21328316 1498 0 0
+1428 1255 17127214 1075 0 0
+2877 2736 26958272 2556 0 0
+755 617 8128918 494 0 0
+334 302 3426140 262 0 0
+551 512 3879207 444 0 0
+449 399 3685263 374 0 0
+268 240 6111797 222 0 0
+7 3 40815 6 0 0
+6 4 45075 4 0 0
+5 3 94687 4 0 0
+526 453 6245587 405 0 0
+626 513 4748275 352 0 0
+102 78 4668499 48 0 0
+28 11 96779 23 0 0
+104 50 2157536 78 0 0
+355 232 2034896 244 0 0
+445 354 2374260 359 0 0
+259 239 6978641 195 0 0
+1332 1160 19924223 894 0 0
+1791 1747 14140260 1305 0 0
+1113 962 9428833 919 0 0
+717 600 6668826 566 0 0
+904 771 9716662 749 0 0
+0
+0
+0
+14786
+0
+0
+0
+0
+0
+25
+0
+37
+373
+113
+191
+0
+28
+0
+24
+0
+131
+774
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+424
+0
+0
+0
+0
+0
+# -urls- 
+/phpmyadmin/js/dist/common.js
+0 3 1 5688 0 0 0 0
+/gatoPiola
+0 21 7233172880604947830 62650 3 1 0 0
+/assets/datatables/datatables.min.css
+0 23 0 252564 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery-migrate.js
+0 4 0 39396 0 0 0 0
+/adm-dir/insertarCiudad
+0 1 0 988 0 0 0 0
+/assets/js/gatoPiola.js
+0 5 8 8863 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_engine.png
+1 3 1 1144 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_drop.png
+1 3 1 1383 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.debounce-1.0.6.js
+0 3 1120 3009 0 0 0 0
+/universidades/Cochabamba/2019
+0 2 8318823020956120367 11324 2 0 0 0
+/phpmyadmin/js/dist/multi_column_sort.js
+0 3 0 5425 0 0 0 0
+/universidades/La Paz/2021/Ingeniería
+0 5 7 16875 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/hint/show-hint.css
+0 3 3 3654 0 0 0 0
+/ListarUsuarios/suscrito
+0 115 1 61662 0 0 0 0
+/phpmyadmin/themes/pmahomme/css/printview.css
+0 3 1 2943 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/jquery.jqplot.js
+0 1 1 97303 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_status.png
+1 3 0 1346 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Cuarto
+0 1 1 2969 0 0 0 0
+/phpmyadmin/themes/pmahomme/css/theme.css
+0 27 2 1039709 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.event.drag-2.2.js
+0 4 0 18572 0 0 0 0
+/contacto
+0 15 7233195987478016047 98974 3 0 0 0
+/assets/mailer/mailCheck.js
+0 2 1 2080 0 0 0 0
+/perfil
+0 82 1 445635 0 0 0 0
+/obtenerNombreImagen/7
+0 4 2 14904 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Base de Datos 1
+0 1 1 3102 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_view_add.png
+1 3 6 11744 0 0 0 0
+/phpmyadmin/js/dist/menu_resizer.js
+0 4 2 9284 0 0 0 0
+/phpmyadmin/
+0 1449 1 4672503 4 5 0 0
+/phpmyadmin/js/dist/shortcuts_handler.js
+0 3 1 3669 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_db.png
+1 3 1 1606 0 0 0 0
+/obtenerNombreLibro/7/7
+0 2 0 7322 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_spatial.png
+1 1 0 746 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.barRenderer.js
+0 1 1 12195 0 0 0 0
+/assets/img/aqui.jpg
+1 6 1 183297 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_insrow.png
+1 3 468 900 0 0 0 0
+/ciudad
+0 12 402 58169 0 0 0 0
+/obtenerNombreLibro/8/7
+0 2 9 7931 0 0 0 0
+/obtenerNombreImagen/1
+0 5 2 17879 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_routine_add.png
+1 1 1 713 0 0 0 0
+/universidades/Cochabamba/2021/Ciencias Jurídicas y Sociales
+0 1 1 2970 0 0 0 0
+/obtenerNombreLibro/6/7
+0 1 0 3309 0 0 0 0
+/assets/js/IdiomaBT.js
+0 48 1 71546 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Álgebra 2
+0 1 0 3102 0 0 0 0
+/universidades/El Alto/2021/Ingeniería
+0 1 0 7671 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.categoryAxisRenderer.js
+0 1 0 5892 0 0 0 0
+/phpmyadmin/js/dist/drag_drop_import.js
+0 4 1 15504 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_tbloptimize.png
+1 1 8 213 0 0 0 0
+/assets/img/La Paz.jpg
+1 36 0 3006081 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/bd_empty.png
+1 2 1 428 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Física 1
+0 1 0 7650 0 0 0 0
+/universidades/Sucre
+0 1 1 8411 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_plugin.png
+1 3 1 1258 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_top.png
+1 3 2 963 0 0 0 0
+/assets/js/admDirectorio.js
+0 29 1 27764 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_loggoff.png
+1 3 1 1372 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_primary.png
+1 1 1 214 0 0 0 0
+/materia
+0 3 2 16402 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_unique.png
+1 1 1 746 0 0 0 0
+/phpmyadmin/js/vendor/sprintf.js
+0 4 1 17372 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Programación 1
+0 1 1 3102 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/jquery-ui.css
+0 4 2 36196 0 0 0 0
+/phpmyadmin/js/dist/rte.js
+0 4 4 34796 0 0 0 0
+/obtenerNombreTag/4
+0 3 1 10171 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Programación 2
+0 1 1 3102 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/lint/lint.js
+0 4 1 12560 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/console.png
+1 3 0 1038 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_rights.png
+1 3 2 1207 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Álgebra I
+0 4 1 17326 0 0 0 0
+/universidades/La Paz/2021
+0 5 8318823020956120367 17335 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_props.png
+1 3 0 1319 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.min.js
+0 5 0 173544 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/logo_left.png
+1 3 1 4014 0 0 0 0
+/phpmyadmin/js/dist/page_settings.js
+0 3 768 2982 0 0 0 0
+/universidades/Santa Cruz/2020
+0 2 8387236820436348521 16369 1 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/runmode/runmode.js
+0 3 4 4572 0 0 0 0
+/phpmyadmin/js/dist/functions.js
+0 5 3 208062 0 0 0 0
+/libro
+0 100 1 487885 0 0 0 0
+/phpmyadmin/js/dist/ajax.js
+0 4 0 34476 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_help.png
+1 3 1 1451 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/pause.png
+1 1 4 572 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+1 1 0 213 0 0 0 0
+/phpmyadmin/js/dist/error_report.js
+0 4 1 12280 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/arrow_ltr.png
+1 3 0 844 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_asc.png
+1 3 1 889 0 0 0 0
+/phpmyadmin/js/dist/doclinks.js
+0 4 0 16688 0 0 0 0
+/assets/audio/BagRaiders.aac
+0 22 0 17306626 0 0 0 0
+/phpmyadmin/js/dist/makegrid.js
+0 4 2 72832 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_rename.svg
+0 1 1 214 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.mousewheel.js
+0 4 1 11888 0 0 0 0
+/ListarUsuarios/guardar
+0 93 0 61841 0 1 0 0
+/universidades/La Paz/2019
+0 1 7233172880604947830 2970 1 0 0 0
+/phpmyadmin/js/vendor/codemirror/lib/codemirror.css
+0 4 1 18012 0 0 0 0
+/assets/datatables/datatables.css
+0 10 1 113234 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Probabilidad y Estadística
+0 1 1 3102 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_no_favorite.png
+1 3 1 1123 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/col_drop.png
+1 3 1 854 0 0 0 0
+/obtenerNombreMateria/38
+0 1 0 3236 0 0 0 0
+/autor
+0 27 1 95784 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.highlighter.js
+0 1 1 5720 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Septimo
+0 1 7 2969 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_browse.png
+1 3 1 1232 0 0 0 0
+/ListarUsuarios/registrar
+0 1 1 473 0 0 0 0
+/assets/js/multiSortBT.js
+0 18 1 105230 0 0 0 0
+/universidades/Pando
+0 1 9 8411 1 0 0 0
+/universidades/La Paz/2021/Diseño y Tecnologías Crossmedia
+0 1 7233172880604947830 2970 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_export.png
+1 3 1 1260 0 0 0 0
+/phpmyadmin/js/dist/console.js
+0 4 1 42884 0 0 0 0
+/obtenerNombreLibro/18
+0 3 1 11646 0 0 0 0
+/phpmyadmin/js/dist/codemirror/addon/lint/sql-lint.js
+0 3 0 2511 0 0 0 0
+/ListarUsuarios/eliminar
+0 93 81 74012 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Quinto
+0 1 6 7517 0 0 0 0
+/favicon.ico
+0 1695 1 9984202 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_minus.png
+1 3 1 866 0 0 0 0
+/git/gitweb.css
+0 4 1 5396 0 0 0 0
+/obtenerNombreLibro/14
+0 6 1 22112 0 0 0 0
+/universidades/Santa Cruz
+0 11 8389997664073442640 64314 1 1 0 0
+/phpmyadmin/themes/pmahomme/img/b_plus.png
+1 3 1 1418 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_saveimage.png
+1 1 12 993 0 0 0 0
+/universidades/Santa Cruz/2021/Ciencias de la Salud
+0 1 1 2970 0 0 0 0
+/universidades/Santa Cruz/2021/Ingeniería
+0 1 2 3117 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_views.png
+1 3 19 1349 0 0 0 0
+/git/gitweb.cgi
+0 47 12 82326 0 1 0 0
+/phpmyadmin/js/dist/navigation.js
+0 4 2 48872 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_cog.png
+1 3 0 1188 0 0 0 0
+/ListarUsuarios/crear
+0 75 5 34655 0 0 0 0
+/universidades/Cochabamba/2021
+0 1 7233172880604947830 3148 2 1 0 0
+/universidades/Cochabamba
+0 9 7233172880604947830 62909 2 1 0 0
+/assets/img/Santa Cruz.jpg
+1 36 1 2064201 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_relations.png
+1 3 0 6043 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_host.png
+1 3 1 1337 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/lint/lint.css
+0 3 1 11057 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_docs.png
+1 3 1 1451 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.validate.js
+0 4 1 56512 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_tblimport.png
+1 2 1 1492 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery-ui.min.js
+0 5 1 345547 0 0 0 0
+/obtenerNombreLibro/2
+0 22 1 81918 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Noveno
+0 1 52 2970 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_vars.png
+1 3 120 1269 0 0 0 0
+/universidades/La Paz
+0 16 8318823020956120367 60795 5 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo
+0 1 0 7843 0 0 0 0
+/tag
+0 25 1 107151 0 0 0 0
+/phpmyadmin/js/dist/sql.js
+0 3 1 30189 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_sortable.png
+1 1 2 521 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.pieRenderer.js
+0 1 0 8915 0 0 0 0
+/universidades/Potosi
+0 1 0 8412 1 0 0 0
+/assets/img/El Alto.jpg
+1 38 1 1265543 0 0 0 0
+/assets/datatables/datatables.min.js
+0 23 1 23742672 0 0 0 0
+/phpmyadmin/js/dist/config.js
+0 4 1 28216 0 0 0 0
+/phpmyadmin/js/dist/database/operations.js
+0 1 1 1934 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.uitablefilter.js
+0 3 0 5142 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/col_pointer.png
+1 3 1 845 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_edit.png
+1 3 2 1123 0 0 0 0
+/assets/img/Cochabamba.jpg
+1 39 1 4211441 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_tblanalyse.png
+1 3 1 895 0 0 0 0
+/assets/js/porcentaje.js
+0 178 4 244932 0 0 0 0
+/universidades/Santa Cruz/2021/Ingeniería/de Sistemas/Primer
+0 1 0 2970 0 0 0 0
+/universidades/La Paz/2021/Ciencias de la Salud
+0 1 7233172880604947830 2970 0 0 0 0
+/obtenerNombreLibro/2/2
+0 1 0 8672 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/images/ui-bg_glass_75_dadada_1x400.png
+1 1 13 213 0 0 0 0
+/login
+0 75 7233172880604947830 369356 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Sexto
+0 1 0 7518 0 0 0 0
+/universidades/El Alto/2019
+0 3 7233172880604947830 14976 2 1 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Inglés 1
+0 1 1 3102 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Informática de Sistemas y Ensamblaje
+0 1 0 3102 0 0 0 0
+/examenes_lista
+0 18 7233172880604947830 106246 2 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_print.png
+1 3 2 1385 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_ftext.png
+1 1 1 5374 0 0 0 0
+/imagen
+0 61 1 272973 0 0 0 0
+/obtenerNombreLibro/5
+0 2 1 7283 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_sqlhelp.png
+1 3 1 1258 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_home.png
+1 3 1 1480 0 0 0 0
+/universidades/Santa Cruz/2021/Ingeniería/de Sistemas
+0 1 0 7675 0 0 0 0
+/phpmyadmin/js/vendor/js.cookie.js
+0 3 2 5709 0 0 0 0
+/ListarUsuarios
+0 2449 1 13035699 9 4 0 0
+/universidades/Cochabamba/2019/Ingeniería
+0 2 1 15790 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_chart.png
+1 3 1 1727 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_select.png
+1 3 6 1339 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_import.png
+1 3 1 1302 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_empty.png
+1 2 1 428 0 0 0 0
+/phpmyadmin/js/vendor/bootstrap/bootstrap.bundle.min.js
+0 4 0 89088 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/images/ui-bg_glass_65_ffffff_1x400.png
+1 1 1 213 0 0 0 0
+/assets/css/gatoPiola.css
+0 5 1 3221 0 0 0 0
+/universidades/Beni
+0 1 2623 8411 1 0 0 0
+/universidades/Tarija
+0 1 14 8411 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_triggers.png
+1 3 3 6884 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_notice.png
+1 3 0 1845 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_table_add.png
+1 3 1 1317 0 0 0 0
+/obtenerNombre/22
+0 2 4 6440 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.enhancedPieLegendRenderer.js
+0 1 1 3448 0 0 0 0
+/phpmyadmin/js/messages.php
+0 14 1 132273 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery-ui-timepicker-addon.js
+0 4 1 77588 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/lib/codemirror.js
+0 6 1 646614 0 0 0 0
+/obtenerNombreFacultad/4
+0 2 1 6450 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Tercer
+0 1 1 7659 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/bd_browse.png
+1 2 0 428 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/window-new.png
+1 3 1 1214 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Cálculo 2
+0 1 2 3102 0 0 0 0
+/phpmyadmin/favicon.ico
+0 13 1 297258 0 0 0 0
+/phpmyadmin/js/dist/table/structure.js
+0 1 1 5124 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_passwd.png
+1 3 1 1077 0 0 0 0
+/phpmyadmin/js/dist/table/chart.js
+0 1 2 8786 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_column_add.png
+1 1 1 749 0 0 0 0
+/obtenerNombreLibro/18/7
+0 13 1 53503 0 0 0 0
+/phpmyadmin/js/dist/database/structure.js
+0 3 1 13596 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/ajax_clock_small.gif
+1 3 0 3111 0 0 0 0
+/universidades/Cochabamba/2021/Ingeniería/de Sistemas
+0 1 1 2971 0 0 0 0
+/phpmyadmin/js/dist/cross_framing_protection.js
+0 3 3 1953 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_lock.png
+1 2 1 960 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_sql.png
+1 3 2 1426 0 0 0 0
+/phpmyadmin/js/dist/gis_data_editor.js
+0 3 1 12619 0 0 0 0
+/assets/css/tablas.css
+0 169 1 543369 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/hint/show-hint.js
+0 4 1 22920 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer
+0 4 1 18191 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.pointLabels.js
+0 1 1 4279 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_success.png
+1 3 1 6371 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Inglés 2
+0 1 1 3102 0 0 0 0
+/ListarUsuarios/restaurar
+0 48 9 26004 0 0 0 0
+/phpmyadmin/js/dist/chart.js
+0 1 0 3908 0 0 0 0
+/universidades/Santa Cruz/2021
+0 2 7233172880604947830 16700 1 0 0 0
+/obtenerNombreLibro/11
+0 4 0 14395 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/addon/hint/sql-hint.js
+0 4 2 12672 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_tblexport.png
+1 3 0 2324 0 0 0 0
+/phpmyadmin/js/vendor/tracekit.js
+0 4 2 47304 0 0 0 0
+/universidades/Santa Cruz/2019
+0 2 7233172880604947830 16369 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_index.png
+1 1 0 746 0 0 0 0
+/
+0 6450 0 63532719 86 27 0 0
+/phpmyadmin/themes/pmahomme/img/s_asci.png
+1 3 1 891 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_move.png
+1 1 1 5374 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_theme.png
+1 3 1 1518 0 0 0 0
+/publi
+0 11 20 35162 1 0 0 0
+/obtenerNombreTag/10
+0 1 2 3743 0 0 0 0
+/phpmyadmin/js/vendor/jquery/jquery.ba-hashchange-2.0.js
+0 4 1 15980 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_unlink.png
+1 1 1 907 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_desc.png
+1 2 2 1208 0 0 0 0
+/universidades/El Alto/2021
+0 3 7002937344670327087 19935 1 0 0 0
+/facultad
+0 4 1 15408 0 0 0 0
+/phpmyadmin/js/dist/keyhandler.js
+0 3 1 4269 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/logo_right.png
+1 4 1 9726 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_routines.png
+1 3 1 2116 0 0 0 0
+/universidades/El Alto/2020
+0 4 7233172880604947830 22615 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_error.png
+1 1 108 214 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_reload.png
+1 3 2 6433 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/normalize.png
+1 1 10 5374 0 0 0 0
+/phpmyadmin/themes/dot.gif
+1 3 1 785 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png
+1 1 1 745 0 0 0 0
+/adm-dir
+0 207 0 1344263 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_lang.png
+1 3 1 1405 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/left_nav_bg.png
+1 3 1 889 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.canvasTextRenderer.js
+0 1 4 5810 0 0 0 0
+/universidades/Cochabamba/2021/Ingeniería
+0 1 1 7665 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_events.png
+1 3 2 7141 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.canvasAxisLabelRenderer.js
+0 1 1 3086 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_search.png
+1 3 2 1284 0 0 0 0
+/phpmyadmin/js/dist/indexes.js
+0 4 1 26744 0 0 0 0
+/robots.txt
+0 45 0 228823 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/bd_select.png
+1 2 1 428 0 0 0 0
+/registrar
+0 17 7233172880604947830 102855 2 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_link.png
+1 3 1 6186 0 0 0 0
+/universidades/La Paz/2020
+0 1 7233172880604947830 7519 1 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_more.png
+1 2 14 426 0 0 0 0
+/obtenerNombreAutor/3
+0 3 0 9677 0 0 0 0
+/assets/js/admUsuarios.js
+0 112 4327 178023 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_tbl.png
+1 2 1 960 0 0 0 0
+/universidades/El Alto
+0 13 8318823020956120367 71506 2 0 0 0
+/universidades/Cochabamba/2020
+0 1 7233172880604947830 7519 2 2 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Octavo
+0 1 2 2969 0 0 0 0
+/phpmyadmin/js/vendor/codemirror/mode/sql/sql.js
+0 4 0 55508 0 0 0 0
+/universidades/El Alto/2021/Ingeniería/de Sistemas
+0 1 0 7519 0 0 0 0
+/phpmyadmin/js/vendor/jqplot/plugins/jqplot.dateAxisRenderer.js
+0 1 1 7399 0 0 0 0
+/phpmyadmin/js/dist/table/change.js
+0 3 0 25062 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Física 2
+0 1 0 3102 0 0 0 0
+/assets/css/style.css
+0 267 1 321094 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_fulltext.png
+1 3 1 919 0 0 0 0
+/phpmyadmin/js/vendor/stickyfill.min.js
+0 3 16 8211 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/b_tblops.png
+1 3 1 1283 0 0 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas
+0 4 7233172880604947830 18317 0 0 0 0
+/libros_lista
+0 20 7233172880604947830 108697 2 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+54.36.148.221
+0 1 1 8411 1 1622647375 0 0
+/universidades/Tarija
+92.118.160.1
+0 3 2 32084 2 1622884612 0 0
+/
+45.89.206.47
+0 2 0 6324 1 1622645800 0 0
+-
+54.36.148.174
+0 2 1 15221 2 1622729222 0 0
+-
+54.36.148.192
+0 1 1 5473 0 0 0 0
+-
+181.215.93.153
+0 10 9 335964 1 1622690891 0 0
+/
+35.166.172.119
+0 1 1 8509 1 1622865828 0 0
+/
+54.36.149.16
+0 1 1 8547 1 1622515798 0 0
+/
+54.36.148.66
+0 1 1 9252 1 1622655020 0 0
+/examenes_lista
+54.36.149.7
+0 1 1 5927 1 1622657216 0 0
+/gatoPiola
+93.158.90.161
+0 1 0 425 0 0 0 0
+-
+54.36.148.118
+0 1 1 8901 1 1622616457 0 0
+/libros_lista
+54.36.148.213
+0 1 1 8586 1 1622822753 0 0
+/
+52.37.206.66
+0 1 1 8452 1 1622521301 0 0
+/
+54.36.148.85
+0 1 1 8901 1 1622659419 0 0
+/libros_lista
+66.249.66.42
+0 1 1 8638 1 1622759573 0 0
+/
+176.9.16.209
+0 63 58 313825 1 1622532493 0 0
+/universidades/La Paz/2021/Ingeniería/de Sistemas/Segundo/Inglés 2
+54.36.149.77
+0 1 0 448 1 1622684403 0 0
+/universidades/Santa Cruz/2021
+165.22.42.239
+0 2 1 16856 1 1622549217 0 0
+/
+167.172.251.164
+0 1 1 16476 1 1622732481 0 0
+/
+93.158.90.151
+0 1 0 405 1 1622637759 0 0
+/
+34.208.2.9
+0 1 1 8540 1 1622780261 0 0
+/
+93.158.90.137
+0 1 1 8586 1 1622637760 0 0
+/
+54.36.148.94
+0 2 1 5879 0 0 0 0
+-
+54.36.148.18
+0 1 0 444 1 1622669109 0 0
+/universidades/Cochabamba/2021
+114.119.140.196
+0 1 1 4934 0 0 0 0
+-
+54.36.149.42
+0 1 0 448 1 1622678256 0 0
+/universidades/Santa Cruz/2019
+190.104.7.69
+0 11 8 380518 1 1622756291 0 0
+/
+54.36.149.61
+0 1 1 8859 1 1622621106 0 0
+/registrar
+54.36.148.25
+0 1 0 440 1 1622673707 0 0
+/universidades/La Paz/2020
+35.161.117.110
+0 3 1 9246 1 1622523338 0 0
+/
+54.36.148.10
+0 1 1 8411 1 1622650287 0 0
+/universidades/Sucre
+168.151.172.193
+0 1 0 6714 1 1622691190 0 0
+-
+34.212.115.233
+0 2 1 8838 1 1622521244 0 0
+/
+18.237.30.16
+0 1 1 10823 0 0 0 0
+-
+179.58.16.116
+0 19 18 1456550 1 1622603442 0 0
+/
+54.191.238.255
+0 1 1 8540 1 1622781119 0 0
+/
+34.86.35.29
+0 1 0 386 1 1622844097 0 0
+/
+54.36.148.250
+0 2 1 5879 0 0 0 0
+-
+13.236.114.230
+0 10 1 37074 1 1622525331 0 0
+-
+167.71.184.64
+0 1 1 16508 1 1622732457 0 0
+/
+185.191.171.1
+0 1 0 6707 1 1622793611 0 0
+-
+185.191.171.38
+0 1 1 5477 0 0 0 0
+-
+138.197.11.246
+0 8 0 25296 1 1622573119 0 0
+-
+173.208.244.94
+0 2 1 19661 2 1622940720 0 0
+/
+200.105.200.99
+0 13394 11956 144594836 22 1622947419 0 0
+/
+54.36.149.90
+0 1 0 442 1 1622695744 0 0
+/universidades/El Alto/2021
+35.231.183.183
+0 13 12 89168 1 1622817070 0 0
+/login
+34.217.210.89
+0 1 1 8452 1 1622521241 0 0
+/
+54.36.149.52
+0 1 1 5473 0 0 0 0
+-
+173.252.87.14
+0 1 1 8692 1 1622766457 0 0
+/
+3.8.12.221
+0 10 1 42266 1 1622944937 0 0
+-
+181.214.190.133
+0 1 0 6715 1 1622691189 0 0
+-
+179.58.60.51
+0 2860 2431 24192452 8 1622906510 0 0
+/
+114.119.156.9
+0 1 1 4934 0 0 0 0
+-
+34.219.28.92
+0 2 1 8954 1 1622609518 0 0
+/
+114.119.141.83
+0 1 1 4934 0 0 0 0
+-
+35.164.153.80
+0 2 1 8954 1 1622694741 0 0
+/
+35.190.189.100
+0 8 4 15143 1 1622734560 0 0
+/
+66.249.66.36
+0 1 1 5466 0 0 0 0
+-
+54.36.148.172
+0 1 1 8645 1 1622761867 0 0
+/
+54.36.148.84
+0 1 1 5473 0 0 0 0
+-
+54.36.148.214
+0 2 2 14230 1 1622550703 0 0
+/contacto
+66.249.66.133
+0 13 8 1102180 3 1622762507 0 0
+/
+54.36.148.163
+0 1 0 6574 1 1622721906 0 0
+-
+167.114.116.25
+0 2 2 13332 1 1622594867 0 0
+/contacto
+35.227.62.178
+0 2 1 24146 2 1622791552 0 0
+/
+93.158.90.153
+0 1 0 6498 0 0 0 0
+-
+54.36.148.184
+0 1 0 440 1 1622676041 0 0
+/universidades/La Paz/2021
+114.119.151.133
+0 1 1 4934 0 0 0 0
+-
+66.249.66.150
+0 2 0 903 1 1622762494 0 0
+/
+54.36.148.128
+0 1 1 8411 1 1622629669 0 0
+/universidades/Pando
+206.189.56.133
+0 2 0 6324 1 1622650468 0 0
+-
+54.36.149.24
+0 2 1 5879 0 0 0 0
+-
+54.36.148.170
+0 1 0 440 1 1622671378 0 0
+/universidades/La Paz/2019
+3.89.255.111
+0 1 0 4812 1 1622796581 0 0
+/
+173.212.246.178
+0 4 2 13890 1 1622633633 0 0
+/universidades/Cochabamba/2019/Ingeniería
+114.119.156.30
+0 1 1 4934 0 0 0 0
+-
+54.36.148.49
+0 1 0 444 1 1622663663 0 0
+/universidades/Cochabamba/2019
+173.252.87.119
+0 2 0 5587 1 1622766455 0 0
+/
+54.191.79.209
+0 2 1 8952 1 1622607927 0 0
+/
+54.36.148.135
+0 2 1 5879 0 0 0 0
+-
+66.249.66.135
+0 5 3 42963 3 1622762276 0 0
+/publi
+199.34.20.37
+0 8 0 25232 1 1622587433 0 0
+-
+144.76.3.131
+0 2 2 8448 1 1622858396 0 0
+/
+54.36.148.114
+0 1 1 8411 1 1622638302 0 0
+/universidades/Beni
+31.13.127.4
+0 3 1 14240 1 1622894176 0 0
+/
+35.231.150.47
+0 13 12 89233 1 1622876273 0 0
+/login
+54.36.148.197
+0 1 1 5473 0 0 0 0
+-
+54.36.148.33
+0 1 1 8515 1 1622832540 0 0
+/universidades/Cochabamba
+52.60.189.115
+0 10 1 37019 1 1622772325 0 0
+-
+54.36.148.111
+0 1 1 5473 0 0 0 0
+-
+52.36.31.206
+0 1 1 8540 1 1622781120 0 0
+/
+185.206.224.236
+0 3 2 31492 1 1622721455 0 0
+/contacto
+93.158.90.162
+0 1 0 6495 0 0 0 0
+-
+5.9.141.8
+0 2 2 10455 1 1622630393 0 0
+/gatoPiola
+34.213.161.236
+0 2 1 8897 1 1622865775 0 0
+/
+54.36.148.103
+0 1 1 8722 1 1622625342 0 0
+/contacto
+34.217.34.27
+0 2 1 8926 1 1622779702 0 0
+/
+114.119.130.178
+0 1 1 4934 0 0 0 0
+-
+54.36.149.1
+0 1 0 386 1 1622591239 0 0
+/
+54.149.184.113
+0 4 0 1588 1 1622780012 0 0
+/
+52.27.50.163
+0 2 1 8953 1 1622608341 0 0
+/
+34.217.64.96
+0 2 0 794 1 1622608937 0 0
+/
+34.217.14.226
+0 1 1 8568 1 1622694505 0 0
+/
+54.36.149.59
+0 1 1 5473 0 0 0 0
+-
+54.36.148.152
+0 1 1 9190 1 1622831074 0 0
+/examenes_lista
+34.222.60.240
+0 1 1 10823 0 0 0 0
+-
+138.246.253.24
+0 1 0 5313 1 1622800909 0 0
+/
+54.36.149.33
+0 1 1 5473 0 0 0 0
+-
+66.249.66.137
+0 6 4 126623 3 1622759657 0 0
+/
+54.244.166.191
+0 4 0 1588 2 1622866531 0 0
+/
+54.201.151.57
+0 1 1 8568 1 1622694185 0 0
+/
+54.36.149.48
+0 1 1 8663 1 1622699775 0 0
+/
+190.171.206.196
+0 146 139 5233357 1 1622772963 0 0
+/
+52.41.73.220
+0 1 1 8567 1 1622607559 0 0
+/
+54.36.148.1
+0 1 0 6574 1 1622704334 0 0
+-
+54.36.148.35
+0 2 1 5879 0 0 0 0
+-
+54.36.148.87
+0 2 1 6375 2 1622681341 0 0
+/universidades/Santa Cruz/2020
+54.36.148.161
+0 10 4 49321 9 1622855739 0 0
+/universidades/Cochabamba/2019
+5.189.159.208
+0 3 3 11693 1 1622900009 0 0
+/universidades/Santa Cruz
+35.196.167.34
+0 13 12 89650 1 1622775069 0 0
+/login
+93.158.90.163
+0 1 1 5397 0 0 0 0
+-
+54.36.148.155
+0 1 1 8599 1 1622596341 0 0
+/universidades/La Paz
+35.194.29.54
+0 61 2 200296 2 1622651352 0 0
+-
+181.215.79.86
+0 2 0 7246 1 1622691189 0 0
+-
+54.36.148.211
+0 1 1 8605 1 1622886398 0 0
+/
+144.76.38.40
+0 14 7 61557 1 1622929438 0 0
+/universidades/Santa Cruz/2021
+35.237.4.214
+0 2 1 16517 1 1622791552 0 0
+/
+54.36.149.99
+0 1 1 8582 1 1622611886 0 0
+/universidades/El Alto
+54.36.148.180
+0 1 0 6579 0 0 0 0
+-
+173.252.87.111
+0 1 1 5516 0 0 0 0
+-
+34.86.35.32
+0 1 1 15651 1 1622777258 0 0
+/
+54.36.148.146
+0 1 0 442 1 1622691683 0 0
+/universidades/El Alto/2020
+54.36.148.38
+0 1 1 8412 1 1622633999 0 0
+/universidades/Potosi
+54.36.149.100
+0 1 0 6577 1 1622652786 0 0
+-
+46.101.28.132
+0 2 0 6324 1 1622719961 0 0
+-
+34.210.5.223
+0 1 1 8540 1 1622779655 0 0
+/
+192.151.156.188
+0 1 0 5980 1 1622789432 0 0
+-
+37.57.218.243
+0 4 2 13832 1 1622855057 0 0
+/universidades/Cochabamba/2019/Ingeniería
+114.119.149.168
+0 1 1 4934 0 0 0 0
+-
+114.119.158.82
+0 1 1 4934 0 0 0 0
+-
+35.161.251.164
+0 2 1 8926 1 1622779664 0 0
+/
+35.243.157.213
+0 13 12 89691 1 1622763193 0 0
+/login
+54.36.148.31
+0 1 1 8859 1 1622661542 0 0
+/registrar
+31.13.127.9
+0 1 1 5516 0 0 0 0
+-
+93.158.90.168
+0 1 0 419 0 0 0 0
+-
+93.158.90.155
+0 1 0 425 0 0 0 0
+-
+34.220.90.176
+0 1 1 10823 0 0 0 0
+-
+181.188.161.195
+0 9 9 404027 1 1622806926 0 0
+/
+45.41.162.3
+0 1 0 6717 1 1622691189 0 0
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+173.208.244.94
+0 1 1 13681 1 1622940720 0 0
+/
+200.105.200.99
+0 724 708 6924777 4 1622947419 0 0
+/
+3.8.12.221
+0 10 1 42266 1 1622944937 0 0
+-
+54.36.148.35
+0 2 1 5879 0 0 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+https://proyecto3.tk/obtenerNombreAutor/3
+0 7
+http://proyecto3.tk/wp-login.php
+0 6
+https://proyecto3.tk/phpmyadmin/themes/pmahomme/jquery/jquery-ui.css
+0 4
+https://proyecto3.tk/new-site/
+0 1
+https://proyecto3.tk:10000/
+0 25
+https://proyecto3.tk/ListarUsuarios/eliminar
+0 20
+https://proyecto3.tk/obtenerNombreLibro/8/7
+0 8
+https://proyecto3.tk/dav/
+0 1
+https://proyecto3.tk/web/
+0 1
+https://proyecto3.tk/libros_lista
+0 33
+https://proyecto3.tk/adm-dir
+0 786
+https://proyecto3.tk/temp/
+0 1
+https://proyecto3.tk/js/admUsuarios.js
+0 4
+https://proyecto3.tk/universidades/La Paz
+0 22
+https://proyecto3.tk/universidades/El Alto
+0 9
+https://proyecto3.tk/install/
+0 1
+https://proyecto3.tk/wp1/
+0 1
+https://www.proyecto3.tk/login
+0 4
+https://proyecto3.tk/obtenerNombreImagen/1
+0 14
+https://proyecto3.tk/obtenerNombreLibro/18/7
+0 46
+https://www.proyecto3.tk/phpmyadmin/themes/pmahomme/css/theme.css
+0 131
+https://proyecto3.tk/obtenerNombreLibro/11
+0 12
+https://proyecto3.tk/materia
+0 9
+https://proyecto3.tk/contacto
+0 20
+https://proyecto3.tk/old/
+0 1
+https://proyecto3.tk/universidades/La Paz/2021
+0 8
+https://proyecto3.tk/2020/
+0 1
+https://proyecto3.tk/universidades/El Alto/2019
+0 2
+https://proyecto3.tk/imagen
+0 302
+https://proyecto3.tk/ListarUsuarios/registrar
+0 4
+https://proyecto3.tk/assets/dataTables
+0 1
+https://proyecto3.tk/examenes_lista
+0 30
+https://proyecto3.tk/obtenerNombreFacultad/4
+0 46
+https://proyecto3.tk/obtenerNombre/22
+0 5
+https://proyecto3.tk/git/proyecto3.git/
+0 1
+https://proyecto3.tk/v1/
+0 1
+https://proyecto3.tk/phpmyadmin/themes/pmahomme/css/theme.css
+0 65
+https://proyecto3.tk/perfil
+0 300
+http://proyecto3.tk/ads.txt
+0 1
+https://proyecto3.tk/universidades/Santa Cruz
+0 12
+http://proyecto3.tk
+0 3
+https://proyecto3.tk/obtenerNombreLibro/2/2
+0 2
+https://proyecto3.tk/ListarUsuarios/guardar
+0 13
+https://www.google.com/
+0 1
+- (Direct Request)
+0 3773
+https://proyecto3.tk/universidades/El Alto/2021
+0 2
+https://proyecto3.tk/dev/
+0 1
+https://proyecto3.tk/main/
+0 1
+https://proyecto3.tk/registrar
+0 36
+https://www.proyecto3.tk/
+0 102
+https://proyecto3.tk/home/
+0 1
+http://proyecto3.tk/humans.txt
+0 1
+http://200.105.200.98:80/
+0 1
+https://proyecto3.tk/assets/dataTables/datatables.css
+0 9
+https://www.proyecto3.tk/examenes_lista
+0 1
+https://proyecto3.tk/obtenerNombreLibro/6/7
+0 2
+https://www.proyecto3.tk/libros_lista
+0 1
+https://proyecto3.tk/obtenerNombreImagen/7
+0 14
+http://www.proyecto3.tk/wp-login.php
+0 5
+https://proyecto3.tk/autor
+0 96
+https://proyecto3.tk/obtenerNombreLibro/7/7
+0 4
+https://proyecto3.tk/publi
+0 49
+https://proyecto3.tk/login
+0 251
+https://proyecto3.tk/facultad
+0 23
+https://proyecto3.tk/
+0 1500
+https://proyecto3.tk/test/
+0 1
+https://proyecto3.tk/new/
+0 1
+https://proyecto3.tk/assets/datatables/datatables.css
+0 1
+https://proyecto3.tk/obtenerNombreTag/10
+0 2
+https://proyecto3.tk/universidades/El Alto/2020
+0 4
+https://proyecto3.tk/obtenerNombreLibro/14
+0 16
+https://proyecto3.tk/obtenerNombreMateria/38
+0 2
+https://proyecto3.tk/old-site/
+0 1
+https://proyecto3.tk/obtenerNombreLibro/18https://proyecto3.tk/obtenerNombreImagen/7
+0 9
+https://proyecto3.tk/site/
+0 1
+https://proyecto3.tk/universidades/La Paz/2021/Ingeniería/de Sistemas
+0 6
+https://proyecto3.tk/backup/
+0 1
+https://proyecto3.tk/assets/css/style.css/assets/css/tablas.css
+0 3
+https://proyecto3.tk/eliminar
+0 1
+https://proyecto3.tk/universidades/La Paz/2021/Ingeniería
+0 6
+http://proyecto3.tk/
+0 3
+https://proyecto3.tk/wordpress/
+0 1
+https://proyecto3.tk/cms/
+0 1
+https://proyecto3.tk/bk/
+0 1
+https://proyecto3.tk/universidades/Cochabamba
+0 6
+https://proyecto3.tk/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer/Álgebra I
+0 10
+https://proyecto3.tk/wp2/
+0 1
+https://proyecto3.tk/demo/
+0 1
+https://proyecto3.tk/2019/
+0 1
+https://proyecto3.tk/bak/
+0 1
+https://proyecto3.tk/crearLibro
+0 2
+https://proyecto3.tk/tag
+0 113
+https://proyecto3.tk/ciudad
+0 37
+https://proyecto3.tk/obtenerNombreTag/4
+0 9
+https://proyecto3.tk/obtenerNombreLibro/2
+0 58
+https://proyecto3.tk/assets/css/tablas.css
+0 54
+https://proyecto3.tk/wp/
+0 1
+https://proyecto3.tk/v2/
+0 1
+https://proyecto3.tk/eliminarLibroLogic/18
+0 1
+https://proyecto3.tk/universidades/La Paz/2021/Ingeniería/de Sistemas/Primer
+0 6
+https://proyecto3.tk/git/gitweb.cgi
+0 153
+https://proyecto3.tk/obtenerNombreLibro/5
+0 5
+https://proyecto3.tk/actualizarLibro
+0 4
+https://proyecto3.tk/ListarUsuarios
+0 8122
+https://proyecto3.tk/old-wp/
+0 1
+https://proyecto3.tk/obtenerNombreLibro/18
+0 12
+https://proyecto3.tk/libro
+0 340
+https://proyecto3.tk/tmp/
+0 1
+https://proyecto3.tk/2018/
+0 1
+https://proyecto3.tk/gatoPiola
+0 61
+http://www.google.com.hk
+0 3
+http://proyecto3.tk/robots.txt
+0 1
+https://proyecto3.tk/blog/
+0 1
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36
+0 10
+Mozilla/5.0 (Linux; Android 5.1.1; SM-J111F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36
+0 59
+Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)
+0 8
+Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +http://megaindex.com/crawler)
+0 63
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Mobile/15E148 
+0 15
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
+0 3
+WhatsApp/2.21.10.16 A
+0 1
+Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)
+0 4
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
+0 26
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 OPR/76.0.4017.177
+0 8888
+Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)
+0 4
+Go http package
+0 1
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36 Mozilla/5.0 (iPad; U; 
+0 10
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 7
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)
+0 68
+Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)
+0 2
+Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/90.0.44
+0 2
+Mozilla/5.0 (Linux; Android 11; POCO F2 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36
+0 116
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
+0 42
+Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
+0 8
+git/2.25.1 (#60~20.04.1-Ubuntu SMP Thu May 6 09:52:46 UTC 2021 5.8.0-53-generic; linux x64) vscode/1.56.2 (Visual Studio Code
+0 10
+facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
+0 8
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E14
+0 234
+Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36
+0 10
+Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39
+0 2
+Mozilla/5.0 (Windows NT 6.1; rv:57.0) Gecko/20100101 Firefox/57.0
+0 2
+Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+0 31
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36
+0 1
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+0 22
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 OPR/76.0.4017.175
+0 3001
+ZoominfoBot (zoominfobot at zoominfo dot com)
+0 60
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36 OPR/53.0.
+0 3
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.97 Mobile S
+0 19
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36 OPR/75.0.
+0 476
+NetSystemsResearch studies the availability of various services across the internet. Our website is netsystemsresearch.com
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.119 Safari/537.36
+0 9
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
+0 2763
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0
+0 68
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36
+0 11
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 OPR/76.0.4017.154
+0 836
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+proyecto3
+0 1966 1817 8964614 12 1622916418 0 0
+# End Of Table - usernames

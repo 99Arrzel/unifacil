@@ -75,7 +75,7 @@
             {
                 name: 'Eliminar',
                 formatter: (cell, row) => html(
-                    `<button id="bttnEliminar${row.cells[0].data}" class="btn btn-alert" onclick="editar(${row.cells[0].data})">Editar</button>`
+                    `<button id="bttnEliminar${row.cells[0].data}" class="btn btn-danger" onclick="elimnar(${row.cells[0].data})">Editar</button>`
                 ),
 
                 sort: {

@@ -25,7 +25,7 @@
                                     <td><input type='text' name='apellido' class='form-control'></input></td>
                                     <td><input type='text' name='login' class='form-control'></input></td>
                                     <td><input type='text' name='email' class='form-control'></input></td>
-                                    <td><input type='password' name='epassword' class='form-control'></input></td>
+                                    <td><input type='password' name='password' class='form-control'></input></td>
                                     <!-- SUS-->
                                     <td><select class='form-control' name='suscrito'>
                                             <option value='1'>SUSCRITO
@@ -92,9 +92,19 @@ endif;
         "{\r\n            \"pagination\":{\r\n                \"first\":\"Primero\",\r\n                \"first_title\":\"Primera p\u00E1gina\", \r\n                \"last\":\"\u00DAltima\",\r\n                \"last_title\":\"\u00DAltima p\u00E1gina\",\r\n                \"prev\":\"Previa\",\r\n                \"prev_title\":\"P\u00E1gina previa\",\r\n                \"next\":\"Siguiente\",\r\n                \"next_title\":\"Siguiente p\u00E1gina\",\r\n            },\r\n  }";
 
     var table = new Tabulator("#UsuariosActivos", {
-        localized:function(locale, lang){
-            var locale = "es-BO";
-            var lang = "\"es-BO\": {\r\n                \"pagination\": {\r\n                    \"first\": \"Primero\",\r\n                    \"first_title\": \"Primera p\u00E1gina\",\r\n                    \"last\": \"\u00DAltima\",\r\n                    \"last_title\": \"\u00DAltima p\u00E1gina\",\r\n                    \"prev\": \"Previa\",\r\n                    \"prev_title\": \"P\u00E1gina previa\",\r\n                    \"next\": \"Siguiente\",\r\n                    \"next_title\": \"Siguiente p\u00E1gina\",\r\n                },\r\n                }"
+        langs: {
+            "es-ES": {
+                "pagination": {
+                    "first": "Primero",
+                    "first_title": "Primera página",
+                    "last": "Última",
+                    "last_title": "Última página",
+                    "prev": "Previa",
+                    "prev_title": "Página previa",
+                    "next": "Siguiente",
+                    "next_title": "Siguiente página",
+                },
+            }
         },
         data: datos, //assign data to table
         layout: "fitColumns", //fit columns to width of table
@@ -170,5 +180,5 @@ endif;
             },
         ],
     });
-    table.setLocale("es");
+    table.setLocale('es');
 </script>

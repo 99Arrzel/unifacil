@@ -304,7 +304,7 @@ endif;
         },
         encode: true,
     }).done(function (resultado) {
-        if(myVal == "SUSCRITO")
+        if(document.getElementById("sus" + id).innerHTML == "SUSCRITO")
         {
             document.getElementById("sus" + id).value = "NO SUSCRITO";
             document.getElementById("sus" + id).innerHTML = "NO SUSCRITO";

@@ -110,7 +110,7 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
         {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
-        {tit formatter:downIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
+        {field: "IDUSER", formatter:downIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
     ],
 
 

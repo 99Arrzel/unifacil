@@ -5,6 +5,12 @@
 <script>
 var datos = <?= json_encode($usuario)?>;
 new gridjs.Grid({
+    columns:[
+      {
+        id: 'NOMBRE',
+        NOMBRE: 'Nombre'
+      }
+    ],
     search: true,
     data:datos,
   }).render(document.getElementById("wrapper"));

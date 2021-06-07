@@ -1,4 +1,3 @@
-
 <?= json_encode($usuario)?>
 <div id="wrapper"></div>
 <script>
@@ -12,7 +11,24 @@ new gridjs.Grid({
       {
         id: 'APELLIDO',
         name: 'Apellido'
-      }],
+      },
+      {
+        id: 'CONTRASEÑA',
+        name: 'Password'
+      },
+      {
+        id: 'LOGIN',
+        name: 'Login'
+      },
+      {
+        id: 'EMAIL',
+        name: 'Email'
+      },
+      {
+        id: 'SUSCRITO',
+        name: 'Suscrito'
+      }
+      ],
     search: true,
     data:datos,
   }).render(document.getElementById("wrapper"));

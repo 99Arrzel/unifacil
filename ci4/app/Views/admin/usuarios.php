@@ -20,7 +20,7 @@ for (var i = 0; i < datos.length; i++) {
 }
 new gridjs.Grid({
     columns: [{
-            id: 'NOMBRE',
+            
             name: 'Nombre'
         },
         {

@@ -111,7 +111,8 @@ endif;
                     data: 'EMAIL'
                 },
                 {
-                    data: 'CONTRASEÑA'
+                    data: 'CONTRASEÑA',
+                    "visible": false,
                 },
                 {
                     data: 'SUSCRITO'

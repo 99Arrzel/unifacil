@@ -19,6 +19,7 @@
                 apellido: document.getElementById("ape" + id).value,
                 login: document.getElementById("log" + id).value,
                 email: document.getElementById("ema" + id).value,
+                datoVacio: 'XD',
                 //nivel: document.getElementById("niv" + id).value,
                 
             };

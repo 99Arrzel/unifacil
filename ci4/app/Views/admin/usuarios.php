@@ -1,5 +1,5 @@
 <?= json_encode($usuario)?>
-<div id="wrapper"></div>
+<div id="UsuariosActivos"></div>
 
 <script type="module">
   import {
@@ -47,14 +47,23 @@
         name: 'Editar',
         formatter: (cell, row) => {
           return h('button', {
-            className: 'btn btn-danger',
+            className: 'btn btn-warning',
             onClick: () => alert(`Editing`)
           }, 'Editar');
+        }
+      },
+      {
+        name: 'Eliminar',
+        formatter: (cell, row) => {
+          return h('button', {
+            className: 'btn btn-danger',
+            onClick: () => alert(`Editing`)
+          }, 'Eliminar');
         }
       },
     ],
     search: true,
     data: datos,
     sort: true,
-  }).render(document.getElementById("wrapper"));
+  }).render(document.getElementById("UsuariosActivos"));
 </script>

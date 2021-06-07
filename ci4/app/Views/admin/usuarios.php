@@ -33,10 +33,10 @@ new gridjs.Grid({
         formatter:(cell, row) => {
           return h('button',{
             className: 'btn btn-danger',
-            onClick:() => alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}"`)
+            onClick:() => alert(`Editing`)
           }, 'Editar');
-          }
-        },
+        }
+      },
       ],
     search: true,
     data:datos,

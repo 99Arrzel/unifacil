@@ -19,7 +19,7 @@
             datos[i].SUSCRITO = "NO SUSCRITO";
         }
     }
-    new gridjs.Grid({
+    new UserGrid.Grid({
         columns: [{
                 id: 'IDUSER',
                 name: 'ID',

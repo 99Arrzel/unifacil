@@ -29,12 +29,12 @@
             {
                 id: 'NOMBRE',
                 name: 'Nombre',
-                formatter: (cell, row) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`    )
+                formatter: (cell, row) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'APELLIDO',
                 name: 'Apellido',
-                formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(`<input id="ape${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'LOGIN',

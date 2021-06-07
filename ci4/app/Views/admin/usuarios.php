@@ -19,13 +19,9 @@
                 apellido: document.getElementById("ape" + id).value,
                 login: document.getElementById("log" + id).value,
                 email: document.getElementById("ema" + id).value,
-                datoVacio: 'XD',
-                //nivel: document.getElementById("niv" + id).value,
+                nivel: "3",
                 
             };
-            
-            console.log(formData);
-            alert(formData);
             $.ajax({
                 type: "POST",
                 url: "/ListarUsuarios/guardar",

@@ -41,6 +41,5 @@ new gridjs.Grid({
     search: true,
     data:datos,
     sort:true,
-    pagination:true,
   }).render(document.getElementById("wrapper"));
 </script>

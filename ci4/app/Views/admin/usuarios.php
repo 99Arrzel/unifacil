@@ -37,7 +37,8 @@
                                     <!-- Nivel-->
                                     <td><select class='form-control' name='nivel'>
                                             <?php foreach ($nivel as $niveles): ?>
-                                            <option value="<?=$niveles['ID'];?>">
+                                            <option
+                                                value="<?=$niveles['ID'];?>">
                                                 <?=$niveles['NIVEL'];?>
                                             </option>
                                             <?php endforeach; ?>
@@ -75,11 +76,54 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <p>Fix: Nivel DropDown y Ajax al borrar (Cómo se recarga con Ajax????¿¿?¿?)</p>
-<div id="UsuariosActivos" class="bg-dark"></div>
-
+<div id="Activos" class="display">
+    <table id="UsuariosActivos" class="col-12 table table-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Login</th>
+                <th>Email</th>
+                <th>Contraseña</th>
+                <th>Suscrito</th>
+                <th>Nivel</th>
+                <th>Editar</th>
+                <th>Dar de baja</th>
+            </tr>
+        </thead>
+    </table>
+</div>
 <script>
     var datos = <?= json_encode($usuario)?> ;
-    $(document).ready(function(){
-        $('#UsuariosActivos').DataTable();
+    $(document).ready(function() {
+        $('#UsuariosActivos').DataTable({
+            data: datos,
+            columns: [{
+                    data: 'NOMBRE'
+                },
+                {
+                    data: 'APELLIDO'
+                },
+                {
+                    data: 'LOGIN'
+                },
+                {
+                    data: 'EMAIL'
+                },
+                {
+                    data: 'CONTRASEÑA'
+                },
+                {
+                    data: 'SUSCRITO'
+                },
+                {
+                    data: 'NIVEL'
+                },
+                {
+                    data: null,
+                    defaultContent: "<button type='button' class='btn btn-info'>Seleccionar</button>"
+                }
+            ]
+        });
     });
 </script>

@@ -19,7 +19,7 @@
                 apellido: document.getElementById("ape" + id).value,
                 login: document.getElementById("log" + id).value,
                 email: document.getElementById("ema" + id).value,
-                nivel: document.getElementById("niv" + id).value,
+                //nivel: document.getElementById("niv" + id).value,
             };
             //console.log(formData);
             $.ajax({

@@ -8,39 +8,6 @@ class Autor extends BaseController
 {
     public function index()
     {
-        //AFCZ 
-        /*
-        if ($this->request->getMethod() == 'post') {
-            function formatearString($str)
-            {
-                $str = trim($str); //Trim primero, esto hace trim primero y al final nomás
-                //$str = str_replace(' ', '', $str); Comento esto porque no quiero que reemplace espacios dentro del string, ejemplo: La Paz
-                return $str;
-            }
-            $fCiudad = formatearString($this->request->getVar('nombreAutor'));
-            $rules = [
-                'nombreAutor' => 'required|min_length[3]|max_length[20]',
-            ];
-            if (!$this->validate($rules)) {
-                $data['validation'] = $this->validator;                
-            }
-            else
-            {
-                $model = new ModeloAutor();
-                $nuevaCiudad = [
-                    'nombreAutor' => $fCiudad,
-                ];
-
-                $model->save($nuevaCiudad);
-                $session = session();
-                $session->setFlashdata('exitoso', 'Registro exitoso');   
-                return redirect()->to('/autor');//Return a autor, lo actualiza
-            }
-        }
-            */
-        //No toques arriba Daniel, es para crear
-
-
         echo view('templates/header');//navbar
         $autor = new ModeloAutor();
         $datos = $autor->listarAutores();

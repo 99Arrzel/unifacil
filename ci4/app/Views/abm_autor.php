@@ -30,20 +30,17 @@
                     <table class="table table-hover table-bordered table-dark">
                         <tr>
                             <th>Autor</th>
+                            <th>Estado</th>
                             <th>Editar</th>
-                            <th>Eliminar</th>
                         </tr>
                         <?php foreach ($datos as $key): ?>
                         <tr>
                             <td><?php echo $key->nombreAutor ?>
                             </td>
+                            <td><?php echo $key->estado ?></td>
                             <td>
                                 <a href="<?php echo base_url().'/obtenerNombreAutor/'.$key->idtblAutor //basicamente obtiene el id para poder hace el update?>"
                                     class="btn btn-warning btn-small">Editar</a>
-                            </td>
-                            <td>
-                                <a href="<?php echo base_url().'/eliminarAutor/'.$key->idtblAutor ?>"
-                                    class="btn btn-danger btn-small">Eliminar</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -51,6 +48,37 @@
                 </div>
             </div>
         </div>
+
+        <h2>Listado de Autores Eliminados</h2>
+        <?php //print_r($datos);?>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table table-responsive">
+                    <table class="table table-hover table-bordered table-dark">
+                        <tr>
+                            <th>Autor</th>
+                            <th>Estado</th>
+                            <th>Editar</th>
+                        </tr>
+                        <?php foreach ($datos as $key): ?>
+                            <?php if(($key->estado)==1): ?>
+                        <tr>
+                            <td><?php echo $key->nombreAutor ?>
+                            </td>
+                            <td><?php echo $key->estado ?></td>
+                            <td>
+                                <a href="<?php echo base_url().'/obtenerNombreAutor/'.$key->idtblAutor //basicamente obtiene el id para poder hace el update?>"
+                                    class="btn btn-warning btn-small">Editar</a>
+                            </td>
+                        </tr>
+                        <?php endif;?> 
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito

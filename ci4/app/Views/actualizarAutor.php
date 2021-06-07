@@ -5,6 +5,7 @@
 
     $idtblAutor = $datos[0]['idtblAutor'];
     $nombreAutor = $datos[0]['nombreAutor'];
+    $estado = $datos[0]['estado'];
 
 ?>
 
@@ -22,6 +23,9 @@
                     <label for="nombreAutor">Nombre</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
                         value="<?php echo $nombreAutor ?>">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" class="form-control"
+                        value="<?php echo $estado ?>">
                     <br>
                     <button class="btn btn-warning">Guardar</button>
                 </form>

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Imagen extends BaseController 
+class Stat extends BaseController 
 {
     public function index()
     {

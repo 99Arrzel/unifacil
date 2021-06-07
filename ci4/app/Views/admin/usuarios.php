@@ -5,7 +5,7 @@
 
 <script type="module">
 var datos = <?= json_encode($usuario)?>;
-var table = new Tabulator("#example-table", {
+var table = new Tabulator("#UsuariosActivos", {
     data:datos, //assign data to table
     autoColumns:true, //create columns from data field names
 });

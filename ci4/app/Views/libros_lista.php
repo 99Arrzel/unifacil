@@ -36,22 +36,21 @@
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
         <div class='container' style='margin-top:3em;'>
-        <?php foreach ($libros as $libro): ?>
             <div class='card-columns custom-columns'>
+            <?php foreach ($libros as $libro): ?>
                 <div class='card'>
                     <div class='card-body'>
-                    <h5 class='card-title' align='center'><?= $libro->nombreLibro;?></h5>
-                    <img src="<?=$libro->dirImagen;?>" class="card-img-top" alt="portada libro">
-                    <ul class="list-group list-group-flush">
+                     <h5 class='card-title' align='center'><?= $libro->nombreLibro;?></h5>
+                     <img src="<?=$libro->dirImagen;?>" class="card-img-top" alt="portada libro">
+                      <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong>Autor(es):</strong><?= $libro->autores?></li>
                         <li class="list-group-item"><strong>Edición:</strong><?= $libro->edicion?></li>
                         <li class="list-group-item"><strong>AÑO:</strong><?= $libro->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1">#<span itemprop="keywords"><?= $libro->tags ?></span></a>
                         <a href="<?= $libro->dirDoc;?>" class='btn btn-primary' style='align:center'>Leer</a>
-                    </ul>
+                      </ul>
+                    </div>
                 </div>
-                
-            </div>
             <?php endforeach; ?>
             </div>
         </div>                    

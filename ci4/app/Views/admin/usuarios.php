@@ -9,10 +9,6 @@ import {
     h,
     html
 } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
-import{
-  RowSelection
-}
-
 
 var datos = <?= json_encode($usuario)?>;
 //Cambio la variable 1 a suscrito y 0 a no suscrito

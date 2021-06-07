@@ -19,7 +19,7 @@ class admin extends BaseController {
         $login = formatearString( $this->request->getVar( 'login' ) );
         $apellido = formatearString( $this->request->getVar( 'apellido' ) );
         $email = formatearString( $this->request->getVar( 'email' ) );
-        $pass = formatearString( $this->request->getVar( 'current-password' ) );
+        $pass = formatearString( $this->request->getVar( 'password' ) );
         $sus = formatearString( $this->request->getVar( 'suscrito' ) );
         $nivel = formatearString( $this->request->getVar( 'nivel' ) );
         if ( $this->request->getMethod() == 'post' ) {
@@ -29,13 +29,13 @@ class admin extends BaseController {
                 'apellido' => 'required|min_length[3]|max_length[20]|sinEspacio',
                 'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[tblUsuario.email]',
                 'login' => 'trim|required|min_length[6]|max_length[50]|is_unique[tblUsuario.login]|sinEspacio',
-                'current-password' => 'required|min_length[8]|max_length[255]|sinEspacio',
+                'password' => 'required|min_length[8]|max_length[255]|sinEspacio',
             ];
             $errors = [
                 'nombre' => ['sinEspacio' => 'Tu usuario no puede tener espacios.'],
                 'apellido' => ['sinEspacio' => 'Tu apellido no puede tener espacios.'],
                 'login' => ['sinEspacio' => 'Tu login no puede tener espacios.'],
-                'current-password' => ['sinEspacio' => 'Tu password no puede tener espacios.'],
+                'password' => ['sinEspacio' => 'Tu password no puede tener espacios.'],
             ];
             $session = session();
             if ( !$this->validate( $rules, $errors ) ) {
@@ -48,7 +48,7 @@ class admin extends BaseController {
                     'apellido' => $apellido,
                     'email' => $email,
                     'login' => $login, //Login usuario
-                    'current-password' => $pass, //Pass
+                    'password' => $pass, //Pass
                     'tblNivel_idtblNivel' => $nivel, //Nivel default ( usuario )
                     'suscrito' => $sus,
                     'estado' => 1, //Estado activo = 0

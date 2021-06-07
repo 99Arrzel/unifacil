@@ -9,6 +9,9 @@ import {
     h,
     html
 } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
+import{
+  RowSelection
+}
 
 
 var datos = <?= json_encode($usuario)?>;
@@ -22,9 +25,10 @@ for (var i = 0; i < datos.length; i++) {
 }
 new gridjs.Grid({
     columns: [{
+            
             id: 'NOMBRE',
             name: 'Nombre',
-            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+            formatter: (cell) => html(`<input id="data:"  value="${cell}" DISABLED></input>`)
             
         },
         {
@@ -61,7 +65,7 @@ new gridjs.Grid({
             }
         },
         {
-            name: 'EliminXDar',
+            name: 'Eliminar',
             formatter: (cell, row) => {
                 return h('button', {
                     className: 'btn btn-danger',

@@ -19,7 +19,7 @@ class admin extends BaseController {
         $login = formatearString( $this->request->getVar( 'login' ) );
         $apellido = formatearString( $this->request->getVar( 'apellido' ) );
         $email = formatearString( $this->request->getVar( 'email' ) );
-        $pass = formatearString( $this->request->getVar( 'password' ) );
+        $pass = formatearString( $this->request->getVar( 'epassword' ) );
         $sus = formatearString( $this->request->getVar( 'suscrito' ) );
         $nivel = formatearString( $this->request->getVar( 'nivel' ) );
         if ( $this->request->getMethod() == 'post' ) {
@@ -29,7 +29,7 @@ class admin extends BaseController {
                 'apellido' => 'required|min_length[3]|max_length[20]|sinEspacio',
                 'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[tblUsuario.email]',
                 'login' => 'trim|required|min_length[6]|max_length[50]|is_unique[tblUsuario.login]|sinEspacio',
-                'password' => 'required|min_length[8]|max_length[255]|sinEspacio',
+                'epassword' => 'required|min_length[8]|max_length[255]|sinEspacio',
             ];
             $errors = [
                 'nombre' => ['sinEspacio' => 'Tu usuario no puede tener espacios.'],

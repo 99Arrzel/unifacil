@@ -24,7 +24,7 @@
                                     <td><input type='text' name='nombre' class='form-control'></input></td>
                                     <td><input type='text' name='apellido' class='form-control'></input></td>
                                     <td><input autocomplete="username" type='text' name='login' class='form-control'></input></td>
-                                    <td><input type='text' name='email' class='form-control'></input></td>
+                                    <td><input autocomplete="email" type='text' name='email' class='form-control'></input></td>
                                     <td><input autocomplete="current-password" type='password' name='password' class='form-control'></input></td>
                                     <!-- SUS-->
                                     <td><select class='form-control' name='suscrito'>

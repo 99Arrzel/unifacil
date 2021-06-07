@@ -70,7 +70,7 @@
     resizable: true,
     style: {
       table: {
-        border: "3px solid #90E0EF",
+        border: "3px solid #FFFFFF",
         color: "#fff",
       },
       th: {

@@ -27,10 +27,21 @@ new gridjs.Grid({
       {
         id: 'SUSCRITO',
         name: 'Suscrito'
-      }
+      },
+      {
+        name: 'Editar',
+        formatter:(cell, row) => {
+          return h('button',{
+            className: 'btn btn-danger',
+            onClick:() => alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}"`)
+          }, 'Editar');
+          }
+        },
       ],
     search: true,
     data:datos,
     sort:true,
+    pagination:true,
+    resizable: true,
   }).render(document.getElementById("wrapper"));
 </script>

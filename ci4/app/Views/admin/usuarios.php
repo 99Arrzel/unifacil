@@ -9,6 +9,11 @@ import {
     h
 } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
 
+import {
+    Grid,
+    html
+} from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
+
 var datos = <?= json_encode($usuario)?>;
 //Cambio la variable 1 a suscrito y 0 a no suscrito
 for (var i = 0; i < datos.length; i++) {
@@ -21,7 +26,9 @@ for (var i = 0; i < datos.length; i++) {
 new gridjs.Grid({
     columns: [{
             id: 'NOMBRE',
-            name: 'Nombre'
+            name: 'Nombre',
+            formatter: (cell) => html(`<b>${cell}</b>`)
+            
         },
         {
             id: 'APELLIDO',
@@ -40,6 +47,7 @@ new gridjs.Grid({
             name: 'Suscrito'
         },
         {
+            id: 'IDUSER',
             name: 'Editar',
             formatter: (cell, row) => {
                 return h('button', {
@@ -52,7 +60,7 @@ new gridjs.Grid({
             }
         },
         {
-            name: 'Eliminar',
+            name: 'EliminXDar',
             formatter: (cell, row) => {
                 return h('button', {
                     className: 'btn btn-danger',

@@ -81,6 +81,9 @@ endif;
 
 <script type="module">
 var datos = <?= json_encode($usuario)?>;
+var openIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-search'></i>"
+};
 
 var table = new Tabulator("#UsuariosActivos", {
     data:datos, //assign data to table
@@ -103,7 +106,9 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Email", field:"EMAIL", editor:"input"},
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
-        {title:"Editar", field:"IDUSER", formatter:"buttonTick", }
+        {title:"" , sortable:false, formatter:openIcon, onClick:function(e, cell, value, data){
+            loadDialog(data);
+        }},
     ],
 
 

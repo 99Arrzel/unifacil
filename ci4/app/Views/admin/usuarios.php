@@ -1,6 +1,6 @@
 <?= json_encode($usuario)?>
 <br>
-<div class="container-fluid">
+<div id="XD" class="container-fluid">
     <div id="UsuariosActivos" class="bg-dark"></div>
 </div>
 
@@ -137,7 +137,7 @@
                 login: document.getElementById("log" + id).value,
                 email: document.getElementById("ema" + id).value,
                 nivel: "3",
-                
+
             };
             $.ajax({
                 type: "POST",
@@ -177,29 +177,30 @@
             document.getElementById("niv" + id).disabled = true;
         }
     }
+
     function eliminar(id) {
-    var formData = {
-        miid: id
-    };
-    $.ajax({
-        type: "POST",
-        url: "/ListarUsuarios/eliminar",
-        data: formData,
-        dataType: "json",
-        statusCode: {
-            500: function () {
-                alert("Error 500, chequea el script amiguito");
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/ListarUsuarios/eliminar",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+            $("#XD").load(window.location.href + " #XD"); //Reload altas
+            //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
+            if (resultado.baja == true) {
+                swal("Usuario dado de baja");
+            } else {
+                swal("Fallo al dar de baja");
             }
-        },
-        encode: true,
-    }).done(function (resultado) {
-        $("#UsuariosActivos").load(window.location.href + " #UsuariosActivos"); //Reload altas
-        //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
-        if (resultado.baja == true) {
-            swal("Usuario dado de baja");
-        } else {
-            swal("Fallo al dar de baja");
-        }
-    })
-}
+        })
+    }
 </script>

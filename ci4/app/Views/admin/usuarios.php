@@ -4,30 +4,116 @@
 </div>
 
 <script type="module">
+import {
+    Grid,
+    h,
+    html
+} from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
+
 var datos = <?= json_encode($usuario)?>;
-var table = new Tabulator("#UsuariosActivos", {
-    data:datos, //assign data to table
-    layout:"fitColumns",      //fit columns to width of table
-    responsiveLayout:"hide",  //hide columns that dont fit on the table
-    tooltips:true,            //show tool tips on cells
-    addRowPos:"top",          //when adding a new row, add it to the top of the table
-    history:true,             //allow undo and redo actions on the table
-    pagination:"local",       //paginate the data
-    paginationSize:7,         //allow 7 rows per page of data
-    movableColumns:true,      //allow column order to be changed
-    resizableRows:true,       //allow row order to be changed
-    initialSort:[             //set the initial sort order of the data
-        {column:"NOMBRE", dir:"asc"},
+//Cambio la variable 1 a suscrito y 0 a no suscrito
+for (var i = 0; i < datos.length; i++) {
+    if (datos[i].SUSCRITO === "1") {
+        datos[i].SUSCRITO = "SUSCRITO";
+    } else {
+        datos[i].SUSCRITO = "NO SUSCRITO";
+    }
+}
+new gridjs.Grid({
+    columns: [{
+            
+            id: 'NOMBRE',
+            name: 'Nombre',
+            formatter: (cell) => html(`<input id="data:"  value="${cell}" DISABLED></input>`)
+            
+        },
+        {
+            id: 'APELLIDO',
+            name: 'Apellido',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+        },
+        {
+            id: 'LOGIN',
+            name: 'Login',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+        },
+        {
+            id: 'EMAIL',
+            name: 'Email',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+        },
+        {
+            id: 'SUSCRITO',
+            name: 'Suscrito',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+        },
+        {
+            id: 'IDUSER',
+            name: 'Editar',
+            formatter: (cell, row) => {
+                return h('button', {
+                    className: 'btn btn-warning',
+                    onClick: () => alert(`Editing`)
+                }, 'Editar');
+            },
+            sort: {
+                enabled: false
+            }
+        },
+        {
+            name: 'Eliminar',
+            formatter: (cell, row) => {
+                return h('button', {
+                    className: 'btn btn-danger',
+                    onClick: () => alert(`Editing`)
+                }, 'Eliminar');
+            },
+            sort: {
+                enabled: false
+            }
+        },
     ],
-    columns:[                 //define the table columns
-        {title:"Nombre", field:"NOMBRE", editor:"input"},
-        {title:"Apellido", field:"APELLIDO", editor:"input"},
-        {title:"Login", field:"LOGIN", width:95, editor:"select", editorParams:{values:["male", "female"]}},
-        {title:"Email", field:"EMAIL", editor:"input"},
-        {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
-        {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
-    ],
-
-
-});
+    search: true,
+    data: datos,
+    sort: true,
+    pagination: {
+        limit: 10
+    },
+    resizable: true,
+    style: {
+        table: {
+            border: "3px solid #99ff99",
+            color: "#fff",
+        },
+        th: {
+            "background-color": "#99ff99",
+            color: "black",
+            "border-bottom": "3px solid #99ff99",
+            "text-align": "center",
+        },
+        td: {
+            "background-color": "#21212c",
+            color: "#fff",
+            "text-align": "center",
+        },
+        footer: {
+            "background-color": "#99ff99",
+            color: "#fff",
+        },
+    },
+    language: {
+        'search': {
+            'placeholder': 'Buscar algo... 🔍'
+        },
+        'pagination': {
+            'previous': '⬅️',
+            'next': '➡️',
+            'showing': 'Mostrando',
+            'results': () => 'Resultados',
+            'of': 'de',
+            'to': 'de'
+        }
+    }
+    //Estilos
+}).render(document.getElementById("UsuariosActivos"));
 </script>

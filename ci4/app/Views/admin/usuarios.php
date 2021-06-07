@@ -93,7 +93,7 @@ endif;
 
     var table = new Tabulator("#UsuariosActivos", {
         langs: {
-            "es-ES": {
+            "es": {
                 "pagination": {
                     "first": "Primero",
                     "first_title": "Primera página",

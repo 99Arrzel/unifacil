@@ -304,7 +304,14 @@ endif;
         },
         encode: true,
     }).done(function (resultado) {
-        location.reload();
+        if(myVal == "SUSCRITO")
+        {
+            document.getElementById("sus" + id).value = "NO SUSCRITO";    
+        }
+        else
+        {
+            document.getElementById("sus" + id).value = "SUSCRITO";
+        }
         //$("#recargarTabla").load(window.location.href + " #recargarTabla"); //Reload altas
         //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
         if (resultado.baja == true) {

@@ -52,6 +52,26 @@
             </div>
         </div>
     </div>
+    <?php if (isset($validation)): ?>
+    <div class='col-12'>
+        <div class='alert alert-danger' role='alert'>
+            <?=$validation->listErrors() ?>
+        </div>
+    </div>
+    <?php
+endif; ?>
+    <?php if (session()
+    ->get('exitoso')): ?>
+    <div class='alert alert-success' role='alert'>
+        <?=session()
+        ->get('exitoso') ?>
+    </div>
+    <?php
+endif;
+?>
+    <h1 class="text-center">Listar Usuarios</h1>
+    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
+</div>
 <br>
 <p>Fix: Suscripción, Nivel y Ajax al editar (Cómo se hace con Ajax????¿¿?¿?)</p>
 <div id="UsuariosActivos" class="bg-dark"></div>

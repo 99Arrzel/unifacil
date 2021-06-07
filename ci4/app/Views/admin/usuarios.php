@@ -1,4 +1,5 @@
 <br>
+<p>Fix: Suscripción, Nivel y Ajax al editar (Cómo se hace con Ajax????¿¿?¿?)</p>
 <div id="UsuariosActivos" class="bg-dark"></div>
 
 <script type="module">
@@ -174,7 +175,6 @@
             document.getElementById("niv" + id).disabled = true;
         }
     }
-
     function eliminar(id) {
         var formData = {
             miid: id

@@ -1,4 +1,3 @@
-<?= json_encode($usuario)?>
 <br>
 <div id="XD" class="container-fluid">
     <div id="UsuariosActivos" class="bg-dark"></div>
@@ -195,7 +194,8 @@
             encode: true,
         }).done(function(resultado) {
             
-            $('#UsuariosActivos').Grid().ajax.reload();
+            location . reload();
+            //$('#UsuariosActivos').Grid().ajax.reload();
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {
                 swal("Usuario dado de baja");

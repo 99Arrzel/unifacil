@@ -312,6 +312,7 @@ endif;
         } else {
             swal("Fallo al cambiar");
         }
+        console . log(formData);
     })
 }
 </script>

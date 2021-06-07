@@ -74,7 +74,7 @@
         color: "#fff",
       },
       th: {
-        "background-color": "#D5E9CF",
+        "background-color": "#21212C",
         color: "black",
         "border-bottom": "3px solid #90E0EF",
         "text-align": "center",
@@ -85,7 +85,7 @@
         "text-align": "center",
       },
       footer: {
-        "background-color": "#48CAE4",
+        "background-color": "#21212C",
         color: "#fff",
       },
     },

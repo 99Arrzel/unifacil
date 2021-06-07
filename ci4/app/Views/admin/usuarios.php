@@ -24,28 +24,28 @@ new gridjs.Grid({
     columns: [{
             id: 'NOMBRE',
             name: 'Nombre',
-            formatter: (cell) => html(`<input>${cell}</input DISABLED>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
             
         },
         {
             id: 'APELLIDO',
             name: 'Apellido',
-            formatter: (cell) => html(`<input>${cell}</input DISABLED>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'LOGIN',
             name: 'Login',
-            formatter: (cell) => html(`<input>${cell}</input DISABLED>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'EMAIL',
             name: 'Email',
-            formatter: (cell) => html(`<input>${cell}</input DISABLED>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'SUSCRITO',
             name: 'Suscrito',
-            formatter: (cell) => html(`<input>${cell}</input DISABLED>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'IDUSER',

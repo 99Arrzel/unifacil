@@ -11,10 +11,10 @@
   //Cambio la variable 1 a suscrito y 0 a no suscrito
   for(var i = 0; i < datos.length; i++)
   {
-    if(datos[i].SUSCRITO === 1){
+    if(datos[i].SUSCRITO === "1"){
       datos[i].SUSCRITO = "SUSCRITO";
     }
-    if(datos[i].SUSCRITO === 0){
+    if(datos[i].SUSCRITO === "0"){
       datos[i].SUSCRITO = "NO SUSCRITO";
     }
   }

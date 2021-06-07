@@ -11,55 +11,6 @@
         html
     } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
     //=======================
-    function editar(id) {
-        if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
-            var formData = {
-                miid: id,
-                nombre: document.getElementById("nom" + id).value,
-                apellido: document.getElementById("ape" + id).value,
-                login: document.getElementById("log" + id).value,
-                email: document.getElementById("ema" + id).value,
-                nivel: "3",
-                
-            };
-            $.ajax({
-                type: "POST",
-                url: "/ListarUsuarios/guardar",
-                data: formData,
-                dataType: "json",
-                statusCode: {
-                    500: function() {
-                        alert(formData);
-                    }
-                },
-                encode: true,
-            }).done(function(resultado) {
-                if (resultado.exists == true) {
-                    swal("Guardado con sssexito");
-                } else {
-                    swal("Error al guardar");
-                }
-            });
-            //event.preventDefault(); no es type submit
-        }
-        if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
-            document.getElementById("bttnEditar" + id).innerHTML = "Guardar";
-            document.getElementById("bttnEditar" + id).className = "btn btn-success form-control";
-            document.getElementById("nom" + id).disabled = false;
-            document.getElementById("ape" + id).disabled = false;
-            document.getElementById("log" + id).disabled = false;
-            document.getElementById("ema" + id).disabled = false;
-            document.getElementById("niv" + id).disabled = false;
-        } else {
-            document.getElementById("bttnEditar" + id).innerHTML = "Editar";
-            document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
-            document.getElementById("nom" + id).disabled = true;
-            document.getElementById("ape" + id).disabled = true;
-            document.getElementById("log" + id).disabled = true;
-            document.getElementById("ema" + id).disabled = true;
-            document.getElementById("niv" + id).disabled = true;
-        }
-    }
     var datos = <?= json_encode($usuario)?> ;
     //Cambio la variable 1 a suscrito y 0 a no suscrito
     for (var i = 0; i < datos.length; i++) {
@@ -177,4 +128,55 @@
         }
         //Estilos
     }).render(document.getElementById("UsuariosActivos"));
+</script>
+<script>
+    function editar(id) {
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
+            var formData = {
+                miid: id,
+                nombre: document.getElementById("nom" + id).value,
+                apellido: document.getElementById("ape" + id).value,
+                login: document.getElementById("log" + id).value,
+                email: document.getElementById("ema" + id).value,
+                nivel: "3",
+                
+            };
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/guardar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert(formData);
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                if (resultado.exists == true) {
+                    swal("Guardado con sssexito");
+                } else {
+                    swal("Error al guardar");
+                }
+            });
+            //event.preventDefault(); no es type submit
+        }
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
+            document.getElementById("bttnEditar" + id).innerHTML = "Guardar";
+            document.getElementById("bttnEditar" + id).className = "btn btn-success form-control";
+            document.getElementById("nom" + id).disabled = false;
+            document.getElementById("ape" + id).disabled = false;
+            document.getElementById("log" + id).disabled = false;
+            document.getElementById("ema" + id).disabled = false;
+            document.getElementById("niv" + id).disabled = false;
+        } else {
+            document.getElementById("bttnEditar" + id).innerHTML = "Editar";
+            document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
+            document.getElementById("nom" + id).disabled = true;
+            document.getElementById("ape" + id).disabled = true;
+            document.getElementById("log" + id).disabled = true;
+            document.getElementById("ema" + id).disabled = true;
+            document.getElementById("niv" + id).disabled = true;
+        }
+    }
 </script>

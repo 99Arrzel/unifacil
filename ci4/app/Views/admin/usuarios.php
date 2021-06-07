@@ -281,10 +281,10 @@ endif;
     var myVal = document.getElementById("sus" + id).value;
     if( myVal == "SUSCRITO")
     {
-        myVal = 1;
+        myVal = 0;
     }
     else{
-        myVal = 0;
+        myVal = 1;
     }
 
     var formData = {

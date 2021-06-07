@@ -1,7 +1,5 @@
 <br>
-<div id="XD" class="container-fluid">
-    <div id="UsuariosActivos" class="bg-dark"></div>
-</div>
+<div id="UsuariosActivos" class="bg-dark"></div>
 
 <script type="module">
     import {
@@ -193,8 +191,8 @@
             },
             encode: true,
         }).done(function(resultado) {
-            
-            location . reload();
+
+            location.reload();
             //$('#UsuariosActivos').Grid().ajax.reload();
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {

@@ -65,5 +65,8 @@
     search: true,
     data: datos,
     sort: true,
+    pagination: true,
+    resizable: true,
+    
   }).render(document.getElementById("UsuariosActivos"));
 </script>

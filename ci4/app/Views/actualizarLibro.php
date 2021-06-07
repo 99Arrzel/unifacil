@@ -41,8 +41,11 @@
                         value="<?php echo $dirDoc ?>">
 
                     <label for="estado">Estado del Libro</label>
-                    <input type="text" name="estado" id="estado" class="form-control"
-                        value="<?php echo $estado ?>">
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option selected>seleccione un estado</option>
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
+                    </select>
     
 
                     <input type="text" id="idtblImagen" name="idtblImagen" hidden=""

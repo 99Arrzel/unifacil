@@ -13,7 +13,7 @@
     if(datos[i].SUSCRITO === "1"){
       datos[i].SUSCRITO = "SUSCRITO";
     }
-    if(datos[i].SUSCRITO === "0"){
+    else{
       datos[i].SUSCRITO = "NO SUSCRITO";
     }
   }
@@ -68,6 +68,9 @@
     sort: true,
     pagination: { limit: 10},
     resizable: true,
+    className:{
+      table: 'table-dark'
+    }
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));
 </script>

@@ -84,13 +84,7 @@
             },
         ],
         search: true,
-        //data: datos,
-        data: () => {
-            return new Promise(resolve => {
-                setTimeout(() =>
-                    resolve(datos));
-            })
-        },
+        data: datos,
         sort: true,
         pagination: {
             limit: 10
@@ -201,7 +195,7 @@
             encode: true,
         }).done(function(resultado) {
             
-            $('#UsuariosActivos').reload;
+            $('#UsuariosActivos').Grid().ajax.reload();
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {
                 swal("Usuario dado de baja");

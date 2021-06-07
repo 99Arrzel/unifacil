@@ -34,6 +34,7 @@
                             <th>Editar</th>
                         </tr>
                         <?php foreach ($datos as $key): ?>
+                        <?php if(($key->estado)==0): ?>
                         <tr>
                             <td><?php echo $key->nombreAutor ?>
                             </td>
@@ -43,6 +44,7 @@
                                     class="btn btn-warning btn-small">Editar</a>
                             </td>
                         </tr>
+                        <?php endif; ?>
                         <?php endforeach; ?>
                     </table>
                 </div>

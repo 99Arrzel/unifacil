@@ -86,7 +86,7 @@ var editIcon = function(cell, formatterParams){
 };
 var downIcon = function(cell, formatterParams){
     var valor= cell.getValue();
-    return "<button id="+valor+"class='btn btn-danger'>Dar de baja</button>"
+    return "<button id='"+valor+"' class='btn btn-danger'>Dar de baja</button>"
 };
 
 var table = new Tabulator("#UsuariosActivos", {

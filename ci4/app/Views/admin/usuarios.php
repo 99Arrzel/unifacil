@@ -92,7 +92,7 @@ endif;
         "{\r\n            \"pagination\":{\r\n                \"first\":\"Primero\",\r\n                \"first_title\":\"Primera p\u00E1gina\", \r\n                \"last\":\"\u00DAltima\",\r\n                \"last_title\":\"\u00DAltima p\u00E1gina\",\r\n                \"prev\":\"Previa\",\r\n                \"prev_title\":\"P\u00E1gina previa\",\r\n                \"next\":\"Siguiente\",\r\n                \"next_title\":\"Siguiente p\u00E1gina\",\r\n            },\r\n  }";
 
     var table = new Tabulator("#UsuariosActivos", {
-        locale: true,
+        locale: "es-ES",
         langs: {
             "es-ES": {
                 "pagination": {

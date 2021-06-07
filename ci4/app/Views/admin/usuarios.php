@@ -20,8 +20,10 @@
                 login: document.getElementById("log" + id).value,
                 email: document.getElementById("ema" + id).value,
                 //nivel: document.getElementById("niv" + id).value,
+                
             };
-            //console.log(formData);
+            
+            console.log(formData);
             $.ajax({
                 type: "POST",
                 url: "/ListarUsuarios/guardar",

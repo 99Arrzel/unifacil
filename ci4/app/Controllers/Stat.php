@@ -6,6 +6,6 @@ class Stat extends BaseController
 {
     public function index()
     {
-        echo view(FCPATH.'stats/index');
+        echo view('\stats\index');
     }
 }

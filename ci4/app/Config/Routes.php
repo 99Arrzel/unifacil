@@ -107,7 +107,7 @@ $routes->get('/eliminarImagen/(:any)','Imagen::eliminarImagen/$1');//ruta para d
 $routes->get('/add_mail','Automail::index');//ruta imagen
 $routes->post('/crearMail','Automail::crearMail');
 
-$routes->get('/stats','Stat::index');//prueba XD
+$routes->get('/stat','Stat::index');//prueba XD
 
 $routes->get('/libro','Libro::index');//ruta libro
 $routes->post('/crearLibro','Libro::crearLibro');//ruta para insert imagen

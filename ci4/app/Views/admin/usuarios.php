@@ -5,6 +5,24 @@
 
 <script type="module">
 var datos = <?= json_encode($usuario)?>;
+
+function buttonFormatter(cell){
+    var cellEl = cell.getElement(); //get cell DOM element
+
+    // create elements
+    var edtiBut document.createElement("button");
+    var elimBut document.createElement("button");
+
+    //add event bindings
+    linkBut.addEventListener("click", function(e){
+        //do something when link button clicked
+    });
+
+    //add buttons to cell
+    cellEl.appendChild(edtiBut);
+    cellEl.appendChild(elimBut);
+}
+
 var table = new Tabulator("#UsuariosActivos", {
     data:datos, //assign data to table
     layout:"fitColumns",      //fit columns to width of table
@@ -26,6 +44,7 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Email", field:"EMAIL", editor:"input"},
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
+        {title:"buttons", formatter:buttonFormatter),
     ],
 
 

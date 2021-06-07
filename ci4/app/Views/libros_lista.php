@@ -6,7 +6,7 @@
                 <div class="table table-responsive">
                     <table class="table table-dark table-hover table-bordered table-striped table-sm">
                         <tr>
-                            <th>Nombre</th>
+                            <th>Nombrezz</th>
                             <th>Año</th>
                             <th>Edicion</th>
                             <th>Direccion</th>

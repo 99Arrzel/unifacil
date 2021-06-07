@@ -1,4 +1,4 @@
-<div id="UsuariosActivos"></div>
+<div id="UsuariosActivos" class="bg-dark"></div>
 <script type="module">
   import {
     Grid,

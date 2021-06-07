@@ -24,7 +24,7 @@ new gridjs.Grid({
         {
             id: 'IDUSER',
             name: 'ID',
-        
+            hidden: true,
 
         },
         {

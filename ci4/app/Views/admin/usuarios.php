@@ -306,11 +306,13 @@ endif;
     }).done(function (resultado) {
         if(myVal == "SUSCRITO")
         {
-            document.getElementById("sus" + id).value = "NO SUSCRITO";    
+            document.getElementById("sus" + id).value = "NO SUSCRITO";
+            document.getElementById("sus" + id).innerHTML = "NO SUSCRITO";
         }
         else
         {
             document.getElementById("sus" + id).value = "SUSCRITO";
+            document.getElementById("sus" + id).innerHTML = "SUSCRITO";
         }
         //$("#recargarTabla").load(window.location.href + " #recargarTabla"); //Reload altas
         //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas

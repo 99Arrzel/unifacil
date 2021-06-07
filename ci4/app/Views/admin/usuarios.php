@@ -126,7 +126,7 @@ endif;
                 id: 'SUSCRITO',
                 name: 'Suscrito',
                 formatter: (cell, row) => html(
-                    `<button class="btn btn-info" id="sus${row.cells[0].data}" onclick="suscrito(${row.cells[0].data})">${cell}</button>`)
+                    `<button class="btn btn-info" id="sus${row.cells[0].data}" value="" onclick="suscrito(${row.cells[0].data})">${cell}</button>`)
             },
             {
                 id: 'NIVEL',
@@ -277,9 +277,19 @@ endif;
         })
     }
     function suscrito(id) {
+
+    var myVal = document.getElementById("sus" + id).value;
+    if( myVal === "SUSCRITO")
+    {
+        myVal = "1";
+    }
+    else{
+        myVal = "0";
+    }
+
     var formData = {
         miid: id,
-        estadoSub: document.getElementById("sus" + id).value,
+        estadoSub: myVal,
     };
     console.log(formData);
     $.ajax({

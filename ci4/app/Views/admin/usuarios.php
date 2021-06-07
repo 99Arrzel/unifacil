@@ -6,13 +6,10 @@
 <script type="module">
 import {
     Grid,
-    h
-} from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
-
-import {
-    Grid,
+    h,
     html
 } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
+
 
 var datos = <?= json_encode($usuario)?>;
 //Cambio la variable 1 a suscrito y 0 a no suscrito

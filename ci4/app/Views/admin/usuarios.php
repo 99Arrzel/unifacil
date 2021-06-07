@@ -68,22 +68,20 @@
       limit: 10
     },
     resizable: true,
-    className: {
-      sty = {
-        table: {
-          border: "3px solid #ccc",
-        },
-        th: {
-          "background-color": "rgba(0, 0, 0, 0.1)",
-          color: "#fff",
-          "border-bottom": "3px solid #ccc",
-          "text-align": "center",
-        },
-        td: {
-          "text-align": "center",
-        },
-      };
-    }
+    style = {
+      table: {
+        border: "3px solid #ccc",
+      },
+      th: {
+        "background-color": "rgba(0, 0, 0, 0.1)",
+        color: "#fff",
+        "border-bottom": "3px solid #ccc",
+        "text-align": "center",
+      },
+      td: {
+        "text-align": "center",
+      },
+    };
 
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));

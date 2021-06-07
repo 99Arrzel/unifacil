@@ -3,7 +3,8 @@
 <script type="module">
   import {
     Grid,
-    html
+    html,
+    h
   } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
 </script>
 <script>

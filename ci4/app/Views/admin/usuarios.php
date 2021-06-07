@@ -33,7 +33,7 @@ new gridjs.Grid({
         formatter:(cell, row) => {
           return h('button',{
             className: 'btn btn-danger',
-            onClick:() => //codigoAcápara el onclick
+            onClick:() => alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}"`)
           }, 'Editar');
           }
         },

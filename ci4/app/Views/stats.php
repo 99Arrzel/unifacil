@@ -1,3 +1,3 @@
 <body>
-    <a href="stats/index">Reportes</a>
+    <a href="/stats/index.html">Reportes</a>
 </body>

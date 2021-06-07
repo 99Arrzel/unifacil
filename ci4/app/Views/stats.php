@@ -1,3 +1,3 @@
-<?php
-header("Location: stats/usage.png");
-?>
+<body>
+    <a href="stats/usage.png">Reportes</a>
+</body>

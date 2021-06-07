@@ -40,11 +40,12 @@ new gridjs.Grid({
             name: 'Suscrito'
         },
         {
+            id: 'IDUSER',
             name: 'Editar',
             formatter: (cell, row) => {
                 return h('button', {
                     className: 'btn btn-warning',
-                    onClick: () => alert(`Editing` + id:'IDUSER')
+                    onClick: () => alert(`Editing`)
                 }, 'Editar');
             },
             sort: {

@@ -76,7 +76,7 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <p>Fix: Nivel DropDown y Ajax al borrar (Cómo se recarga con Ajax????¿¿?¿?)</p>
-<div id="Activos" class="display">
+<div id="Activos" class="container-fluid">
     <table id="UsuariosActivos" class="col-12 table table-dark">
         <thead class="thead-dark">
             <tr>

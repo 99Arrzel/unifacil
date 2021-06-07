@@ -107,8 +107,8 @@
             {
                 name: 'Editar',
                 formatter: (cell, row) => html(
-                    `<button id="bttnEditar(${row.cells[0].data})" class="btn btn-warning" onclick="editar${row.cells[0].data}">Editar</button>`
-                    ),
+                    `<button id="bttnEditar(${row.cells[0].data})" class="btn btn-warning" onclick="editar(${row.cells[0].data})">Editar</button>`
+                ),
 
                 sort: {
                     enabled: false

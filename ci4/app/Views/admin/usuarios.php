@@ -69,7 +69,7 @@
     pagination: { limit: 10},
     resizable: true,
     className:{
-      table: 'table-dark'
+      table: 'table table-dark'
     }
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));

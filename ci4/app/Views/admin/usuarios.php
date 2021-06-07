@@ -82,7 +82,10 @@ endif;
 <script type="module">
 var datos = <?= json_encode($usuario)?>;
 var editIcon = function(cell, formatterParams){
-    return "<button class='btn btn-warning'></button>"
+    return "<button class='btn btn-warning'>Editar</button>"
+};
+var downIcon = function(cell, formatterParams){
+    return "<button class='btn btn-danger'>Dar de baja</button>"
 };
 
 var table = new Tabulator("#UsuariosActivos", {
@@ -106,6 +109,7 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Email", field:"EMAIL", editor:"input"},
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
+        {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
         {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
     ],
 

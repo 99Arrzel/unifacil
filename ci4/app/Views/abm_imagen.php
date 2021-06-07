@@ -15,7 +15,11 @@
                     <label>URL Imagen</label>
                     <input type="url" name="dirImagen" id="dirImagen" class="form-control" required>
                     <label>Estado</label>
-                    <input type="number" name="estado" id="estado" class="form-control" required>
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option selected>seleccione un estado</option>
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
+                    </select>
                     <br>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>

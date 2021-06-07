@@ -97,6 +97,7 @@ endif;
     var datos = <?= json_encode($usuario)?> ;
     $(document).ready(function() {
         $('#UsuariosActivos').DataTable({
+            RoweditMode($(this).parent());
             data: datos,
             columns: [{
                     data: 'NOMBRE'
@@ -130,9 +131,37 @@ endif;
                 },
             ]
         });
-        jQuery('#UsuariosActivos').on('click', 'tbody td:not(:first-child)', function (e) {
-        console.log('editor.inline');
-        editor.inline(this);
-    });
+        function RoweditMode(rowid) {
+            var prevRow;
+            var rowIndexVlaue = parseInt(rowid.attr("indexv"));
+            if (editIndexTable == -1) {
+                saveRowIntoArray(rowid);
+                rowid.attr("editState", "editState");
+                editIndexTable = rowid.rowIndex;
+                setEditStateValue(rowid, rowIndexVlaue + 2);
+            }
+            else {
+                prevRow = $("[editState=editState]");
+                prevRow.attr("editState", "");
+                rowid.attr("editState", "editState");
+                editIndexTable = rowIndexVlaue;
+                saveArrayIntoRow(prevRow);
+                saveRowIntoArray(rowid);
+                setEditStateValue(rowid, rowIndexVlaue + 2);
+            }
+        }
+        function saveRowIntoArray(cureentCells) {
+            $.each(ColumnData, function (index, element) {
+                if (element.Editable == true) {
+                    var htmlVal = $($(cureentCells).children('.' + element.Name)[0]).html();
+                    EditRowData[element.Name] = htmlVal;
+                }
+            });
+        }
+        function setEditStateValue(td1, indexRow) {
+            for (var k in EditRowData) {
+                $($(td1).children('.' + k)[0]).html('<input value="' + EditRowData[k] + '" class="userinput"  style="width: 99% " />');
+            }
+        }
     });
 </script>

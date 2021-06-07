@@ -35,9 +35,9 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
-        <?php foreach ($libros as $libro): ?>
         <div class='container' style='margin-top:3em;'>
             <div class='card-columns custom-columns'>
+                <?php foreach ($libros as $libro): ?>
                 <div class='card'>
                     <div class='card-body'>
                     <h5 class='card-title' align='center'><?= $libro->nombreLibro;?></h5>
@@ -50,10 +50,10 @@
                         <a href="<?= $libro->dirDoc;?>" class='btn btn-primary' style='align:center'>Leer</a>
                     </ul>
                 </div>
+                <?php endforeach; ?>
             </div>
             </div>
         </div>                    
-        <?php endforeach; ?>
 
     <?php else:?>
         <h1>No hay libros que mostrar, por favor contacte a soporte para informar el error</h1>

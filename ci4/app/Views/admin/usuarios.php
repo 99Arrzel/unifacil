@@ -44,7 +44,7 @@ new gridjs.Grid({
             formatter: (cell, row) => {
                 return h('button', {
                     className: 'btn btn-warning',
-                    onClick: () => alert(`Editing`)
+                    onClick: () => alert(`Editing` + id:'IDUSER')
                 }, 'Editar');
             },
             sort: {

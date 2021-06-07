@@ -1,5 +1,7 @@
 <?= json_encode($usuario)?>;
-
+<br>
+<p>XD</p>
+<br>
 <div id="wrapper"></div>
 
 <script>

@@ -205,7 +205,7 @@
                     setTimeout(() =>
                         resolve(datos));
                 })
-            },
+            };
             //$('#UsuariosActivos').trigger( 'reloadGrid' )
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {

@@ -1,12 +1,10 @@
-<?php echo json_encode($usuario); ?>;
-<br>
-<br>
-<br>
-<br>
-<?php echo json_encode($nivel); ?>;
-<br>
-<br>
-<br>
-<br>
-<br>
-<?php echo json_encode($usuarioBaja); ?>;
+<div id="wrapper"></div>
+
+<script>
+var datos = <?= json_encode($usuario);
+new gridjs.Grid({
+    data:datos,
+    columns: [ {data:'NOMBRE'},{data:'APELLIDO'}],
+    search: true,
+  }).render(document.getElementById("wrapper"));
+</script>

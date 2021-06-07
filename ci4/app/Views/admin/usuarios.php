@@ -31,5 +31,6 @@ new gridjs.Grid({
       ],
     search: true,
     data:datos,
+    sort:true,
   }).render(document.getElementById("wrapper"));
 </script>

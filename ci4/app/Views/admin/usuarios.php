@@ -30,7 +30,7 @@ new gridjs.Grid({
         {
             id: 'NOMBRE',
             name: 'Nombre',
-            formatter: (_, row,cell) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`)
+            formatter: (cell, _, row) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`)
         },
         {
             id: 'APELLIDO',

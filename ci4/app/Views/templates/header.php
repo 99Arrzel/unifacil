@@ -118,6 +118,7 @@
     echo '<a href="/imagen">Libro ABM</a>';
     echo '<a href="/autor">Autor ABM</a>';
     echo '<a href="/tag">TAG ABM</a>';
+    echo '<a href="/stats">Reporte</a>';
     echo '<a href="/examen">Examen ABM</a>';
 } elseif (session()->get('nivel') == 2) {
     echo '<a href="/imagen">Libro ABM</a>';

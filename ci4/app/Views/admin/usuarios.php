@@ -73,7 +73,7 @@ endif;
     <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
 </div>
 <br>
-<p>Fix: Suscripción, Nivel y Ajax al editar (Cómo se hace con Ajax????¿¿?¿?)</p>
+<p>Fix: Nivel DropDown y Ajax al borrar (Cómo se recarga con Ajax????¿¿?¿?)</p>
 <div id="UsuariosActivos" class="bg-dark"></div>
 
 <script type="module">

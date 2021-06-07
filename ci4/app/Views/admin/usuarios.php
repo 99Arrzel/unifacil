@@ -49,6 +49,9 @@
             className: 'btn btn-warning',
             onClick: () => alert(`Editing`)
           }, 'Editar');
+        },
+        sort: {
+        enabled: false
         }
       },
       {
@@ -58,6 +61,9 @@
             className: 'btn btn-danger',
             onClick: () => alert(`Editing`)
           }, 'Eliminar');
+        },
+        sort: {
+        enabled: false
         }
       },
     ],

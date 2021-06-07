@@ -28,15 +28,8 @@
             },
             {
                 id: 'NOMBRE',
-                name: 'mNombre',
-                hidden: true,
-            },
-            {
-                id: 'NOMBRE',
                 name: 'Nombre',
-                formatter: (_, row) => html(
-                    `<input id="nom${row.cells[0].data}" value="${row.cells[1].data}" DISABLED></input>`
-                    )
+                formatter: (cell, row) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`    )
             },
             {
                 id: 'APELLIDO',

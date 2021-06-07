@@ -102,7 +102,7 @@ function editar(id) {
                 id: 'SUSCRITO',
                 name: 'Suscrito',
                 formatter: (cell, row) => html(
-                    `<button onclick="sus${row.cells[0].data}" value="${cell}"></button>`)
+                    `<button onclick="sus${row.cells[0].data}" value="${cell}" ></button>`)
             },
             {
                 id: 'IDUSER',
@@ -110,7 +110,7 @@ function editar(id) {
                 formatter: (cell, row) => {
                     return h('button', {
                         className: 'btn btn-warning',
-                        onClick: () => editar(${cell})
+                        onClick: () => alert(`Editing${cell}`)
                     }, 'Editar');
                 },
                 sort: {

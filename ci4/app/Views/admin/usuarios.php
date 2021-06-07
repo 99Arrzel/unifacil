@@ -200,13 +200,8 @@
             },
             encode: true,
         }).done(function(resultado) {
-            data: () => {
-                return new Promise(resolve => {
-                    setTimeout(() =>
-                        resolve(datos));
-                })
-            };
-            //$('#UsuariosActivos').trigger( 'reloadGrid' )
+            
+            $('#UsuariosActivos').reload;
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {
                 swal("Usuario dado de baja");

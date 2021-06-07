@@ -74,9 +74,9 @@
         color: "#fff",
       },
       th: {
-        "background-color": "#21212C",
+        "background-color": "#cac8c8",
         color: "black",
-        "border-bottom": "3px solid #90E0EF",
+        "border-bottom": "3px solid #cac8c8",
         "text-align": "center",
       },
       td: {
@@ -85,7 +85,7 @@
         "text-align": "center",
       },
       footer: {
-        "background-color": "#21212C",
+        "background-color": "#cac8c8",
         color: "#fff",
       },
     },

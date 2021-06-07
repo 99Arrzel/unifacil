@@ -43,9 +43,9 @@
                      <h5 class='card-title text-white' align='center'><?= $libro->nombreLibro;?></h5>
                      <img src="<?=$libro->dirImagen;?>" class="card-img-top" alt="portada libro">
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong class="text-white">Autor(es):</strong><?= $libro->autores?></li>
-                        <li class="list-group-item"><strong class="text-white">Edición:</strong><?= $libro->edicion?></li>
-                        <li class="list-group-item"><strong class="text-white">AÑO:</strong><?= $libro->year ?></li>
+                        <li class="list-group-item"><strong class="text-dark">Autor(es):</strong><?= $libro->autores?></li>
+                        <li class="list-group-item"><strong class="text-dark">Edición:</strong><?= $libro->edicion?></li>
+                        <li class="list-group-item"><strong class="text-dark">AÑO:</strong><?= $libro->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1 text-white">#<span itemprop="keywords"><?= $libro->tags ?></span></a>
                         <a href="<?= $libro->dirDoc;?>" class='btn btn-light' style='align:center'>Leer</a>
                       </ul>

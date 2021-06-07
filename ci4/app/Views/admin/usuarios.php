@@ -88,7 +88,7 @@
         "background-color": "#48CAE4",
         color: "#fff",
       },
-    }
+    },
     language: {
     'search': {
       'placeholder': '🔍 Search...'

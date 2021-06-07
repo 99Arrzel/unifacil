@@ -74,12 +74,10 @@
             },
             {
                 name: 'Eliminar',
-                formatter: (cell, row) => {
-                    return h('button', {
-                        className: 'btn btn-danger',
-                        onClick: () => alert(`Editing`)
-                    }, 'Eliminar');
-                },
+                formatter: (cell, row) => html(
+                    `<button id="bttnEliminar${row.cells[0].data}" class="btn btn-alert" onclick="editar(${row.cells[0].data})">Editar</button>`
+                ),
+
                 sort: {
                     enabled: false
                 }
@@ -179,4 +177,29 @@
             document.getElementById("niv" + id).disabled = true;
         }
     }
+    function eliminar(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/ListarUsuarios/eliminar",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        $("#UsuariosActivos").load(window.location.href + " #UsuariosActivos"); //Reload altas
+        //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
+        if (resultado.baja == true) {
+            swal("Usuario dado de baja");
+        } else {
+            swal("Fallo al dar de baja");
+        }
+    })
+}
 </script>

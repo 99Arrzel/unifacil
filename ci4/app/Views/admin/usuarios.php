@@ -1,3 +1,4 @@
+<?= json_encode($usuario)?>
 <br>
 <div class="container-fluid">
     <div id="UsuariosActivos" class="bg-dark"></div>

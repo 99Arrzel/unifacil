@@ -194,7 +194,7 @@
             },
             encode: true,
         }).done(function(resultado) {
-            $("#UsuariosActivos").reload; //Reload altas
+            location.reload(); //Reload altas
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {
                 swal("Usuario dado de baja");

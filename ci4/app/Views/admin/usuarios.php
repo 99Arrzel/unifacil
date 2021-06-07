@@ -1,16 +1,15 @@
 <?= json_encode($usuario)?>
 <div id="wrapper"></div>
+
 <script type="module">
   import {
     Grid,
     h
   } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
-</script>
-<script>
-var datos = <?= json_encode($usuario)?>;
-new gridjs.Grid({
-    columns:[
-      {
+
+  var datos = <?= json_encode($usuario)?> ;
+  new gridjs.Grid({
+    columns: [{
         id: 'NOMBRE',
         name: 'Nombre'
       },
@@ -36,16 +35,16 @@ new gridjs.Grid({
       },
       {
         name: 'Editar',
-        formatter:(cell, row) => {
-          return h('button',{
+        formatter: (cell, row) => {
+          return h('button', {
             className: 'btn btn-danger',
-            onClick:() => alert(`Editing`)
+            onClick: () => alert(`Editing`)
           }, 'Editar');
         }
       },
-      ],
+    ],
     search: true,
-    data:datos,
-    sort:true,
+    data: datos,
+    sort: true,
   }).render(document.getElementById("wrapper"));
 </script>

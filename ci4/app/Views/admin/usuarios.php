@@ -91,13 +91,15 @@
     },
     language: {
     'search': {
-      'placeholder': '🔍 Search...'
+      'placeholder': 'Buscar algo...'
     },
     'pagination': {
       'previous': '⬅️',
       'next': '➡️',
-      'showing': '😃 Displaying',
-      'results': () => 'Records'
+      'showing': '😃 Mostrando',
+      'results': () => 'Resultados',
+      'of': 'de',
+      'to': 'de'
     }
   }
     //Estilos

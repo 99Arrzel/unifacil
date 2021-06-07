@@ -28,13 +28,10 @@
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Sweet Alert -->
-    <!-- bootstrap tables -->
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-    <script src="assets/js/IdiomaBT.js"></script>
-    
-    <!--<script src="assets/js/multiSortBT.js"></script>-->
-    <!-- bootstrap tables -->
+    <!-- GridJS  -->
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <!-- GridJS  -->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";

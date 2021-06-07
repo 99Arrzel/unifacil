@@ -27,7 +27,6 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Email", field:"EMAIL", editor:"input"},
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
-        {title:"buttons", formatter:buttonFormatter),
     ],
 
 

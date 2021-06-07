@@ -49,7 +49,7 @@
             document.getElementById("ape" + id).disabled = false;
             document.getElementById("log" + id).disabled = false;
             document.getElementById("ema" + id).disabled = false;
-            //document.getElementById("niv" + id).disabled = false;
+            document.getElementById("niv" + id).disabled = false;
         } else {
             document.getElementById("bttnEditar" + id).innerHTML = "Editar";
             document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
@@ -57,7 +57,7 @@
             document.getElementById("ape" + id).disabled = true;
             document.getElementById("log" + id).disabled = true;
             document.getElementById("ema" + id).disabled = true;
-            //document.getElementById("niv" + id).disabled = true;
+            document.getElementById("niv" + id).disabled = true;
         }
     }
     var datos = <?= json_encode($usuario)?> ;
@@ -109,7 +109,7 @@
                 id: 'NIVEL',
                 name: 'Nivel',
                 formatter: (cell, row) => html(
-                    `<button class="btn btn-info" onclick="niv${row.cells[0].data}"> ${cell}</button>`)
+                    `<input id="niv${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 name: 'Editar',

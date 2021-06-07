@@ -1,7 +1,9 @@
 <?= json_encode($usuario)?>
 <div id="wrapper"></div>
 <script>
-import { Grid, h } from "gridjs";
+import { Grid, html } from "https://unpkg.com/gridjs/dist/gridjs.production.min.js";
+
+
 var datos = <?= json_encode($usuario)?>;
 new gridjs.Grid({
     columns:[

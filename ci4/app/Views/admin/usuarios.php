@@ -114,7 +114,7 @@
             {
                 name: 'Editar',
                 formatter: (cell, row) => html(
-                    `<select id="bttnEditar${row.cells[0].data}" class="btn btn-warning" onclick="editar(${row.cells[0].data})">Editar</input>`
+                    `<input id="bttnEditar${row.cells[0].data}" class="btn btn-warning" onclick="editar(${row.cells[0].data})">Editar</input>`
                 ),
 
                 sort: {

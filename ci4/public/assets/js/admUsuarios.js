@@ -2,6 +2,7 @@ $(document).ready(mostrar());
 $('#tablasVistas').bootstrapTable();
 $('#tablasNoVistas').bootstrapTable();
 $('#insertar').bootstrapTable();
+//DAVID SOS MARICON PASAME DE EDA XD
 function suscrito(id) {
     var formData = {
         miid: id,

@@ -12,7 +12,7 @@ class ModeloAutor extends Model
 
     protected $table = 'tblAutor';
     protected $primaryKey = 'idtblAutor';
-    protected $allowedFields = ['nombreAutor'];    
+    protected $allowedFields = ['nombreAutor','estado'];    
     
     public function insertarAutor($datos)
     {

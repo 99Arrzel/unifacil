@@ -43,7 +43,8 @@ class Autor extends BaseController
         //print_r($_POST); se fija si los datos llegan
         $datos = [
             "idtblAutor"=>$_POST['idtblAutor'],//el update es lo mismo que el insert pero hay que adjuntar el ID a modificar
-            "nombreAutor"=>$_POST['nombreAutor']//nombre del campo de la base=> nombre o id del input
+            "nombreAutor"=>$_POST['nombreAutor'],
+            "estado"=>$_POST['estado']//nombre del campo de la base=> nombre o id del input
         ];
         $idtblAutor=$_POST['idtblAutor'];//id para la consulta
         $autor = new ModeloAutor(); // nuevo objeto autor

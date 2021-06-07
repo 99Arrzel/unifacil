@@ -19,8 +19,8 @@
                     <input type="text" name="dirDoc" id="dirDoc" class="form-control">
                     <!--<label>Estado</label> -->
                     <input type="text" name="estado" id="estado" class="form-control" hidden="" value ="0">
-                    <label>Imagen</label>
-                    <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-select-lg mb-3">
+                    <label>Imagen</label> <br>
+                    <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-control">
                         <option selected>seleccione una imagen</option>
                         <?php foreach ($imagen as $imagenData): ?>
                         <option value="<?= $imagenData['IDimagen']?>"><?=$imagenData['nombreImagen'];?></option>

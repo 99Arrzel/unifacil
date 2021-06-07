@@ -20,12 +20,17 @@ for (var i = 0; i < datos.length; i++) {
     }
 }
 new gridjs.Grid({
-    columns: [{
-            
+    columns: [
+        {
+            id: 'IDUSER',
+            name: 'ID',
+        
+
+        },
+        {
             id: 'NOMBRE',
             name: 'Nombre',
-            formatter: (cell) => html(`<input id="nom"  value="${'IDUSER'}" DISABLED></input>`)
-            
+            formatter: (cell) => html(`<input id="nom"  value="${cell}" DISABLED></input>`)
         },
         {
             id: 'APELLIDO',

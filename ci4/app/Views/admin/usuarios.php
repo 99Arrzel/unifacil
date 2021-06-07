@@ -35,7 +35,7 @@
                 encode: true,
             }).done(function(resultado) {
                 if (resultado.exists == true) {
-                    swal("Guardado con exito");
+                    swal("Guardado con sssexito");
                 } else {
                     swal("Error al guardar");
                 }

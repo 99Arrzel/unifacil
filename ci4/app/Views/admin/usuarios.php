@@ -121,8 +121,12 @@ endif;
                 },
                 {
                     data: null,
-                    defaultContent: "<button type='button' class='btn btn-info'>Seleccionar</button>"
-                }
+                    defaultContent: "<button type='button' class='btn btn-info'>Editar</button>"
+                },
+                {
+                    data: null,
+                    defaultContent: "<button type='button' class='btn btn-info'>Eliminar</button>"
+                },
             ]
         });
     });

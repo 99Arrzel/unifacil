@@ -6,7 +6,7 @@ class Stat extends BaseController
 {
     public function index()
     {
-        echo view('header');
+        echo view('templates/header');
         return view('stats');
     }
 }

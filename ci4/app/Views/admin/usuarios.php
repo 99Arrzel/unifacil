@@ -67,7 +67,7 @@
     resizable: true,
     //Estilos
     className: {
-      table: 'table table-dark',
+      table: 'table-dark',
     }
   }).render(document.getElementById("UsuariosActivos"));
 </script>

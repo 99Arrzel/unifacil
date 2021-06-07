@@ -22,9 +22,9 @@ for (var i = 0; i < datos.length; i++) {
 new gridjs.Grid({
     columns: [{
             
-            id: 'NOMBRE',
+            data:(row) => row.NOMBRE,
             name: 'Nombre',
-            formatter: (cell) => html(`<input id="nom${data: (row) => row.IDUSER} "  value="${cell}" DISABLED></input>`)
+            formatter: (cell) => html(`<input id="nom" Xvalue="${cell}" DISABLED></input>`)
             
         },
         {

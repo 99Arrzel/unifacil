@@ -1,3 +1,3 @@
 <body>
-    <a href="stats/usage.png">Reportes</a>
+    <a href="stats/usage">Reportes</a>
 </body>

@@ -29,7 +29,7 @@
                 dataType: "json",
                 statusCode: {
                     500: function() {
-                        alert("Error 500, No pongas mismo correo o login.");
+                        alert(formData);
                     }
                 },
                 encode: true,

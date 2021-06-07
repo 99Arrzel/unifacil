@@ -81,8 +81,7 @@
       td: {
         "text-align": "center",
       },
-    };
-
+    }
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));
 </script>

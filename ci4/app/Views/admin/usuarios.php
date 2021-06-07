@@ -106,7 +106,7 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Email", field:"EMAIL", editor:"input"},
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
-        {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")},
+        {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
     ],
 
 

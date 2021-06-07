@@ -194,7 +194,7 @@
             },
             encode: true,
         }).done(function(resultado) {
-            location.reload(); //Reload altas
+            $('#UsuariosActivos').trigger( 'reloadGrid' )
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {
                 swal("Usuario dado de baja");

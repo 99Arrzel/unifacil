@@ -88,7 +88,7 @@
         data: () => {
             return new Promise(resolve => {
                 setTimeout(() =>
-                    resolve(datos), 1000);
+                    resolve(datos));
             })
         },
         sort: true,
@@ -200,6 +200,12 @@
             },
             encode: true,
         }).done(function(resultado) {
+            data: () => {
+                return new Promise(resolve => {
+                    setTimeout(() =>
+                        resolve(datos));
+                })
+            },
             //$('#UsuariosActivos').trigger( 'reloadGrid' )
             //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
             if (resultado.baja == true) {

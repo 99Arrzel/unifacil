@@ -304,6 +304,7 @@ endif;
         },
         encode: true,
     }).done(function (resultado) {
+        //En vez de Ajax, solo cambio el botón
         if(document.getElementById("sus" + id).innerHTML == "SUSCRITO")
         {
             document.getElementById("sus" + id).value = "NO SUSCRITO";
@@ -321,7 +322,6 @@ endif;
         } else {
             swal("Fallo al cambiar");
         }
-        console . log(formData);
     })
 }
 </script>

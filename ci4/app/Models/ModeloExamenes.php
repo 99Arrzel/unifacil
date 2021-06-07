@@ -9,9 +9,7 @@ class ModeloExamenes extends Model
     public function getExamenes()
     {
         $db = \Config\Database::connect();
-        $query = $db->query('SELECT e.nombreExamen,e.year,e.paralelo,e.dirDoc,a.nombreAutor,i.dirImagen
-        FROM tblExamen as e,tblImagen as i, tblAutor as a
-        WHERE a.idtblAutor=tblAutor_idtblAutor AND i.idtblImagen=tblImagen_idtblImagen');
+        $query = $db->query('SELECT * FROM EXAMENES_AUTORES_TAGS');
         $result = $query->getResult();
         if(count($result)>0)
         {

@@ -68,7 +68,7 @@
       limit: 10
     },
     resizable: true,
-    style = {
+    style: {
       table: {
         border: "3px solid #ccc",
       },

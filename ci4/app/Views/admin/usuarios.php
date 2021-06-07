@@ -74,7 +74,7 @@
         color: "#fff",
       },
       th: {
-        "background-color": "#48CAE4",
+        "background-color": "#D5E9CF",
         color: "black",
         "border-bottom": "3px solid #90E0EF",
         "text-align": "center",

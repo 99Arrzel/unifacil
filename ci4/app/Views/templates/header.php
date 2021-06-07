@@ -28,16 +28,10 @@
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Sweet Alert -->
-    <!-- DatatablesCDN  -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/b-print-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.8/sl-1.3.3/datatables.min.css" />
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.25/af-2.3.7/b-1.7.1/b-html5-1.7.1/b-print-1.7.1/date-1.1.0/fh-3.1.9/r-2.2.8/sl-1.3.3/datatables.min.js">
-    </script>
-    <!-- DatatablesCDN  -->
+    <!-- TABULATOR  -->
+    <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
+    <!-- TABULATOR  -->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -123,7 +117,6 @@
     echo '<a href="/imagen">Libro ABM</a>';
     echo '<a href="/autor">Autor ABM</a>';
     echo '<a href="/tag">TAG ABM</a>';
-    echo '<a href="/stat">Reporte</a>';
     echo '<a href="/examen">Examen ABM</a>';
 } elseif (session()->get('nivel') == 2) {
     echo '<a href="/imagen">Libro ABM</a>';

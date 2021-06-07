@@ -13,7 +13,7 @@
                      <img src="<?=$examen->dirImagen;?>" class="card-img-top" alt="portada examen">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong class="text-dark">Autor(es):</strong><?= $examen->nombreAutor?></li>
-                        <li class="list-group-item"><strong class="text-dark">Edición:</strong><?= $examen->paralelo?></li>
+                        <li class="list-group-item"><strong class="text-dark">Paralelo:</strong><?= $examen->paralelo?></li>
                         <li class="list-group-item"><strong class="text-dark">AÑO:</strong><?= $examen->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1 text-white">#<span itemprop="keywords"><?= $examen->tags ?></span></a>
                         <a href="<?= $examen->dirDoc;?>" class='btn btn-light' style='align:center'>Leer</a>

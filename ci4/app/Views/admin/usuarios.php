@@ -24,24 +24,28 @@ new gridjs.Grid({
     columns: [{
             id: 'NOMBRE',
             name: 'Nombre',
-            formatter: (cell) => html(`<b>${cell}</b>`)
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
             
         },
         {
             id: 'APELLIDO',
-            name: 'Apellido'
+            name: 'Apellido',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'LOGIN',
-            name: 'Login'
+            name: 'Login',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'EMAIL',
-            name: 'Email'
+            name: 'Email',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'SUSCRITO',
-            name: 'Suscrito'
+            name: 'Suscrito',
+            formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
         },
         {
             id: 'IDUSER',
@@ -78,13 +82,13 @@ new gridjs.Grid({
     resizable: true,
     style: {
         table: {
-            border: "3px solid #FFFFFF",
+            border: "3px solid #99ff99",
             color: "#fff",
         },
         th: {
-            "background-color": "#FFFFFF",
+            "background-color": "#99ff99",
             color: "black",
-            "border-bottom": "3px solid #FFFFFF",
+            "border-bottom": "3px solid #99ff99",
             "text-align": "center",
         },
         td: {
@@ -93,7 +97,7 @@ new gridjs.Grid({
             "text-align": "center",
         },
         footer: {
-            "background-color": "#FFFFFF",
+            "background-color": "#99ff99",
             color: "#fff",
         },
     },

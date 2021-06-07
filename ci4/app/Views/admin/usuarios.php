@@ -91,12 +91,12 @@
     },
     language: {
     'search': {
-      'placeholder': 'Buscar algo...'
+      'placeholder': 'Buscar algo... 🔍'
     },
     'pagination': {
       'previous': '⬅️',
       'next': '➡️',
-      'showing': '😃 Mostrando',
+      'showing': 'Mostrando',
       'results': () => 'Resultados',
       'of': 'de',
       'to': 'de'

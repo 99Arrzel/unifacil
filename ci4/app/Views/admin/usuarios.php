@@ -276,4 +276,32 @@ endif;
             }
         })
     }
+    function suscrito(id) {
+    var formData = {
+        miid: id,
+        estadoSub: document.getElementById("sus" + id).value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/ListarUsuarios/suscrito",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        location.reload();
+        //$("#recargarTabla").load(window.location.href + " #recargarTabla"); //Reload altas
+        //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
+        if (resultado.baja == true) {
+            swal("Cambio realizado con exito");
+        } else {
+            swal("Fallo al cambiar");
+        }
+    })
+}
 </script>

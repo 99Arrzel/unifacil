@@ -126,7 +126,7 @@ endif;
                 id: 'SUSCRITO',
                 name: 'Suscrito',
                 formatter: (cell, row) => html(
-                    `<button class="btn btn-info" id="sus${row.cells[0].data}" onclick="suscrito(${row.cells[0].data})"> ${cell})</button>`)
+                    `<button class="btn btn-info" id="sus${row.cells[0].data}" onclick="suscrito(${row.cells[0].data})"> ${cell}</button>`)
             },
             {
                 id: 'NIVEL',

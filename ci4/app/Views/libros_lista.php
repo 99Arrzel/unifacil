@@ -6,10 +6,12 @@
                 <div class="table table-responsive">
                     <table class="table table-dark table-hover table-bordered table-striped table-sm">
                         <tr>
-                            <th>Nombrezzzzzzzzzzz</th>
+                            <th>Nombre</th>
                             <th>Año</th>
                             <th>Edicion</th>
                             <th>Direccion</th>
+                            <th>Autor(es)</th>
+                            <th>Tag(s)</th>
                             <th>Portada</th>
                         </tr>
                          <?php foreach ($libros as $libro):?>
@@ -19,6 +21,8 @@
                             <td><?= $libro->year;?></td>
                             <td><?= $libro->edicion;?></td>
                             <td> <a href="<?= $libro->dirDoc;?>">Enlace</a></td>
+                            <td><?= $libro->autores ?></td>
+                            <td><?= $libro->tags ?></td>
                             <td class="w-25"><img src="<?= $libro->dirImagen;?>" class="img-fluid" class="mx-auto d-block"></td>
                         </tr>
                         </tbody>

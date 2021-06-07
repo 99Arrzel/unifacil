@@ -9,9 +9,7 @@ class ModeloLibros extends Model
     public function getLibros()
     {
         $db = \Config\Database::connect();
-        $query = $db->query('SELECT l.nombreLibro,l.year,l.edicion,l.dirDoc,i.dirImagen
-        FROM tblLibro as l, tblImagen as i
-        WHERE l.tblImagen_idtblImagen = i.idtblImagen ');
+        $query = $db->query('SELECT * FROM LIBROS_AUTORES_TAGS');
         $result = $query->getResult();
         if(count($result)>0)
         {

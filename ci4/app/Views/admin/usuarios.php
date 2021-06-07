@@ -304,7 +304,7 @@ endif;
         },
         encode: true,
     }).done(function (resultado) {
-        location.reload();
+        //location.reload();
         //$("#recargarTabla").load(window.location.href + " #recargarTabla"); //Reload altas
         //$("#recargarTablaBaja").load(window.location.href + " #recargarTablaBaja"); //Reload bajas
         if (resultado.baja == true) {

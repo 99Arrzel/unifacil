@@ -9,39 +9,39 @@
         h,
         html
     } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
-//=======================
-function editar(id) {
-    if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
-        var formData = {
-            miid: id,
-            nombre: document.getElementById("nom" + id).value,
-            apellido: document.getElementById("ape" + id).value,
-            login: document.getElementById("log" + id).value,
-            email: document.getElementById("ema" + id).value,
-            nivel: document.getElementById("niv" + id).value,
-        };
-        //console.log(formData);
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/guardar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function () {
-                    alert("Error 500, No pongas mismo correo o login.");
+    //=======================
+    function editar(id) {
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
+            var formData = {
+                miid: id,
+                nombre: document.getElementById("nom" + id).value,
+                apellido: document.getElementById("ape" + id).value,
+                login: document.getElementById("log" + id).value,
+                email: document.getElementById("ema" + id).value,
+                nivel: document.getElementById("niv" + id).value,
+            };
+            //console.log(formData);
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/guardar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, No pongas mismo correo o login.");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                if (resultado.exists == true) {
+                    swal("Guardado con exito");
+                } else {
+                    swal("Error al guardar");
                 }
-            },
-            encode: true,
-        }).done(function (resultado) {
-            if (resultado.exists == true) {
-                swal("Guardado con exito");
-            } else {
-                swal("Error al guardar");
-            }
-        });
-        //event.preventDefault(); no es type submit
-    }
-    if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
+            });
+            //event.preventDefault(); no es type submit
+        }
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
             document.getElementById("bttnEditar" + id).innerHTML = "Guardar";
             document.getElementById("bttnEditar" + id).className = "btn btn-success form-control";
             document.getElementById("nom" + id).disabled = false;
@@ -49,16 +49,16 @@ function editar(id) {
             document.getElementById("log" + id).disabled = false;
             document.getElementById("ema" + id).disabled = false;
             //document.getElementById("niv" + id).disabled = false;
-    } else {
-        document.getElementById("bttnEditar" + id).innerHTML = "Editar";
-        document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
-        document.getElementById("nom" + id).disabled = true;
-        document.getElementById("ape" + id).disabled = true;
-        document.getElementById("log" + id).disabled = true;
-        document.getElementById("ema" + id).disabled = true;
-        //document.getElementById("niv" + id).disabled = true;
+        } else {
+            document.getElementById("bttnEditar" + id).innerHTML = "Editar";
+            document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
+            document.getElementById("nom" + id).disabled = true;
+            document.getElementById("ape" + id).disabled = true;
+            document.getElementById("log" + id).disabled = true;
+            document.getElementById("ema" + id).disabled = true;
+            //document.getElementById("niv" + id).disabled = true;
+        }
     }
-}
     var datos = <?= json_encode($usuario)?> ;
     //Cambio la variable 1 a suscrito y 0 a no suscrito
     for (var i = 0; i < datos.length; i++) {
@@ -102,7 +102,7 @@ function editar(id) {
                 id: 'SUSCRITO',
                 name: 'Suscrito',
                 formatter: (cell, row) => html(
-                    `<button onclick="sus${row.cells[0].data}" value="${cell}" ></button>`)
+                    `<button class="btn btn-info" onclick="sus${row.cells[0].data}"> ${cell}</button>`)
             },
             {
                 id: 'IDUSER',
@@ -175,38 +175,38 @@ function editar(id) {
     }).render(document.getElementById("UsuariosActivos"));
 </script>
 <script>
-function editar(id) {
-    if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
-        var formData = {
-            miid: id,
-            nombre: document.getElementById("nom" + id).value,
-            apellido: document.getElementById("ape" + id).value,
-            login: document.getElementById("log" + id).value,
-            email: document.getElementById("ema" + id).value,
-            nivel: document.getElementById("niv" + id).value,
-        };
-        //console.log(formData);
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/guardar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function () {
-                    alert("Error 500, No pongas mismo correo o login.");
+    function editar(id) {
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Guardar") {
+            var formData = {
+                miid: id,
+                nombre: document.getElementById("nom" + id).value,
+                apellido: document.getElementById("ape" + id).value,
+                login: document.getElementById("log" + id).value,
+                email: document.getElementById("ema" + id).value,
+                nivel: document.getElementById("niv" + id).value,
+            };
+            //console.log(formData);
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/guardar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, No pongas mismo correo o login.");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                if (resultado.exists == true) {
+                    swal("Guardado con exito");
+                } else {
+                    swal("Error al guardar");
                 }
-            },
-            encode: true,
-        }).done(function (resultado) {
-            if (resultado.exists == true) {
-                swal("Guardado con exito");
-            } else {
-                swal("Error al guardar");
-            }
-        });
-        //event.preventDefault(); no es type submit
-    }
-    if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
+            });
+            //event.preventDefault(); no es type submit
+        }
+        if (document.getElementById("bttnEditar" + id).innerHTML == "Editar") {
             document.getElementById("bttnEditar" + id).innerHTML = "Guardar";
             document.getElementById("bttnEditar" + id).className = "btn btn-success form-control";
             document.getElementById("nom" + id).disabled = false;
@@ -214,14 +214,14 @@ function editar(id) {
             document.getElementById("log" + id).disabled = false;
             document.getElementById("ema" + id).disabled = false;
             document.getElementById("niv" + id).disabled = false;
-    } else {
-        document.getElementById("bttnEditar" + id).innerHTML = "Editar";
-        document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
-        document.getElementById("nom" + id).disabled = true;
-        document.getElementById("ape" + id).disabled = true;
-        document.getElementById("log" + id).disabled = true;
-        document.getElementById("ema" + id).disabled = true;
-        document.getElementById("niv" + id).disabled = true;
+        } else {
+            document.getElementById("bttnEditar" + id).innerHTML = "Editar";
+            document.getElementById("bttnEditar" + id).className = "btn btn-warning form-control";
+            document.getElementById("nom" + id).disabled = true;
+            document.getElementById("ape" + id).disabled = true;
+            document.getElementById("log" + id).disabled = true;
+            document.getElementById("ema" + id).disabled = true;
+            document.getElementById("niv" + id).disabled = true;
+        }
     }
-}
 </script>

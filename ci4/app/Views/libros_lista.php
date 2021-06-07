@@ -17,16 +17,16 @@
                          <?php //foreach ($libros as $libro):?>
                         <tbody>
                         <tr>
-                            <td><?= //$libro->nombreLibro;?></td>
-                            <td><?= //$libro->year;?></td>
-                            <td><?= //$libro->edicion;?></td>
-                            <td> <a href="<?= //$libro->dirDoc;?>">Enlace</a></td>
-                            <td><?= //$libro->autores ?></td>
-                            <td><?= //$libro->tags ?></td>
-                            <td class="w-25"><img src="<?= //$libro->dirImagen;?>" class="img-fluid" class="mx-auto d-block"></td>
+                            <td><//$libro->nombreLibro;</td>
+                            <td> //$libro->year;</td>
+                            <td><//$libro->edicion;</td>
+                            <td> <a href="//$libro->dirDoc;">Enlace</a></td>
+                            <td><//$libro->autores </td>
+                            <td> //$libro->tags</td>
+                            <td class="w-25"><img src="< //$libro->dirImagen;" class="img-fluid" class="mx-auto d-block"></td>
                         </tr>
                         </tbody>
-                        <?php// endforeach; ?>    
+                        // endforeach;     
                     </table>
                 </div>
             </div>

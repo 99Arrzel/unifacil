@@ -29,8 +29,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Sweet Alert -->
     <!-- GridJS  -->
-    <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <!-- GridJS  -->
     <script>
         function openNav() {

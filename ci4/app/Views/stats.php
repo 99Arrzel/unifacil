@@ -1,3 +1,3 @@
 <body>
-    <a href="/stats/index.html">Reportes</a>
+    <a href="BASEPATH/stats/index.html">Reportes</a>
 </body>

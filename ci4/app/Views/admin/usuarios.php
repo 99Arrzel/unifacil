@@ -85,7 +85,8 @@ var editIcon = function(cell, formatterParams){
     return "<button class='btn btn-warning'>Editar</button>"
 };
 var downIcon = function(cell, formatterParams){
-    return "<button id="+cell+"class='btn btn-danger'>Dar de baja</button>"
+    var valor= cell.getValue();
+    return "<button id="+valor+"class='btn btn-danger'>Dar de baja</button>"
 };
 
 var table = new Tabulator("#UsuariosActivos", {
@@ -110,7 +111,7 @@ var table = new Tabulator("#UsuariosActivos", {
         {title:"Nivel", field:"NIVEL", editor:"select", editorParams:{values:["Admin", "Publisher", "Usuario"]}},
         {title:"Suscrito", field:"SUSCRITO",  formatter:"tickCross", sorter:"boolean", editor:true},
         {formatter:editIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
-        {field: "IDUSER", formatter:downIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
+        {title:"Eliminar", field: "IDUSER", formatter:downIcon, hozAlign:"center", cellClick:function(e, cell){alert("XD")}},
     ],
 
 

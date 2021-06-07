@@ -31,7 +31,6 @@
     <!-- TABULATOR  -->
     <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
-    <link href="https://proyecto3.tk/assets/css/tabulator_bootstrap4.min.css" rel="stylesheet">
     <!-- TABULATOR  -->
     <script>
         function openNav() {

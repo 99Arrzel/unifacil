@@ -12,7 +12,11 @@
                     <label>Tag</label>
                     <input type="text" name="nombreTag" id="nombreTag" class="form-control">
                     <label>Estado</label>
-                    <input type="text" name="estado" id="estado" class="form-control">
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option selected>seleccione un estado</option>
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
+                    </select>
                     <br>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>

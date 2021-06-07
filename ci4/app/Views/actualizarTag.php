@@ -23,6 +23,12 @@
                     <label for="nombreTag">Tag</label>
                     <input type="text" name="nombreTag" id="nombreTag" class="form-control"
                         value="<?php echo $nombreTag ?>">
+                    <label for="estado">Estado</label>    
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option selected>seleccione un estado</option>
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
+                    </select>
                     <br>
                     <button class="btn btn-warning">Guardar</button>
                 </form>

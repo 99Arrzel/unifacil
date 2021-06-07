@@ -42,6 +42,5 @@ new gridjs.Grid({
     data:datos,
     sort:true,
     pagination:true,
-    resizable: true,
   }).render(document.getElementById("wrapper"));
 </script>

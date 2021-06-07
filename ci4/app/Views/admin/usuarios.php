@@ -1,3 +1,4 @@
+<br>
 <div id="UsuariosActivos" class="bg-dark"></div>
 <script type="module">
   import {
@@ -66,8 +67,5 @@
     pagination: { limit: 10},
     resizable: true,
     //Estilos
-    className: {
-      table: 'table-dark',
-    }
   }).render(document.getElementById("UsuariosActivos"));
 </script>

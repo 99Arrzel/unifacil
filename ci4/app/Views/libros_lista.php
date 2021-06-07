@@ -38,7 +38,7 @@
         <div class='container' style='margin-top:3em;'>
             <div class='card-columns custom-columns'>
             <?php foreach ($libros as $libro): ?>
-                <div class='card'>
+                <div class='card bg-dark'>
                     <div class='card-body'>
                      <h5 class='card-title' align='center'><?= $libro->nombreLibro;?></h5>
                      <img src="<?=$libro->dirImagen;?>" class="card-img-top" alt="portada libro">

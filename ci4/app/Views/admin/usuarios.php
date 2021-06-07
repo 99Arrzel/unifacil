@@ -130,5 +130,9 @@ endif;
                 },
             ]
         });
+        jQuery('#UsuariosActivos').on('click', 'tbody td:not(:first-child)', function (e) {
+        console.log('editor.inline');
+        editor.inline(this);
+    });
     });
 </script>

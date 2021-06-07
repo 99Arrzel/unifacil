@@ -82,13 +82,13 @@ new gridjs.Grid({
     resizable: true,
     style: {
         table: {
-            border: "3px solid #FFFFFF",
+            border: "3px solid #99ff99",
             color: "#fff",
         },
         th: {
-            "background-color": "#FFFFFF",
+            "background-color": "#99ff99",
             color: "black",
-            "border-bottom": "3px solid #FFFFFF",
+            "border-bottom": "3px solid #99ff99",
             "text-align": "center",
         },
         td: {
@@ -97,7 +97,7 @@ new gridjs.Grid({
             "text-align": "center",
         },
         footer: {
-            "background-color": "#FFFFFF",
+            "background-color": "#99ff99",
             color: "#fff",
         },
     },

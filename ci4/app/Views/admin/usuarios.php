@@ -22,6 +22,7 @@ new gridjs.Grid({
     columns: [{
             id: 'NOMBRE',
             name: 'Nombre',
+            formatter: (cell) => html(`<b>${cell}</b>`)
             
         },
         {

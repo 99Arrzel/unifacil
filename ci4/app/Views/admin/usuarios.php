@@ -1,6 +1,4 @@
-<?= json_encode($usuario)?>
 <div id="UsuariosActivos"></div>
-
 <script type="module">
   import {
     Grid,
@@ -65,8 +63,11 @@
     search: true,
     data: datos,
     sort: true,
-    pagination: true,
+    pagination: { limit: 10},
     resizable: true,
-    
+    //Estilos
+    className: {
+      table: 'table table-dark',
+    }
   }).render(document.getElementById("UsuariosActivos"));
 </script>

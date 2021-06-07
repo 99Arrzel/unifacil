@@ -70,16 +70,23 @@
     resizable: true,
     style: {
       table: {
-        border: "3px solid #ccc",
+        border: "3px solid #90E0EF",
+        color: "#fff",
       },
       th: {
-        "background-color": "rgba(0, 0, 0, 0.1)",
-        color: "#fff",
-        "border-bottom": "3px solid #ccc",
+        "background-color": "#48CAE4",
+        color: "black",
+        "border-bottom": "3px solid #90E0EF",
         "text-align": "center",
       },
       td: {
+        "background-color": "#21212c",
+        color: "#fff",
         "text-align": "center",
+      },
+      footer: {
+        "background-color": "#48CAE4",
+        color: "#fff",
       },
     }
     //Estilos

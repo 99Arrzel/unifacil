@@ -8,6 +8,16 @@
   } from "https://unpkg.com/gridjs/dist/gridjs.production.es.min.js";
 
   var datos = <?= json_encode($usuario)?> ;
+  //Cambio la variable 1 a suscrito y 0 a no suscrito
+  for(var i = 0; i < datos.length; i++)
+  {
+    if(datos[i].SUSCRITO === 1){
+      datos[i].SUSCRITO = "SUSCRITO";
+    }
+    if(datos[i].SUSCRITO === 0){
+      datos[i].SUSCRITO = "NO SUSCRITO";
+    }
+  }
   new gridjs.Grid({
     columns: [{
         id: 'NOMBRE',

@@ -24,6 +24,7 @@
             };
             
             console.log(formData);
+            alert(formData);
             $.ajax({
                 type: "POST",
                 url: "/ListarUsuarios/guardar",

@@ -27,10 +27,6 @@
         name: 'Apellido'
       },
       {
-        id: 'CONTRASEÑA',
-        name: 'Password'
-      },
-      {
         id: 'LOGIN',
         name: 'Login'
       },

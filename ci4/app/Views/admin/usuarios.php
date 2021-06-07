@@ -279,12 +279,12 @@ endif;
     function suscrito(id) {
 
     var myVal = document.getElementById("sus" + id).value;
-    if( myVal === "SUSCRITO")
+    if( myVal == "SUSCRITO")
     {
-        myVal = "1";
+        myVal = 1;
     }
     else{
-        myVal = "0";
+        myVal = 0;
     }
 
     var formData = {

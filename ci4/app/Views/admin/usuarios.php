@@ -8,12 +8,10 @@
 
   var datos = <?= json_encode($usuario)?> ;
   //Cambio la variable 1 a suscrito y 0 a no suscrito
-  for(var i = 0; i < datos.length; i++)
-  {
-    if(datos[i].SUSCRITO === "1"){
+  for (var i = 0; i < datos.length; i++) {
+    if (datos[i].SUSCRITO === "1") {
       datos[i].SUSCRITO = "SUSCRITO";
-    }
-    else{
+    } else {
       datos[i].SUSCRITO = "NO SUSCRITO";
     }
   }
@@ -47,7 +45,7 @@
           }, 'Editar');
         },
         sort: {
-        enabled: false
+          enabled: false
         }
       },
       {
@@ -59,18 +57,34 @@
           }, 'Eliminar');
         },
         sort: {
-        enabled: false
+          enabled: false
         }
       },
     ],
     search: true,
     data: datos,
     sort: true,
-    pagination: { limit: 10},
+    pagination: {
+      limit: 10
+    },
     resizable: true,
-    className:{
-      table: 'table-striped table-dark bg-dark'
+    className: {
+      sty = {
+        table: {
+          border: "3px solid #ccc",
+        },
+        th: {
+          "background-color": "rgba(0, 0, 0, 0.1)",
+          color: "#fff",
+          "border-bottom": "3px solid #ccc",
+          "text-align": "center",
+        },
+        td: {
+          "text-align": "center",
+        },
+      };
     }
+
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));
 </script>

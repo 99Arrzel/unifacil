@@ -89,6 +89,17 @@
         color: "#fff",
       },
     }
+    language: {
+    'search': {
+      'placeholder': '🔍 Search...'
+    },
+    'pagination': {
+      'previous': '⬅️',
+      'next': '➡️',
+      'showing': '😃 Displaying',
+      'results': () => 'Records'
+    }
+  }
     //Estilos
   }).render(document.getElementById("UsuariosActivos"));
 </script>

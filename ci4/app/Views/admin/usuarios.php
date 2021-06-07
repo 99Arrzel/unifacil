@@ -8,9 +8,12 @@ new gridjs.Grid({
     columns:[
       {
         id: 'NOMBRE',
-        NOMBRE: 'Nombre'
-      }
-    ],
+        name: 'Nombre'
+      },
+      {
+        id: 'APELLIDO',
+        name: 'Apellido'
+      }],
     search: true,
     data:datos,
   }).render(document.getElementById("wrapper"));

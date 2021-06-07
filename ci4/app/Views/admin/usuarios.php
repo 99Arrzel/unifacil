@@ -29,27 +29,32 @@
             {
                 id: 'NOMBRE',
                 name: 'Nombre',
-                formatter: (cell, row) => html(`<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(
+                    `<input id="nom${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'APELLIDO',
                 name: 'Apellido',
-                formatter: (cell, row) => html(`<input id="ape${row.cells[0].data}" value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(
+                    `<input id="ape${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'LOGIN',
                 name: 'Login',
-                formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(
+                    `<input id="log${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'EMAIL',
                 name: 'Email',
-                formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(
+                    `<input id="ema${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'SUSCRITO',
                 name: 'Suscrito',
-                formatter: (cell) => html(`<input value="${cell}" DISABLED></input>`)
+                formatter: (cell, row) => html(
+                    `<input id="sus${row.cells[0].data}" value="${cell}" DISABLED></input>`)
             },
             {
                 id: 'IDUSER',
@@ -57,7 +62,7 @@
                 formatter: (cell, row) => {
                     return h('button', {
                         className: 'btn btn-warning',
-                        onClick: () => alert(`Editing`)
+                        onClick: () => alert(`Editing${cell}`)
                     }, 'Editar');
                 },
                 sort: {

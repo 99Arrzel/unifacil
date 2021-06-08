@@ -17,10 +17,14 @@ class LibroFiltro extends BaseController
     
         $imagen = new ModeloLibroFiltro();
         $datosimagen = $imagen->listarImagenes();
+
+        $autor = new ModeloLibroFiltro();
+        $datosautor = $autor->listarAutores();
         $data = [
             "libro" => $datoslibro,//datosdir
             "mensaje"=>$mensaje,
-            "imagen" => $datosimagen
+            "imagen" => $datosimagen,
+            "autor" => $datosautor
             //mensaje para la alerta
         ];
         return view('abm_libro_filtro',$data);

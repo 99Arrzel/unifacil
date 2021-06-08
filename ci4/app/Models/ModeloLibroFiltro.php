@@ -11,8 +11,10 @@ class ModeloLibroFiltro extends Model
         `lib`.`year` AS `year`,
         `lib`.`edicion` AS `edicion`,
         `lib`.`dirDoc` AS `dirDoc`,
-        `ima`.`nombreImagen` AS `dirImagen`,
-        lib.estado AS estado,
+        lib.estado, 
+        lib.tblImagen_idtblImagen ,
+        ima.idtblImagen,
+        ima.nombreImagen,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
@@ -47,10 +49,24 @@ class ModeloLibroFiltro extends Model
             )AND ff.idfiltroFinal = flib.idfiltroFinal_Union AND lib.idtblLibro = flib.idtblLibro_Union
         )
     GROUP BY
-        `lib`.`nombreLibro`");
-
+        `lib`.`nombreLibro`SELECT * FROM tblLibro");
         return $Libros->getResult();        
     }
+
+    public function listarImagenes()
+    {
+        $query = $this->db->query("SELECT im.idtblImagen as IDimagen, im.nombreImagen
+        FROM tblImagen as im");
+        return $query->getResultArray();
+    }
+
+    public function listarAutores()
+    {
+        $query = $this->db->query("SELECT aut.idtblAutor as IDAutor, aut.nombreAutor
+        FROM tblAutor as aut");
+        return $query->getResultArray();
+    }
+
 
     //protected $table = 'tblLibro';
     //protected $primaryKey = 'idtblLibro';
@@ -122,10 +138,5 @@ class ModeloLibroFiltro extends Model
             mail($ar['mail'], "Nuevo libro añadido: " .$libro, "Se añadió un libro");
         }
     }
-    public function listarImagenes()
-    {
-        $query = $this->db->query("SELECT im.idtblImagen as IDimagen, im.nombreImagen
-        FROM tblImagen as im");
-        return $query->getResultArray();
-    }
+   
 }

@@ -25,7 +25,7 @@ class LibroFiltro extends BaseController
         $datostag = $tag->listarTags();
 
         $filtro = new ModeloLibroFiltro();
-        $datosfiltro = $filtro->listarFiltro();
+        $datosfiltro = $filtro->listarFiltros();
 
         $data = [
             "libro" => $datoslibro,//datosdir

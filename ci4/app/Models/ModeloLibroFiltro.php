@@ -49,7 +49,7 @@ class ModeloLibroFiltro extends Model
             )AND ff.idfiltroFinal = flib.idfiltroFinal_Union AND lib.idtblLibro = flib.idtblLibro_Union
         )
     GROUP BY
-        `lib`.`nombreLibro`SELECT * FROM tblLibro");
+        `lib`.`nombreLibro`");
         return $Libros->getResult();        
     }
 

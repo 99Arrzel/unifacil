@@ -11,7 +11,7 @@ class ModeloLibroFiltro extends Model
         `lib`.`year` AS `year`,
         `lib`.`edicion` AS `edicion`,
         `lib`.`dirDoc` AS `dirDoc`,
-        `ima`.`dirImagen` AS `dirImagen`,
+        `ima`.`nombreImagen` AS `dirImagen`,
         lib.estado AS estado,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '

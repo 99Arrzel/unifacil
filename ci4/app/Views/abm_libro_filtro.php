@@ -72,6 +72,9 @@
                             <th>Edicion</th>
                             <th>Direccion</th>
                             <th>Imagen</th>
+                            <th>Autor(es)</th>
+                            <th>Tag(S)</th>
+                            <th>Filtro(s)</th>
                             <th>Editar</th>
                            <!-- <th>Eliminar</th> -->
                         </tr>
@@ -83,7 +86,10 @@
                             <td><?php echo $key->year ?> </td>
                             <td><?php echo $key->edicion ?> </td>
                             <td><a href="<?php echo $key->dirDoc ?>">Enlace</a></td>
-                            <td><?php echo $key->nombreImagen ?></td>
+                            <td><a href="<?php echo $key->dirImagen?>"><?php echo $key->nombreImagen ?></a></td>
+                            <td><?php echo $key->autores ?></td>
+                            <td><?php echo $key->tags ?></td>
+                            <td><?php echo $key->filtros?></td>
                             <td>
                                 <a href="<?php echo base_url().'/obtenerNombreLibro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
                                     class="btn btn-warning btn-small">Editar</a>
@@ -110,6 +116,9 @@
                             <th>Edicion</th>
                             <th>Direccion</th>
                             <th>Imagen</th>
+                            <th>Autor(es)</th>
+                            <th>Tag(S)</th>
+                            <th>Filtro(s)</th>
                             <th>Editar</th>
                         </tr>
                         
@@ -120,7 +129,10 @@
                             <td><?php echo $key->year ?> </td>
                             <td><?php echo $key->edicion ?> </td>
                             <td><a href="<?php echo $key->dirDoc ?>">Enlace</a></td>
-                            <td><?php echo $key->nombreImagen ?></td>
+                            <td><a href="<?php echo $key->dirImagen?>"><?php echo $key->nombreImagen ?></a></td>
+                            <td><?php echo $key->autores ?></td>
+                            <td><?php echo $key->tags ?></td>
+                            <td><?php echo $key->filtros?></td>
                             <td>
                                 <a href="<?php echo base_url().'/obtenerNombreLibro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
                                     class="btn btn-warning btn-small">Editar</a>

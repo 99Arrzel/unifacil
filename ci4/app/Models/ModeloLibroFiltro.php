@@ -16,12 +16,13 @@ class ModeloLibroFiltro extends Model
         lib.tblImagen_idtblImagen ,
         ima.idtblImagen,
         ima.nombreImagen,
+        ima.dirImagen,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
         GROUP_CONCAT(
             DISTINCT `tag`.`nombreTag` SEPARATOR ', '
-        ) AS `tags`, GROUP_CONCAT( DISTINCT ff.idfiltroFinal SEPARATOR', ') as filtro 
+        ) AS `tags`, GROUP_CONCAT( DISTINCT ff.idfiltroFinal SEPARATOR', ') as filtros 
     FROM
                        
                             `altillo`.`tblLibro` `lib`

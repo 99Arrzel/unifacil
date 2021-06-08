@@ -27,7 +27,7 @@
                         <?php endforeach; ?>
                     </select>
                     <label>Autores</label> <br>
-                    <select name="nombreAutor" id="nombreAutor" class="form-control">
+                    <select name="nombreAutor" id="nombreAutor" class="form-control" multiple>
                         <option selected>seleccione un Autor</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>

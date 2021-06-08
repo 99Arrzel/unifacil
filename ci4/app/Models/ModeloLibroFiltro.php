@@ -7,6 +7,7 @@ class ModeloLibroFiltro extends Model
     public function listarLibros()
     {                               
         $Libros = $this->db->query("SELECT
+        lib.idtblLibro,
         `lib`.`nombreLibro` AS `nombreLibro`,
         `lib`.`year` AS `year`,
         `lib`.`edicion` AS `edicion`,

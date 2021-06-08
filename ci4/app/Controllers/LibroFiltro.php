@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ModeloLibroFiltro;
 
-class Libro extends BaseController 
+class LibroFiltro extends BaseController 
 {
     public function index()
     {

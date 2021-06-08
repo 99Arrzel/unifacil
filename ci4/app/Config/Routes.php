@@ -117,6 +117,7 @@ $routes->post('/actualizarLibro','Libro::actualizarLibro');//ruta para update im
 $routes->get('/eliminarLibro/(:any)','Libro::eliminarLibro/$1');//ruta para delete imagen
 $routes->post('/eliminarLibroLogic','Libro::eliminarLibroLogic');
 
+$routes->get('/librofiltro','LibroFiltro::index');//ruta libro
 
 $routes->match(['get','post'],'registrar','Usuarios::registrar');
 $routes->match(['get','post'],'login','Usuarios::login');

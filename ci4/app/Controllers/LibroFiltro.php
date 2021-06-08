@@ -20,11 +20,20 @@ class LibroFiltro extends BaseController
 
         $autor = new ModeloLibroFiltro();
         $datosautor = $autor->listarAutores();
+
+        $tag =  new ModeloLibroFiltro();
+        $datostag = $tag->listarTags();
+
+        $filtro = new ModeloLibroFiltro();
+        $datosfiltro = $filtro->listarFiltro();
+
         $data = [
             "libro" => $datoslibro,//datosdir
             "mensaje"=>$mensaje,
             "imagen" => $datosimagen,
-            "autor" => $datosautor
+            "autor" => $datosautor,
+            "tag" => $datostag,
+            "filtro" =>$datosfiltro
             //mensaje para la alerta
         ];
         return view('abm_libro_filtro',$data);

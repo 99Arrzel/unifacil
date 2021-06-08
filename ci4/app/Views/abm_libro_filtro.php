@@ -28,9 +28,23 @@
                     </select>
                     <label>Autores</label> <br>
                     <select name="nombreAutor" id="nombreAutor" class="form-control" multiple>
-                        <option selected>seleccione un Autor</option>
+                        <option selected>seleccione uno o varios Autores</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label>Tags</label> <br>
+                    <select name="nombreTag" id="nombreTag" class="form-control" multiple>
+                        <option selected>seleccione uno o varios Tags</option>
+                        <?php foreach ($tag as $tagData): ?>
+                        <option value="<?= $tagData['IDTag']?>"><?=$tagData['nombreTag'];?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label>Filtro</label> <br>
+                    <select name="idfiltroFinal" id="idfiltroFinal" class="form-control" multiple>
+                        <option selected>seleccione un Filtro</option>
+                        <?php foreach ($filtro as $filtroData): ?>
+                        <option value="<?= $filtroData['IDFiltro']?>"><?=$filtroData['IDFiltro'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <br>

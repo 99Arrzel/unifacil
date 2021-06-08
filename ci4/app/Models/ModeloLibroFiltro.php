@@ -68,6 +68,19 @@ class ModeloLibroFiltro extends Model
         return $query->getResultArray();
     }
 
+    public function listarTags()
+    {
+        $query = $this->db->query("SELECT tag.idtblTag as IDTag, tag.nombreTag
+        FROM tblTag as tag");
+        return $query->getResultArray();
+    }
+
+    public function listarFiltros()
+    {
+        $query = $this->db->query("SELECT fil.idfiltroFinal as IDFiltro
+        FROM filtroFinal as fil");
+        return $query->getResultArray();
+    }
 
     //protected $table = 'tblLibro';
     //protected $primaryKey = 'idtblLibro';

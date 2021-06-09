@@ -64,10 +64,10 @@
             <?= session()->get('exitoso') 
         </div> */?>
 
-        <?php ?>
+        <?php print_r($libro);?>
         <br>
         <h2>Listado de Libros</h2>
-        <?php print_r($libro['idtblAutor']);?>
+        <?php ?>
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">

@@ -52,7 +52,7 @@
                     <input type="text" id="idtblImagen" name="idtblImagen" hidden=""
                         value="<?php echo $idtblImagen ?>">
 
-                    <label for="nombreImagen">Nombre de la imagen</label>
+                    <label for="nombreImagen">Nombre de la imagenXD</label>
                     <input type="text" name="nombreImagen" id="nombreImagen" class="form-control"
                         value="<?php echo $nombreImagen ?>">
 

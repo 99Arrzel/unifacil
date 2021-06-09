@@ -94,7 +94,7 @@ endif;
     }
     var editIcon = function(cell, formatterParams) {
         var valor = cell.getValue();
-        return "<button id='" + valor + "' class= 'btn btn-success' DISABLED>Guardar</button>";
+        return "<button id='guardar" + valor + "' class= 'btn btn-success' DISABLED>Guardar</button>";
     };
     var downIcon = function(cell, formatterParams) {
         var valor = cell.getValue();
@@ -141,6 +141,7 @@ endif;
                 title: "Nombre",
                 field: "NOMBRE",
                 editor: "input"
+                
             },
             {
                 title: "Apellido",

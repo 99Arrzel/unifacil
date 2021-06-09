@@ -64,7 +64,7 @@
             <?= session()->get('exitoso') 
         </div> */?>
 
-        <?php print_r($libro->idtblAutor) ?>
+        <?php ?>
         <br>
         <h2>Listado de Libros</h2>
         <?php print_r($libro['idtblAutor']);?>

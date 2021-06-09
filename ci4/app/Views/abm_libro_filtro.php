@@ -97,7 +97,7 @@
                             <td><?php echo $key->tags ?></td>
                             <td><?php echo $key->filtros?></td>
                             <td>
-                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen.'/'.$key->IDsAutores.'/'.$key->IDsTags.'/'.$key->filtros?>"
+                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen.'/'.$key->idtblAutor.'/'.$key->IDsTags.'/'.$key->filtros?>"
                                     class="btn btn-warning btn-small">Editar</a>
                             </td> <!-- esto es lo que explicaba el sujeto, que los controladores reciben parametros -->
                            <!-- <td>

@@ -137,7 +137,7 @@ class LibroFiltro extends BaseController
 
     */
    
-    public function obtenerNombreLibroFiltro($idtblLibro,$idtblImagen,$IDsAutores)//aca se reciben las ids de las tablas llamadas de la vista
+    public function obtenerNombreLibroFiltro($idtblLibro,$idtblImagen,$idtblAutor)//aca se reciben las ids de las tablas llamadas de la vista
     {
         echo view('templates/header');//navbar
         $data =["idtblLibro" => $idtblLibro];//mismo que en la linea 61
@@ -148,7 +148,7 @@ class LibroFiltro extends BaseController
         $imagen = new ModeloLibroFiltro();
         $respuestaimg=$imagen->obtenerNombreImagen($dataimg);
 
-        $dataaut = ["IDsAutores" => $IDsAutores];
+        $dataaut = ["idtblAutor" => $idtblAutor];
         $autor = new ModeloLibroFiltro();
         $respuestaaut=$autor->obtenerNombreAutor($dataaut);
 

@@ -49,7 +49,6 @@
                         <option value="1">Inactivo</option>
                     </select>
     
-
                     <input type="text" id="idtblImagen" name="idtblImagen" hidden=""
                         value="<?php echo $idtblImagen ?>">
 
@@ -60,7 +59,7 @@
                      <input type="text" id="idtblAutor" name="idtblAutor" hidden=""
                         value="<?php echo $IDsAutores ?>">
 
-                    <label for="nombreImagen">Nombre del/los Autores</label>
+                    <label for="nombreAutor">Nombre del/los Autores</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
                         value="<?php echo $nombreAutor ?>">   
                     <br>

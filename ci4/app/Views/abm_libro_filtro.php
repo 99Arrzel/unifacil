@@ -67,7 +67,7 @@
         <?php print_r($libro->idtblAutor) ?>
         <br>
         <h2>Listado de Libros</h2>
-        <?php print_r($libro);?>
+        <?php print_r($libro['idtblAutor']);?>
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">

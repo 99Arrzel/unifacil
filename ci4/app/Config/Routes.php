@@ -119,6 +119,9 @@ $routes->post('/eliminarLibroLogic','Libro::eliminarLibroLogic');
 
 $routes->get('/librofiltro','LibroFiltro::index');//ruta libro
 $routes->get('/obtenerNombreLibroFiltro/(:any)','LibroFiltro::obtenerNombreLibroFiltro/$1');
+$routes->post('/crearLibroFiltro','LibroFiltro::crearLibroFiltro');//ruta para insert imagen
+$routes->post('/actualizarLibroFiltro','LibroFiltro::actualizarLibroFiltro');//ruta para update imagen
+
 
 
 $routes->match(['get','post'],'registrar','Usuarios::registrar');

@@ -21,7 +21,7 @@ class ModeloLibroFiltro extends Model
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
-        GROUP_CONCAT(DISTINCT tag.idtblTag SEPARATOR ', ') as IDsTags,
+        GROUP_CONCAT(DISTINCT tag.idtblTag SEPARATOR ', ') as IdtblTag,
         
         GROUP_CONCAT(
             DISTINCT `tag`.`nombreTag` SEPARATOR ', ') AS `tags`, 
@@ -100,6 +100,27 @@ class ModeloLibroFiltro extends Model
         return $this->db->insertID();//devuelve el ultimo ID
     }
 
+    public function insertarAutor($datosaut)
+    {
+        $Autores = $this->db->table('tblAutor_has_tblLibro');//selecciona la tabla
+        $Autores->insert($datosaut); //inserta los datos
+        //return $this->db->insertID();//devuelve el ultimo ID
+    }    
+
+    public function insertarTag($datostag)
+    {
+        $Tags = $this->db->table('tblTag_has_tblLibro');//selecciona la tabla
+        $Tags->insert($datostag); //inserta los datos
+        //return $this->db->insertID();//devuelve el ultimo ID
+    } 
+
+    public function insertarFiltro($datosfil)
+    {
+        $Filtros = $this->db->table('tblfiltroFinal_has_tblLibro');//selecciona la tabla
+        $Filtros->insert($datosfil); //inserta los datos
+        //return $this->db->insertID();//devuelve el ultimo ID
+    } 
+
     public function actualizarLibro($data,$idtblLibro)
     {
         $Libros = $this->db->table('tblLibro');
@@ -125,6 +146,33 @@ class ModeloLibroFiltro extends Model
         return $Imagenes->update();
     }
 
+    public function actualizarAutor($data,$idtblAutor)
+    {
+        $Autores = $this->db->table('tblAutor');
+        $Autores->set($data);//funcion update
+        $Autores->where('idtblImagen',$idtblAutor);
+        return $Autores->update();
+    }
+
+    public function actualizarTag($data,$idtblTag)
+    {
+        $Tags = $this->db->table('tblTag');
+        $Tags->set($data);//funcion update
+        $Tags->where('idtblImagen',$idtblTag);
+        return $Tags->update();
+    }
+
+    public function actualizarFiltro($data,$idfiltroFinal)
+    {
+        $Filtros = $this->db->table('filtroFinal');
+        $Filtros->set($data);//funcion update
+        $Filtros->where('idtblImagen',$idfiltroFinal);
+        return $Filtros->update();
+    }
+
+
+
+
     public function obtenerNombreLibro($data)
     {
         $Libros = $this->db->table('tblLibro');
@@ -145,6 +193,22 @@ class ModeloLibroFiltro extends Model
         $Autores->where($data);
         return $Autores->get()->getResultArray();
     }
+
+    public function obtenerNombreTag($data)
+    {
+        $Tags = $this->db->table('tblTag');
+        $Tags->where($data);
+        return $Tags->get()->getResultArray();
+    }
+
+    public function obtenerNombreFiltro($data)
+    {
+        $Filtros = $this->db->table('filtroFinal');
+        $Filtros->where($data);
+        return $Filtros->get()->getResultArray();
+    }
+
+
     public function eliminarLibro($data)
     {
         $Libros = $this->db->table('tblLibro');

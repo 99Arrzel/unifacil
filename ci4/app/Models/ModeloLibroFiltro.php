@@ -21,7 +21,7 @@ class ModeloLibroFiltro extends Model
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
-        GROUP_CONCAT(DISTINCT tag.idtblTag SEPARATOR ', ') as IdtblTag,
+        GROUP_CONCAT(DISTINCT tag.idtblTag SEPARATOR ', ') as idtblTag,
         
         GROUP_CONCAT(
             DISTINCT `tag`.`nombreTag` SEPARATOR ', ') AS `tags`, 

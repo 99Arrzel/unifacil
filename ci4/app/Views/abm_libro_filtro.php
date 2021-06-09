@@ -64,7 +64,11 @@
             <?= session()->get('exitoso') 
         </div> */?>
 
-        <?php print_r($libro[0]['idtblAutor']);?>
+        <?php print_r($libro[0]['idtblAutor']);
+                    
+             $ids = $integerIDs = array_map('intval', explode(',', $libro[0]['idtblAutor']));       
+                        ?>
+                        <?php print_r($ids); ?>
         <br>
         <h2>Listado de Libros</h2>
         <?php print_r($libro )?>

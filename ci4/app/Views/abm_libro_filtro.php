@@ -17,8 +17,6 @@
                     <input type="text" name="edicion" id="edicion" class="form-control">
                     <label>Direccion</label>
                     <input type="text" name="dirDoc" id="dirDoc" class="form-control">
-                    <label>Codigo</label>
-                    <input type="text" name="idtblLibro" id="idtblLibro" class="form-control">
                     <input type="text" name="estado" id="estado" class="form-control" hidden="" value ="0">
                     <label>Imagen</label> <br>
                     <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-control">

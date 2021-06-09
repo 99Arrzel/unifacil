@@ -4,6 +4,12 @@ use CodeIgniter\Model;
 
 class ModeloLibroFiltro extends Model
 {
+    public function ultimoID()
+    {
+        $query = $this->db->query("SELECT MAX(idtblLibro)+1 AS XD FROM tblLibro");
+        return $query->row_array();
+    }
+
     public function listarLibros()
     {                               
         $Libros = $this->db->query("SELECT

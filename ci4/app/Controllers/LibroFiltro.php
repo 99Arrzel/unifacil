@@ -60,8 +60,11 @@ class LibroFiltro extends BaseController
     public function crearLibroFiltro()
     {
         //print_r($_POST); se fija si los datos llegan
+        //xd
+        $miId = (new ModeloLibroFiltro())->ultimoID();
+        $miId = $miId['XD'];
         $datos = [
-            "idtblLibro"=>$_POST['idtblLibro'],
+            "idtblLibro"=> $miId,
             "nombreLibro"=>$_POST['nombreLibro'],
             "year"=>$_POST['year'],
             "edicion"=>$_POST['edicion'],
@@ -72,18 +75,18 @@ class LibroFiltro extends BaseController
 
         $datosaut = [
             "tblAutor_idtblAutor"=>$_POST['IDAutor'],
-            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
+            "tblLibro_idtblLibro"=>$miId,
         ];
 
         $datostag = [
             "tblTag_idtblTag"=>$_POST['IDTag'],
-            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
+            "tblLibro_idtblLibro"=>$miId,
 
         ];
 
         $datosfil = [
             "idfiltroFinal_Union"=>$_POST['IDFiltro'],
-            "idtblLibro_Union"=>$_POST['idtblLibro']
+            "idtblLibro_Union"=>$miId,
         ];
 
         $libro = new ModeloLibroFiltro(); // nuevo objeto libro

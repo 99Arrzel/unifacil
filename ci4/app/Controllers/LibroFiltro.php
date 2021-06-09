@@ -57,10 +57,11 @@ class LibroFiltro extends BaseController
         
     }
 
-    public function crearLibro()
+    public function crearLibroFiltro()
     {
         //print_r($_POST); se fija si los datos llegan
         $datos = [
+            "idtblLibro"=>$_POST['idtblLibro'],
             "nombreLibro"=>$_POST['nombreLibro'],
             "year"=>$_POST['year'],
             "edicion"=>$_POST['edicion'],
@@ -68,15 +69,45 @@ class LibroFiltro extends BaseController
             "tblImagen_idtblImagen"=>$_POST['tblImagen_idtblImagen']
             //nombre del campo de la base=> nombre o id del input
         ];
+
+        $datosaut = [
+            "tblAutor_idtblAutor"=>$_POST['IDAutor'],
+            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
+        ];
+
+        $datostag = [
+            "tblTag_idtblTag"=>$_POST['IDTag'],
+            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
+
+        ];
+
+        $datosfil = [
+            "idfiltroFinal_Union"=>$_POST['IDFiltro'],
+            "idtblLibro_Union"=>$_POST['idtblLibro']
+        ];
+
         $libro = new ModeloLibroFiltro(); // nuevo objeto libro
         $respuesta = $libro->insertarLibro($datos); //manda los datos al modelo
+
+        $autor = new ModeloLibroFiltro();
+        $autor->insertarAutor($datosaut);
+
+        $tag = new ModeloLibroFiltro();
+        $tag->insertarTag($datostag);
+
+        $filtro = new ModeloLibroFiltro();
+        $filtro->insertarFiltro($datosfil);
+        
+        //$imagen = new ModeloLibroFiltro($datosimg);
+        //$respuestaimg = $imagen->insertarImagen($datosimg);
+
         if($respuesta > 0){ 
-            return redirect()->to(base_url().'/libro')->with('mensaje','1');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','1');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','0');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','0');
         }
     }
-    public function actualizarLibro()
+    public function actualizarLibroFiltro()
     {
         
         print_r($_POST); 
@@ -94,18 +125,45 @@ class LibroFiltro extends BaseController
             "nombreImagen"=>$_POST['nombreImagen']
         ];
 
+        $datosaut =[
+            "idtblAutor"=>$_POST['idtblAutor'],
+            "nombreAutor"=>$_POST['nombreAutor']
+        ];
+
+        $datostag =[
+            "idtblTag"=>$_POST['idtblTag'],
+            "nombreTag"=>$_POST['nombreTag']
+        ];
+
+        $datosfil =[
+            "idfiltroFinal"=>$_POST['idfiltroFinal']
+        ];
+
         $idtblLibro=$_POST['idtblLibro'];//id para la consulta
         $libro = new ModeloLibroFiltro(); // nuevo objeto libro
+
         $respuesta = $libro->actualizarLibro($datos,$idtblLibro);
 
         $idtblImagen=$_POST['idtblImagen'];
         $imagen = new ModeloLibroFiltro();
-        $respuestaimg = $imagen->actualizarImagen($datosimg,$idtblImagen);
+        $imagen->actualizarImagen($datosimg,$idtblImagen);
+
+        $idtblAutor=$_POST['idtblAutor'];
+        $autor = new ModeloLibroFiltro();
+        $autor->actualizarAutor($datosaut,$idtblAutor);
+
+        $idtblTag=$_POST['idtblTag'];
+        $tag = new ModeloLibroFiltro();
+        $tag->actualizarTag($datostag,$idtblTag);
+
+        $idfiltroFinal=$_POST['idfiltroFinal'];
+        $filtro = new ModeloLibroFiltro();
+        $filtro->actualizarFiltro($datosfil,$idfiltroFinal);
 
         if($respuesta){//if true
-            return redirect()->to(base_url().'/libro')->with('mensaje','2');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','2');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','3');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','3');
         }
     }
 
@@ -137,7 +195,7 @@ class LibroFiltro extends BaseController
 
     */
    
-    public function obtenerNombreLibroFiltro($idtblLibro,$idtblImagen,$idtblAutor)//aca se reciben las ids de las tablas llamadas de la vista
+    public function obtenerNombreLibroFiltro($idtblLibro,$idtblImagen,$idtblAutor,$idtblTag,$idfiltroFinal)//aca se reciben las ids de las tablas llamadas de la vista
     {
         echo view('templates/header');//navbar
         $data =["idtblLibro" => $idtblLibro];//mismo que en la linea 61
@@ -152,10 +210,20 @@ class LibroFiltro extends BaseController
         $autor = new ModeloLibroFiltro();
         $respuestaaut=$autor->obtenerNombreAutor($dataaut);
 
+        $datatag = ["idtblTag" => $idtblTag];
+        $tag = new ModeloLibroFiltro();
+        $respuestatag=$tag->obtenerNombreTag($datatag);
+
+        $datafil = ["idfiltroFinal" =>$idfiltroFinal];
+        $filtro = new ModeloLibroFiltro();
+        $respuestafil=$filtro->obtenerNombreFiltro($datafil);
+
         $datos=[
             "datos" => $respuesta,
             "datosimg" =>$respuestaimg,
-            "datosaut" =>$respuestaaut
+            "datosaut" =>$respuestaaut,
+            "datostag" =>$respuestatag,
+            "datosfil" =>$respuestafil
         ];
 
         return view('actualizarLibroFiltro',$datos);

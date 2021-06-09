@@ -13,6 +13,9 @@
     $nombreImagen = $datosimg[0]['nombreImagen'];
     $idtblAutor =$datosaut[0]['idtblAutor'];
     $nombreAutor= $datosaut[0]['nombreAutor'];
+    $idtblTag = $datostag[0]['idtblTag'];
+    $nombreTag = $datostag[0]['nombreTag'];
+    $idfiltroFinal = $datosfil[0]['idfiltroFinal'];
 ?>
 
 <body>
@@ -24,7 +27,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <form method="POST" action="<?php echo base_url() . '/actualizarLibro'?>">
+                <form method="POST" action="<?php echo base_url() . '/actualizarLibroFiltro'?>">
                     <input type="text" id="idtblLibro" name="idtblLibro" hidden=""
                         value="<?php echo $idtblLibro ?>">
                     <!--poner los mismos nombres de las tablas para evitar confusion-->
@@ -55,7 +58,7 @@
                     <input type="text" id="idtblImagen" name="idtblImagen" hidden=""
                         value="<?php echo $idtblImagen ?>">
 
-                    <label for="nombreImagen">Nombre de la imagenXD</label>
+                    <label for="nombreImagen">Nombre de la imagen</label>
                     <input type="text" name="nombreImagen" id="nombreImagen" class="form-control"
                         value="<?php echo $nombreImagen ?>">
 
@@ -64,7 +67,19 @@
 
                     <label for="nombreAutor">Nombre del/los Autores</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo 'Xd' //$nombreAutor ?>">   
+                        value="<?php echo $nombreAutor ?>">   
+                    
+                    <input type="text" id="idtblTag" name="idtblTag" hidden=""
+                        value="<?php echo $idtblTag ?>">
+
+                    <label for="nombreTag">Nombre del/los Tags</label>
+                    <input type="text" name="nombreTag" id="nombreTag" class="form-control"
+                        value="<?php echo $nombreTag ?>">   
+
+                    <label for="nombreTag">Direccion del filtro</label>
+                    <input type="text" name="idfiltroFinal" id="idFiltroFinal" class="form-control"
+                        value="<?php echo $idfiltroFinal ?>">   
+
                     <br>
                     <button class="btn btn-warning">Guardar</button>
                 </form>

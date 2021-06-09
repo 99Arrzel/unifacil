@@ -8,7 +8,7 @@
         <h1>ABM Libro-Filtro</h1>
         <div class="row">
             <div class="col-sm-12">
-                <form action="<?php echo base_url().'/crearLibro'?>" method="POST">
+                <form action="<?php echo base_url().'/crearLibroFiltro'?>" method="POST">
                     <label>Libro</label>
                     <input type="text" name="nombreLibro" id="nombreLibro" class="form-control">
                     <label>Año</label>
@@ -17,7 +17,8 @@
                     <input type="text" name="edicion" id="edicion" class="form-control">
                     <label>Direccion</label>
                     <input type="text" name="dirDoc" id="dirDoc" class="form-control">
-                    <!--<label>Estado</label> -->
+                    <label>Codigo</label>
+                    <input type="text" name="idtblLibro" id="idtblLibro" class="form-control">
                     <input type="text" name="estado" id="estado" class="form-control" hidden="" value ="0">
                     <label>Imagen</label> <br>
                     <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-control">
@@ -27,21 +28,21 @@
                         <?php endforeach; ?>
                     </select>
                     <label>Autores</label> <br>
-                    <select name="nombreAutor" id="nombreAutor" class="form-control" multiple>
+                    <select name="IDAutor" id="IDAutor"  class="form-control" multiple>
                         <option selected>seleccione uno o varios Autores</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Tags</label> <br>
-                    <select name="nombreTag" id="nombreTag" class="form-control" multiple>
+                    <select name="IDTag" id="IDTag" class="form-control" multiple>
                         <option selected>seleccione uno o varios Tags</option>
                         <?php foreach ($tag as $tagData): ?>
                         <option value="<?= $tagData['IDTag']?>"><?=$tagData['nombreTag'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Filtro</label> <br>
-                    <select name="idfiltroFinal" id="idfiltroFinal" class="form-control" multiple>
+                    <select name="IDFiltro" id="IDFiltro" class="form-control" multiple>
                         <option selected>seleccione un Filtro</option>
                         <?php foreach ($filtro as $filtroData): ?>
                         <option value="<?= $filtroData['IDFiltro']?>"><?=$filtroData['IDFiltro'];?></option>
@@ -105,7 +106,7 @@
                             <td><?php echo $key['tags'] ?></td>
                             <td><?php echo $key['filtros']?></td>
                             <td>
-                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key['idtblLibro'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['IDsTags'].'/'.$key['filtros']?>"
+                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key['idtblLibro'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
                                     class="btn btn-warning btn-small">Editar</a>
                             </td> <!-- esto es lo que explicaba el sujeto, que los controladores reciben parametros -->
                            <!-- <td>

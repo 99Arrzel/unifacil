@@ -118,7 +118,7 @@ $routes->get('/eliminarLibro/(:any)','Libro::eliminarLibro/$1');//ruta para dele
 $routes->post('/eliminarLibroLogic','Libro::eliminarLibroLogic');
 
 $routes->get('/librofiltro','LibroFiltro::index');//ruta libro
-$routes->get('/obtenerNombreLibroFiltro/(:any)','LibroFiltro::obtenerNombreLibro/$1');
+$routes->get('/obtenerNombreLibroFiltro/(:any)','LibroFiltro::obtenerNombreLibroFiltro/$1');
 
 
 $routes->match(['get','post'],'registrar','Usuarios::registrar');

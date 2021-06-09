@@ -17,7 +17,7 @@ class ModeloLibroFiltro extends Model
         ima.idtblImagen,
         ima.nombreImagen,
         ima.dirImagen,
-        GROUP_CONCAT( DISTINCT n.idtblAutor SEPARATOR ', ') AS idtblAutor,
+        GROUP_CONCAT( DISTINCT n.idtblAutor SEPARATOR '') AS idtblAutor,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
@@ -142,7 +142,9 @@ class ModeloLibroFiltro extends Model
     public function obtenerNombreAutor($data)
     {
         $Autores = $this->db->table('tblAutor');
+        foreach ($data as $Autores) {
         $Autores->where($data);
+        }
         return $Autores->get()->getResultArray();
     }
     public function eliminarLibro($data)

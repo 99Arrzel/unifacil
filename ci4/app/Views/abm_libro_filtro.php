@@ -5,7 +5,7 @@
         }?>
 <body>
     <div class="container">
-        <h1>ABM Libro</h1>
+        <h1>ABM Libro-Filtro</h1>
         <div class="row">
             <div class="col-sm-12">
                 <form action="<?php echo base_url().'/crearLibro'?>" method="POST">
@@ -46,6 +46,12 @@
                         <?php foreach ($filtro as $filtroData): ?>
                         <option value="<?= $filtroData['IDFiltro']?>"><?=$filtroData['IDFiltro'];?></option>
                         <?php endforeach; ?>
+                    </select>
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado" class="form-control" required>
+                        <option selected>seleccione un estado</option>
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
                     </select>
                     <br>
                     <button type="submit" class="btn btn-primary">Guardar</button>
@@ -91,9 +97,9 @@
                             <td><?php echo $key->tags ?></td>
                             <td><?php echo $key->filtros?></td>
                             <td>
-                                <a href="<?php echo base_url().'/obtenerNombreLibro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
+                                <a href="<?php echo base_url().'/obtenerNombreLibro/'.$key->idtblLibro.'/'.$key->idtblImagen.'/'.$key->IDsAutores.'/'.$key->IDsTags.'/'.$key->filtros?>"
                                     class="btn btn-warning btn-small">Editar</a>
-                            </td>
+                            </td> <!-- esto es lo que explicaba el sujeto, que los controladores reciben parametros -->
                            <!-- <td>
                                 <a href="<?php //echo base_url().'/eliminarLibroLogic/'.$key->idtblLibro?>" class="btn btn-danger btn-small">Eliminar</a>
                             </td> -->

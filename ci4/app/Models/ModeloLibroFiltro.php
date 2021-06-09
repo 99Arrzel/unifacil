@@ -17,12 +17,15 @@ class ModeloLibroFiltro extends Model
         ima.idtblImagen,
         ima.nombreImagen,
         ima.dirImagen,
+        GROUP_CONCAT( DISTINCT n.idtblAutor SEPARATOR ', ') AS IDsAutores,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ', '
         ) AS `autores`,
+        GROUP_CONCAT(DISTINCT tag.idtblTag SEPARATOR ', ') as IDsTags,
+        
         GROUP_CONCAT(
-            DISTINCT `tag`.`nombreTag` SEPARATOR ', '
-        ) AS `tags`, GROUP_CONCAT( DISTINCT ff.idfiltroFinal SEPARATOR', ') as filtros 
+            DISTINCT `tag`.`nombreTag` SEPARATOR ', ') AS `tags`, 
+        GROUP_CONCAT( DISTINCT ff.idfiltroFinal SEPARATOR', ') as filtros 
     FROM
                        
                             `altillo`.`tblLibro` `lib`
@@ -136,6 +139,12 @@ class ModeloLibroFiltro extends Model
         return $Imagenes->get()->getResultArray();
     }
 
+    public function obtenerNombreAutor($data)
+    {
+        $Autores = $this->db->table('tblAutor');
+        $Autores->where($data);
+        return $Autores->get()->getResultArray();
+    }
     public function eliminarLibro($data)
     {
         $Libros = $this->db->table('tblLibro');

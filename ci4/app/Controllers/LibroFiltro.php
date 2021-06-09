@@ -78,8 +78,8 @@ class LibroFiltro extends BaseController
     }
     public function actualizarLibro()
     {
-        //TODO: terminar de aniadir los datos
-        print_r($_POST); //se fija si los datos llegan
+        
+        print_r($_POST); 
         $datos = [
             "idtblLibro"=>$_POST['idtblLibro'],//el update es lo mismo que el insert pero hay que adjuntar el ID a modificar
             "nombreLibro"=>$_POST['nombreLibro'],
@@ -88,7 +88,7 @@ class LibroFiltro extends BaseController
             "dirDoc"=>$_POST['dirDoc'],
             "estado"=>$_POST['estado']
             //nombre del campo de la base=> nombre o id del input
-        ];
+        ];//PARA CADA TABLA ANIADIR UN ARRAY
         $datosimg = [
             "idtblImagen"=>$_POST['idtblImagen'],
             "nombreImagen"=>$_POST['nombreImagen']
@@ -137,7 +137,7 @@ class LibroFiltro extends BaseController
 
     */
    
-    public function obtenernombreLibro($idtblLibro,$idtblImagen)
+    public function obtenernombreLibro($idtblLibro,$idtblImagen,$IDsAutores)//aca se reciben las ids de las tablas llamadas de la vista
     {
         echo view('templates/header');//navbar
         $data =["idtblLibro" => $idtblLibro];//mismo que en la linea 61
@@ -148,12 +148,17 @@ class LibroFiltro extends BaseController
         $imagen = new ModeloLibroFiltro();
         $respuestaimg=$imagen->obtenerNombreImagen($dataimg);
 
+        $dataaut = ["IDsAutores" => $IDsAutores];
+        $autor = new ModeloLibroFiltro();
+        $respuestaaut=$autor->obtenerNombreAutor($dataaut);
+
         $datos=[
             "datos" => $respuesta,
-            "datosimg" =>$respuestaimg
+            "datosimg" =>$respuestaimg,
+            "datosaut" =>$respuestaaut
         ];
 
-        return view('actualizarLibro',$datos);
+        return view('actualizarLibroFiltro',$datos);
     }
 
     public function eliminarLibro($idtblLibro)

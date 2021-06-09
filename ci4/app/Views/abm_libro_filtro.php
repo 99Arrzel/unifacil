@@ -65,13 +65,13 @@
         </div> */?>
 
         <?php print_r($libro[0]['idtblAutor']);
-                    
+           /*         
              $IDsAutores = $integerIDs = array_map('intval', explode(',', $libro[0]['idtblAutor']));       
                         ?>
                         <?php print_r($IDsAutores);
                         foreach ($libro as $ids) {
                             array_push($libro[$ids],$IDsAutores) ;
-                        }
+                        } */
                             ?>
         <br>
         <h2>Listado de Libros</h2>

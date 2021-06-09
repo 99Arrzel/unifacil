@@ -23,9 +23,12 @@
                                 <tr>
                                     <td><input type='text' name='nombre' class='form-control'></input></td>
                                     <td><input type='text' name='apellido' class='form-control'></input></td>
-                                    <td><input autocomplete="username" type='text' name='login' class='form-control'></input></td>
-                                    <td><input autocomplete="email" type='text' name='email' class='form-control'></input></td>
-                                    <td><input autocomplete="current-password" type='password' name='password' class='form-control'></input></td>
+                                    <td><input autocomplete="username" type='text' name='login'
+                                            class='form-control'></input></td>
+                                    <td><input autocomplete="email" type='text' name='email'
+                                            class='form-control'></input></td>
+                                    <td><input autocomplete="current-password" type='password' name='password'
+                                            class='form-control'></input></td>
                                     <!-- SUS-->
                                     <td><select class='form-control' name='suscrito'>
                                             <option value='1'>SUSCRITO
@@ -81,10 +84,9 @@ endif;
 
 <script type="module">
     var datos = <?= json_encode($usuario)?> ;
-    var dropValues = function(cell, formatterParams)
-    {
+    var dropValues = function(cell, formatterParams) {
         var valor = cell.getValue();
-        return "<select id='niv'"+valor+"' name='niv'"+valor+"' <?php foreach($nivel as $niveles):?> <optionvalue='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?> <?php endforeach;?></select>";
+        return "<select name='niv' <?php foreach ($nivel as $niveles):?> <optionvalue='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?> <?php endforeach;?></select>";
     }
     var editIcon = function(cell, formatterParams) {
         return "<button class='btn btn-warning'>Editar</button>";
@@ -156,7 +158,7 @@ endif;
             {
                 title: "Nivel",
                 field: "NIVEL",
-                formatter:dropValues, 
+                formatter: dropValues,
                 hozAlign: "center",
             },
             {
@@ -184,5 +186,4 @@ endif;
             },
         ],
     });
-
 </script>

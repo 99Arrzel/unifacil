@@ -69,7 +69,7 @@
 
                     <label for="nombreAutor">Nombre del/los Autores</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo $nombreAutor ?>">   
+                        value="<?php echo 'Xd' //$nombreAutor ?>">   
                     <br>
                     <button class="btn btn-warning">Guardar</button>
                 </form>

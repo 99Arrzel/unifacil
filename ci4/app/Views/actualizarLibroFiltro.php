@@ -21,9 +21,9 @@
 <body>
     <div class="container">
         <h1>Actualizar Libro</h1>
-        <?php print_r($datos); ?>
-        <?php print_r($datosimg); ?>
-        <?php print_r($datosaut); ?>
+        <?php //print_r($datos); ?>
+        <?php //print_r($datosimg); ?>
+        <?php //print_r($datosaut); ?>
 
         <div class="row">
             <div class="col-sm-12">

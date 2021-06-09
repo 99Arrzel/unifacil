@@ -155,7 +155,7 @@ class ModeloLibroFiltro extends Model
     {
         $Autores = $this->db->table('tblAutor');
         $Autores->set($data);//funcion update
-        $Autores->where('idtblImagen',$idtblAutor);
+        $Autores->where('idtblAutor',$idtblAutor);
         return $Autores->update();
     }
 
@@ -163,7 +163,7 @@ class ModeloLibroFiltro extends Model
     {
         $Tags = $this->db->table('tblTag');
         $Tags->set($data);//funcion update
-        $Tags->where('idtblImagen',$idtblTag);
+        $Tags->where('idtblTag',$idtblTag);
         return $Tags->update();
     }
 
@@ -171,7 +171,7 @@ class ModeloLibroFiltro extends Model
     {
         $Filtros = $this->db->table('filtroFinal');
         $Filtros->set($data);//funcion update
-        $Filtros->where('idtblImagen',$idfiltroFinal);
+        $Filtros->where('idfiltroFinal',$idfiltroFinal);
         return $Filtros->update();
     }
 

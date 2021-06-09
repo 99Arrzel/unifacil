@@ -12,13 +12,13 @@
     $idtblImagen=$datosimg[0]['idtblImagen'];
     $nombreImagen = $datosimg[0]['nombreImagen'];
     $IDsAutores =$datosaut[0]['idtblAutor'];
-    $nombreAutor = $datosaut[0]['nombreAutor'];
+    $nombreAutor[] = $datosaut[0]['nombreAutor'];
 ?>
 
 <body>
     <div class="container">
         <h1>Actualizar Libro</h1>
-        <?php //print_r($datos); ?>
+        <?php print_r($datos); ?>
         <div class="row">
             <div class="col-sm-12">
                 <form method="POST" action="<?php echo base_url() . '/actualizarLibro'?>">
@@ -57,7 +57,7 @@
                         value="<?php echo $nombreImagen ?>">
 
                      <input type="text" id="idtblAutor" name="idtblAutor" hidden=""
-                        value="<?php echo $IDsAutores ?>">
+                        value="<?php echo $idtblAutor ?>">
 
                     <label for="nombreAutor">Nombre del/los Autores</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"

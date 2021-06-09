@@ -12,7 +12,7 @@
     $idtblImagen=$datosimg[0]['idtblImagen'];
     $nombreImagen = $datosimg[0]['nombreImagen'];
     print_r($datosaut);
-    $idtblAutor =$datosaut['idtblAutor'];
+    $idtblAutor =$datosaut[0]['idtblAutor'];
 
     $idtblAutor = array_map('intval', explode(',', $IDsAutores));
 

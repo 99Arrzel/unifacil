@@ -62,6 +62,7 @@ class LibroFiltro extends BaseController
         //print_r($_POST); se fija si los datos llegan
         //xd
         $miId = (new ModeloLibroFiltro())->ultimoID();
+        $miId = implode($miId);
         $datos = [
             "idtblLibro"=> $miId,
             "nombreLibro"=>$_POST['nombreLibro'],

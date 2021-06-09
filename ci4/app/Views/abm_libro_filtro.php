@@ -140,7 +140,7 @@
                             <td><?php echo $key['tags'] ?></td>
                             <td><?php echo $key['filtros']?></td>
                             <td>
-                                <a href="<?php// echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
+                                <a href="<?php // echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
                                     class="btn btn-warning btn-small">Editar</a>
                             </td>
                            <!-- <td>

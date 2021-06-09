@@ -4,6 +4,7 @@
         }?>
 
 <div class="container">
+<h3>Ahora debes agregar un autor o si ya esta en la lista, puedes continuar o poner desconocido</h3>
     <h1>ABM Autor</h1>
     <div class="row">
         <div class="col-sm-12">
@@ -84,6 +85,7 @@
                 </div>
             </div>
         </div>
+    <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
 
     </div>

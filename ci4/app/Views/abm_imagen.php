@@ -98,7 +98,7 @@
 
     
 
-    <a class="btn btn-primary btn-lg btn-block" href="/libro" role="button">Continuar a Libros</a>
+    <a class="btn btn-primary btn-lg btn-block" href="/autor" role="button">Continuar a Autores</a>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">//sweet alert para que se vea mas bonito</script>
     
     <script type="text/javascript"> //muestra un alert si todo va bien

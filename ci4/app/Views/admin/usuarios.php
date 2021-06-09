@@ -90,7 +90,7 @@ endif;
     }
     var dropValues = function(cell, formatterParams) {
         var valor = cell.getValue();
-        return "<select class='form-control' name='niv'> <option value="" selected disabled hidden>"+valor+"</option><?php foreach ($nivel as $niveles):?><option value='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?><?php endforeach;?></select>";
+        return "<select class='form-control' name='niv'> <option value='' selected='selected' hidden='hidden'>"+valor+"</option><?php foreach ($nivel as $niveles):?><option value='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?><?php endforeach;?></select>";
     }
     var editIcon = function(cell, formatterParams) {
         return "<button class= 'btn btn-success' DISABLED>Guardar</button>";

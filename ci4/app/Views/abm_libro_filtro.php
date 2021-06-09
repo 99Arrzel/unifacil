@@ -28,7 +28,7 @@
                         <?php endforeach; ?>
                     </select>
                     <label>Autores</label> <br>
-                    <select name="IDAutor" id="IDAutor"  class="form-control" multiple>
+                    <select name="IDAutor" id="IDAutor" class="form-control" multiple>
                         <option selected>seleccione uno o varios Autores</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>
@@ -43,9 +43,11 @@
                     </select>
                     <label>Filtro</label> <br>
                     <select name="IDFiltro" id="IDFiltro" class="form-control" multiple>
-                        <option selected>seleccione un Filtro</option>
+                        <option selected>seleccione un Directorio</option>
                         <?php foreach ($filtro as $filtroData): ?>
-                        <option value="<?= $filtroData['IDFiltro']?>"><?=$filtroData['IDFiltro'];?></option>
+                            <?php if(($filtroData['ESTADO'])==1): ?>
+                        <option value="<?= $filtroData['ID']?>"><?=$filtroData['CIUDAD'].'/'.$filtroData['GESTION'].'/'.$filtroData['FACULTAD'].'/'.$filtroData['CARRERA'].'/'.$filtroData['SEMESTRE'].'/'.$filtroData['MATERIA'];?></option>
+                        <?php endif; ?>
                         <?php endforeach; ?>
                     </select>
                     <label for="estado">Estado</label>
@@ -65,7 +67,7 @@
             <?= session()->get('exitoso') 
         </div> */?>
 
-        <?php print_r($libro[0]['idtblAutor']);
+        <?php //print_r($libro[0]['idtblAutor']);
            /*         
              $IDsAutores = $integerIDs = array_map('intval', explode(',', $libro[0]['idtblAutor']));       
                         ?>
@@ -76,7 +78,7 @@
                             ?>
         <br>
         <h2>Listado de Libros</h2>
-        <?php print_r($libro )?>
+        <?php //print_r($libro )?>
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">

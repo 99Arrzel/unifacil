@@ -86,7 +86,7 @@ endif;
     var datos = <?= json_encode($usuario)?> ;
     var dropValues = function(cell, formatterParams) {
         var valor = cell.getValue();
-        return "<select name='niv' <?php foreach ($nivel as $niveles):?> <optionvalue='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?> <?php endforeach;?></select>";
+        return "<select name='niv'><?php foreach ($nivel as $niveles):?> <option value='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?> <?php endforeach;?></select>";
     }
     var editIcon = function(cell, formatterParams) {
         return "<button class='btn btn-warning'>Editar</button>";

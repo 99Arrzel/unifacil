@@ -11,7 +11,8 @@
     $estado =$datos[0]['estado'];
     $idtblImagen=$datosimg[0]['idtblImagen'];
     $nombreImagen = $datosimg[0]['nombreImagen'];
-    $IDsAutores =$datosaut[0]['idtblAutor'];
+    print_r($datosaut);
+    $idtblAutor =$datosaut[0]['idtblAutor'];
     $nombreAutor= $datosaut[0]['nombreAutor'];
 ?>
 

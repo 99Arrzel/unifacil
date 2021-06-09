@@ -14,7 +14,7 @@
     print_r($datosaut);
     $idtblAutor =$datosaut[0]['idtblAutor'];
 
-    $idtblAutor = array_map('intval', explode(',', $IDsAutores));
+    $IDsAutores = array_map('intval', explode(',', $idtblAutor));
 
     //$nombreAutor= $datosaut[0]['nombreAutor'];
     print_r($IDsAutores);

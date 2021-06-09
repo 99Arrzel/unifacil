@@ -7,7 +7,7 @@ class ModeloLibroFiltro extends Model
     public function ultimoID()
     {
         $query = $this->db->query("SELECT MAX(idtblLibro)+1 AS XD FROM tblLibro");
-        return $query->row_array();
+        return $query->getResultArray();
     }
 
     public function listarLibros()

@@ -17,7 +17,7 @@ class ModeloLibroFiltro extends Model
         ima.idtblImagen,
         ima.nombreImagen,
         ima.dirImagen,
-        CONCAT("[",GROUP_CONCAT( DISTINCT n.idtblAutor),"]") AS idtblAutor,
+        GROUP_CONCAT( DISTINCT n.idtblAutor), AS idtblAutor,
         GROUP_CONCAT(
             DISTINCT `n`.`nombreAutor` SEPARATOR ','
         ) AS `autores`,

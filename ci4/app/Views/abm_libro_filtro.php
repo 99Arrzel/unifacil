@@ -69,7 +69,7 @@
              $IDsAutores = $integerIDs = array_map('intval', explode(',', $libro[0]['idtblAutor']));       
                         ?>
                         <?php print_r($IDsAutores);
-                           array_push($IDsAutores,$libro[0]) ; ?>
+                           array_push($libro[0],$IDsAutores) ; ?>
         <br>
         <h2>Listado de Libros</h2>
         <?php print_r($libro )?>

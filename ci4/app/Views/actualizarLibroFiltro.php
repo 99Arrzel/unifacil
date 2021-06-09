@@ -11,13 +11,8 @@
     $estado =$datos[0]['estado'];
     $idtblImagen=$datosimg[0]['idtblImagen'];
     $nombreImagen = $datosimg[0]['nombreImagen'];
-    print_r($datosaut);
     $idtblAutor =$datosaut[0]['idtblAutor'];
-
-    $IDsAutores = array_map('intval', explode(',', $idtblAutor));
-
-    //$nombreAutor= $datosaut[0]['nombreAutor'];
-    print_r($IDsAutores);
+    $nombreAutor= $datosaut[0]['nombreAutor'];
 ?>
 
 <body>

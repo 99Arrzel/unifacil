@@ -87,15 +87,15 @@
                         
                         <tr>
                         <?php foreach ($libro as $key): ?>
-                            <?php if(($key->estado)==0): ?>
-                            <td><?php echo $key->nombreLibro ?> </td>
-                            <td><?php echo $key->year ?> </td>
-                            <td><?php echo $key->edicion ?> </td>
-                            <td><a href="<?php echo $key->dirDoc ?>">Enlace</a></td>
-                            <td><a href="<?php echo $key->dirImagen?>"><?php echo $key->nombreImagen ?></a></td>
-                            <td><?php echo $key->autores ?></td>
-                            <td><?php echo $key->tags ?></td>
-                            <td><?php echo $key->filtros?></td>
+                            <?php if(($key['estado'])==0): ?>
+                            <td><?php echo $key['nombreLibro'] ?> </td>
+                            <td><?php echo $key['year'] ?> </td>
+                            <td><?php echo $key['edicion'] ?> </td>
+                            <td><a href="<?php echo $key['dirDoc'] ?>">Enlace</a></td>
+                            <td><a href="<?php echo $key['dirImagen']?>"><?php echo $key['nombreImagen'] ?></a></td>
+                            <td><?php echo $key['autores'] ?></td>
+                            <td><?php echo $key['tags'] ?></td>
+                            <td><?php echo $key['filtros']?></td>
                             <td>
                                 <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen.'/'.$key->idtblAutor.'/'.$key->IDsTags.'/'.$key->filtros?>"
                                     class="btn btn-warning btn-small">Editar</a>
@@ -130,15 +130,15 @@
                         
                         <tr>
                         <?php foreach ($libro as $key): ?>
-                            <?php if(($key->estado)==1): ?>
-                            <td><?php echo $key->nombreLibro ?> </td>
-                            <td><?php echo $key->year ?> </td>
-                            <td><?php echo $key->edicion ?> </td>
-                            <td><a href="<?php echo $key->dirDoc ?>">Enlace</a></td>
-                            <td><a href="<?php echo $key->dirImagen?>"><?php echo $key->nombreImagen ?></a></td>
-                            <td><?php echo $key->autores ?></td>
-                            <td><?php echo $key->tags ?></td>
-                            <td><?php echo $key->filtros?></td>
+                            <?php if(($key['estado'])==1): ?>
+                            <td><?php echo $key['nombreLibro'] ?> </td>
+                            <td><?php echo $key['year'] ?> </td>
+                            <td><?php echo $key['edicion'] ?> </td>
+                            <td><a href="<?php echo $key['dirDoc'] ?>">Enlace</a></td>
+                            <td><a href="<?php echo $key['dirImagen']?>"><?php echo $key['nombreImagen'] ?></a></td>
+                            <td><?php echo $key['autores'] ?></td>
+                            <td><?php echo $key['tags'] ?></td>
+                            <td><?php echo $key['filtros']?></td>
                             <td>
                                 <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key->idtblLibro.'/'.$key->idtblImagen?>"
                                     class="btn btn-warning btn-small">Editar</a>

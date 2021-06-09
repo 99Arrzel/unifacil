@@ -55,7 +55,7 @@ class ModeloLibroFiltro extends Model
         )
     GROUP BY
         `lib`.`nombreLibro`");
-        return $Libros->getResult();        
+        return $Libros->getResultArray();        
     }
 
     public function listarImagenes()

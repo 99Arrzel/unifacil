@@ -81,8 +81,7 @@ class ModeloLibroFiltro extends Model
 
     public function listarFiltros()
     {
-        $query = $this->db->query("SELECT fil.idfiltroFinal as IDFiltro
-        FROM filtroFinal as fil");
+        $query = $this->db->query("SELECT * FROM DIRECTORIO");
         return $query->getResultArray();
     }
 

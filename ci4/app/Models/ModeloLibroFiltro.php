@@ -142,9 +142,7 @@ class ModeloLibroFiltro extends Model
     public function obtenerNombreAutor($data)
     {
         $Autores = $this->db->table('tblAutor');
-        foreach ($data as $Autores) {
         $Autores->where($data);
-        }
         return $Autores->get()->getResultArray();
     }
     public function eliminarLibro($data)

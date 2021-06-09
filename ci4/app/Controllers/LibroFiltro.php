@@ -148,8 +148,6 @@ class LibroFiltro extends BaseController
         $imagen = new ModeloLibroFiltro();
         $respuestaimg=$imagen->obtenerNombreImagen($dataimg);
 
-        $idtblAutor = array_map('intval',str_split($idtblAutor));
-        var_dump($idtblAutor);
         $dataaut = ["idtblAutor" => $idtblAutor];
         $autor = new ModeloLibroFiltro();
         $respuestaaut=$autor->obtenerNombreAutor($dataaut);

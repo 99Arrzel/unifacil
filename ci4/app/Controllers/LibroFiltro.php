@@ -102,9 +102,9 @@ class LibroFiltro extends BaseController
         //$respuestaimg = $imagen->insertarImagen($datosimg);
 
         if($respuesta > 0){ 
-            return redirect()->to(base_url().'/libro')->with('mensaje','1');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','1');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','0');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','0');
         }
     }
     public function actualizarLibroFiltro()
@@ -161,9 +161,9 @@ class LibroFiltro extends BaseController
         $filtro->actualizarFiltro($datosfil,$idfiltroFinal);
 
         if($respuesta){//if true
-            return redirect()->to(base_url().'/libro')->with('mensaje','2');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','2');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','3');
+            return redirect()->to(base_url().'/librofiltro')->with('mensaje','3');
         }
     }
 

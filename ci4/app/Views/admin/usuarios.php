@@ -81,12 +81,17 @@ endif;
 
 <script type="module">
     var datos = <?= json_encode($usuario)?> ;
+    var dropValues = function(cell, formatterParams)
+    {
+        var valor = cell.getValue();
+        return "<select id='niv'"+valor+"' name='niv'"+valor+"' <?php foreach($nivel as $niveles):?> <optionvalue='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?> <?php endforeach;?></select>";
+    }
     var editIcon = function(cell, formatterParams) {
-        return "<button class='btn btn-warning'>Editar</button>"
+        return "<button class='btn btn-warning'>Editar</button>";
     };
     var downIcon = function(cell, formatterParams) {
         var valor = cell.getValue();
-        return "<button id='" + valor + "' class='btn btn-danger'>Dar de baja</button>"
+        return "<button id='" + valor + "' class='btn btn-danger'>Dar de baja</button>";
     };
     var esp =
         "{\r\n            \"pagination\":{\r\n                \"first\":\"Primero\",\r\n                \"first_title\":\"Primera p\u00E1gina\", \r\n                \"last\":\"\u00DAltima\",\r\n                \"last_title\":\"\u00DAltima p\u00E1gina\",\r\n                \"prev\":\"Previa\",\r\n                \"prev_title\":\"P\u00E1gina previa\",\r\n                \"next\":\"Siguiente\",\r\n                \"next_title\":\"Siguiente p\u00E1gina\",\r\n            },\r\n  }";
@@ -151,10 +156,8 @@ endif;
             {
                 title: "Nivel",
                 field: "NIVEL",
-                editor: "select",
-                editorParams: {
-                    values: ["Admin", "Publisher", "Usuario"]
-                }
+                formatter:dropValues, 
+                hozAlign: "center",
             },
             {
                 title: "Suscrito",

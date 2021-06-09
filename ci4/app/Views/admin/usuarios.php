@@ -93,7 +93,7 @@ endif;
         return "<select  name='niv'> <option>"+valor+"</option><?php foreach ($nivel as $niveles):?><option value='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?><?php endforeach;?></select>";
     }
     var editIcon = function(cell, formatterParams) {
-        return "<button class='btn btn-warning'>Editar</button>";
+        return "<button class= 'btn btn-success' DISABLED>Guardar</button>";
     };
     var downIcon = function(cell, formatterParams) {
         var valor = cell.getValue();

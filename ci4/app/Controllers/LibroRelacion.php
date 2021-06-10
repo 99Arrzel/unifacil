@@ -84,11 +84,16 @@ class LibroRelacion extends BaseController
             "tblTag_idtblTag"=>$_POST['IDTag'],
             "tblLibro_idtblLibro"=>$_POST['idtblLibro']
 
-        ];
-
-        
+        ];        
         $tag = new ModeloLibroRelacion();
-        $tag->insertarTag($datostag);
+        $respuesta =$tag->insertarTag($datostag);
+
+        if($respuesta > 0){ 
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','1');
+        }else {
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','0');
+        }
+
     }
     public function crearFiltroRelacion(){
         $datosfil = [

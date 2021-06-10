@@ -32,6 +32,43 @@
             </div>
         </div>
 
+        <div class="container">
+            <h3>Seleccione un tag y un libro para que sea asignado a dicho libro</h3>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="<?php echo base_url() . '/crearTagRelacion' ?>" method="POST">
+                        <label>Libro</label>
+                        <select name="idtblLibro" id="idtblLibro" class="form-control">
+                            <option selected>Seleccione un Libro</option>
+                            <?php foreach ($libro as $libroData) : ?>
+                            <?php if(($libroData['estado'])==0): ?>
+                                <option value="<?= $libroData['idtblLibro'] ?>"><?= $libroData['nombreLibro']; ?></option>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        </select>
+                        <label>Autor</label> <br>
+                        <select name="IDTag" id="IDTag" class="form-control">
+                            <option selected>Seleccione un Tag</option>
+                            <?php foreach ($tag as $tagData) : ?>
+                                <option value="<?= $tagData['IDTag'] ?>"><?= $tagData['nombreTag']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+                       
+
+
+
+
+
+
+
+
+
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
             //sweet alert para que se vea mas bonito
         </script>

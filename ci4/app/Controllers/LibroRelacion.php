@@ -102,9 +102,13 @@ class LibroRelacion extends BaseController
         ];
 
         $filtro = new ModeloLibroRelacion();
-        $filtro->insertarFiltro($datosfil);
+        $respuesta = $filtro->insertarFiltro($datosfil);
         
-
+        if($respuesta > 0){ 
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','1');
+        }else {
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','0');
+        }
         
     }
     

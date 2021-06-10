@@ -13,7 +13,7 @@ class ModeloLibroRelacion extends Model
 
     public function listarLibros()
     {                               
-        $Libros = $this->db->query("SELECT * FROM tblLibro");
+        $Libros = $this->db->query("SELECT lib.idtblLibro, lib.nombreLibro, lib.estado FROM tblLibro as lib");
         return $Libros->getResultArray();        
     }
 

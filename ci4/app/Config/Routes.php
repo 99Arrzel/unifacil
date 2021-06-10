@@ -124,6 +124,8 @@ $routes->post('/actualizarLibroFiltro','LibroFiltro::actualizarLibroFiltro');//r
 
 $routes->get('/librorelacion','LibroRelacion::index');//
 $routes->post('/crearAutorRelacion','LibroRelacion::crearAutorRelacion');//
+$routes->post('/crearTagRelacion','LibroRelacion::crearTagRelacion');//
+
 
 
 

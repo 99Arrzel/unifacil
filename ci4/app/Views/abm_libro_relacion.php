@@ -30,8 +30,8 @@
                     </form>
                 </div>
             </div>
-        </div>
-
+        </div><br>
+        <hr>
         <div class="container">
             <h3>Seleccione un tag y un libro para que sea asignado a dicho libro</h3>
             <div class="row">

@@ -59,14 +59,39 @@
                 </div>
             </div>
         </div>
-                       
-
-
-
-
-
-
-
+        <br>
+        <h4>Para que un libro aparezca en la lista general, debe tener al menos 1 tag y 1 autor
+        <br>Y para que aparezca en un directorio debe estar enlazdo al directorio enlazado<br></h4>
+        <hr>
+        <div class="container">
+            <h3>Seleccione un directorio y un libro para que sea asignado a dicho directorio</h3>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="<?php echo base_url() . '/crearFiltroRelacion' ?>" method="POST">
+                        <label>Libro</label>
+                        <select name="idtblLibro" id="idtblLibro" class="form-control">
+                            <option selected>Seleccione un Libro</option>
+                            <?php foreach ($libro as $libroData) : ?>
+                            <?php if(($libroData['estado'])==0): ?>
+                                <option value="<?= $libroData['idtblLibro'] ?>"><?= $libroData['nombreLibro']; ?></option>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        </select>
+                        <label>Filtro</label> <br>
+                        <select name="IDFiltro" id="IDFiltro" class="form-control" >
+                            <option selected>Seleccione un Directorio</option>
+                            <?php foreach ($filtro as $filtroData): ?>
+                            <?php if(($filtroData['ESTADO'])==1): ?>
+                                <option value="<?= $filtroData['ID']?>"><?=$filtroData['CIUDAD'].'/'.$filtroData['GESTION'].'/'.$filtroData['FACULTAD'].'/'.$filtroData['CARRERA'].'/'.$filtroData['SEMESTRE'].'/'.$filtroData['MATERIA'];?></option>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                         </select>
+                        <br>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>               
 
 
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">

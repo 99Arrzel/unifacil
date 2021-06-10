@@ -10,7 +10,7 @@
                 <div class="col-sm-12">
                     <form action="<?php echo base_url() . '/crearAutorRelacion' ?>" method="POST">
                         <label>Libro</label>
-                        <select name="idtbLibro" id="idtbLibro" class="form-control">
+                        <select name="idtblLibro" id="idtblLibro" class="form-control">
                             <option selected>Seleccione un Libro</option>
                             <?php foreach ($libro as $libroData) : ?>
                             <?php if(($libroData['estado'])==0): ?>

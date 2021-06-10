@@ -34,14 +34,15 @@ class Autor extends BaseController
 
     }
 
-    public function crearLibroRelacion()
-    {
+    
+    //public function crearLibroRelacion()
+    //{
         //print_r($_POST); se fija si los datos llegan
         //xd 
         /*
         $miId = (new ModeloLibroRelacion())->ultimoID();
         $miId = $miId[0]['XD'];
-        */
+        */ /*
         $datos = [
             "idtblLibro"=> $_POST['idtblLibro'],
             "nombreLibro"=>$_POST['nombreLibro'],
@@ -49,40 +50,56 @@ class Autor extends BaseController
             //nombre del campo de la base=> nombre o id del input
         ]; 
 
+        $libro = new ModeloLibroRelacion(); // nuevo objeto libro
+        $respuesta = $libro->insertarLibro($datos); //manda los datos al modelo
+
+        
+        if($respuesta > 0){ 
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','1');
+        }else {
+            return redirect()->to(base_url().'/librorelacion')->with('mensaje','0');
+        }
+    } */
+
+    public function crearAutorRelacion(){
         $datosaut = [
             "tblAutor_idtblAutor"=>$_POST['IDAutor'],
             "tblLibro_idtblLibro"=>$_POST['idtblLibro']
         ];
 
-        $datostag = [
-            "tblTag_idtblTag"=>$_POST['IDTag'],
-            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
-
-        ];
-
-        $datosfil = [
-            "idfiltroFinal_Union"=>$_POST['IDFiltro'],
-            "idtblLibro_Union"=>$_POST['idtblLibro']
-        ];
-
-        $libro = new ModeloLibroRelacion(); // nuevo objeto libro
-        $libro->insertarLibro($datos); //manda los datos al modelo
-
         $autor = new ModeloLibroRelacion();
         $respuesta = $autor->insertarAutor($datosaut);
-
-        $tag = new ModeloLibroRelacion();
-        $tag->insertarTag($datostag);
-
-        $filtro = new ModeloLibroRelacion();
-        $filtro->insertarFiltro($datosfil);
-        
 
         if($respuesta > 0){ 
             return redirect()->to(base_url().'/librorelacion')->with('mensaje','1');
         }else {
             return redirect()->to(base_url().'/librorelacion')->with('mensaje','0');
         }
+        
+    }
+
+    public function crearTagRelacion(){
+        $datostag = [
+            "tblTag_idtblTag"=>$_POST['IDTag'],
+            "tblLibro_idtblLibro"=>$_POST['idtblLibro']
+
+        ];
+
+        
+        $tag = new ModeloLibroRelacion();
+        $tag->insertarTag($datostag);
+    }
+    public function crearFiltroRelacion(){
+        $datosfil = [
+            "idfiltroFinal_Union"=>$_POST['IDFiltro'],
+            "idtblLibro_Union"=>$_POST['idtblLibro']
+        ];
+
+        $filtro = new ModeloLibroRelacion();
+        $filtro->insertarFiltro($datosfil);
+        
+
+        
     }
     
 }

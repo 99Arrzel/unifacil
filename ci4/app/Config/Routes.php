@@ -122,6 +122,9 @@ $routes->get('/obtenerNombreLibroFiltro/(:any)','LibroFiltro::obtenerNombreLibro
 $routes->post('/crearLibroFiltro','LibroFiltro::crearLibroFiltro');//ruta para insert imagen
 $routes->post('/actualizarLibroFiltro','LibroFiltro::actualizarLibroFiltro');//ruta para update imagen
 
+$routes->get('/librorelacion','LibroRelacion::index');//
+$routes->post('/crearAutorRelacion','LibroRelacion::crearAutorRelacion');//
+
 
 
 $routes->match(['get','post'],'registrar','Usuarios::registrar');

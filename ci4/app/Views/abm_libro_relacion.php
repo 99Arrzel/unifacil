@@ -8,7 +8,7 @@
             <h3>Seleccione un autor y un libro para que sea asignado a dicho libro</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="<?php echo base_url() . '/crearLibroRelacion' ?>" method="POST">
+                    <form action="<?php echo base_url() . '/crearAutorRelacion' ?>" method="POST">
                         <label>Libro</label>
                         <select name="idtblibro" id="idtblibro" class="form-control">
                             <option selected>Seleccione un Libro</option>
@@ -18,7 +18,7 @@
                             <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
-                        <label>Autores</label> <br>
+                        <label>Autor</label> <br>
                         <select name="IDAutor" id="IDAutor" class="form-control">
                             <option selected>Seleccione un Autor</option>
                             <?php foreach ($autor as $autorData) : ?>

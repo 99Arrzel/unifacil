@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 use App\Models\ModeloLibroRelacion;
 
-class Autor extends BaseController 
+class LibroRelacion extends BaseController 
 {
     public function index()
     {
-        echo view('templates/header');//navbar
+        
         $libro= new ModeloLibroRelacion();
         $datoslibro = $libro->listarLibros();
         $mensaje = session('mensaje');
@@ -30,6 +30,7 @@ class Autor extends BaseController
             "filtro" =>$datosfiltro
             //mensaje para la alerta
         ];
+        echo view('templates/header');//navbar
         return view('abm_libro_relacion',$data);
 
     }

@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">
-                    <table class="table table-hover table-bordered table-dark">
+                    <table class="table table-hover table-bordered table-dark" id="styledTable">
                         <tr>
                             <th>Autor</th>
                             <th>Estado</th>

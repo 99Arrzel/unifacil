@@ -87,7 +87,16 @@
         </div>
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
+    <button class="btn" id="browserPrint">Export PDF with browser print</button>                        
+        <button class="btn" id="pdfmake">Export PDF with pdfmake</button>
 
+
+        <script src="scripts/pdfExportMethods.js"></script>
+        
+         <!-- For pdfmake -->
+    <script src="scripts/pdfmake.0.1.68.min.js"></script>
+    <script src="scripts/pdfmake.vfs_fonts.0.1.68.min.js"></script>
+    
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito

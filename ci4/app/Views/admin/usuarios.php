@@ -138,6 +138,11 @@ endif;
         ],
         columns: [ //define the table columns
             {
+                title: "ID",
+                field: "IDUSER",
+                visible:false,
+            }
+            {
                 title: "Nombre",
                 field: "NOMBRE",
                 editor: "input"
@@ -189,8 +194,11 @@ endif;
                 field: "IDUSER",
                 formatter: downIcon,
                 hozAlign: "center",
-                cellClick: function(e, cell) {
-                    alert("XD")
+                cellClick: function(e, cell, data) {
+                    var celda = $('#UsuariosActivos').tabulator("getRow",cell).getCell("ID");
+                    var celdaVal = cell.getValue();
+                    console.log(celdaVal);
+                    alert("XD");
                 }
             },
         ],

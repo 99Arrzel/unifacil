@@ -34,8 +34,8 @@
         <?php //print_r($datos);?>
         <div class="row">
             <div class="col-sm-12">
-                <div class="table table-responsive">
-                    <table class="table table-hover table-bordered table-dark" id="styledTable">
+                <div class="table table-responsive" id="styledTable">
+                    <table class="table table-hover table-bordered table-dark" >
                         <tr>
                             <th>Autor</th>
                             <th>Estado</th>

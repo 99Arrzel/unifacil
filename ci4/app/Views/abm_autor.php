@@ -34,8 +34,8 @@
         <?php //print_r($datos);?>
         <div class="row">
             <div class="col-sm-12">
-                <div class="table table-responsive" id="styledTable">
-                    <table class="table table-hover table-bordered table-dark" >
+                <div class="table table-responsive" >
+                    <table class="table table-hover table-bordered table-dark" id="styledTable" >
                         <tr>
                             <th>Autor</th>
                             <th>Estado</th>
@@ -190,7 +190,7 @@ function generate() {
     doc.setLineWidth(2);  
     doc.text(200, y = y + 30, "TOTAL MARKS OF STUDENTS");  
     doc.autoTable({  
-        html: '#styledTable',  
+        html: '#styledTable', 
         startY: 70,  
         theme: 'grid',  
         columnStyles: {  

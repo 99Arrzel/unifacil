@@ -87,19 +87,34 @@
         </div>
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
-    <button class="btn" id="browserPrint" onclick="downloadPDFWithBrowserPrint()">Export PDF with browser print</button>                        
+    <div class="buttonContainer">
+        <button class="btn" id="docRaptor" onclick="downloadPDFWithDocRaptor()">Export PDF with DocRaptor</button>
+        <button class="btn" id="pdfmake" onclick="downloadPDFWithPDFMake()">Export PDF with pdfmake</button>
+        <button class="btn" id="jsPDF" onclick="downloadPDFWithjsPDF()">Export PDF with jsPDF</button>
+        <button class="btn" id="browserPrint" onclick="downloadPDFWithBrowserPrint()">Export PDF with browser print</button>
+        <p id="styledHeaderLink">See a similar page but with a <a href="styled-header.html">fancy styled header</a>.</p>
+      </div>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito
     </script>
 
-    <script type = "text/javascript">
+  
+    <!-- For DocRaptor -->
+    <script src="scripts/docraptor.1.0.0.js"></script>
+
+    <!-- For pdfmake -->
+    <script src="scripts/pdfmake.0.1.68.min.js"></script>
+    <script src="scripts/pdfmake.vfs_fonts.0.1.68.min.js"></script>
     
-    function downloadPDFWithBrowserPrint() {
-      window.print();
-    }
-     document.querySelector('#browserPrint').addEventListener('click', downloadPDFWithBrowserPrint);
-    </script>
+    <!-- For jsPDF -->
+    <script src="scripts/html2canvas.1.0.0-rc.7.js"></script>
+    <script src="scripts/dompurify.2.2.0.min.js"></script>
+    <script src="scripts/jspdf.2.1.1.umd.min.js"></script>
+
+    <!-- PDF export methods I wrote using the libraries above -->
+    <script src="scripts/pdfExportMethods.js"></script>
+
     <script type="text/javascript">
     //muestra un alert si todo va bien
     let mensaje = "<?php echo $mensaje ?>";

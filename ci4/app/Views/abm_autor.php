@@ -87,21 +87,19 @@
         </div>
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
-    <button class="btn" id="browserPrint">Export PDF with browser print</button>                        
-        <button class="btn" id="pdfmake">Export PDF with pdfmake</button>
+    <button class="btn" id="browserPrint" onclick="downloadPDFWithBrowserPrint()">Export PDF with browser print</button>                        
 
-
-        <script src="scripts/pdfExportMethods.js"></script>
-        
-         <!-- For pdfmake -->
-    <script src="scripts/pdfmake.0.1.68.min.js"></script>
-    <script src="scripts/pdfmake.vfs_fonts.0.1.68.min.js"></script>
-    
-    </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito
     </script>
 
+    <script type = "text/javascript">
+    
+    function downloadPDFWithBrowserPrint() {
+      window.print();
+    }
+     document.querySelector('#browserPrint').addEventListener('click', downloadPDFWithBrowserPrint);
+    </script>
     <script type="text/javascript">
     //muestra un alert si todo va bien
     let mensaje = "<?php echo $mensaje ?>";

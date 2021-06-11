@@ -2,7 +2,9 @@
         {
             header('Location: http://proyecto3.tk/');
         }?>
-
+<head>
+<meta charset="utf-8"/> 
+</head>
 <div class="container">
 <h3>Ahora debes agregar un autor o si ya esta en la lista, puedes continuar o poner desconocido</h3>
     <h1>ABM Autor</h1>
@@ -89,18 +91,57 @@
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
     <div class="buttonContainer">
-        <button class="btn" id="docRaptor" onclick="downloadPDFWithDocRaptor()">Export PDF with DocRaptor</button>
-        <button class="btn" id="pdfmake" onclick="downloadPDFWithPDFMake()">Export PDF with pdfmake</button>
-        <button class="btn" id="jsPDF" onclick="downloadPDFWithjsPDF()">Export PDF with jsPDF</button>
-        <button class="btn" id="browserPrint" onclick="downloadPDFWithBrowserPrint()">Export PDF with browser print</button>
+        <button class="btn" id="docRaptor" >Export PDF with DocRaptor</button>
+        <button class="btn" id="pdfmake" >Export PDF with pdfmake</button>
+        <button class="btn" id="jsPDF" >Export PDF with jsPDF</button>
+        <button class="btn" id="browserPrint" >Export PDF with browser print</button>
         <p id="styledHeaderLink">See a similar page but with a <a href="styled-header.html">fancy styled header</a>.</p>
       </div>
-
+      <iframe id="txtArea1" style="display:none"></iframe>
+      <button id="btnExport" onclick="fnExcelReport();"> EXPORT </button>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito
     </script>
 
+  <script type="text/javascript">
+    function fnExcelReport()
+{
+    var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+    var textRange; var j=0;
+    tab = document.getElementById('styledTable'); // id of table
+
+    for(j = 0 ; j < tab.rows.length ; j++) 
+    {     
+        tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+        //tab_text=tab_text+"</tr>";
+    }
+
+    tab_text=tab_text+"</table>";
+    tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+    tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+    tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE "); 
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+    {
+        txtArea1.document.open("txt/html","replace");
+        txtArea1.document.write(tab_text);
+        txtArea1.document.close();
+        txtArea1.focus(); 
+        sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+    }  
+    else                 //other browser not tested on IE 11
+        sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+
+    return (sa);
+}
   
+  </script>
+
+
+
    <!-- For DocRaptor -->
    <script src="assets/docraptor.1.0.0.js"></script>
 

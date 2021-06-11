@@ -141,7 +141,7 @@ endif;
                 title: "ID",
                 field: "IDUSER",
                 visible:false,
-            }
+            },
             {
                 title: "Nombre",
                 field: "NOMBRE",

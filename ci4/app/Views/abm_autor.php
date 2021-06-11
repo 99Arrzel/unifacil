@@ -91,8 +91,6 @@
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
 
     <div class="buttonContainer">
-        <button class="btn" id="docRaptor" >Export PDF with DocRaptor</button>
-        <button class="btn" id="pdfmake" >Export PDF with pdfmake</button>
         <button class="btn" id="jsPDF" >Export PDF with jsPDF</button>
         <button class="btn" id="browserPrint" >Export PDF with browser print</button>
         <p id="styledHeaderLink">See a similar page but with a <a href="styled-header.html">fancy styled header</a>.</p>
@@ -139,15 +137,6 @@
 }
   
   </script>
-
-
-
-   <!-- For DocRaptor -->
-   <script src="assets/docraptor.1.0.0.js"></script>
-
-<!-- For pdfmake -->
-<script src="/assets/js/pdfmake.0.1.68.min.js"></script>
-<script src="/assets/js/pdfmake.vfs_fonts.0.1.68.min.js"></script>
 
 <!-- For jsPDF -->
 <script src="/assets/js/html2canvas.1.0.0-rc.7.js"></script>

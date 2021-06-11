@@ -105,16 +105,16 @@
    <script src="assets/docraptor.1.0.0.js"></script>
 
 <!-- For pdfmake -->
-<script src="assets/pdfmake.0.1.68.min.js"></script>
-<script src="assets/pdfmake.vfs_fonts.0.1.68.min.js"></script>
+<script src="/assets/js/pdfmake.0.1.68.min.js"></script>
+<script src="/assets/js/pdfmake.vfs_fonts.0.1.68.min.js"></script>
 
 <!-- For jsPDF -->
-<script src="assets/html2canvas.1.0.0-rc.7.js"></script>
-<script src="assets/dompurify.2.2.0.min.js"></script>
-<script src="assets/jspdf.2.1.1.umd.min.js"></script>
+<script src="/assets/js/html2canvas.1.0.0-rc.7.js"></script>
+<script src="/assets/js/dompurify.2.2.0.min.js"></script>
+<script src="/assets/js/jspdf.2.1.1.umd.min.js"></script>
 
 <!-- PDF export methods I wrote using the libraries above -->
-<script src="assets/pdfExportMethods.js"></script>
+<script src="/assets/js/pdfExportMethods.js"></script>
 
     <script type="text/javascript">
     //muestra un alert si todo va bien

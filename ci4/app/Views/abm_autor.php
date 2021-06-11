@@ -101,35 +101,20 @@
     </script>
 
   
-    <!-- For DocRaptor -->
-    <script src="scripts/docraptor.1.0.0.js"></script>
+   <!-- For DocRaptor -->
+   <script src="assets/docraptor.1.0.0.js"></script>
 
-    <!-- For pdfmake -->
-    <script src="scripts/pdfmake.0.1.68.min.js"></script>
-    <script src="scripts/pdfmake.vfs_fonts.0.1.68.min.js"></script>
-    
-    <!-- For jsPDF -->
-    <script src="scripts/html2canvas.1.0.0-rc.7.js"></script>
-    <script src="scripts/dompurify.2.2.0.min.js"></script>
-    <script src="scripts/jspdf.2.1.1.umd.min.js"></script>
+<!-- For pdfmake -->
+<script src="assets/pdfmake.0.1.68.min.js"></script>
+<script src="assets/pdfmake.vfs_fonts.0.1.68.min.js"></script>
 
-    <!-- PDF export methods I wrote using the libraries above -->
-    <script type="text/javascript">
-    function downloadPDFWithjsPDF() {
-  var doc = new jspdf.jsPDF('p', 'pt', 'a4');
+<!-- For jsPDF -->
+<script src="assets/html2canvas.1.0.0-rc.7.js"></script>
+<script src="assets/dompurify.2.2.0.min.js"></script>
+<script src="assets/jspdf.2.1.1.umd.min.js"></script>
 
-  doc.html(document.querySelector('#styledTable'), {
-    callback: function (doc) {
-      doc.save('MLB World Series Winners.pdf');
-    },
-    margin: [60, 60, 60, 60],
-    x: 32,
-    y: 32,
-  });
-}
-
-document.querySelector('#jsPDF').addEventListener('click', downloadPDFWithjsPDF);
-    </script>
+<!-- PDF export methods I wrote using the libraries above -->
+<script src="assets/pdfExportMethods.js"></script>
 
     <script type="text/javascript">
     //muestra un alert si todo va bien

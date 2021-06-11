@@ -93,7 +93,7 @@
     <div class="buttonContainer">
         <button class="btn" id="jsPDF" >Export PDF with jsPDF</button>
         <button class="btn" id="browserPrint" >Export PDF with browser print</button>
-        <button class="btn" onclick="demoFromHTML()" >PDF</button>
+        <input type="button" onclick="generate()" value="Export To PDF" /> 
 
         <p id="styledHeaderLink">See a similar page but with a <a href="styled-header.html">fancy styled header</a>.</p>
       </div>
@@ -139,51 +139,10 @@
 }
   
 
-function demoFromHTML() {
-    var pdf = new jsPDF('p', 'pt', 'letter');
-    // source can be HTML-formatted string, or a reference
-    // to an actual DOM element from which the text will be scraped.
-    source = $('#styledTable')[0];
-
-    // we support special element handlers. Register them with jQuery-style 
-    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-    // There is no support for any other type of selectors 
-    // (class, of compound) at this time.
-    specialElementHandlers = {
-        // element with id of "bypass" - jQuery style selector
-        '#bypassme': function (element, renderer) {
-            // true = "handled elsewhere, bypass text extraction"
-            return true
-        }
-    };
-    margins = {
-        top: 80,
-        bottom: 60,
-        left: 40,
-        width: 522
-    };
-    // all coords and widths are in jsPDF instance's declared units
-    // 'inches' in this case
-    pdf.fromHTML(
-    source, // HTML string or DOM elem ref.
-    margins.left, // x coord
-    margins.top, { // y coord
-        'width': margins.width, // max width of content on PDF
-        'elementHandlers': specialElementHandlers
-    },
-
-    function (dispose) {
-        // dispose: object with X, Y of the last line add to the PDF 
-        //          this allow the insertion of new lines after html
-        pdf.save('Test.pdf');
-    }, margins);
-}
   </script>
 
-<!-- For jsPDF -->
-<script src="/assets/js/html2canvas.1.0.0-rc.7.js"></script>
-<script src="/assets/js/dompurify.2.2.0.min.js"></script>
-<script src="/assets/js/jspdf.2.1.1.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>  
 
 <!-- PDF export methods I wrote using the libraries above -->
 <script src="/assets/js/pdfExportMethods.js"></script>
@@ -205,3 +164,50 @@ function demoFromHTML() {
         swal('🤡', 'Error al eliminar', 'error');
     }
     </script>
+
+<script type="text/javascript">  
+function generate() {  
+    var doc = new jsPDF('p', 'pt', 'letter');  
+    var htmlstring = '';  
+    var tempVarToCheckPageHeight = 0;  
+    var pageHeight = 0;  
+    pageHeight = doc.internal.pageSize.height;  
+    specialElementHandlers = {  
+        // element with id of "bypass" - jQuery style selector  
+        '#bypassme': function(element, renderer) {  
+            // true = "handled elsewhere, bypass text extraction"  
+            return true  
+        }  
+    };  
+    margins = {  
+        top: 150,  
+        bottom: 60,  
+        left: 40,  
+        right: 40,  
+        width: 600  
+    };  
+    var y = 20;  
+    doc.setLineWidth(2);  
+    doc.text(200, y = y + 30, "TOTAL MARKS OF STUDENTS");  
+    doc.autoTable({  
+        html: '#styledTable',  
+        startY: 70,  
+        theme: 'grid',  
+        columnStyles: {  
+            0: {  
+                cellWidth: 180,  
+            },  
+            1: {  
+                cellWidth: 180,  
+            },  
+            2: {  
+                cellWidth: 180,  
+            }  
+        },  
+        styles: {  
+            minCellHeight: 40  
+        }  
+    })  
+    doc.save('Marks_Of_Students.pdf');  
+}  
+</script>  

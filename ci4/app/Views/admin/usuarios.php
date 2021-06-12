@@ -152,10 +152,10 @@ endif;
 <!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
 <br>
-<div class='container-fluid'>
+<div class='container-fluid' id="listadealta">
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
-    <div class='row' id="listadealta">
+    <div class='row'>
         <div class='col-12'>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
@@ -177,7 +177,11 @@ endif;
             </div>
         </div>
     </div>
-    <div class='row' id="listadebaja" hidden>
+</div>
+<div class='container-fluid' id="listadebaja" hidden>
+    <h1 class="text-center">Lista de Usuarios</h1>
+    <h3 id="anuncio" class="text-center">De baja</h3>
+    <div class='row'>
         <div class='col-12'>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">

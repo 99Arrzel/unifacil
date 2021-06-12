@@ -202,10 +202,7 @@ endif;
 </div>
 <script>
     $(document).ready(function() {
-        setTimeout(function() {
-            document.getElementById("listadebaja").hidden = true;
-        }, 500);
-
+        document.getElementById("listadebaja").hidden = true;
     });
 
     function mostrar() {

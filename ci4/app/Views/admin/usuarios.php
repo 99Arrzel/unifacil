@@ -91,7 +91,6 @@ endif;
                     <th>Nivel</th>
                     <th>Suscrito</th>
                     <th>Editar</th>
-                    <th>Guardar</th>
                 </tr>
             </thead>
         </table>
@@ -101,6 +100,11 @@ endif;
     $(document).ready(function() {
         $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
+            "columnDefs": [{
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<button>Click!</button>"
+            }],
             columns: [{
                     data: 'IDUSER',
                     visible: false,
@@ -127,15 +131,11 @@ endif;
                     data: null,
                     defaultContent: "<button class='btn btn-warning'>Editar</button>"
                 },
-                {
-                    data: 'IDUSER',
-                    defaultContent: "<button class='btn btn-danger'>Dar de baja</button>"
-                },
             ],
         });
     });
-    $('#tblUsuarios tbody').on( 'click', 'button', function (e) {
-        var data = table.row( $(this).parents('tr') ).data();
-        alert(data[0] + "Es el id XD");
-    } );
+    $('#tblUsuarios tbody').on('click', 'button', function(e) {
+        var data = table.row($(this).parents('tr')).data();
+        alert(data[0] + "'s salary is: " + data[5]);
+    });
 </script>

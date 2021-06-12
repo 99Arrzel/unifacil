@@ -224,7 +224,7 @@ endif;
 </script>
 
 <script>
-    //Script para activos
+    //Script para inactivos
     $(document).ready(function() {
         var tabla = $('#tblUsuariosBaja').DataTable({
             data: <?php echo json_encode($usuarioBaja)?> ,
@@ -259,7 +259,7 @@ endif;
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
                 "infoEmpty": "Mostrando 0 a 0 de 0 registros",
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",
@@ -328,7 +328,16 @@ endif;
                     data: 'NIVEL'
                 },
                 {
-                    data: 'SUSCRITO'
+                    data: 'SUSCRITO',
+                    render: function(data, type, row) {
+                        if ($(data['SUSCRITO'] === '1')) {
+                            var i = "SI";
+                            return i;
+                        } else {
+                            var i = "NO";
+                            return i;
+                        }
+                    },
                 },
             ],
             language: {
@@ -339,7 +348,7 @@ endif;
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ registros",
+                "lengthMenu": "Mostrar _MENU_ Registros",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscar:",

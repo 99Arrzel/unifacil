@@ -129,9 +129,10 @@ endif;
                 },
             ],
         });
-        $('#tblUsuarios tbody').on( 'click', 'button', function () {
-        var data = tabla.row( $(this).parents('tr') ).data();
-        alert( data[1] + "id" );
-    } );
+        $('#tblUsuarios tbody').on('click', 'button', function() {
+            var data = tabla.row($(this).parents('tr')).data();
+            alert(data[1] + "id");
+            console.log(data);
+        });
     });
 </script>

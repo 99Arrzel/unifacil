@@ -127,6 +127,8 @@ $routes->post('/crearAutorRelacion','LibroRelacion::crearAutorRelacion');//
 $routes->post('/crearTagRelacion','LibroRelacion::crearTagRelacion');//
 $routes->post('/crearFiltroRelacion','LibroRelacion::crearFiltroRelacion');//
 
+$routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
+
 
 
 

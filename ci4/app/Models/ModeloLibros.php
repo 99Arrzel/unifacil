@@ -21,6 +21,15 @@ class ModeloLibros extends Model
         }
     }
 
+    public function listarUsuariosLibros()
+    {                               
+        $Libros = $this->db->query("SELECT * FROM REPORTE_USUARIO_LIBRO");
+        return $Libros->getResultArray();          
+    }
+
+    
+
+
 }
 
 

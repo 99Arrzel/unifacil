@@ -13,13 +13,16 @@ class Libros_lista extends BaseController
 		return view("libros_lista",$data);
 	}
 
-	/*
-	public function product($type)
+	public function ReporteUsuario()
 	{
-		echo '<h2>Este es un producto: '.$type.'</h2>';
-		//return view('product');
+		$usuario= new ModeloLibros();
+        $datosusuario = $usuario->listarUsuariosLibros();
+       // $mensaje = session('mensaje');
+
+        $data = [
+            "usuario" => $datosusuario
+        ];
+        echo view('templates/header');//navbar
+        return view('reporte_usuarios_libros',$data);
 	}
-	*/
-
-
 }

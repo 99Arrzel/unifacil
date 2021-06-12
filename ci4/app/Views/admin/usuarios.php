@@ -176,7 +176,7 @@ endif;
         </div>
     </div>
 </div>
-<div class='container-fluid' id="listadebaja" hidden>
+<div class='container-fluid' id="listadebaja">
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De baja</h3>
     <div class='col-12'>
@@ -201,6 +201,7 @@ endif;
     </div>
 </div>
 <script>
+    $(document).ready(mostrar());
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";

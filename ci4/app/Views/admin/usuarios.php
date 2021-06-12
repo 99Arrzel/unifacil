@@ -134,4 +134,8 @@ endif;
             ],
         });
     });
+    $('#tblUsuarios tbody').on( 'click', 'button', function () {
+        var data = table.row( $(this).parents('tr') ).data();
+        alert(data[0] + "Es el id XD");
+    } );
 </script>

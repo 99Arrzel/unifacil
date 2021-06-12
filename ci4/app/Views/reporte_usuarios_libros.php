@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">
-                    <table class="table table-hover table-bordered table-dark">
+                    <table class="table table-hover table-bordered table-dark" id="reporteusuariolibro">
                         <tr>
                             <th>Nombre</th>
                             <th>Apellido</th>
@@ -38,3 +38,96 @@
 
     </div>
 </body>
+
+<div class="buttonContainer">
+    <button class="btn btn-primary" onclick="generate()">Descargar PDF</button>
+    <button id="btnExport" class="btn btn-success" onclick="fnExcelReport();">Descargar Excel</button>
+</div>
+
+<script type="text/javascript">
+    function fnExcelReport()
+{
+    var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+    var textRange; var j=0;
+    tab = document.getElementById('reporteusuariolibro'); // id of table
+
+    for(j = 0 ; j < tab.rows.length ; j++) 
+    {     
+        tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+        //tab_text=tab_text+"</tr>";
+    }
+
+    tab_text=tab_text+"</table>";
+    tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+    tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+    tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE "); 
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+    {
+        txtArea1.document.open("txt/html","replace");
+        txtArea1.document.write(tab_text);
+        txtArea1.document.close();
+        txtArea1.focus(); 
+        sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+    }  
+    else                 //other browser not tested on IE 11
+        sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+
+    return (sa);
+}
+  
+
+  </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>  
+
+<script type="text/javascript">  
+function generate() {  
+    var doc = new jsPDF('p', 'pt', 'letter');  
+    var htmlstring = '';  
+    var tempVarToCheckPageHeight = 0;  
+    var pageHeight = 0;  
+    pageHeight = doc.internal.pageSize.height;  
+    specialElementHandlers = {  
+        // element with id of "bypass" - jQuery style selector  
+        '#bypassme': function(element, renderer) {  
+            // true = "handled elsewhere, bypass text extraction"  
+            return true  
+        }  
+    };  
+    margins = {  
+        top: 150,  
+        bottom: 60,  
+        left: 40,  
+        right: 40,  
+        width: 600  
+    };  
+    var y = 20;  
+    doc.setLineWidth(2);  
+    doc.text(200, y = y + 30, "REPORTE DE LIBROS DESCARGADOS");  
+    doc.autoTable({  
+        html: '#reporteusuariolibro', 
+        startY: 70,  
+        theme: 'striped',  
+        columnStyles: {  
+            0: {  
+                cellWidth: 180,  
+            },  
+            1: {  
+                cellWidth: 180,  
+            },  
+            2: {  
+                cellWidth: 180,  
+            }  
+        },  
+        styles: {  
+            minCellHeight: 40  
+        }  
+    })  
+    doc.save('Reporte_Libros_Descargados.pdf');  
+}  
+</script>  

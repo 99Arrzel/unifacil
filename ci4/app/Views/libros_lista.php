@@ -7,8 +7,8 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
-        <div class='container' style='margin-top:3em;'>
         <?php foreach ($libros as $libro): ?>
+        <div class='container' style='margin-top:3em;'>
              <form action="<?php echo base_url().'/crearUsuarioLibro'?>" method="POST">
             <div class='card-columns custom-columns'>
                 <div class='card bg-dark'>
@@ -30,9 +30,9 @@
                 </div>
             </div>
             </form>
-            <?php endforeach; ?>
+           
         </div>                    
-
+        <?php endforeach; ?>
     <?php else:?>
         <h1>No hay libros que mostrar, por favor contacte a soporte para informar el error</h1>
     <?php endif;?> <!-- OK--------------------->

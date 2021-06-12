@@ -115,14 +115,27 @@ function generate() {
         theme: 'striped',  
         columnStyles: {  
             0: {  
-                cellWidth: 180,  
+                cellWidth: 100,  
             },  
             1: {  
-                cellWidth: 180,  
+                cellWidth: 100,  
             },  
             2: {  
-                cellWidth: 180,  
-            }  
+                cellWidth: 100,  
+            },
+            3: {
+                cellWidth: 100,
+            },
+            4: {
+                cellWidth: 100,
+            }
+            ,
+            5: {
+                cellWidth: 100,
+            },
+            6: {
+                cellWidth: 100,
+            }        
         },  
         styles: {  
             minCellHeight: 40  

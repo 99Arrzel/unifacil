@@ -8,9 +8,9 @@
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
         <div class='container' style='margin-top:3em;'>
+        <?php foreach ($libros as $libro): ?>
              <form action="<?php echo base_url().'/crearUsuarioLibro'?>" method="POST">
             <div class='card-columns custom-columns'>
-            <?php foreach ($libros as $libro): ?>
                 <div class='card bg-dark'>
                     <div class='card-body'>
                      <h5 class='card-title text-white' align='center'><?= $libro->nombreLibro;?></h5>
@@ -28,9 +28,9 @@
                       </ul>
                     </div>
                 </div>
-            <?php endforeach; ?>
             </div>
             </form>
+            <?php endforeach; ?>
         </div>                    
 
     <?php else:?>

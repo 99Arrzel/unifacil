@@ -8,8 +8,13 @@ class Libros_lista extends BaseController
 	{
 		echo view('templates/header'); //Nacbar invocado
 		$ModeloLibros = new ModeloLibros();
-		//$libro = new Libros(); //Esto no hace nada, que hace acá XDD 
+		if($this->request->getGet('q')){
+			$q=$this->request->getGet('q');
+			$data['libros']=$ModeloLibros->like('nombreLibro',$q,)->getLibros();
+		}else{
 		$data['libros']=$ModeloLibros->getLibros();
+		}
+		//$libro = new Libros(); //Esto no hace nada, que hace acá XDD 
 		return view("libros_lista",$data);
 	}
 

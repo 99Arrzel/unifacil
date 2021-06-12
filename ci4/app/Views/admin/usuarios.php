@@ -179,7 +179,7 @@ endif;
             "columnDefs": [{
                 "targets": 7,
                 "data": null,
-                "defaultContent": "<button class='btn btn-warning' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
+                "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
             columns: [{
                     data: 'IDUSER',

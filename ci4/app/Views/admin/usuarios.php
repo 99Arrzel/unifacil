@@ -233,6 +233,7 @@ endif;
                 "data": null,
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
+
             columns: [{
                     data: 'IDUSER',
                     visible: false,
@@ -315,6 +316,10 @@ endif;
                 "data": null,
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
             columns: [{
                     data: 'IDUSER',
                     visible: false,

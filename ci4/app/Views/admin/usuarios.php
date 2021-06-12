@@ -236,7 +236,7 @@ endif;
             }],
             dom: 'Bfrtip',
             buttons: [
-                'copiar', 'csv', 'excel', 'pdf', 'imprimir'
+                'copy', 'csv', 'excel', 'pdf', 'print'
             ],
             columns: [{
                     data: 'IDUSER',

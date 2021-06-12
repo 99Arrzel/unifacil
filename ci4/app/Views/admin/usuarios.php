@@ -152,10 +152,10 @@ endif;
 <!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
 <br>
-<div class='container-fluid' id="listadealta">
+<div class='container-fluid'>
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
-    <div class='col-12'>
+    <div class='col-12' id="listadealta">
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
                 <table class="table table-hover" id="tblUsuarios">
@@ -175,11 +175,7 @@ endif;
             </div>
         </div>
     </div>
-</div>
-<div class='container-fluid' id="listadebaja">
-    <h1 class="text-center">Lista de Usuarios</h1>
-    <h3 id="anuncio" class="text-center">De baja</h3>
-    <div class='col-12'>
+    <div class='col-12' id="listadebaja">
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
                 <table class="table table-hover" id="tblUsuariosBaja">
@@ -214,11 +210,15 @@ endif;
             document.getElementById("botonOcultar").className = "btn btn-success";
             document.getElementById("listadealta").hidden = true;
             document.getElementById("listadebaja").hidden = false;
+            document.getElementById("anuncio").innerHTML = "De alta";
+
+
         } else {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
             document.getElementById("botonOcultar").className = "btn btn-primary";
             document.getElementById("listadealta").hidden = false;
             document.getElementById("listadebaja").hidden = true;
+            document.getElementById("anuncio").innerHTML = "De baja";
         }
     }
 </script>

@@ -201,7 +201,6 @@ endif;
     </div>
 </div>
 <script>
-    $(document).ready(mostrar());
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";

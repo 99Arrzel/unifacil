@@ -73,7 +73,7 @@ endif; ?>
     <?php
 endif;
 ?>
-    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
+    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
 </div>
 <!-- Modal para editar usuario -->
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -176,7 +176,7 @@ endif;
         </div>
     </div>
 </div>
-<div class='container-fluid' id="listadebaja" hidden>
+<div class='container-fluid' id="listadebaja">
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De baja</h3>
     <div class='col-12'>
@@ -327,7 +327,7 @@ endif;
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
                 "infoEmpty": "Mostrando 0 a 0 de 0 registros",
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",

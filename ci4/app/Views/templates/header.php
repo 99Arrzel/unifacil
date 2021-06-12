@@ -115,7 +115,9 @@
     echo '<a href="/imagen">Libro ABM</a>';
     echo '<a href="/autor">Autor ABM</a>';
     echo '<a href="/tag">TAG ABM</a>';
-    echo '<a href="https://htmlpreview.github.io/?https://github.com/CraniumAdamantium/unifacil/blob/51543534c8986f1706311310880b9c2588d4ead5/stats/index.html">Reportes</a>';
+    echo '<a href="https://htmlpreview.github.io/?https://github.com/CraniumAdamantium/unifacil/blob/51543534c8986f1706311310880b9c2588d4ead5/stats/index.html">Reporte Visitas</a>';
+    echo '<a href="/reporteusuariolibro"></a>';
+    echo '<a href="/reporteusuarioactivo"></a>';
     echo '<a href="/examen">Examen ABM</a>';
 } elseif (session()->get('nivel') == 2) {
     echo '<a href="/imagen">Libro ABM</a>';

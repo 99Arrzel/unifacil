@@ -129,9 +129,9 @@ endif;
                 },
             ],
         });
-    });
-    $('#tblUsuarios tbody').on('click', 'button', function(e) {
-        var data = table.row($(this).parents('tr')).data();
-        alert(data[1] + "'s salary is: ");
+        $('#tblUsuarios tbody').on( 'click', 'button', function () {
+        var data = table.row( $(this).parents('tr') ).data();
+        alert( data[0] + "id" );
+    } );
     });
 </script>

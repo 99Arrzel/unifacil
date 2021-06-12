@@ -199,6 +199,7 @@ endif;
 <script>
     $(document).ready(function() {
         setTimeout(function() {
+            document.title = "Usuarios de UNIFACIL";
             document.getElementById("listadebaja").hidden = true;
         }, 200);
 

@@ -153,22 +153,24 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <div class="container-fluid">
-    <div class='table table-bordered bg-dark text-light'>
-        <div class="table-responsive">
-            <table class="table table-hover" id="tblUsuarios">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Login</th>
-                        <th>Correo</th>
-                        <th>Nivel</th>
-                        <th>Suscrito</th>
-                        <th>Editar</th>
-                    </tr>
-                </thead>
-            </table>
+    <div class="col-lg-12">
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table class="table table-hover" id="tblUsuarios">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Login</th>
+                            <th>Correo</th>
+                            <th>Nivel</th>
+                            <th>Suscrito</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
     </div>
 </div>

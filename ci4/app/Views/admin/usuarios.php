@@ -115,7 +115,7 @@ endif;
                     data: 'NIVEL'
                 },
                 {
-                    data: 'SUCRITO'
+                    data: 'SUSCRITO'
                 },
             ],
         });

@@ -87,55 +87,61 @@ endif;
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <table id="insertar" class='col-12 table table-dark'>
-                    <thead class='thead-dark'>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Login</th>
-                            <th>Email</th>
-                            <th>Contraseña</th>
-                            <th>Suscrito</th>
-                            <th>Nivel</th>
-                            <th>Guardar</th>
-                        </tr>
-                    </thead>
-                    <form class='' action='/ListarUsuarios' method='post'>
-                        <label id="idUsuario" value=""></label>
-                        <tbody>
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="modal-body">
+                    <table id="insertar" class='col-12 table table-dark'>
+                        <thead class='thead-dark'>
                             <tr>
-                                <td><input id="nombreModal" autocomplete="off" type='text' name='nombre' class='form-control'></input></td>
-                                <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido' class='form-control'></input></td>
-                                <td><input id="loginModal" autocomplete="off" type='text' name='login'
-                                        class='form-control'></input></td>
-                                <td><input id="emailModal" autocomplete="off" type='text' name='email' class='form-control'></input>
-                                </td>
-                                <td><input id="passwordModal" autocomplete="off" type='password' name='password'
-                                        class='form-control'></input></td>
-                                <!-- SUS-->
-                                <td><select id="suscritoModal" class='form-control' name='suscrito'>
-                                        <option value='1'>SUSCRITO
-                                        </option>
-                                        <option value='0'> NO SUSCRITO
-                                        </option>
-                                    </select></td>
-                                <!-- SUS-->
-                                <!-- Nivel-->
-                                <td><select id="nivelModal" class='form-control' name='nivel'>
-                                        <?php foreach ($nivel as $niveles): ?>
-                                        <option
-                                            value="<?=$niveles['ID'];?>">
-                                            <?=$niveles['NIVEL'];?>
-                                        </option>
-                                        <?php endforeach; ?>
-                                    </select></td>
-                                <!-- Nivel-->
-                                <td><button id="btnModal" type='submit' class='btn btn-success form-control'>Enviar</td>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Login</th>
+                                <th>Email</th>
+                                <th>Contraseña</th>
+                                <th>Suscrito</th>
+                                <th>Nivel</th>
+                                <th>Guardar</th>
                             </tr>
-                        </tbody>
-                    </form>
-                </table>
+                        </thead>
+                        <form class='' action='/ListarUsuarios' method='post'>
+                            <label id="idUsuario" value=""></label>
+                            <tbody>
+                                <tr>
+                                    <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
+                                            class='form-control'></input></td>
+                                    <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido'
+                                            class='form-control'></input></td>
+                                    <td><input id="loginModal" autocomplete="off" type='text' name='login'
+                                            class='form-control'></input></td>
+                                    <td><input id="emailModal" autocomplete="off" type='text' name='email'
+                                            class='form-control'></input>
+                                    </td>
+                                    <td><input id="passwordModal" autocomplete="off" type='password' name='password'
+                                            class='form-control'></input></td>
+                                    <!-- SUS-->
+                                    <td><select id="suscritoModal" class='form-control' name='suscrito'>
+                                            <option value='1'>SUSCRITO
+                                            </option>
+                                            <option value='0'> NO SUSCRITO
+                                            </option>
+                                        </select></td>
+                                    <!-- SUS-->
+                                    <!-- Nivel-->
+                                    <td><select id="nivelModal" class='form-control' name='nivel'>
+                                            <?php foreach ($nivel as $niveles): ?>
+                                            <option
+                                                value="<?=$niveles['ID'];?>">
+                                                <?=$niveles['NIVEL'];?>
+                                            </option>
+                                            <?php endforeach; ?>
+                                        </select></td>
+                                    <!-- Nivel-->
+                                    <td><button id="btnModal" type='submit' class='btn btn-success form-control'>Enviar
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </form>
+                    </table>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -204,7 +210,7 @@ endif;
             document.getElementById("loginModal").value = data['LOGIN'];
             document.getElementById("emailModal").value = data['EMAIL'];
             document.getElementById("passwordModal").value = data['CONTRASEÑA'];
-            document.getElementById("suscritoModal").value  = data['SUSCRITO'];
+            document.getElementById("suscritoModal").value = data['SUSCRITO'];
             document.getElementById("nivelModal").value = data['NIVELID'];
             document.getElementById("idUsuario").value = data['IDUSER'];
             //data-toggle="modal" data-target="#staticBackdrop"

@@ -93,10 +93,8 @@
     <div class="buttonContainer">
         <button class="btn" id="jsPDF" >Export PDF with jsPDF</button>
         <button class="btn" id="browserPrint" >Export PDF with browser print</button>
-        <input type="button" onclick="generate()" value="Export To PDF" /> 
-
-        <p id="styledHeaderLink">See a similar page but with a <a href="styled-header.html">fancy styled header</a>.</p>
-      </div>
+        <input class="btn btn-primary" type="button" onclick="generate()" value="Export To PDF" /> 
+     </div>
       <iframe id="txtArea1" style="display:none"></iframe>
       <button id="btnExport" onclick="fnExcelReport();"> EXPORT </button>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">

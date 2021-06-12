@@ -103,9 +103,9 @@ endif;
                             </tr>
                         </thead>
                         <form class='' action='/ListarUsuarios/guardar' method='post'>
-                            <label id="idUsuario" name="idUsuario" value=""></label>
                             <tbody>
                                 <tr>
+                                    
                                     <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
                                             class='form-control'></input></td>
                                     <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido'
@@ -135,7 +135,7 @@ endif;
                                             <?php endforeach; ?>
                                         </select></td>
                                     <!-- Nivel-->
-                                    <td><button id="btnModal" type='submit' class='btn btn-success form-control'>Enviar
+                                    <td><button id="btnModal" value="" type='submit' class='btn btn-success form-control'>Enviar
                                     </td>
                                 </tr>
                             </tbody>
@@ -240,7 +240,7 @@ endif;
             document.getElementById("passwordModal").value = data['CONTRASEÑA'];
             document.getElementById("suscritoModal").value = data['SUSCRITO'];
             document.getElementById("nivelModal").value = data['NIVELID'];
-            document.getElementById("idUsuario").value = data['IDUSER'];
+            document.getElementById("btnModal").value = data['IDUSER'];
             //data-toggle="modal" data-target="#staticBackdrop"
             //alert(data['NOMBRE'] + "id");
             console.log(data);

@@ -102,18 +102,19 @@ endif;
                         </tr>
                     </thead>
                     <form class='' action='/ListarUsuarios' method='post'>
+                        <label id="idUsuario"></label>
                         <tbody>
                             <tr>
-                                <td><input type='text' name='nombre' class='form-control'></input></td>
-                                <td><input type='text' name='apellido' class='form-control'></input></td>
-                                <td><input autocomplete="username" type='text' name='login'
+                                <td><input id="nombreModal" autocomplete="off" type='text' name='nombre' class='form-control'></input></td>
+                                <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido' class='form-control'></input></td>
+                                <td><input id="loginModal" autocomplete="off" type='text' name='login'
                                         class='form-control'></input></td>
-                                <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
+                                <td><input id="emailModal" autocomplete="off" type='text' name='email' class='form-control'></input>
                                 </td>
-                                <td><input autocomplete="current-password" type='password' name='password'
+                                <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                         class='form-control'></input></td>
                                 <!-- SUS-->
-                                <td><select class='form-control' name='suscrito'>
+                                <td><select id="valoresModal" class='form-control' name='suscrito'>
                                         <option value='1'>SUSCRITO
                                         </option>
                                         <option value='2'> NO SUSCRITO
@@ -121,7 +122,7 @@ endif;
                                     </select></td>
                                 <!-- SUS-->
                                 <!-- Nivel-->
-                                <td><select class='form-control' name='nivel'>
+                                <td><select id="nivelModal" class='form-control' name='nivel'>
                                         <?php foreach ($nivel as $niveles): ?>
                                         <option
                                             value="<?=$niveles['ID'];?>">
@@ -130,7 +131,7 @@ endif;
                                         <?php endforeach; ?>
                                     </select></td>
                                 <!-- Nivel-->
-                                <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                                <td><button id="btnModal" type='submit' class='btn btn-success form-control'>Enviar</td>
                             </tr>
                         </tbody>
                     </form>
@@ -200,9 +201,11 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
+            document.getElementById("nombreModal").value = data['NOMBRE'];
+            document.getElementById("apellidoModal").value = data['APELLIDO'];
             //data-toggle="modal" data-target="#staticBackdrop"
             //alert(data['NOMBRE'] + "id");
-            //console.log(data);
+            console.log(data);
         });
     });
 </script>

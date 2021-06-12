@@ -330,7 +330,7 @@ endif;
                 {
                     data: 'SUSCRITO',
                     render: function(data) {
-                        if ($(data['SUSCRITO'] === '1')) {
+                        if ($(data['SUSCRITO'] == "1")) {
                             return "SI";
                         } else {
                             return "NO";

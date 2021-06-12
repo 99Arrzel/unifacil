@@ -22,6 +22,7 @@
     <!-- Boostrap Icons -->
     <!-- Mis Includes -->
     <link rel="stylesheet" href="https://proyecto3.tk/assets/css/style.css">
+    <link rel="stylesheet" href="https://proyecto3.tk/assets/css/tabla.css">
     <!-- Mis Includes -->
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

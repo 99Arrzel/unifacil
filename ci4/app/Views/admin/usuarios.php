@@ -99,7 +99,12 @@ endif;
     $(document).ready(function() {
         $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
-            columns: [{
+            columns: [
+                {
+                    data: 'IDUSER'
+                    visible: false;
+                },
+                {
                     data: 'NOMBRE'
                 },
                 {
@@ -116,6 +121,14 @@ endif;
                 },
                 {
                     data: 'SUSCRITO'
+                },
+                {
+                    data: null,
+                    defaultContent: "<button class='btn btn-warning'>Editar</button>"
+                },
+                {
+                    data: null,
+                    defaultContent: "<button class='btn btn-danger'>Dar de baja</button>"
                 },
             ],
         });

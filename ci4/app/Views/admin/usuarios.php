@@ -112,7 +112,7 @@ endif;
                                     <td><input id="loginModal" autocomplete="off" type='text' name='login'
                                             class='form-control'></input></td>
                                     <td><input id="emailModal" autocomplete="off" type='text' name='email'
-                                            class='form-control'></input>
+                                            class='form-control' disabled></input>
                                     </td>
                                     <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                             class='form-control'></input></td>
@@ -201,6 +201,13 @@ endif;
     </div>
 </div>
 <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            document.getElementById("listadebaja").hidden = true;
+        }, 200);
+
+    });
+
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
@@ -274,7 +281,7 @@ endif;
                 }
             },
         });
-        $('#tblUsuarios tbody').on('click', 'button', function() {
+        $('#tblUsuariosBaja tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];

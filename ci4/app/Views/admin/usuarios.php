@@ -329,7 +329,9 @@ endif;
                 },
                 {
                     data: 'SUSCRITO',
-                    render: function(data, type, row) {
+                },
+            ],
+            render: function(data, type, row) {
                         if ($(data['SUSCRITO'] === '1')) {
                             var i = "SI";
                             return i;
@@ -338,8 +340,6 @@ endif;
                             return i;
                         }
                     },
-                },
-            ],
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",

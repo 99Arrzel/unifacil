@@ -293,7 +293,7 @@ td {
       border: 1px solid #aaa;
       border-radius: 3px;
       padding: 5px;
-      background-color: transparent;
+      background-color: white;
       margin-left: 3px;
     }
     .dataTables_wrapper .dataTables_info {

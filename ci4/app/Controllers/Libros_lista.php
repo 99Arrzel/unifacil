@@ -35,7 +35,7 @@ class Libros_lista extends BaseController
 
         $libro = new ModeloLibros();
         $libro->insertarUsuarioLibro($datosuslib);
-
-        
+		$enlace = $_POST['dirDoc'];
+		return redirect()->to($enlace);
     }
 }

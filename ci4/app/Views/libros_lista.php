@@ -15,6 +15,7 @@
                     <div class='card-body'>
                      <h5 class='card-title text-white' align='center'><?= $libro->nombreLibro;?></h5>
                      <input type="text" hidden name="idtblLibro" id="idtblLibro" class="form-control" value="<?= $libro->idtblLibro;?>">
+                     <input type="text" hidden name="dirDoc" id="dirDoc" class="form-control" value="<?= $libro->dirDoc;?>">
                      <input type="text" hidden name="idtblUsuario" id="idtblUsuario" class="form-control" value="<?php echo $id ?>">
                      <input type="text" hidden name="fecha" id="fecha" class="form-control" value="<?php echo $fecha ?>">
                      <img src="<?=$libro->dirImagen;?>" class="card-img-top" alt="portada libro">
@@ -23,7 +24,7 @@
                         <li class="list-group-item"><strong class="text-dark">Edición:</strong><?= $libro->edicion?></li>
                         <li class="list-group-item"><strong class="text-dark">AÑO:</strong><?= $libro->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1 text-white">#<span itemprop="keywords"><?= $libro->tags ?></span></a>
-                        <input class='btn btn-light' type="submit" href="<?= $libro->dirDoc;?>" value="Leer">
+                        <button class='btn btn-light' type="submit">Leer</button>
                       </ul>
                     </div>
                 </div>

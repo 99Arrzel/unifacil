@@ -78,130 +78,46 @@ endif;
 </div>
 <!-- Insertar arriba -->
 <br>
-<div class="container-fluid">
-    <div id="UsuariosActivos" class="bg-dark"></div>
+<div class="table-responsive">
+    <table class="table table-hover" id="tblUsuarios">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Login</th>
+                <th>Correo</th>
+                <th>Nivel</th>
+                <th>Suscrito</th>
+                <th>Editar</th>
+                <th>Guardar</th>
+            </tr>
+        </thead>
+    </table>
 </div>
-
-<script type="module">
-    var datos = <?= json_encode($usuario)?> ;
-    function selected()
-    {
-        return "SELECTED";
-    }
-    var dropValues = function(cell, formatterParams) {
-        var valor = cell.getValue();
-        return "<select class='form-control' name='niv'> <option value='' selected='selected' hidden='hidden'>"+valor+"</option><?php foreach ($nivel as $niveles):?><option value='<?=$niveles['ID'];?>'><?=$niveles['NIVEL'];?></option>?><?php endforeach;?></select>";
-    }
-    var editIcon = function(cell, formatterParams) {
-        var valor = cell.getValue();
-        return "<button id='guardar" + valor + "' class= 'btn btn-success' DISABLED>Guardar</button>";
-    };
-    var downIcon = function(cell, formatterParams) {
-        var valor = cell.getValue();
-        return "<button id='" + valor + "' class='btn btn-danger'>Dar de baja</button>";
-    };
-    
-    var esp =
-        "{\r\n            \"pagination\":{\r\n                \"first\":\"Primero\",\r\n                \"first_title\":\"Primera p\u00E1gina\", \r\n                \"last\":\"\u00DAltima\",\r\n                \"last_title\":\"\u00DAltima p\u00E1gina\",\r\n                \"prev\":\"Previa\",\r\n                \"prev_title\":\"P\u00E1gina previa\",\r\n                \"next\":\"Siguiente\",\r\n                \"next_title\":\"Siguiente p\u00E1gina\",\r\n            },\r\n  }";
-
-    var table = new Tabulator("#UsuariosActivos", {
-        locale: "es",
-        langs: {
-            "es": {
-                "pagination": {
-                    "first": "Primero",
-                    "first_title": "Primera página",
-                    "last": "Última",
-                    "last_title": "Última página",
-                    "prev": "Previa",
-                    "prev_title": "Página previa",
-                    "next": "Siguiente",
-                    "next_title": "Siguiente página",
+</div>
+<script>
+    $(document).ready(function() {
+        $('#tblUsuarios').DataTable({
+            data: <?php echo json_encode($usuario)?> ,
+            columns: [{
+                    data: 'NOMBRE'
                 },
-            }
-        },
-        data: datos, //assign data to table
-        layout: "fitColumns", //fit columns to width of table
-        responsiveLayout: "hide", //hide columns that dont fit on the table
-        tooltips: true, //show tool tips on cells
-        addRowPos: "top", //when adding a new row, add it to the top of the table
-        history: true, //allow undo and redo actions on the table
-        pagination: "local", //paginate the data
-        paginationSize: 7, //allow 7 rows per page of data
-        movableColumns: true, //allow column order to be changed
-        //resizableRows:true,       //allow row order to be changed
-        initialSort: [ //set the initial sort order of the data
-            {
-                column: "NOMBRE",
-                dir: "asc"
-            },
-        ],
-        columns: [ //define the table columns
-            {
-                title: "ID",
-                field: "IDUSER",
-                visible:false,
-            },
-            {
-                title: "Nombre",
-                field: "NOMBRE",
-                editor: "input"
-                
-            },
-            {
-                title: "Apellido",
-                field: "APELLIDO",
-                editor: "input"
-            },
-            {
-                title: "Login",
-                field: "LOGIN",
-                width: 95,
-                editor: "select",
-                editorParams: {
-                    values: ["male", "female"]
-                }
-            },
-            {
-                title: "Email",
-                field: "EMAIL",
-                editor: "input"
-            },
-            {
-                title: "Nivel",
-                field: "NIVEL",
-                formatter: dropValues,
-                hozAlign: "center",
-            },
-            {
-                title: "Suscrito",
-                field: "SUSCRITO",
-                formatter: "tickCross",
-                sorter: "boolean",
-                editor: true
-            },
-            {
-                title: "Guardar",
-                field: "IDUSER",
-                formatter: editIcon,
-                hozAlign: "center",
-                cellClick: function(e, cell) {
-                    alert("XD")
-                }
-            },
-            {
-                title: "Eliminar",
-                field: "IDUSER",
-                formatter: downIcon,
-                hozAlign: "center",
-                cellClick: function(e, cell, data) {
-                    var celda = $('#UsuariosActivos').tabulator("getRow",cell).getCell("ID");
-                    var celdaVal = cell.getValue();
-                    console.log(celdaVal);
-                    alert("XD");
-                }
-            },
-        ],
+                {
+                    data: 'APELLIDO'
+                },
+                {
+                    data: 'LOGIN'
+                },
+                {
+                    data: 'EMAIL'
+                },
+                {
+                    data: 'NIVEL'
+                },
+                {
+                    data: 'SUCRITO'
+                },
+            ],
+        });
     });
-
 </script>

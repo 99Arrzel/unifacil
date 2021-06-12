@@ -112,7 +112,7 @@ endif;
                                     <td><input id="loginModal" autocomplete="off" type='text' name='login'
                                             class='form-control'></input></td>
                                     <td><input id="emailModal" autocomplete="off" type='text' name='email'
-                                            class='form-control' disabled></input>
+                                            class='form-control' disabled required></input>
                                     </td>
                                     <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                             class='form-control'></input></td>
@@ -329,17 +329,15 @@ endif;
                 },
                 {
                     data: 'SUSCRITO',
-                },
-            ],
-            render: function(data, type, row) {
+                    render: function(data) {
                         if ($(data['SUSCRITO'] === '1')) {
-                            var i = "SI";
-                            return i;
+                            return "SI";
                         } else {
-                            var i = "NO";
-                            return i;
+                            return "NO";
                         }
                     },
+                },
+            ],
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",

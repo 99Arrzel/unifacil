@@ -102,7 +102,7 @@ endif;
                         </tr>
                     </thead>
                     <form class='' action='/ListarUsuarios' method='post'>
-                        <label id="idUsuario"></label>
+                        <label id="idUsuario" value=""></label>
                         <tbody>
                             <tr>
                                 <td><input id="nombreModal" autocomplete="off" type='text' name='nombre' class='form-control'></input></td>
@@ -114,7 +114,7 @@ endif;
                                 <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                         class='form-control'></input></td>
                                 <!-- SUS-->
-                                <td><select id="valoresModal" class='form-control' name='suscrito'>
+                                <td><select id="suscritoModal" class='form-control' name='suscrito'>
                                         <option value='1'>SUSCRITO
                                         </option>
                                         <option value='2'> NO SUSCRITO
@@ -201,8 +201,15 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
+
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
+            document.getElementById("loginModal").value = data['LOGIN'];
+            document.getElementById("emailModal").value = data['EMAIL'];
+            document.getElementById("passwordModal").value = data['PASSWORD'];
+            document.getElementById("suscritoModal").value = data['SUSCRITO'];
+            document.getElementById("nivelModal").value = data['NIVELID'];
+            document.getElementById("idUsuario").value = data['IDUSER'];
             //data-toggle="modal" data-target="#staticBackdrop"
             //alert(data['NOMBRE'] + "id");
             console.log(data);

@@ -79,7 +79,7 @@ endif;
 <!-- Modal para editar usuario -->
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="container-fluid">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
@@ -201,7 +201,6 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
-
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
             document.getElementById("loginModal").value = data['LOGIN'];

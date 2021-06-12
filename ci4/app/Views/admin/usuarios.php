@@ -234,7 +234,10 @@ endif;
                 "data": null,
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
-
+            dom: 'Bfrtip',
+            buttons: [
+                'copiar', 'csv', 'excel', 'pdf', 'imprimir'
+            ],
             columns: [{
                     data: 'IDUSER',
                     visible: false,

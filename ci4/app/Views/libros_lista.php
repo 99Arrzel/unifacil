@@ -23,7 +23,7 @@
                         <li class="list-group-item"><strong class="text-dark">Edición:</strong><?= $libro->edicion?></li>
                         <li class="list-group-item"><strong class="text-dark">AÑO:</strong><?= $libro->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1 text-white">#<span itemprop="keywords"><?= $libro->tags ?></span></a>
-                        <a class='btn btn-light' type="submit" href="<?= $libro->dirDoc;?>">Leer</a>
+                        <input class='btn btn-light' type="submit" href="<?= $libro->dirDoc;?>" value="Leer">
                       </ul>
                     </div>
                 </div>

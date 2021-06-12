@@ -73,7 +73,7 @@ endif; ?>
     <?php
 endif;
 ?>
-    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
+    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
 </div>
 <!-- Modal para editar usuario -->
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
@@ -152,62 +152,66 @@ endif;
 <!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
 <br>
-<div class='container-fluid'>
+<div class='container-fluid' id="listadealta">
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
-    <div class='row' id="listadealta">
-        <div class='col-12'>
-            <div class='table table-bordered bg-dark text-light'>
-                <div class="table-responsive">
-                    <table class="table table-hover" id="tblUsuarios">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Login</th>
-                                <th>Correo</th>
-                                <th>Nivel</th>
-                                <th>Suscrito</th>
-                                <th>Editar</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+    <div class='col-12'>
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table class="table table-hover" id="tblUsuarios">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Login</th>
+                            <th>Correo</th>
+                            <th>Nivel</th>
+                            <th>Suscrito</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     </div>
-    <div class='row' id="listadebaja" hidden>
-        <div class='col-12'>
-            <div class='table table-bordered bg-dark text-light'>
-                <div class="table-responsive">
-                    <table class="table table-hover" id="tblUsuariosBaja">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Login</th>
-                                <th>Correo</th>
-                                <th>Nivel</th>
-                                <th>Suscrito</th>
-                                <th>Editar</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+</div>
+<div class='container-fluid' id="listadebaja">
+    <h1 class="text-center">Lista de Usuarios</h1>
+    <h3 id="anuncio" class="text-center">De baja</h3>
+    <div class='col-12'>
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table class="table table-hover" id="tblUsuariosBaja">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Login</th>
+                            <th>Correo</th>
+                            <th>Nivel</th>
+                            <th>Suscrito</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
         </div>
     </div>
 </div>
 <script>
     function mostrar() {
-        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de alta") {
-            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
-            document.getElementById("botonOcultar").className = "btn btn-success";
-        } else {
+        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
+            document.getElementById("botonOcultar").className = "btn btn-success";
+            document.getElementById("listadealta").hidden = true;
+            document.getElementById("listadebaja").hidden = false;
+        } else {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
             document.getElementById("botonOcultar").className = "btn btn-primary";
+            document.getElementById("listadealta").hidden = false;
+            document.getElementById("listadebaja").hidden = true;
         }
     }
 </script>
@@ -323,7 +327,7 @@ endif;
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
                 "infoEmpty": "Mostrando 0 a 0 de 0 registros",
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",

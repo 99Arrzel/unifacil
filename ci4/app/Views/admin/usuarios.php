@@ -103,7 +103,7 @@ endif;
             "columnDefs": [{
                 "targets": 7,
                 "data": null,
-                "defaultContent": "<button>Click!</button>"
+                "defaultContent": "<button class='btn btn-warning'>Editar</button>"
             }],
             columns: [{
                     data: 'IDUSER',

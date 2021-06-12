@@ -78,30 +78,30 @@ endif;
 </div>
 <!-- Insertar arriba -->
 <br>
-<div class="table-responsive">
-    <table class="table table-hover" id="tblUsuarios">
-        <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Login</th>
-                <th>Correo</th>
-                <th>Nivel</th>
-                <th>Suscrito</th>
-                <th>Editar</th>
-                <th>Guardar</th>
-            </tr>
-        </thead>
-    </table>
-</div>
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-hover" id="tblUsuarios">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Login</th>
+                    <th>Correo</th>
+                    <th>Nivel</th>
+                    <th>Suscrito</th>
+                    <th>Editar</th>
+                    <th>Guardar</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </div>
 <script>
     $(document).ready(function() {
         $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
-            columns: [
-                {
+            columns: [{
                     data: 'IDUSER',
                     visible: false,
                 },

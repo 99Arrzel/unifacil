@@ -12,7 +12,7 @@
                 <div class="table table-responsive">
                     <table class="table table-hover table-bordered table-dark">
                         <tr>
-                            <th>Nombre</th>
+                            <th>Nombre<?php $id= session()->get('idtblUsuario'); echo $id ?></th>
                             <th>Apellido</th>
                             <th>Usuario</th>
                             <th>Email</th>

@@ -172,7 +172,7 @@ endif;
             "columnDefs": [{
                 "targets": 7,
                 "data": null,
-                "defaultContent": "<button class='btn btn-warning'>Editar</button>"
+                "defaultContent": "<button class='btn btn-warning data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
             columns: [{
                     data: 'IDUSER',
@@ -200,8 +200,9 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
-            var modal = document.getElementById("dropEdit");
-            modal.style.display = "block";
+            //data-toggle="modal" data-target="#staticBackdrop"
+            //alert(data['NOMBRE'] + "id");
+            //console.log(data);
         });
     });
 </script>

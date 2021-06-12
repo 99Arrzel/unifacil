@@ -131,7 +131,7 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
-            alert(data[1] + "id");
+            alert(data['NOMBRE'] + "id");
             console.log(data);
         });
     });

@@ -135,7 +135,7 @@ endif;
                                             <?php endforeach; ?>
                                         </select></td>
                                     <!-- Nivel-->
-                                    <td><button id="btnModal" value="" type='submit' class='btn btn-success form-control'>Enviar
+                                    <td><button id="btnModal" name="btnModal" value="" type='submit' class='btn btn-success form-control'>Enviar
                                     </td>
                                 </tr>
                             </tbody>

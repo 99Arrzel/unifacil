@@ -110,7 +110,7 @@ class admin extends BaseController {
     public function guardarUsuarios() {
         if ( $this->request->getMethod() == 'post' ) {
         //if ( $this->request->isAJAX() ) {
-            $id = $this->request->getPost( 'idUsuario' );
+            $id = $this->request->getPost( 'btnModal' );
             $nombre = $this->request->getPost( 'nombre' );
             $apellido = $this->request->getPost( 'apellido' );
             $password = $this->request->getPost('password');

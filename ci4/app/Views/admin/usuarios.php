@@ -73,7 +73,6 @@ endif; ?>
     <?php
 endif;
 ?>
-    <h1 class="text-center">Listar Usuarios</h1>
     <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
 </div>
 <!-- Modal para editar usuario -->
@@ -154,7 +153,6 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <div class='container-fluid'>
-
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
     <div class='row' id="listadealta">
@@ -183,7 +181,7 @@ endif;
         <div class='col-12'>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
-                    <table class="table table-hover" id="tblUsuarios">
+                    <table class="table table-hover" id="tblUsuariosBaja">
                         <thead class="thead-dark">
                             <tr>
                                 <th>ID</th>
@@ -202,6 +200,18 @@ endif;
         </div>
     </div>
 </div>
+<script>
+    function mostrar() {
+        if (document.getElementById("botonOcultar").innerHTML = "Mostrar de alta") {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
+            document.getElementById("botonOcultar").className = "btn btn-success";
+        } else {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
+            document.getElementById("botonOcultar").className = "btn btn-primary";
+        }
+    }
+</script>
+
 <script>
     //Script para activos
     $(document).ready(function() {
@@ -243,7 +253,7 @@ endif;
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ registros",
+                "lengthMenu": "Mostrar _MENU_ Registros",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscar:",

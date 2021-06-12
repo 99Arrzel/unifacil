@@ -82,10 +82,10 @@ endif;
     <div id="myModal" class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title text-center" id="staticBackdropLabel">Editar Usuario</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h3 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
             </div>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="modal-body">
@@ -153,21 +153,23 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <div class="container-fluid">
-    <div class="table-responsive">
-        <table class="table table-hover" id="tblUsuarios">
-            <thead class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Login</th>
-                    <th>Correo</th>
-                    <th>Nivel</th>
-                    <th>Suscrito</th>
-                    <th>Editar</th>
-                </tr>
-            </thead>
-        </table>
+    <div class='table table-bordered bg-dark text-light'>
+        <div class="table-responsive">
+            <table class="table table-hover" id="tblUsuarios">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Login</th>
+                        <th>Correo</th>
+                        <th>Nivel</th>
+                        <th>Suscrito</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
 </div>
 <script>

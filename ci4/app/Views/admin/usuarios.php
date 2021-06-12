@@ -117,7 +117,7 @@ endif;
                                 <td><select id="suscritoModal" class='form-control' name='suscrito'>
                                         <option value='1'>SUSCRITO
                                         </option>
-                                        <option value='2'> NO SUSCRITO
+                                        <option value='0'> NO SUSCRITO
                                         </option>
                                     </select></td>
                                 <!-- SUS-->

@@ -76,6 +76,75 @@ endif;
     <h1 class="text-center">Listar Usuarios</h1>
     <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de alta</button>
 </div>
+<!-- Modal para editar usuario -->
+<div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table id="insertar" class='col-12 table table-dark'>
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Login</th>
+                            <th>Email</th>
+                            <th>Contraseña</th>
+                            <th>Suscrito</th>
+                            <th>Nivel</th>
+                            <th>Crear</th>
+                        </tr>
+                    </thead>
+                    <form class='' action='/ListarUsuarios' method='post'>
+                        <tbody>
+                            <tr>
+                                <td><input type='text' name='nombre' class='form-control'></input></td>
+                                <td><input type='text' name='apellido' class='form-control'></input></td>
+                                <td><input autocomplete="username" type='text' name='login'
+                                        class='form-control'></input></td>
+                                <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
+                                </td>
+                                <td><input autocomplete="current-password" type='password' name='password'
+                                        class='form-control'></input></td>
+                                <!-- SUS-->
+                                <td><select class='form-control' name='suscrito'>
+                                        <option value='1'>SUSCRITO
+                                        </option>
+                                        <option value='2'> NO SUSCRITO
+                                        </option>
+                                    </select></td>
+                                <!-- SUS-->
+                                <!-- Nivel-->
+                                <td><select class='form-control' name='nivel'>
+                                        <?php foreach ($nivel as $niveles): ?>
+                                        <option
+                                            value="<?=$niveles['ID'];?>">
+                                            <?=$niveles['NIVEL'];?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select></td>
+                                <!-- Nivel-->
+                                <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                            </tr>
+                        </tbody>
+                    </form>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
 <br>
 <div class="container-fluid">
@@ -131,8 +200,8 @@ endif;
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
             var data = tabla.row($(this).parents('tr')).data();
-            alert(data['NOMBRE'] + "id");
-            console.log(data);
+            var modal = document.getElementById("dropEdit");
+            modal.style.display = "block";
         });
     });
 </script>

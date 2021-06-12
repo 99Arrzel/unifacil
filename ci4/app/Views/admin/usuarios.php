@@ -201,6 +201,13 @@ endif;
     </div>
 </div>
 <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            document.getElementById("listadebaja").hidden = true;
+        }, 2000);
+
+    });
+
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";

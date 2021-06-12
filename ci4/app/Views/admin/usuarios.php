@@ -210,7 +210,7 @@ endif;
             document.getElementById("botonOcultar").className = "btn btn-success";
             document.getElementById("listadealta").hidden = true;
             document.getElementById("listadebaja").hidden = false;
-            document.getElementById("anuncio").innerHTML = "De alta";
+            document.getElementById("anuncio").innerHTML = "De baja";
 
 
         } else {
@@ -218,7 +218,7 @@ endif;
             document.getElementById("botonOcultar").className = "btn btn-primary";
             document.getElementById("listadealta").hidden = false;
             document.getElementById("listadebaja").hidden = true;
-            document.getElementById("anuncio").innerHTML = "De baja";
+            document.getElementById("anuncio").innerHTML = "De alta";
         }
     }
 </script>

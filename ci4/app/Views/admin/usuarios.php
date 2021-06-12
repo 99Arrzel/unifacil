@@ -202,12 +202,16 @@ endif;
 </div>
 <script>
     function mostrar() {
-        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de alta") {
-            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
-            document.getElementById("botonOcultar").className = "btn btn-success";
-        } else {
+        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
+            document.getElementById("botonOcultar").className = "btn btn-success";
+            document.getElementById("listadealta").hidden = true;
+            document.getElementById("listadebaja").hidden = false;
+        } else {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
             document.getElementById("botonOcultar").className = "btn btn-primary";
+            document.getElementById("listadealta").hidden = false;
+            document.getElementById("listadebaja").hidden = true;
         }
     }
 </script>

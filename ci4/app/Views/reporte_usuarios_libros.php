@@ -127,14 +127,14 @@ function generate() {
                 cellWidth: 60,
             },
             4: {
-                cellWidth: 60,
+                cellWidth: 90,
             }
             ,
             5: {
-                cellWidth: 60,
+                cellWidth: 90,
             },
             6: {
-                cellWidth: 60,
+                cellWidth: 90,
             }        
         },  
         styles: {  

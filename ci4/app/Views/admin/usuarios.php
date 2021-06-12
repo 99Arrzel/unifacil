@@ -102,7 +102,6 @@ endif;
             columns: [
                 {
                     data: 'IDUSER'
-                    visible: false;
                 },
                 {
                     data: 'NOMBRE'

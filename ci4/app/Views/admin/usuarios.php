@@ -330,7 +330,7 @@ endif;
                 {
                     data: 'SUSCRITO',
                     render: function(data) {
-                        if ($(data == "1")) {
+                        if (data == "1") {
                             return "SI";
                         } else {
                             return "NO";

@@ -25,4 +25,17 @@ class Libros_lista extends BaseController
         echo view('templates/header');//navbar
         return view('reporte_usuarios_libros',$data);
 	}
+
+	public function crearUsuarioLibro(){
+        $datosuslib = [
+            "tblUsuario_idtblUsuario"=>$_POST['idtblUsuario'],
+            "tblLibro_idtblLibro"=>$_POST['idtblLibro'],
+			"fecha"=>$_POST['fecha']
+        ];
+
+        $libro = new ModeloLibros();
+        $libro->insertarUsuarioLibro($datosuslib);
+
+        
+    }
 }

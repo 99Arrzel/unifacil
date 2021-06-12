@@ -27,6 +27,12 @@ class ModeloLibros extends Model
         return $Libros->getResultArray();          
     }
 
+    public function insertarUsuarioLibro($datosuslib)
+    {
+        $Libros = $this->db->table('tblUsuario_downloads_tblLibro');//selecciona la tabla
+        $Libros->insert($datosuslib); //inserta los datos
+        //return $this->db->insertID();//devuelve el ultimo ID
+    }   
     
 
 

@@ -102,7 +102,8 @@ endif;
             data: <?php echo json_encode($usuario)?> ,
             columns: [
                 {
-                    data: 'IDUSER'
+                    data: 'IDUSER',
+                    visible: false,
                 },
                 {
                     data: 'NOMBRE'

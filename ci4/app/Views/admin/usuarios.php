@@ -112,7 +112,7 @@ endif;
                                     <td><input id="loginModal" autocomplete="off" type='text' name='login'
                                             class='form-control'></input></td>
                                     <td><input id="emailModal" autocomplete="off" type='text' name='email'
-                                            class='form-control' disabled required></input>
+                                            class='form-control'></input>
                                     </td>
                                     <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                             class='form-control'></input></td>

@@ -102,8 +102,8 @@ function generate() {
     margins = {  
         top: 150,  
         bottom: 60,  
-        left: 40,  
-        right: 40,  
+        left: 30,  
+        right: 30,  
         width: 600  
     };  
     var y = 20;  
@@ -115,26 +115,26 @@ function generate() {
         theme: 'striped',  
         columnStyles: {  
             0: {  
-                cellWidth: 100,  
+                cellWidth: 60,  
             },  
             1: {  
-                cellWidth: 100,  
+                cellWidth: 60,  
             },  
             2: {  
-                cellWidth: 100,  
+                cellWidth: 60,  
             },
             3: {
-                cellWidth: 100,
+                cellWidth: 60,
             },
             4: {
-                cellWidth: 100,
+                cellWidth: 60,
             }
             ,
             5: {
-                cellWidth: 100,
+                cellWidth: 60,
             },
             6: {
-                cellWidth: 100,
+                cellWidth: 60,
             }        
         },  
         styles: {  

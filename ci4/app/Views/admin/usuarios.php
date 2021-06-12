@@ -206,7 +206,7 @@ endif;
             document.getElementById("loginModal").value = data['LOGIN'];
             document.getElementById("emailModal").value = data['EMAIL'];
             document.getElementById("passwordModal").value = data['CONTRASEÑA'];
-            document.getElementById("suscritoModal").value = data['SUSCRITO'];
+            document.getElementById("suscritoModal").selectedIndex  = data['SUSCRITO'];
             document.getElementById("nivelModal").value = data['NIVELID'];
             document.getElementById("idUsuario").value = data['IDUSER'];
             //data-toggle="modal" data-target="#staticBackdrop"

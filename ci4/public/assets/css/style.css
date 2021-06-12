@@ -9,7 +9,3 @@ body {
 .progress-bar {
     background-color: green;
 }
-
-#myModal {
-    min-width: 1500 !important;
-}

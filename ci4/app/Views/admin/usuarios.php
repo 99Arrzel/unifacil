@@ -202,7 +202,7 @@ endif;
 </div>
 <script>
     function mostrar() {
-        if (document.getElementById("botonOcultar").innerHTML = "Mostrar de alta") {
+        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de alta") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
             document.getElementById("botonOcultar").className = "btn btn-success";
         } else {

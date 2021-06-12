@@ -10,3 +10,9 @@ body {
     background-color: green;
 }
 
+@media (min-width: 992px) {
+    .modal-xl {
+        width: 90%;
+        max-width: 1200px;
+    }
+}

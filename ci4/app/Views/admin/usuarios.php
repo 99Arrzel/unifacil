@@ -204,7 +204,7 @@ endif;
     $(document).ready(function() {
         setTimeout(function() {
             document.getElementById("listadebaja").hidden = true;
-        }, 2000);
+        }, 500);
 
     });
 

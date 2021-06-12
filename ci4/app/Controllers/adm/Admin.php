@@ -134,7 +134,8 @@ class admin extends BaseController {
                 $nuevoUsuario['password'] = $password;
             }
             $model->save( $nuevoUsuario );
-            echo'{"exists":true}';
+            return redirect()->to( 'https://proyecto3.tk/ListarUsuarios' );
+            //echo'{"exists":true}';
             //True si pasa
         }
     }

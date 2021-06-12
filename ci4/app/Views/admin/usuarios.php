@@ -98,7 +98,7 @@ endif;
 </div>
 <script>
     $(document).ready(function() {
-        $('#tblUsuarios').DataTable({
+        var tabla = $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
             "columnDefs": [{
                 "targets": 7,
@@ -130,7 +130,7 @@ endif;
             ],
         });
         $('#tblUsuarios tbody').on( 'click', 'button', function () {
-        var data = table.row( $(this).parents('tr') ).data();
+        var data = tabla.row( $(this).parents('tr') ).data();
         alert( data[0] + "id" );
     } );
     });

@@ -176,7 +176,7 @@ endif;
         </div>
     </div>
 </div>
-<div class='container-fluid' id="listadebaja">
+<div class='container-fluid' id="listadebaja" hidden>
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De baja</h3>
     <div class='col-12'>

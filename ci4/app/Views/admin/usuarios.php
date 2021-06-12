@@ -128,13 +128,13 @@ endif;
                     defaultContent: "<button class='btn btn-warning'>Editar</button>"
                 },
                 {
-                    data: null,
+                    data: 'IDUSER',
                     defaultContent: "<button class='btn btn-danger'>Dar de baja</button>"
                 },
             ],
         });
     });
-    $('#tblUsuarios tbody').on( 'Editar', 'button', function () {
+    $('#tblUsuarios tbody').on( 'click', 'button', function (e) {
         var data = table.row( $(this).parents('tr') ).data();
         alert(data[0] + "Es el id XD");
     } );

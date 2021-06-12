@@ -108,13 +108,16 @@ class admin extends BaseController {
         }
     }
     public function guardarUsuarios() {
-        if ( $this->request->isAJAX() ) {
-            $id = $this->request->getPost( 'miid' );
+        if ( $this->request->getMethod() == 'post' ) {
+        //if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'idUsuario' );
             $nombre = $this->request->getPost( 'nombre' );
             $apellido = $this->request->getPost( 'apellido' );
+            $password = $this->request->getPost('password');
             $login = $this->request->getPost( 'login' );
             $email = $this->request->getPost( 'email' );
             $nivel = $this->request->getPost( 'nivel' );
+            $suscrito = $this->request->getPost('suscrito');
             //TODO: verificiación de datos acá
             $model = new ModeloUsuario();
             $nuevoUsuario = [
@@ -122,9 +125,14 @@ class admin extends BaseController {
                 'nombreUsuario' => $nombre,
                 'apellido' => $apellido,
                 'email' => $email,
+                'suscrito' => $suscrito,
                 'login' => $login, //Login usuario
                 'tblNivel_idtblNivel' => $nivel, //Nivel default ( usuario )
             ];
+            if($password != "")
+            {
+                $nuevoUsuario['password'] = $password;
+            }
             $model->save( $nuevoUsuario );
             echo'{"exists":true}';
             //True si pasa

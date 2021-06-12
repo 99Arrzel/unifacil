@@ -102,8 +102,8 @@ endif;
                                 <th>Guardar</th>
                             </tr>
                         </thead>
-                        <form class='' action='/ListarUsuarios' method='post'>
-                            <label id="idUsuario" value=""></label>
+                        <form class='' action='/ListarUsuarios/guardar' method='post'>
+                            <label id="idUsuario" name="idUsuario" value=""></label>
                             <tbody>
                                 <tr>
                                     <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'

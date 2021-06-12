@@ -127,15 +127,11 @@ endif;
                 {
                     data: 'SUSCRITO'
                 },
-                {
-                    data: null,
-                    defaultContent: "<button class='btn btn-warning'>Editar</button>"
-                },
             ],
         });
     });
     $('#tblUsuarios tbody').on('click', 'button', function(e) {
         var data = table.row($(this).parents('tr')).data();
-        alert(data[0] + "'s salary is: " + data[5]);
+        alert(data[1] + "'s salary is: ");
     });
 </script>

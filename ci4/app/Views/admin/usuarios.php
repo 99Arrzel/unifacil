@@ -154,9 +154,32 @@ endif;
 <!-- Insertar arriba -->
 <br>
 <div class='container-fluid'>
+
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
-    <div class='row'>
+    <div class='row' id="listadealta">
+        <div class='col-12'>
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="tblUsuarios">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Login</th>
+                                <th>Correo</th>
+                                <th>Nivel</th>
+                                <th>Suscrito</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row' id="listadebaja" hidden>
         <div class='col-12'>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
@@ -179,30 +202,6 @@ endif;
         </div>
     </div>
 </div>
-
-<div class="container-fluid">
-    <div class="col-lg-12">
-        <div class='table table-bordered bg-dark text-light'>
-            <div class="table-responsive">
-                <table class="table table-hover" id="tblUsuariosBaja">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Login</th>
-                            <th>Correo</th>
-                            <th>Nivel</th>
-                            <th>Suscrito</th>
-                            <th>Editar</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
     //Script para activos
     $(document).ready(function() {

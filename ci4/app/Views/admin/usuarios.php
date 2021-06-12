@@ -101,7 +101,7 @@ endif;
         $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
             "columnDefs": [{
-                "targets": -1,
+                "targets": 7,
                 "data": null,
                 "defaultContent": "<button>Click!</button>"
             }],

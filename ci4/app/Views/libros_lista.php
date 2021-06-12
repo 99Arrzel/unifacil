@@ -8,7 +8,7 @@
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
         <div class='container' style='margin-top:3em;'>
-             <form method="POST">
+             <form action="<?php echo base_url().'/crearUsuarioLibro'?>" method="POST">
             <div class='card-columns custom-columns'>
             <?php foreach ($libros as $libro): ?>
                 <div class='card bg-dark'>
@@ -23,7 +23,7 @@
                         <li class="list-group-item"><strong class="text-dark">Edición:</strong><?= $libro->edicion?></li>
                         <li class="list-group-item"><strong class="text-dark">AÑO:</strong><?= $libro->year ?></li>
                         <a href="#" class="btn btn-accent-b btn-sm m-1 text-white">#<span itemprop="keywords"><?= $libro->tags ?></span></a>
-                        <button class='btn btn-light'type="submit" onclick="<?php echo base_url().'/crearUsuarioLibro'?>"><a href="<?= $libro->dirDoc;?>">Leer</a></button>
+                        <a class='btn btn-light' type="submit" href="<?= $libro->dirDoc;?>">Leer</a>
                       </ul>
                     </div>
                 </div>

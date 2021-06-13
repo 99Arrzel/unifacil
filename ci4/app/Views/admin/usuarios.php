@@ -2,72 +2,74 @@
 <div class='container-fluid'>
     <h1 class="text-center">Crear Usuario</h1>
     <div id='crear'>
-        <table id="insertar" class='table table-dark'>
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Login</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Contraseña</th>
-                    <th scope="col">Suscrito</th>
-                    <th scope="col">Nivel</th>
-                    <th scope="col">Crear</th>
-                </tr>
-            </thead>
-            <form action='/ListarUsuarios' method='post'>
-                <tbody>
+        <div class="table-responsive">
+            <table id="insertar" class='table table-dark'>
+                <thead>
                     <tr>
-                        <td><input type='text' name='nombre' class='form-control'></input></td>
-                        <td><input type='text' name='apellido' class='form-control'></input></td>
-                        <td><input autocomplete="username" type='text' name='login' class='form-control'></input></td>
-                        <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
-                        </td>
-                        <td><input autocomplete="current-password" type='password' name='password'
-                                class='form-control'></input></td>
-                        <!-- SUS-->
-                        <td><select class='form-control' name='suscrito'>
-                                <option value='1'>SUSCRITO
-                                </option>
-                                <option value='0'> NO SUSCRITO
-                                </option>
-                            </select></td>
-                        <!-- SUS-->
-                        <!-- Nivel-->
-                        <td><select class='form-control' name='nivel'>
-                                <?php foreach ($nivel as $niveles): ?>
-                                <option
-                                    value="<?=$niveles['ID'];?>">
-                                    <?=$niveles['NIVEL'];?>
-                                </option>
-                                <?php endforeach; ?>
-                            </select></td>
-                        <!-- Nivel-->
-                        <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Login</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Contraseña</th>
+                        <th scope="col">Suscrito</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Crear</th>
                     </tr>
-                </tbody>
-            </form>
-        </table>
+                </thead>
+                <form action='/ListarUsuarios' method='post'>
+                    <tbody>
+                        <tr>
+                            <td><input type='text' name='nombre' class='form-control'></input></td>
+                            <td><input type='text' name='apellido' class='form-control'></input></td>
+                            <td><input autocomplete="username" type='text' name='login' class='form-control'></input>
+                            </td>
+                            <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
+                            </td>
+                            <td><input autocomplete="current-password" type='password' name='password'
+                                    class='form-control'></input></td>
+                            <!-- SUS-->
+                            <td><select class='form-control' name='suscrito'>
+                                    <option value='1'>SUSCRITO
+                                    </option>
+                                    <option value='0'> NO SUSCRITO
+                                    </option>
+                                </select></td>
+                            <!-- SUS-->
+                            <!-- Nivel-->
+                            <td><select class='form-control' name='nivel'>
+                                    <?php foreach ($nivel as $niveles): ?>
+                                    <option
+                                        value="<?=$niveles['ID'];?>">
+                                        <?=$niveles['NIVEL'];?>
+                                    </option>
+                                    <?php endforeach; ?>
+                                </select></td>
+                            <!-- Nivel-->
+                            <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                        </tr>
+                    </tbody>
+                </form>
+            </table>
+        </div>
     </div>
-</div>
-<?php if (isset($validation)): ?>
-<div class='col-12'>
-    <div class='alert alert-danger' role='alert'>
-        <?=$validation->listErrors() ?>
+    <?php if (isset($validation)): ?>
+    <div class='col-12'>
+        <div class='alert alert-danger' role='alert'>
+            <?=$validation->listErrors() ?>
+        </div>
     </div>
-</div>
-<?php
+    <?php
 endif; ?>
-<?php if (session()
+    <?php if (session()
     ->get('exitoso')): ?>
-<div class='alert alert-success' role='alert'>
-    <?=session()
+    <div class='alert alert-success' role='alert'>
+        <?=session()
         ->get('exitoso') ?>
-</div>
-<?php
+    </div>
+    <?php
 endif;
 ?>
-<button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
+    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
 </div>
 <!-- Modal para editar usuario -->
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"

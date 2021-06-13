@@ -55,7 +55,7 @@ class admin extends BaseController {
                 ];
                 $model->save( $nuevoUsuario );
                 $session->setFlashdata( 'exitoso', 'Registro exitoso' );
-                return redirect()->to( 'https://www.proyecto3.tk/ListarUsuarios' );
+                return redirect()->to( 'https://proyecto3.tk/ListarUsuarios' );
             }
         }
         $datosUsuario = ( new ModeloUsuarioADM() )->traerUsuariosActivos();
@@ -134,7 +134,7 @@ class admin extends BaseController {
                 $nuevoUsuario['password'] = $password;
             }
             $model->save( $nuevoUsuario );
-            return redirect()->to( 'https://www.proyecto3.tk/ListarUsuarios' );
+            return redirect()->to( 'https://proyecto3.tk/ListarUsuarios' );
             //echo'{"exists":true}';
             //True si pasa
         }
@@ -191,7 +191,7 @@ class admin extends BaseController {
                     $model->save( $nuevoUsuario );
                     $session->setFlashdata( 'exitoso', 'Registro exitoso' );
                 }
-                return redirect()->to( 'https://www.proyecto3.tk/ListarUsuarios' );
+                return redirect()->to( 'https://proyecto3.tk/ListarUsuarios' );
                 //Return a main
             }
         }

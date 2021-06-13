@@ -459,8 +459,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                mitab.tablaBaja.reload();
-                mitab.tablaAlta.reload();
+                mitab.tablaBaja.ajax.reload();
+                mitab.tablaBaja.ajax.reload();
             })
         },
 
@@ -480,8 +480,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                mitab.tablaBaja.reload();
-                mitab.tablaAlta.reload();
+                mitab.tablaBaja.ajax.reload();
+                mitab.tablaBaja.ajax.reload();
             })
         },
     }

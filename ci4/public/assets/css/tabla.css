@@ -490,6 +490,6 @@ table.dataTable, table.dataTable th, table.dataTable td {
 
 
 .dataTables_wrapper .dt-buttons {
-    float:none;  
-    text-align:center;
+    float:none !important;  
+    text-align:center !important;
 }

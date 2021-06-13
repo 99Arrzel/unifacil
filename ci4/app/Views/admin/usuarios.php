@@ -278,7 +278,7 @@ endif;
                 {
                     data: 'IDUSER',
                     render: function(data) {
-                        return "<button onclick='restaurar(" + data +
+                        return "<button onclick='ops.re(" + data +
                             ")' class='btn btn-success form-control'>Restaurar</button>";
                     },
                 },
@@ -322,48 +322,6 @@ endif;
             //alert(data['NOMBRE'] + "id");
             console.log(data);
         });
-
-        function restaurar(id) {
-            var formData = {
-                miid: id
-            };
-            $.ajax({
-                type: "POST",
-                url: "/ListarUsuarios/restaurar",
-                data: formData,
-                dataType: "json",
-                statusCode: {
-                    500: function() {
-                        alert("Error 500, chequea el script amiguito");
-                    }
-                },
-                encode: true,
-            }).done(function(resultado) {
-                tablaBaja.reload();
-                tablaAlta.reload();
-            })
-        }
-
-        function baja(id) {
-            var formData = {
-                miid: id
-            };
-            $.ajax({
-                type: "POST",
-                url: "/ListarUsuarios/eliminar",
-                data: formData,
-                dataType: "json",
-                statusCode: {
-                    500: function() {
-                        alert("Error 500, chequea el script amiguito");
-                    }
-                },
-                encode: true,
-            }).done(function(resultado) {
-                tablaBaja.reload();
-                tablaAlta.reload();
-            })
-        }
     });
     //Script para activos
     $(document).ready(function() {
@@ -438,7 +396,7 @@ endif;
                 {
                     data: 'IDUSER',
                     render: function(data) {
-                        return "<button onclick='baja(" + data +
+                        return "<button onclick='ops.ba(" + data +
                             ")' class='btn btn-danger form-control'>Dar de baja</button>";
                     },
                 },
@@ -482,8 +440,9 @@ endif;
             //alert(data['NOMBRE'] + "id");
             console.log(data);
         });
-
-        function restaurar(id) {
+    });
+    ops = {
+        re: function restaurar(id) {
             var formData = {
                 miid: id
             };
@@ -502,9 +461,9 @@ endif;
                 tablaBaja.reload();
                 tablaAlta.reload();
             })
-        }
+        },
 
-        function baja(id) {
+        ba: function baja(id) {
             var formData = {
                 miid: id
             };
@@ -523,8 +482,9 @@ endif;
                 tablaBaja.reload();
                 tablaAlta.reload();
             })
-        }
-    });
+        },
+    }
+
 
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {

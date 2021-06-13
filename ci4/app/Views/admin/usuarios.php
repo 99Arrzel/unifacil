@@ -229,26 +229,34 @@ endif;
     $(document).ready(function() {
         var tabla = $('#tblUsuariosBaja').DataTable({
             data: <?php echo json_encode($usuarioBaja)?> ,
-            "columnDefs": [{
-                "targets": 7,
-                "data": null,
-                "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
-            }],
             dom: 'Bfrtip',
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
+                    columns: [0, 1, 2, 3, 4],
                 },
-                'csv', 'excel', 'pdf',
+                {
+                    extend: 'csv',
+                    text: 'CSV',
+                    columns: [0, 1, 2, 3, 4],
+                },
+                {
+                    extend: 'excel',
+                    text: 'EXCEL',
+                    columns: [0, 1, 2, 3, 4],
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    columns: [0, 1, 2, 3, 4],
+                },
                 {
                     extend: 'print',
-                    text: 'Imprimir'
+                    text: 'Imprimir',
+                    columns: [0, 1, 2, 3, 4],
                 },
             ],
-            columns: [{
-                    data: 'IDUSER',
-                    visible: false,
-                },
+            columns: [
                 {
                     data: 'NOMBRE'
                 },
@@ -273,6 +281,10 @@ endif;
                             return "NO";
                         }
                     },
+                },
+                {
+                    data: null,
+                    defaultContent: "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>",
                 },
             ],
             language: {
@@ -377,7 +389,7 @@ endif;
                 {
                     data: null,
                     defaultContent: "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>",
-                }
+                },
             ],
             language: {
                 "decimal": "",

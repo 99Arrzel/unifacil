@@ -3,7 +3,7 @@
     <h1 class="text-center">Crear Usuario</h1>
     <div id='crear'>
         <div class='row'>
-            <div class='col-12'>
+            <div class='col-md-12'>
                 <div class='table table-bordered bg-dark text-light'>
                     <table id="insertar" class='col-12 table table-dark'>
                         <thead class='thead-dark'>
@@ -214,7 +214,7 @@ endif;
                 url: ajaxListBaja,
                 dataSrc:"",
             },
-            dom: 'B<lf>rtip',
+            dom: 'B<lf>rtip', //Magico y sencillazango
             buttons: [{
                     extend: 'copyHtml5',
                     text: 'Copiar',

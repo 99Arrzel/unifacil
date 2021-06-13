@@ -1,3 +1,7 @@
+<?php
+header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+header("Access-Control-Allow-Methods: GET, OPTIONS");
+?>
 <br>
 <div class='container-fluid'>
     <h1 class="text-center">Crear Usuario</h1>
@@ -203,7 +207,7 @@ endif;
     });
     //Script para inactivos
     $(document).ready(function() {
-        const ajaxListBaja = "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja";
+        const ajaxListBaja = "https://www.proyecto3.tk/ListarUsuarios/ajaxListBaja";
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
                 url: ajaxListBaja,

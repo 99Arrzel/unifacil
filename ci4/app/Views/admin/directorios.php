@@ -416,9 +416,9 @@ var mitab = {}; //Global
                 }
             },
         });
-        $('#tblDirectorios tbody').on('click', 'button', function() {
+        /*$('#tblDirectorios tbody').on('click', 'button', function() {
             var data = mitab.tablaAlta.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
 
-        });
+        });*/
 </script>

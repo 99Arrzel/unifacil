@@ -4,7 +4,7 @@
             header('Location: http://proyecto3.tk/');
         }?>
 <body>
-<h3>Finalmente debes insertar un tag para seleccionar o si ya esta en la lista puedes<a href="/librofiltro"> omitir </a>esta parte</h3>
+<h3>Finalmente debes insertar un tag para seleccionar o si ya esta en la lista puedes omitir esta parte</h3>
     <div class="container">
         <h1>ABM Tag</h1>
         <div class="row">
@@ -90,6 +90,7 @@
 
     </div>
     <a class="btn btn-primary btn-lg btn-block" href="/librofiltro" role="button">Continuar a Libros</a>
+    <a class="btn btn-primary btn-lg btn-block" href="/examenfiltro" role="button">Continuar a Examenes</a>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">//sweet alert para que se vea mas bonito</script>
     

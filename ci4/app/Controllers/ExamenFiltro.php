@@ -2,33 +2,33 @@
 
 namespace App\Controllers;
 
-use App\Models\ModeloLibroFiltro;
+use App\Models\ModeloExamenFiltro;
 
-class LibroFiltro extends BaseController 
+class ExamenFiltro extends BaseController 
 {
     public function index()
     {
         echo view('templates/header');//navbar
         //TODO::cambios aqui
-        //$datoslibro = (new ModeloLibroFiltro())->listarlibros();//Envio todo el puto directorio dentro de dir
-        $libro= new ModeloLibroFiltro();
-        $datoslibro = $libro->listarLibros();
+        //$datosexamen = (new ModeloExamenFiltro())->listarlibros();//Envio todo el puto directorio dentro de dir
+        $examen= new ModeloExamenFiltro();
+        $datosexamen = $examen->listarExamenes();
         $mensaje = session('mensaje');
     
-        $imagen = new ModeloLibroFiltro();
+        $imagen = new ModeloExamenFiltro();
         $datosimagen = $imagen->listarImagenes();
 
-        $autor = new ModeloLibroFiltro();
+        $autor = new ModeloExamenFiltro();
         $datosautor = $autor->listarAutores();
 
-        $tag =  new ModeloLibroFiltro();
+        $tag =  new ModeloExamenFiltro();
         $datostag = $tag->listarTags();
 
-        $filtro = new ModeloLibroFiltro();
+        $filtro = new ModeloExamenFiltro();
         $datosfiltro = $filtro->listarFiltros();
 
         $data = [
-            "libro" => $datoslibro,//datosdir
+            "examen" => $datosexamen,//datosdir
             "mensaje"=>$mensaje,
             "imagen" => $datosimagen,
             "autor" => $datosautor,
@@ -36,14 +36,14 @@ class LibroFiltro extends BaseController
             "filtro" =>$datosfiltro
             //mensaje para la alerta
         ];
-        return view('abm_libro_filtro',$data);
+        return view('abm_libro_examen',$data);
 
         
         /*
-        $libro = new ModeloLibroFiltro();
-        $datos = $libro->listarLibros();
+        $examen = new ModeloExamenFiltro();
+        $datos = $examen->listarLibros();
         $mensaje = session('mensaje');
-        $imagen = new ModeloLibroFiltro();
+        $imagen = new ModeloExamenFiltro();
         $datosImg = $imagen->listarImagenes();
         $data = [
             "datos" => $datos,//datos
@@ -57,19 +57,20 @@ class LibroFiltro extends BaseController
         
     }
 
-    public function crearLibroFiltro()
+    public function crearExamenFiltro()
     {
         //print_r($_POST); se fija si los datos llegan
         //xd
-        $miId = (new ModeloLibroFiltro())->ultimoID();
+        $miId = (new ModeloExamenFiltro())->ultimoID();
         $miId = $miId[0]['XD'];
         $datos = [
-            "idtblLibro"=> $miId,
-            "nombreLibro"=>$_POST['nombreLibro'],
+            "idtblExamen"=> $miId,
+            "nombreExamen"=>$_POST['nombreExamen'],
             "year"=>$_POST['year'],
-            "edicion"=>$_POST['edicion'],
+            "paralelo"=>$_POST['paralelo'],
             "dirDoc"=>$_POST['dirDoc'],
             "tblImagen_idtblImagen"=>$_POST['tblImagen_idtblImagen'],
+            "tblAutor_idtblAutor"=>$_POST['IDAutor'],
             "estado"=>$_POST['estado']
             //nombre del campo de la base=> nombre o id del input
         ];
@@ -82,7 +83,6 @@ class LibroFiltro extends BaseController
         $datostag = [
             "tblTag_idtblTag"=>$_POST['IDTag'],
             "tblLibro_idtblLibro"=>$miId,
-
         ];
 
         $datosfil = [
@@ -90,36 +90,36 @@ class LibroFiltro extends BaseController
             "idtblLibro_Union"=>$miId,
         ];
 
-        $libro = new ModeloLibroFiltro(); // nuevo objeto libro
-        $respuesta = $libro->insertarLibro($datos); //manda los datos al modelo
+        $examen = new ModeloExamenFiltro(); // nuevo objeto examen
+        $respuesta = $examen->insertarExamen($datos); //manda los datos al modelo
 
-        $autor = new ModeloLibroFiltro();
+        $autor = new ModeloExamenFiltro();
         $autor->insertarAutor($datosaut);
 
-        $tag = new ModeloLibroFiltro();
+        $tag = new ModeloExamenFiltro();
         $tag->insertarTag($datostag);
 
-        $filtro = new ModeloLibroFiltro();
+        $filtro = new ModeloExamenFiltro();
         $filtro->insertarFiltro($datosfil);
         
-        //$imagen = new ModeloLibroFiltro($datosimg);
+        //$imagen = new ModeloExamenFiltro($datosimg);
         //$respuestaimg = $imagen->insertarImagen($datosimg);
 
         if($respuesta > 0){ 
-            return redirect()->to(base_url().'/librofiltro')->with('mensaje','1');
+            return redirect()->to(base_url().'/examenfiltro')->with('mensaje','1');
         }else {
-            return redirect()->to(base_url().'/librofiltro')->with('mensaje','0');
+            return redirect()->to(base_url().'/examenfiltro')->with('mensaje','0');
         }
     }
-    public function actualizarLibroFiltro()
+    public function actualizarExamenFiltro()
     {
         
         print_r($_POST); 
         $datos = [
-            "idtblLibro"=>$_POST['idtblLibro'],//el update es lo mismo que el insert pero hay que adjuntar el ID a modificar
+            "idtblExamen"=>$_POST['idtblExamen'],//el update es lo mismo que el insert pero hay que adjuntar el ID a modificar
             "nombreLibro"=>$_POST['nombreLibro'],
             "year"=>$_POST['year'],
-            "edicion"=>$_POST['edicion'],
+            "paralelo"=>$_POST['paralelo'],
             "dirDoc"=>$_POST['dirDoc'],
             "estado"=>$_POST['estado']
             //nombre del campo de la base=> nombre o id del input
@@ -143,25 +143,25 @@ class LibroFiltro extends BaseController
             "idfiltroFinal"=>$_POST['idfiltroFinal']
         ];
 
-        $idtblLibro=$_POST['idtblLibro'];//id para la consulta
-        $libro = new ModeloLibroFiltro(); // nuevo objeto libro
+        $idtblExamen=$_POST['idtblExamen'];//id para la consulta
+        $examen = new ModeloExamenFiltro(); // nuevo objeto examen
 
-        $respuesta = $libro->actualizarLibro($datos,$idtblLibro);
+        $respuesta = $examen->actualizarExamen($datos,$idtblExamen);
 
         $idtblImagen=$_POST['idtblImagen'];
-        $imagen = new ModeloLibroFiltro();
+        $imagen = new ModeloExamenFiltro();
         $imagen->actualizarImagen($datosimg,$idtblImagen);
 
         $idtblAutor=$_POST['idtblAutor'];
-        $autor = new ModeloLibroFiltro();
+        $autor = new ModeloExamenFiltro();
         $autor->actualizarAutor($datosaut,$idtblAutor);
 
         $idtblTag=$_POST['idtblTag'];
-        $tag = new ModeloLibroFiltro();
+        $tag = new ModeloExamenFiltro();
         $tag->actualizarTag($datostag,$idtblTag);
 
         $idfiltroFinal=$_POST['idfiltroFinal'];
-        $filtro = new ModeloLibroFiltro();
+        $filtro = new ModeloExamenFiltro();
         $filtro->actualizarFiltro($datosfil,$idfiltroFinal);
 
         if($respuesta){//if true
@@ -187,39 +187,39 @@ class LibroFiltro extends BaseController
         ];
         
         $idtblLibro=$_POST['idtblLibro'];//id para la consulta
-        $libro = new ModeloLibroFiltro(); // nuevo objeto libro
-        $respuesta = $libro->eliminarLibroLogic($datos,$idtblLibro);
+        $examen = new ModeloExamenFiltro(); // nuevo objeto examen
+        $respuesta = $examen->eliminarLibroLogic($datos,$idtblLibro);
 
         if($respuesta){//if true
-            return redirect()->to(base_url().'/libro')->with('mensaje','2');
+            return redirect()->to(base_url().'/examen')->with('mensaje','2');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','3');
+            return redirect()->to(base_url().'/examen')->with('mensaje','3');
         }
     }
 
     */
    
-    public function obtenerNombreLibroFiltro($idtblLibro,$idtblImagen,$idtblAutor,$idtblTag,$idfiltroFinal)//aca se reciben las ids de las tablas llamadas de la vista
+    public function obtenerNombreExamenFiltro($idtblExamen,$idtblImagen,$idtblAutor,$idtblTag,$idfiltroFinal)//aca se reciben las ids de las tablas llamadas de la vista
     {
         echo view('templates/header');//navbar
-        $data =["idtblLibro" => $idtblLibro];//mismo que en la linea 61
-        $libro = new ModeloLibroFiltro();
-        $respuesta=$libro->obtenernombreLibro($data);
+        $data =["idtblExamen" => $idtblExamen];//mismo que en la linea 61
+        $examen = new ModeloExamenFiltro();
+        $respuesta=$examen->obtenerNombreExamen($data);
 
         $dataimg = ["idtblImagen" => $idtblImagen];
-        $imagen = new ModeloLibroFiltro();
+        $imagen = new ModeloExamenFiltro();
         $respuestaimg=$imagen->obtenerNombreImagen($dataimg);
 
         $dataaut = ["idtblAutor" => $idtblAutor];
-        $autor = new ModeloLibroFiltro();
+        $autor = new ModeloExamenFiltro();
         $respuestaaut=$autor->obtenerNombreAutor($dataaut);
 
         $datatag = ["idtblTag" => $idtblTag];
-        $tag = new ModeloLibroFiltro();
+        $tag = new ModeloExamenFiltro();
         $respuestatag=$tag->obtenerNombreTag($datatag);
 
         $datafil = ["idfiltroFinal" =>$idfiltroFinal];
-        $filtro = new ModeloLibroFiltro();
+        $filtro = new ModeloExamenFiltro();
         $respuestafil=$filtro->obtenerNombreFiltro($datafil);
 
         $datos=[
@@ -230,20 +230,20 @@ class LibroFiltro extends BaseController
             "datosfil" =>$respuestafil
         ];
 
-        return view('actualizarLibroFiltro',$datos);
+        return view('actualizarExamenFiltro',$datos);
     }
 
-    public function eliminarLibro($idtblLibro)
+   /* public function eliminarLibro($idtblLibro)
     {
-        $libro = new ModeloLibroFiltro();
+        $examen = new ModeloExamenFiltro();
         $data = ["idtblLibro" => $idtblLibro];
 
-        $respuesta = $libro->eliminarLibro($data);
+        $respuesta = $examen->eliminarLibro($data);
 
         if($respuesta){//if true
-            return redirect()->to(base_url().'/libro')->with('mensaje','4');
+            return redirect()->to(base_url().'/examen')->with('mensaje','4');
         }else {
-            return redirect()->to(base_url().'/libro')->with('mensaje','5');
+            return redirect()->to(base_url().'/examen')->with('mensaje','5');
         }
-    }
+    } */
 }

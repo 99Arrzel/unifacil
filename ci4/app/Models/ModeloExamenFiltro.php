@@ -43,12 +43,6 @@ class ModeloExamenFiltro extends Model
         return $query->getResultArray();
     }
 
-    //protected $table = 'tblLibro';
-    //protected $primaryKey = 'idtblLibro';
-    //protected $allowedFields = ['idtblLibro','nombreLibro',
-    //'year','edicion','dirDor',
-    //'tblImagen_idtblImagen'];    
-    
     public function insertarExamen($datos)
     {
         $Examenes = $this->db->table('tblExamen');//selecciona la tabla
@@ -57,43 +51,29 @@ class ModeloExamenFiltro extends Model
         return $this->db->insertID();//devuelve el ultimo ID
     }
 
-    public function insertarAutor($datosaut)
-    {
-        $Autores = $this->db->table('tblAutor_has_tblLibro');//selecciona la tabla
-        $Autores->insert($datosaut); //inserta los datos
-        //return $this->db->insertID();//devuelve el ultimo ID
-    }    
 
     public function insertarTag($datostag)
     {
-        $Tags = $this->db->table('tblTag_has_tblLibro');//selecciona la tabla
+        $Tags = $this->db->table('tblTag_has_tblExamen');//selecciona la tabla
         $Tags->insert($datostag); //inserta los datos
         //return $this->db->insertID();//devuelve el ultimo ID
     } 
 
     public function insertarFiltro($datosfil)
     {
-        $Filtros = $this->db->table('tblfiltroFinal_has_tblLibro');//selecciona la tabla
+        $Filtros = $this->db->table('tblfiltroFinal_has_tblExamen');//selecciona la tabla
         $Filtros->insert($datosfil); //inserta los datos
         //return $this->db->insertID();//devuelve el ultimo ID
     } 
 
-    public function actualizarLibro($data,$idtblExamen)
+    public function actualizarExamen($data,$idtblExamen)
     {
-        $nExamenes = $this->db->table('tblLibro');
+        $nExamenes = $this->db->table('tblExamen');
         $nExamenes->set($data);//funcion update
         $nExamenes->where('idtblExamen',$idtblExamen);
         return $nExamenes->update();
     }
 
-    /*
-    public function eliminarLibroLogic($data,$idtblLibro)
-    {
-        $nExamenes = $this->db->table('tblLibro');
-        $nExamenes->set($data);//funcion update
-        $nExamenes->where('idtblLibro',$idtblLibro);
-        return $nExamenes->update();
-    }*/
 
     public function actualizarImagen($data,$idtblImagen)
     {

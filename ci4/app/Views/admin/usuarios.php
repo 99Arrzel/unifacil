@@ -212,6 +212,7 @@ endif;
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:"",
+                dataType: "jsonp",
             },
             dom: 'Blfrtip',
             buttons: [{
@@ -338,6 +339,7 @@ endif;
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataSrc:"",
+                dataType: "jsonp",
             },
             dom: 'Blfrtip',
             buttons: [{

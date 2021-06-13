@@ -212,7 +212,7 @@ endif;
             processing: true,
             serverSide: true,
             ajax: {
-                url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
+                url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:""
             },
             data: <?php echo json_encode($usuarioBaja)?> ,

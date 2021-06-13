@@ -211,12 +211,9 @@ endif;
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
-                dataSrc: "",
+                dataSrc:"",
             },
-            dom: 'Bfrtip',
-            dom: "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
-                "<'row'<'col-sm-12'tr>>" +
-                "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+            dom: 'Blfrtip',
             buttons: [{
                     extend: 'copyHtml5',
                     text: 'Copiar',
@@ -340,9 +337,9 @@ endif;
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
-                dataSrc: "",
+                dataSrc:"",
             },
-            dom: 'Bfrtip',
+            dom: 'Blfrtip',
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
@@ -384,7 +381,7 @@ endif;
                     className: 'btn btn-info',
                 },
             ],
-
+            
             columns: [{
                     data: 'NOMBRE'
                 },

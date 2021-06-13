@@ -214,8 +214,7 @@ endif;
                 url: ajaxListBaja,
                 dataSrc:"",
             },
-            dom: 'Rfrtlip',
-            //dom: 'Blfrtip',
+            dom: 'B<lf>rtip',
             buttons: [{
                     extend: 'copyHtml5',
                     text: 'Copiar',
@@ -342,8 +341,7 @@ endif;
                 url: ajaxList,
                 dataSrc:"",
             },
-            dom: 'Rfrtlip'
-            //dom: 'Blfrtip',
+            dom: 'B<lf>rtip',
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',

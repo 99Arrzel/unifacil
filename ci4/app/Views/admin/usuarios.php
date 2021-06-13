@@ -8,49 +8,36 @@
                     <table id="insertar" class='col-12 table table-dark'>
                         <thead class='thead-dark'>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Login</th>
-                                <th>Email</th>
-                                <th>Contraseña</th>
-                                <th>Suscrito</th>
-                                <th>Nivel</th>
-                                <th>Crear</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Login</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Suscrito</th>
+                                <th scope="col">Nivel</th>
+                                <th scope="col">Crear</th>
                             </tr>
                         </thead>
                         <form action='/ListarUsuarios' method='post'>
-                            <tbody>
-                                <tr>
-                                    <div class="form-group">
+                                <tbody>
+                                    <tr>
                                         <td><input type='text' name='nombre' class='form-control'></input></td>
-                                    </div>
-                                    <div class="form-group">
                                         <td><input type='text' name='apellido' class='form-control'></input></td>
-                                    </div>
-                                    <div class="form-group">
                                         <td><input autocomplete="username" type='text' name='login'
                                                 class='form-control'></input></td>
-                                    </div>
-                                    <div class="form-group">
                                         <td><input autocomplete="email" type='text' name='email'
                                                 class='form-control'></input></td>
-                                    </div>
-                                    <div class="form-group">
                                         <td><input autocomplete="current-password" type='password' name='password'
                                                 class='form-control'></input></td>
-                                    </div>
-                                    <!-- SUS-->
-                                    <div class="form-group">
+                                        <!-- SUS-->
                                         <td><select class='form-control' name='suscrito'>
                                                 <option value='1'>SUSCRITO
                                                 </option>
                                                 <option value='0'> NO SUSCRITO
                                                 </option>
                                             </select></td>
-                                    </div>
-                                    <!-- SUS-->
-                                    <!-- Nivel-->
-                                    <div class="form-group">
+                                        <!-- SUS-->
+                                        <!-- Nivel-->
                                         <td><select class='form-control' name='nivel'>
                                                 <?php foreach ($nivel as $niveles): ?>
                                                 <option
@@ -59,14 +46,11 @@
                                                 </option>
                                                 <?php endforeach; ?>
                                             </select></td>
-                                    </div>
-                                    <!-- Nivel-->
-                                    <div class="form-group">
+                                        <!-- Nivel-->
                                         <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
-                                    </div>
-                                </tr>
-                            </tbody>
-
+                                    </tr>
+                                </tbody>
+                            
                         </form>
                     </table>
                 </div>

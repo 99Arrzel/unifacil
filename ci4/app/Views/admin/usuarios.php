@@ -101,7 +101,7 @@ endif;
                                 <th>Guardar</th>
                             </tr>
                         </thead>
-                        <form  action='/ListarUsuarios/guardar' method='post' autocomplete="off">
+                        <form action='/ListarUsuarios/guardar' method='post' autocomplete="off">
                             <tbody>
                                 <tr>
 
@@ -169,6 +169,7 @@ endif;
                             <th>Nivel</th>
                             <th>Suscrito</th>
                             <th>Editar</th>
+                            <th>Dar de alta</th>
                         </tr>
                     </thead>
                 </table>
@@ -205,6 +206,48 @@ endif;
 
     });
 
+    function restaurar(id) {
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/ListarUsuarios/restaurar",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+            tablaBaja.reload();
+            tablaAlta.reload();
+        })
+    }
+
+    function baja(id) {
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/ListarUsuarios/eliminar",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+            tablaBaja.reload();
+            tablaAlta.reload();
+        })
+    }
+
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
@@ -229,7 +272,7 @@ endif;
 <script>
     //Script para inactivos
     $(document).ready(function() {
-        var tabla = $('#tblUsuariosBaja').DataTable({
+        var tablaBaja = $('#tblUsuariosBaja').DataTable({
             data: <?php echo json_encode($usuarioBaja)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -299,8 +342,9 @@ endif;
                 },
                 {
                     data: 'IDUSER',
-                    render: function(data){
-                        return "<button id='alta("+ data + ")' class='btn btn-danger form-control'>Eliminar</button>";
+                    render: function(data) {
+                        return "<button id='restaurar(" + data +
+                            ")' class='btn btn-success form-control'>Restaurar</button>";
                     },
                 },
             ],
@@ -330,7 +374,7 @@ endif;
             },
         });
         $('#tblUsuariosBaja tbody').on('click', 'button', function() {
-            var data = tabla.row($(this).parents('tr')).data();
+            var data = tablaBaja.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
             document.getElementById("loginModal").value = data['LOGIN'];
@@ -349,7 +393,7 @@ endif;
 <script>
     //Script para activos
     $(document).ready(function() {
-        var tabla = $('#tblUsuarios').DataTable({
+        var tablaAlta = $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -417,6 +461,13 @@ endif;
                     data: null,
                     defaultContent: "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>",
                 },
+                {
+                    data: 'IDUSER',
+                    render: function(data) {
+                        return "<button id='baja(" + data +
+                            ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    },
+                },
             ],
             language: {
                 "decimal": "",
@@ -444,7 +495,7 @@ endif;
             },
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
-            var data = tabla.row($(this).parents('tr')).data();
+            var data = tablaAlta.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
             document.getElementById("loginModal").value = data['LOGIN'];

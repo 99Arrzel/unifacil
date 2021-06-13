@@ -214,43 +214,6 @@ endif;
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:"",
             },
-            dom: 'Bfrtip',
-            buttons: [{
-                    extend: 'copyHtml5',
-                    text: 'Copiar',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                },
-                {
-                    extend: 'csv',
-                    text: 'CSV',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                },
-                {
-                    extend: 'excel',
-                    text: 'EXCEL',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                },
-                {
-                    extend: 'pdf',
-                    text: 'PDF',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                },
-                {
-                    extend: 'print',
-                    text: 'Imprimir',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                },
-            ],
             columns: [{
                     data: 'NOMBRE'
                 },

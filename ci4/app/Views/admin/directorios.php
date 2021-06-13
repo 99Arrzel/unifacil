@@ -313,7 +313,7 @@
                 }
             };*/
 var mitab = {}; //Global
-var ajaxDirectorios = "proyecto3.tk/adm-dir/ajaxListDirectorio";
+var ajaxDirectorios = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
     $(document).ready(function()
     {
         mitab.tablaBaja = $('#tblDirectorios').DataTable({

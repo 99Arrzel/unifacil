@@ -209,12 +209,11 @@ endif;
     //Script para inactivos
     $(document).ready(function() {
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
-            paging: false,
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:"",
             },
-            dom: 'Bfrtip',
+            //dom: 'Bfrtip',
             buttons: [{
                     extend: 'copyHtml5',
                     text: 'Copiar',
@@ -336,12 +335,11 @@ endif;
     //Script para activos
     $(document).ready(function() {
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
-            paging: false,
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataSrc:"",
             },
-            dom: 'Bfrtip',
+            //dom: 'Bfrtip',
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
@@ -383,6 +381,7 @@ endif;
                     className: 'btn btn-info',
                 },
             ],
+            
             columns: [{
                     data: 'NOMBRE'
                 },

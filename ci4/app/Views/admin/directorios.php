@@ -288,7 +288,7 @@
 <script type='text/javascript' src='assets/js/admDirectorio.js'>
 </script>
 <script>
-var esp =  {
+/*var esp =  {
                 "decimal": "",
                 "emptyTable": "No hay datos",
                 "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
@@ -311,7 +311,7 @@ var esp =  {
                     "sortAscending": ": Activar orden de columna ascendente",
                     "sortDescending": ": Activar orden de columna desendente"
                 }
-            };
+            };*/
 var mitab = {}; //Global
 var ajaxDirectorios = "proyecto3.tk/adm-dir/ajaxListDirectorio";
     $(document).ready(function()
@@ -368,7 +368,30 @@ var ajaxDirectorios = "proyecto3.tk/adm-dir/ajaxListDirectorio";
                     data: 'NOMBRE',
                 },
             ],
-            language: esp,
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay datos",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
+                "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+                "infoFiltered": "(Filtro de _MAX_ total registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Registros",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron coincidencias",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": Activar orden de columna ascendente",
+                    "sortDescending": ": Activar orden de columna desendente"
+                }
+            },
         });
         $('#tblDirectorios tbody').on('click', 'button', function() {
             var data = mitab.tablaAlta.row($(this).parents('tr')).data();

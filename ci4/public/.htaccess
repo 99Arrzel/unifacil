@@ -62,4 +62,4 @@ Options All -Indexes
 #Development habilitado
 SetEnv CI_ENVIRONMENT development
 #Allow cross origin, XD, falta investigar más de esto
-Header set Access-Control-Allow-Origin "*"
+#Header set Access-Control-Allow-Origin "*"

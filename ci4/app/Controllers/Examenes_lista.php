@@ -13,6 +13,31 @@ class Examenes_lista extends BaseController
 		return view("examenes_lista",$data);
 	}
 
+	public function ReporteUsuario()
+	{
+		$usuario= new ModeloExamenes();
+        $datosusuario = $usuario->listarUsuariosExamenes();
+       // $mensaje = session('mensaje');
+
+        $data = [
+            "usuario" => $datosusuario
+        ];
+        echo view('templates/header');//navbar
+        return view('reporte_usuarios_examenes',$data);
+	}
+
+	public function crearUsuarioExamen(){
+        $datosusex = [
+            "tblUsuario_idtblUsuario"=>$_POST['idtblUsuario'],
+            "tblExamen_idtblExamen"=>$_POST['idtblExamen'],
+			"fecha"=>$_POST['fecha']
+        ];
+
+        $libro = new ModeloExamenes();
+        $libro->insertarUsuarioExamen($datosusex);
+		$enlace = $_POST['dirDoc'];
+		return redirect()->to($enlace);
+    }
 
 
 }

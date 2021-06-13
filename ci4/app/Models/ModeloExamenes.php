@@ -21,6 +21,18 @@ class ModeloExamenes extends Model
         }
     }
 
+    public function listarUsuariosExamenes()
+    {                               
+        $Examenes = $this->db->query("SELECT * FROM REPORTE_USUARIO_EXAMEN");
+        return $Examenes->getResultArray();          
+    }
+
+    public function insertarUsuarioExamen($datosusex)
+    {
+        $Examenes = $this->db->table('tblUsuario_downloads_tblExamen');//selecciona la tabla
+        $Examenes->insert($datosusex); //inserta los datos
+        //return $this->db->insertID();//devuelve el ultimo ID
+    }
 }
 
 

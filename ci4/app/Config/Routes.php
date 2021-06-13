@@ -130,7 +130,6 @@ $routes->post('/crearFiltroRelacion','LibroRelacion::crearFiltroRelacion');//
 $routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');//
 
-
 $routes->get('/reporteusuarioexamen','Examenes_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioExamen','Examenes_lista::crearUsuarioExamen');//
 

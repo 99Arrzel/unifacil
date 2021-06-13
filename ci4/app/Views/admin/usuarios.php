@@ -267,9 +267,6 @@ endif;
             document.title = "Usuarios de alta UNIFACIL";
         }
     }
-</script>
-
-<script>
     //Script para inactivos
     $(document).ready(function() {
         var tablaBaja = $('#tblUsuariosBaja').DataTable({
@@ -388,9 +385,6 @@ endif;
             console.log(data);
         });
     });
-</script>
-<!-- ACTIVOS ABAJO -->
-<script>
     //Script para activos
     $(document).ready(function() {
         var tablaAlta = $('#tblUsuarios').DataTable({

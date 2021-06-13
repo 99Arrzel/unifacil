@@ -29,6 +29,7 @@
                                 </ul>
                             </div>
                         </div>
+                    </form> <!-- form trolazo -->
                     <?php endforeach; ?>
             </div>
         </div>

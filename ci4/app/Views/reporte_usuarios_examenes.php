@@ -17,7 +17,7 @@
                             <th>Usuario</th><!-- ward:  $id= session()->get('idtblUsuario'); echo $id  -->
                             <th>Email</th>
                             <th>Fecha y Hora</th>
-                            <th>Nombre del Examenes</th>
+                            <th>Nombre del Examene</th>
                             <th>Enlace</th>
                         </tr>
                         <tr>

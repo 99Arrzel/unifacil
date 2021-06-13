@@ -188,6 +188,7 @@ endif;
                             <th>Nivel</th>
                             <th>Suscrito</th>
                             <th>Editar</th>
+                            <th>Dar de alta</th>
                         </tr>
                     </thead>
                 </table>
@@ -298,7 +299,9 @@ endif;
                 },
                 {
                     data: 'IDUSER',
-                    
+                    render: function(data){
+                        return "<button id='alta("+ data + ")' class='btn btn-danger form-control'>Eliminar</button>";
+                    },
                 },
             ],
             language: {

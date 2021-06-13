@@ -211,10 +211,7 @@ endif;
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
-                //dataSrc:""
-                processFunction: 'ajaxListBaja',
-                dataType: 'jsonp',
-                cors: true,
+                dataSrc:""
             },
             dom: 'Bfrtip',
             buttons: [{
@@ -335,10 +332,7 @@ endif;
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
-                processFunction: 'ajaxList',
-                //dataSrc:""
-                dataType: 'jsonp',
-                cors: true,
+                dataSrc:""
             },
             dom: 'Bfrtip',
             buttons: [{

@@ -200,12 +200,11 @@ class admin extends BaseController {
     {
         $datosUsuario = ( new ModeloUsuarioADM() )->traerUsuariosActivos();
         //$datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
-        echo "ajaxList(".json_encode($datosUsuario).")";
-        //echo json_encode($datosUsuario);
+        echo json_encode($datosUsuario);
     }
     public function ajaxListBaja()
     {
         $datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
-        echo "ajaxListBaja(".json_encode($datosUsuarioBaja).")";
+        echo json_encode($datosUsuarioBaja);
     }
 }

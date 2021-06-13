@@ -365,7 +365,29 @@ var ajaxDirectorios = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
             ],
             columns:[
                 {
-                    data: 'NOMBRE',
+                    data: 'CIUDAD',
+                },
+                {
+                    data: 'GESTION',
+                },
+                {
+                    data: 'FACULTAD',
+                },
+                {
+                    data: 'CARRERA',
+                },
+                {
+                    data: 'SEMESTRE',
+                },
+                {
+                    data: 'MATERIA',
+                },
+                {
+                    data: 'ID',
+                    render: function(data) {
+                        return "<button onclick='ops.re(" + data +
+                            ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    },
                 },
             ],
             language: {

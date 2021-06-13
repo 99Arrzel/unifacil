@@ -324,11 +324,6 @@ endif;
     $(document).ready(function() {
         var tabla = $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
-            "columnDefs": [{
-                "targets": 7,
-                "data": null,
-                "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
-            }],
             dom: 'Bfrtip',
             buttons: [{
                     extend: 'copy',
@@ -385,6 +380,10 @@ endif;
                         }
                     },
                 },
+                {
+                    data: null,
+                    defaultContent: "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>",
+                }
             ],
             language: {
                 "decimal": "",

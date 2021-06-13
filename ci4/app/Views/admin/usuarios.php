@@ -148,7 +148,6 @@ endif;
 </div>
 <!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
-<br>
 <div class='container-fluid'>
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
@@ -196,7 +195,7 @@ endif;
 <script>
     var mitab = {};
     $(document).ready(function() {
-        document.title = "Usuarios de UNIFACIL";
+        document.title = "Usuarios de alta UNIFACIL";
         setTimeout(function() {
             document.getElementById("listadebaja").hidden = true;
         }, 200);

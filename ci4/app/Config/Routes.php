@@ -22,7 +22,7 @@ $routes->setDefaultController('Usuarios');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(false);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -129,6 +129,9 @@ $routes->post('/crearFiltroRelacion','LibroRelacion::crearFiltroRelacion');//
 
 $routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');//
+
+$routes->get('/reporteusuarioexamen','Examenes_lista::ReporteUsuario');//
+$routes->post('/crearUsuarioExamen','Examenes_lista::crearUsuarioExamen');//
 
 $routes->get('/reporteusuarioactivo','ReporteUsuario::ReporteUsuarioActivo');//
 

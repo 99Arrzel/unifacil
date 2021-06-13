@@ -1,6 +1,10 @@
 <?php
-header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk//ListarUsuarios/ajaxList, https://proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk, https://www.proyecto3.tk'); //Si no es www se bugea jajajajaa
-header("Access-Control-Allow-Methods: GET, OPTIONS");
+$http_origin = $_SERVER['HTTP_ORIGIN'];
+
+if ($http_origin == "http://www.domain1.com" || $http_origin == "https://www.proyecto3.tk" || $http_origin == "https://proyecto3.tk")
+{  
+    header("Access-Control-Allow-Origin: $http_origin");
+}
 ?>
 <br>
 <div class='container-fluid'>

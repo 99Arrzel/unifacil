@@ -5,7 +5,7 @@
         }?>
 <body>
     <div class="container">
-        <h1>ABM Libro-Filtro</h1>
+        <h1>ABM Libro</h1>
         <div class="row">
             <div class="col-sm-12">
                 <form action="<?php echo base_url().'/crearLibroFiltro'?>" method="POST">

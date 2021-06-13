@@ -4,7 +4,7 @@
     <div id='crear'>
         <div class='row'>
             <div class='col-md-12'>
-                <div class='table table-bordered bg-dark text-light'>
+                <div class='table table-bordered'>
                     <table id="insertar" class='col-12 table table-dark'>
                         <thead class='thead-dark'>
                             <tr>

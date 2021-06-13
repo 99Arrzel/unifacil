@@ -2,60 +2,54 @@
 <div class='container-fluid'>
     <h1 class="text-center">Crear Usuario</h1>
     <div id='crear'>
-        <div class='row'>
-            <div class='col-md-12'>
 
-                <table id="insertar" class='table table-dark'>
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Login</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Contraseña</th>
-                            <th scope="col">Suscrito</th>
-                            <th scope="col">Nivel</th>
-                            <th scope="col">Crear</th>
-                        </tr>
-                    </thead>
-                    <form action='/ListarUsuarios' method='post'>
-                        <tbody>
-                            <tr>
-                                <td><input type='text' name='nombre' class='form-control'></input></td>
-                                <td><input type='text' name='apellido' class='form-control'></input></td>
-                                <td><input autocomplete="username" type='text' name='login'
-                                        class='form-control'></input></td>
-                                <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
-                                </td>
-                                <td><input autocomplete="current-password" type='password' name='password'
-                                        class='form-control'></input></td>
-                                <!-- SUS-->
-                                <td><select class='form-control' name='suscrito'>
-                                        <option value='1'>SUSCRITO
-                                        </option>
-                                        <option value='0'> NO SUSCRITO
-                                        </option>
-                                    </select></td>
-                                <!-- SUS-->
-                                <!-- Nivel-->
-                                <td><select class='form-control' name='nivel'>
-                                        <?php foreach ($nivel as $niveles): ?>
-                                        <option
-                                            value="<?=$niveles['ID'];?>">
-                                            <?=$niveles['NIVEL'];?>
-                                        </option>
-                                        <?php endforeach; ?>
-                                    </select></td>
-                                <!-- Nivel-->
-                                <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
-                            </tr>
-                        </tbody>
 
-                    </form>
-                </table>
-
-            </div>
-        </div>
+        <table id="insertar" class='table table-dark'>
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Login</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Suscrito</th>
+                    <th scope="col">Nivel</th>
+                    <th scope="col">Crear</th>
+                </tr>
+            </thead>
+            <form action='/ListarUsuarios' method='post'>
+                <tbody>
+                    <tr>
+                        <td><input type='text' name='nombre' class='form-control'></input></td>
+                        <td><input type='text' name='apellido' class='form-control'></input></td>
+                        <td><input autocomplete="username" type='text' name='login' class='form-control'></input></td>
+                        <td><input autocomplete="email" type='text' name='email' class='form-control'></input>
+                        </td>
+                        <td><input autocomplete="current-password" type='password' name='password'
+                                class='form-control'></input></td>
+                        <!-- SUS-->
+                        <td><select class='form-control' name='suscrito'>
+                                <option value='1'>SUSCRITO
+                                </option>
+                                <option value='0'> NO SUSCRITO
+                                </option>
+                            </select></td>
+                        <!-- SUS-->
+                        <!-- Nivel-->
+                        <td><select class='form-control' name='nivel'>
+                                <?php foreach ($nivel as $niveles): ?>
+                                <option
+                                    value="<?=$niveles['ID'];?>">
+                                    <?=$niveles['NIVEL'];?>
+                                </option>
+                                <?php endforeach; ?>
+                            </select></td>
+                        <!-- Nivel-->
+                        <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                    </tr>
+                </tbody>
+            </form>
+        </table>
     </div>
     <?php if (isset($validation)): ?>
     <div class='col-12'>

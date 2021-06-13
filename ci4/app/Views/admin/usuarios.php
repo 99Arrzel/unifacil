@@ -209,7 +209,6 @@ endif;
     //Script para inactivos
     $(document).ready(function() {
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
-            ajax: <?php echo json_encode($usuarioBaja)?> ,
             data: <?php echo json_encode($usuarioBaja)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -328,7 +327,6 @@ endif;
     //Script para activos
     $(document).ready(function() {
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
-            ajax: <?php echo json_encode($usuario)?> ,
             data: <?php echo json_encode($usuario)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -461,8 +459,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                mitab.tablaBaja.ajax.reload();
-                mitab.tablaBaja.ajax.reload();
+                $('#tblUsuarios').DataTable().ajax.reload();
+                $('#tblUsuariosBaja').DataTable().ajax.reload();
             })
         },
 
@@ -482,8 +480,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                mitab.tablaBaja.ajax.reload();
-                mitab.tablaBaja.ajax.reload();
+                $('#tblUsuarios').DataTable().ajax.reload();
+                $('#tblUsuariosBaja').DataTable().ajax.reload();
             })
         },
     }

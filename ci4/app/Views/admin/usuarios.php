@@ -5,8 +5,8 @@
         <div class='row'>
             <div class='col-md-12'>
                 <div class='table table-bordered'>
-                    <table id="insertar" class='col-12 table table-dark'>
-                        <thead class='thead-dark'>
+                    <table id="insertar" class='table table-dark'>
+                        <thead>
                             <tr>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>

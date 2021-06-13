@@ -212,7 +212,6 @@ endif;
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:"",
-                crossDomain: true,
             },
             dom: 'Bfrtip',
             buttons: [{
@@ -334,7 +333,6 @@ endif;
             ajax: {
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataSrc:"",
-                crossDomain: true,
             },
             dom: 'Bfrtip',
             buttons: [{

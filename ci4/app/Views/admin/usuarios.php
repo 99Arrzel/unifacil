@@ -210,7 +210,6 @@ endif;
     $(document).ready(function() {
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
-                type: "GET",
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataType: 'json',
                 dataSrc:"",
@@ -334,7 +333,6 @@ endif;
     $(document).ready(function() {
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
             ajax: {
-                type: "GET",
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataType: 'json',
                 dataSrc:"",

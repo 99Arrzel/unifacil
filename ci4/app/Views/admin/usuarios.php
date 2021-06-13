@@ -310,7 +310,7 @@ endif;
             },
         });
         $('#tblUsuariosBaja tbody').on('click', 'button', function() {
-            var data = tablaBaja.row($(this).parents('tr')).data();
+            var data = mitab.tablaBaja.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
             document.getElementById("loginModal").value = data['LOGIN'];
@@ -428,7 +428,7 @@ endif;
             },
         });
         $('#tblUsuarios tbody').on('click', 'button', function() {
-            var data = tablaAlta.row($(this).parents('tr')).data();
+            var data = mitab.tablaAlta.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
             document.getElementById("apellidoModal").value = data['APELLIDO'];
             document.getElementById("loginModal").value = data['LOGIN'];

@@ -221,7 +221,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'csv',
@@ -229,7 +229,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'excel',
@@ -237,7 +237,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'pdf',
@@ -245,7 +245,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'print',
@@ -253,7 +253,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
             ],
             columns: [{
@@ -348,7 +348,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'csv',
@@ -356,7 +356,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'excel',
@@ -364,7 +364,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'pdf',
@@ -372,7 +372,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
                 {
                     extend: 'print',
@@ -380,7 +380,7 @@ endif;
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5],
                     },
-                    className: 'btn btn-info float-center',
+                    className: 'btn btn-info',
                 },
             ],
             

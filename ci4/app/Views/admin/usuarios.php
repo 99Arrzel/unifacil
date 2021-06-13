@@ -205,68 +205,6 @@ endif;
         }, 200);
 
     });
-
-    function restaurar(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/restaurar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            tablaBaja.reload();
-            tablaAlta.reload();
-        })
-    }
-
-    function baja(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/eliminar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            tablaBaja.reload();
-            tablaAlta.reload();
-        })
-    }
-
-    function mostrar() {
-        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
-            document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
-            document.getElementById("botonOcultar").className = "btn btn-success";
-            document.getElementById("listadealta").hidden = true;
-            document.getElementById("listadebaja").hidden = false;
-            document.getElementById("anuncio").innerHTML = "De baja";
-            document.title = "Usuarios de baja UNIFACIL";
-
-
-        } else {
-            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
-            document.getElementById("botonOcultar").className = "btn btn-primary";
-            document.getElementById("listadealta").hidden = false;
-            document.getElementById("listadebaja").hidden = true;
-            document.getElementById("anuncio").innerHTML = "De alta";
-            document.title = "Usuarios de alta UNIFACIL";
-        }
-    }
     //Script para inactivos
     $(document).ready(function() {
         var tablaBaja = $('#tblUsuariosBaja').DataTable({
@@ -503,4 +441,66 @@ endif;
             console.log(data);
         });
     });
+
+    function restaurar(id) {
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/ListarUsuarios/restaurar",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+            tablaBaja.reload();
+            tablaAlta.reload();
+        })
+    }
+
+    function baja(id) {
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/ListarUsuarios/eliminar",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+            tablaBaja.reload();
+            tablaAlta.reload();
+        })
+    }
+
+    function mostrar() {
+        if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de alta";
+            document.getElementById("botonOcultar").className = "btn btn-success";
+            document.getElementById("listadealta").hidden = true;
+            document.getElementById("listadebaja").hidden = false;
+            document.getElementById("anuncio").innerHTML = "De baja";
+            document.title = "Usuarios de baja UNIFACIL";
+
+
+        } else {
+            document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
+            document.getElementById("botonOcultar").className = "btn btn-primary";
+            document.getElementById("listadealta").hidden = false;
+            document.getElementById("listadebaja").hidden = true;
+            document.getElementById("anuncio").innerHTML = "De alta";
+            document.title = "Usuarios de alta UNIFACIL";
+        }
+    }
 </script>

@@ -210,8 +210,9 @@ endif;
     $(document).ready(function() {
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
-                url: "/ajaxListBaja",
-                "dataType": 'json',
+                type: "GET",
+                url: "/ajaxList",
+                dataType: 'json',
                 dataSrc:"",
                 crossDomain: true,
             },
@@ -333,8 +334,9 @@ endif;
     $(document).ready(function() {
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
             ajax: {
+                type: "GET",
                 url: "/ajaxList",
-                "dataType": 'json',
+                dataType: 'json',
                 dataSrc:"",
                 crossDomain: true,
             },

@@ -343,7 +343,7 @@ endif;
                 {
                     data: 'IDUSER',
                     render: function(data) {
-                        return "<button id='restaurar(" + data +
+                        return "<button onclick='restaurar(" + data +
                             ")' class='btn btn-success form-control'>Restaurar</button>";
                     },
                 },
@@ -464,7 +464,7 @@ endif;
                 {
                     data: 'IDUSER',
                     render: function(data) {
-                        return "<button id='baja(" + data +
+                        return "<button onclick='baja(" + data +
                             ")' class='btn btn-danger form-control'>Dar de baja</button>";
                     },
                 },

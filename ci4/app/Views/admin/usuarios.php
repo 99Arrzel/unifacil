@@ -213,7 +213,7 @@ endif;
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:"",
             },
-            //dom: 'Bfrtip',
+            dom: 'Bfrti',
             buttons: [{
                     extend: 'copyHtml5',
                     text: 'Copiar',
@@ -339,7 +339,7 @@ endif;
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataSrc:"",
             },
-            //dom: 'Bfrtip',
+            dom: 'Bfrti',
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',

@@ -8,7 +8,7 @@ class Examenes_lista extends BaseController
 	{
 		echo view('templates/header');
 		$ModeloExamenes = new ModeloExamenes();
-		//$libro = new Libros(); //Esto no hace nada, que hace acá XDD 
+		//$examen = new Libros(); //Esto no hace nada, que hace acá XDD 
 		$data['examenes']=$ModeloExamenes->getExamenes();
 		return view("examenes_lista",$data);
 	}
@@ -33,8 +33,8 @@ class Examenes_lista extends BaseController
 			"fecha"=>$_POST['fecha']
         ];
 
-        $libro = new ModeloExamenes();
-        $libro->insertarUsuarioExamen($datosusex);
+        $examen = new ModeloExamenes();
+        $examen->insertarUsuarioExamen($datosusex);
 		$enlace = $_POST['dirDoc'];
 		return redirect()->to($enlace);
     }

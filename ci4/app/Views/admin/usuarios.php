@@ -19,27 +19,38 @@
                             </tr>
                         </thead>
                         <form action='/ListarUsuarios' method='post'>
-                                <tbody>
-                                    <tr>
+                            <tbody>
+                                <tr>
                                     <div class="form-group">
                                         <td><input type='text' name='nombre' class='form-control'></input></td>
                                     </div>
+                                    <div class="form-group">
                                         <td><input type='text' name='apellido' class='form-control'></input></td>
+                                    </div>
+                                    <div class="form-group">
                                         <td><input autocomplete="username" type='text' name='login'
                                                 class='form-control'></input></td>
+                                    </div>
+                                    <div class="form-group">
                                         <td><input autocomplete="email" type='text' name='email'
                                                 class='form-control'></input></td>
+                                    </div>
+                                    <div class="form-group">
                                         <td><input autocomplete="current-password" type='password' name='password'
                                                 class='form-control'></input></td>
-                                        <!-- SUS-->
+                                    </div>
+                                    <!-- SUS-->
+                                    <div class="form-group">
                                         <td><select class='form-control' name='suscrito'>
                                                 <option value='1'>SUSCRITO
                                                 </option>
                                                 <option value='0'> NO SUSCRITO
                                                 </option>
                                             </select></td>
-                                        <!-- SUS-->
-                                        <!-- Nivel-->
+                                    </div>
+                                    <!-- SUS-->
+                                    <!-- Nivel-->
+                                    <div class="form-group">
                                         <td><select class='form-control' name='nivel'>
                                                 <?php foreach ($nivel as $niveles): ?>
                                                 <option
@@ -48,11 +59,14 @@
                                                 </option>
                                                 <?php endforeach; ?>
                                             </select></td>
-                                        <!-- Nivel-->
+                                    </div>
+                                    <!-- Nivel-->
+                                    <div class="form-group">
                                         <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
-                                    </tr>
-                                </tbody>
-                            
+                                    </div>
+                                </tr>
+                            </tbody>
+
                         </form>
                     </table>
                 </div>

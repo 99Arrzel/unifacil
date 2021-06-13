@@ -32,8 +32,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->match(['get'], '/ListarUsuarios/ajaxListBaja', 'adm/Admin::ajaxListBaja');
-$routes->match(['get'], '/ListarUsuarios/ajaxList', 'adm/Admin::ajaxList');
+$routes->match(['get','post'], '/ListarUsuarios/ajaxListBaja', 'adm/Admin::ajaxListBaja');
+$routes->match(['get','post'], '/ListarUsuarios/ajaxList', 'adm/Admin::ajaxList');
 $routes->match(['post'], '/ListarUsuarios/suscrito', 'adm/Admin::suscritoID');
 $routes->match(['post'], '/ListarUsuarios/eliminar', 'adm/Admin::eliminarID');
 $routes->match(['post'], '/ListarUsuarios/guardar', 'adm/Admin::guardarUsuarios');

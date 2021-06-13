@@ -298,9 +298,7 @@ endif;
                 },
                 {
                     data: 'IDUSER',
-                    render: function(data){
-                        return "<button id='baja("+ data + ")' class='btn btn-danger form-control'>Eliminar</button>";
-                    },
+                    
                 },
             ],
             language: {

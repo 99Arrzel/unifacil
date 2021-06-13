@@ -198,8 +198,8 @@ endif;
 </div>
 <script>
     $(document).ready(function() {
+        document.title = "Usuarios de UNIFACIL";
         setTimeout(function() {
-            document.title = "Usuarios de UNIFACIL";
             document.getElementById("listadebaja").hidden = true;
         }, 200);
 
@@ -212,6 +212,7 @@ endif;
             document.getElementById("listadealta").hidden = true;
             document.getElementById("listadebaja").hidden = false;
             document.getElementById("anuncio").innerHTML = "De baja";
+            document.title = "Usuarios de baja UNIFACIL";
 
 
         } else {
@@ -220,6 +221,7 @@ endif;
             document.getElementById("listadealta").hidden = false;
             document.getElementById("listadebaja").hidden = true;
             document.getElementById("anuncio").innerHTML = "De alta";
+            document.title = "Usuarios de alta UNIFACIL";
         }
     }
 </script>
@@ -235,8 +237,15 @@ endif;
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
             dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+            buttons: [{
+                    extend: 'copy',
+                    text: 'Copiar',
+                },
+                'csv', 'excel', 'pdf',
+                {
+                    extend: 'print',
+                    text: 'Imprimir'
+                },
             ],
             columns: [{
                     data: 'IDUSER',
@@ -321,8 +330,15 @@ endif;
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
             dom: 'Bfrtip',
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+            buttons: [{
+                    extend: 'copy',
+                    text: 'Copiar',
+                },
+                'csv', 'excel', 'pdf',
+                {
+                    extend: 'print',
+                    text: 'Imprimir'
+                },
             ],
             columns: [{
                     data: 'IDUSER',

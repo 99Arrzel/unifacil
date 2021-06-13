@@ -18,11 +18,12 @@
                                 <th>Crear</th>
                             </tr>
                         </thead>
-                        <form class='' action='/ListarUsuarios' method='post'>
-                            <div class="form-group">
+                        <form action='/ListarUsuarios' method='post'>
                                 <tbody>
                                     <tr>
+                                    <div class="form-group">
                                         <td><input type='text' name='nombre' class='form-control'></input></td>
+                                    </div>
                                         <td><input type='text' name='apellido' class='form-control'></input></td>
                                         <td><input autocomplete="username" type='text' name='login'
                                                 class='form-control'></input></td>
@@ -51,7 +52,7 @@
                                         <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
                                     </tr>
                                 </tbody>
-                            </div>
+                            
                         </form>
                     </table>
                 </div>

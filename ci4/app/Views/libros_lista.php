@@ -9,16 +9,10 @@
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
         <div class='container' style='margin-top:3em;'>
-            <form>
-                <div>
-                    <input name="q" type="text" class="form-control" placeholder="Nombre del Libro">
-                    <button class="btn btn-dark" type="button" id="button-addon2">Buscar</button>
-                </div>
-            </form>
             <div class='card-columns custom-columns'>
                 <?php foreach ($libros as $libro) : ?>
                     <form action="<?php echo base_url() . '/crearUsuarioLibro' ?>" method="POST">
-                        <div class='card bg-dark'>
+                        <div class='card bg-dark'><!-- antes de esta linea para que se vea ordenado -->
                             <div class='card-body'>
                                 <h5 class='card-title text-white' align='center'><?= $libro->nombreLibro; ?></h5>
                                 <input type="text" hidden name="idtblLibro" id="idtblLibro" class="form-control" value="<?= $libro->idtblLibro; ?>">

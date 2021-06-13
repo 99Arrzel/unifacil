@@ -213,7 +213,6 @@ endif;
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
                 dataSrc:""
             },
-            data: <?php echo json_encode($usuarioBaja)?> ,
             dom: 'Bfrtip',
             buttons: [{
                     extend: 'copyHtml5',
@@ -335,7 +334,6 @@ endif;
                 url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
                 dataSrc:""
             },
-            data: <?php echo json_encode($usuario)?> ,
             dom: 'Bfrtip',
             buttons: [{
                     extend: 'copy',

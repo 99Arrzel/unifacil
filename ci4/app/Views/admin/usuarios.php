@@ -234,35 +234,35 @@ endif;
                     extend: 'copyHtml5',
                     text: 'Copiar',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
             ],
@@ -348,35 +348,35 @@ endif;
                     extend: 'copy',
                     text: 'Copiar',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
                     exportOptions: {
-                        columns: [0, 1, 2, 3, 4],
+                        columns: [0, 1, 2, 3, 4, 5],
                     },
                 },
             ],

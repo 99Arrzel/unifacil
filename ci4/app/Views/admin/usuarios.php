@@ -208,12 +208,11 @@ endif;
     });
     //Script para inactivos
     $(document).ready(function() {
+        const ajaxListBaja = "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja";
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
-            processing: true,
-            serverSide: true,
             ajax: {
-                url: "https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja",
-                dataType: "jsonp",
+                url: ajaxListBaja,
+                dataSrc:"",
             },
             dom: 'Blfrtip',
             buttons: [{
@@ -336,12 +335,11 @@ endif;
     });
     //Script para activos
     $(document).ready(function() {
+        const ajaxList = "https://www.proyecto3.tk//ListarUsuarios/ajaxList"
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
-            processing: true,
-            serverSide: true,
             ajax: {
-                url: "https://www.proyecto3.tk//ListarUsuarios/ajaxList",
-                dataType: "jsonp",
+                url: ajaxList,
+                dataSrc:"",
             },
             dom: 'Blfrtip',
             buttons: [{

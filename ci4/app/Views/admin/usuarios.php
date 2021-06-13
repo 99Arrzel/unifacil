@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk//ListarUsuarios/ajaxList, https://proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk'); //Si no es www se bugea jajajajaa
+header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk//ListarUsuarios/ajaxList, https://proyecto3.tk//ListarUsuarios/ajaxListBaja, https://proyecto3.tk, https://www.proyecto3.tk'); //Si no es www se bugea jajajajaa
 header("Access-Control-Allow-Methods: GET, OPTIONS");
 ?>
 <br>

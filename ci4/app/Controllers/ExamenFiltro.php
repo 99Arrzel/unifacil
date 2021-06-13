@@ -36,7 +36,7 @@ class ExamenFiltro extends BaseController
             "filtro" =>$datosfiltro
             //mensaje para la alerta
         ];
-        return view('abm_libro_examen',$data);
+        return view('abm_examen_filtro',$data);
 
         
         /*

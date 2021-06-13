@@ -233,27 +233,27 @@ endif;
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
             ],
             columns: [
@@ -338,27 +338,27 @@ endif;
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
-                    columns: [0, 1, 2, 3, 4],
+                    exportOptions: [0, 1, 2, 3, 4],
                 },
             ],
             columns: [{

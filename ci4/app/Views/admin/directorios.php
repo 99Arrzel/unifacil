@@ -313,7 +313,7 @@ var esp =  {
                 }
             };
 var mitab = {}; //Global
-var ajaxDirectorios = "";
+var ajaxDirectorios = "proyecto3.tk/adm-dir/ajaxListDirectorio";
     $(document).ready(function()
     {
         mitab.tablaBaja = $('#tblDirectorios').DataTable({
@@ -370,9 +370,9 @@ var ajaxDirectorios = "";
             ],
             language: esp,
         });
-        $('#tblUsuarios tbody').on('click', 'button', function() {
+        $('#tblDirectorios tbody').on('click', 'button', function() {
             var data = mitab.tablaAlta.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];
 
-    });
+        });
 </script>

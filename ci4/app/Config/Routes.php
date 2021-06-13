@@ -39,6 +39,7 @@ $routes->match(['get'], '/adm-dir/ajaxListMateria', 'adm/EditarDirectorio::ajaxL
 $routes->match(['get'], '/adm-dir/ajaxListFacultad', 'adm/EditarDirectorio::ajaxListFacultad');
 $routes->match(['get'], '/adm-dir/ajaxListCarrera', 'adm/EditarDirectorio::ajaxListCarrera');
 $routes->match(['get'], '/adm-dir/ajaxListSemestre', 'adm/EditarDirectorio::ajaxListSemestre');
+$routes->match(['get'], '/adm-dir/ajaxListDirectorio', 'adm/EditarDirectorio::ajaxListDirectorio');
 // AJAX LISTS EN JSON BAJA
 $routes->match(['get'], '/adm-dir/ajaxListCiudadBaja', 'adm/EditarDirectorio::ajaxListCiudadBaja');
 $routes->match(['get'], '/adm-dir/ajaxListGestionBaja', 'adm/EditarDirectorio::ajaxListGestionBaja');
@@ -46,6 +47,7 @@ $routes->match(['get'], '/adm-dir/ajaxListMateriaBaja', 'adm/EditarDirectorio::a
 $routes->match(['get'], '/adm-dir/ajaxListFacultadBaja', 'adm/EditarDirectorio::ajaxListFacultadBaja');
 $routes->match(['get'], '/adm-dir/ajaxListCarreraBaja', 'adm/EditarDirectorio::ajaxListCarreraBaja');
 $routes->match(['get'], '/adm-dir/ajaxListSemestreBaja', 'adm/EditarDirectorio::ajaxListSemestreBaja');
+$routes->match(['get'], '/adm-dir/ajaxListDirectorioBaja', 'adm/EditarDirectorio::ajaxListDirectorioBaja');
 // route since we don't have to scan directories.
 $routes->match(['get','post'], '/ListarUsuarios/ajaxListBaja', 'adm/Admin::ajaxListBaja');
 $routes->match(['get','post'], '/ListarUsuarios/ajaxList', 'adm/Admin::ajaxList');

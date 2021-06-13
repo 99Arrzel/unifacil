@@ -38,6 +38,11 @@ class editarDirectorio extends BaseController
         return       view( 'templates/footer' );
     }
     //====================================================================
+    public function ajaxListDirectorio()
+    {
+        $datosdir = ( new ModeloDirectorio() )->ListarDirectorio();
+        echo json_encode($datosdir);
+    }
     public function ajaxListMateria()
     {
         $listarMaterias = (new ModeloMateria() )->listarMaterias();
@@ -69,6 +74,11 @@ class editarDirectorio extends BaseController
         echo json_encode($listarCiudades);
     }
     // ================================Baja para ABAJO ==================================================================
+    public function ajaxListDirectorioBaja()
+    {
+        $datosdir = ( new ModeloDirectorio() )->ListarDirectorioHidden();
+        echo json_encode($datosdir);
+    }
     public function ajaxListMateriaBaja()
     {
         $listarMaterias = (new ModeloMateria() )->listarMateriasBaja();

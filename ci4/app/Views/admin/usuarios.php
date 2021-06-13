@@ -296,6 +296,12 @@ endif;
                     data: null,
                     defaultContent: "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>",
                 },
+                {
+                    data: 'IDUSER',
+                    render: function(data){
+                        return "<button id='baja("+ data + ")' class='btn btn-danger form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
+                    },
+                },
             ],
             language: {
                 "decimal": "",

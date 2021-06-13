@@ -471,8 +471,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                $('#tblUsuarios').data.reload();
-                $('#tblUsuariosBaja').data.reload();                
+                mitab.tablaAlta.ajax.reload();
+                mitab.tablaBaja.ajax.reload();
             })
         },
 

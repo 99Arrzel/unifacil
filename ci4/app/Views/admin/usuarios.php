@@ -333,11 +333,13 @@ endif;
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
+                    columns: [0,1,2,4,5,6],
                 },
                 'csv', 'excel', 'pdf',
                 {
                     extend: 'print',
-                    text: 'Imprimir'
+                    text: 'Imprimir',
+                    columns: [0,1,2,4,5,6],
                 },
             ],
             columns: [{

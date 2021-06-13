@@ -161,7 +161,6 @@ endif;
                 <table class="table table-hover" id="tblUsuarios">
                     <thead class="thead-dark">
                         <tr>
-                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Login</th>

@@ -4,7 +4,7 @@
             header('Location: http://proyecto3.tk/');
         }?>
 <body>
-<h3>Bienvenido para insertar un libro primero debes insertar la portada</h3>
+<h3>Bienvenido para insertar un libro o examen,primero debes insertar la portada</h3>
     <div class="container">
         <h1>ABM Imagen</h1>
         <div class="row">

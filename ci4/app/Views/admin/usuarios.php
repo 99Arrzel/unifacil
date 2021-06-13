@@ -198,6 +198,7 @@ endif;
     </div>
 </div>
 <script>
+    var mitab = {};
     $(document).ready(function() {
         document.title = "Usuarios de UNIFACIL";
         setTimeout(function() {
@@ -207,7 +208,7 @@ endif;
     });
     //Script para inactivos
     $(document).ready(function() {
-        var tablaBaja = $('#tblUsuariosBaja').DataTable({
+        mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             data: <?php echo json_encode($usuarioBaja)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -325,7 +326,7 @@ endif;
     });
     //Script para activos
     $(document).ready(function() {
-        var tablaAlta = $('#tblUsuarios').DataTable({
+        mitab.tablaAlta = $('#tblUsuarios').DataTable({
             data: <?php echo json_encode($usuario)?> ,
             dom: 'Bfrtip',
             buttons: [{
@@ -458,8 +459,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                tablaBaja.reload();
-                tablaAlta.reload();
+                mitab.tablaBaja.reload();
+                mitab.tablaAlta.reload();
             })
         },
 
@@ -479,8 +480,8 @@ endif;
                 },
                 encode: true,
             }).done(function(resultado) {
-                tablaBaja.reload();
-                tablaAlta.reload();
+                mitab.tablaBaja.reload();
+                mitab.tablaAlta.reload();
             })
         },
     }

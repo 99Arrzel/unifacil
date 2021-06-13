@@ -299,7 +299,7 @@ endif;
                 {
                     data: 'IDUSER',
                     render: function(data){
-                        return "<button id='baja("+ data + ")' class='btn btn-danger form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
+                        return "<button id='baja("+ data + ")' class='btn btn-danger form-control'>Eliminar</button>";
                     },
                 },
             ],

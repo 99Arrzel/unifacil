@@ -2,8 +2,6 @@
 <div class='container-fluid'>
     <h1 class="text-center">Crear Usuario</h1>
     <div id='crear'>
-
-
         <table id="insertar" class='table table-dark'>
             <thead>
                 <tr>
@@ -51,24 +49,25 @@
             </form>
         </table>
     </div>
-    <?php if (isset($validation)): ?>
-    <div class='col-12'>
-        <div class='alert alert-danger' role='alert'>
-            <?=$validation->listErrors() ?>
-        </div>
+</div>
+<?php if (isset($validation)): ?>
+<div class='col-12'>
+    <div class='alert alert-danger' role='alert'>
+        <?=$validation->listErrors() ?>
     </div>
-    <?php
+</div>
+<?php
 endif; ?>
-    <?php if (session()
+<?php if (session()
     ->get('exitoso')): ?>
-    <div class='alert alert-success' role='alert'>
-        <?=session()
+<div class='alert alert-success' role='alert'>
+    <?=session()
         ->get('exitoso') ?>
-    </div>
-    <?php
+</div>
+<?php
 endif;
 ?>
-    <button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
+<button id='botonOcultar' type='button' onclick='mostrar()' class='btn btn-primary'>Mostrar de baja</button>
 </div>
 <!-- Modal para editar usuario -->
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"

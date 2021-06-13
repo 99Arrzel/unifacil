@@ -18,13 +18,6 @@
                         <thead class='thead-dark'>
                             <tr>
                                 <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Login</th>
-                                <th>Email</th>
-                                <th>Contraseña</th>
-                                <th>Suscrito</th>
-                                <th>Nivel</th>
-                                <th>Guardar</th>
                             </tr>
                         </thead>
                         <form action='/ListarUsuarios/guardar' method='post' autocomplete="off">

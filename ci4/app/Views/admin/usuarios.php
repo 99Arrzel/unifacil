@@ -88,15 +88,49 @@ endif;
                         <thead class='thead-dark'>
                             <tr>
                                 <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Login</th>
+                                <th>Email</th>
+                                <th>Contraseña</th>
+                                <th>Suscrito</th>
+                                <th>Nivel</th>
+                                <th>Guardar</th>
                             </tr>
                         </thead>
-                        <form autocomplete="off">
+                        <form action='/ListarUsuarios/guardar' method='post' autocomplete="off">
                             <tbody>
                                 <tr>
                                     <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
                                             class='form-control'></input></td>
-                                    <td><button id="btnModal" name="btnModal" value="" type='button'
-                                            class='btn btn-success form-control'>Guardar
+                                    <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido'
+                                            class='form-control'></input></td>
+                                    <td><input id="loginModal" autocomplete="off" type='text' name='login'
+                                            class='form-control'></input></td>
+                                    <td><input id="emailModal" autocomplete="off" type='text' name='email'
+                                            class='form-control'></input>
+                                    </td>
+                                    <td><input id="passwordModal" autocomplete="off" type='password' name='password'
+                                            class='form-control'></input></td>
+                                    <!-- SUS-->
+                                    <td><select id="suscritoModal" class='form-control' name='suscrito'>
+                                            <option value='1'>SUSCRITO
+                                            </option>
+                                            <option value='0'> NO SUSCRITO
+                                            </option>
+                                        </select></td>
+                                    <!-- SUS-->
+                                    <!-- Nivel-->
+                                    <td><select id="nivelModal" class='form-control' name='nivel'>
+                                            <?php foreach ($nivel as $niveles): ?>
+                                            <option
+                                                value="<?=$niveles['ID'];?>">
+                                                <?=$niveles['NIVEL'];?>
+                                            </option>
+                                            <?php endforeach; ?>
+                                        </select></td>
+                                    <!-- Nivel-->
+                                    <td><button id="btnModal" name="btnModal" value="" type='submit'
+                                            class='btn btn-success form-control'>Enviar
                                     </td>
                                 </tr>
                             </tbody>

@@ -141,6 +141,7 @@ endif;
                             </tbody>
                         </form>
                     </table>
+                    <h3>NOTA: Deja la contraseña en blanco a no ser que desees actualizarla</h3>
                 </div>
             </div>
             <div class="modal-footer">

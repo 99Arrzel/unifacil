@@ -31,6 +31,21 @@ $routes->setAutoRoute(true);
  */
 
 // We get a performance increase by specifying the default
+
+// AJAX LISTS EN JSON ALTA
+$routes->match(['get'], '/adm-dir/ajaxListCiudad', 'adm/EditarDirectorio::ajaxListCiudad');
+$routes->match(['get'], '/adm-dir/ajaxListGestion', 'adm/EditarDirectorio::ajaxListGestion');
+$routes->match(['get'], '/adm-dir/ajaxListMateria', 'adm/EditarDirectorio::ajaxListMateria');
+$routes->match(['get'], '/adm-dir/ajaxListFacultad', 'adm/EditarDirectorio::ajaxListFacultad');
+$routes->match(['get'], '/adm-dir/ajaxListCarrera', 'adm/EditarDirectorio::ajaxListCarrera');
+$routes->match(['get'], '/adm-dir/ajaxListSemestre', 'adm/EditarDirectorio::ajaxListSemestre');
+// AJAX LISTS EN JSON BAJA
+$routes->match(['get'], '/adm-dir/ajaxListCiudadBaja', 'adm/EditarDirectorio::ajaxListCiudadBaja');
+$routes->match(['get'], '/adm-dir/ajaxListGestionBaja', 'adm/EditarDirectorio::ajaxListGestionBaja');
+$routes->match(['get'], '/adm-dir/ajaxListMateriaBaja', 'adm/EditarDirectorio::ajaxListMateriaBaja');
+$routes->match(['get'], '/adm-dir/ajaxListFacultadBaja', 'adm/EditarDirectorio::ajaxListFacultadBaja');
+$routes->match(['get'], '/adm-dir/ajaxListCarreraBaja', 'adm/EditarDirectorio::ajaxListCarreraBaja');
+$routes->match(['get'], '/adm-dir/ajaxListSemestreBaja', 'adm/EditarDirectorio::ajaxListSemestreBaja');
 // route since we don't have to scan directories.
 $routes->match(['get','post'], '/ListarUsuarios/ajaxListBaja', 'adm/Admin::ajaxListBaja');
 $routes->match(['get','post'], '/ListarUsuarios/ajaxList', 'adm/Admin::ajaxList');

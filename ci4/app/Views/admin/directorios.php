@@ -1,6 +1,81 @@
 <?php if (session()->get('nivel') != 1) {
     header('Location: https://proyecto3.tk/');
 }?>
+
+<div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div id="myModal" class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="modal-body">
+                    <table id="insertar" class='col-12 table table-dark'>
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Login</th>
+                                <th>Email</th>
+                                <th>Contraseña</th>
+                                <th>Suscrito</th>
+                                <th>Nivel</th>
+                                <th>Guardar</th>
+                            </tr>
+                        </thead>
+                        <form action='/ListarUsuarios/guardar' method='post' autocomplete="off">
+                            <tbody>
+                                <tr>
+                                    <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
+                                            class='form-control'></input></td>
+                                    <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido'
+                                            class='form-control'></input></td>
+                                    <td><input id="loginModal" autocomplete="off" type='text' name='login'
+                                            class='form-control'></input></td>
+                                    <td><input id="emailModal" autocomplete="off" type='text' name='email'
+                                            class='form-control'></input>
+                                    </td>
+                                    <td><input id="passwordModal" autocomplete="off" type='password' name='password'
+                                            class='form-control'></input></td>
+                                    <!-- SUS-->
+                                    <td><select id="suscritoModal" class='form-control' name='suscrito'>
+                                            <option value='1'>SUSCRITO
+                                            </option>
+                                            <option value='0'> NO SUSCRITO
+                                            </option>
+                                        </select></td>
+                                    <!-- SUS-->
+                                    <!-- Nivel-->
+                                    <td><select id="nivelModal" class='form-control' name='nivel'>
+                                            <?php foreach ($nivel as $niveles): ?>
+                                            <option
+                                                value="<?=$niveles['ID'];?>">
+                                                <?=$niveles['NIVEL'];?>
+                                            </option>
+                                            <?php endforeach; ?>
+                                        </select></td>
+                                    <!-- Nivel-->
+                                    <td><button id="btnModal" name="btnModal" value="" type='submit'
+                                            class='btn btn-success form-control'>Enviar
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </form>
+                    </table>
+                    <h3>NOTA: Deja la contraseña en blanco a no ser que desees actualizarla</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================== MODAL ARRIBA ==========================-->
 <div class="container-fluid" id="todoMenu">
     <h2>Listado de Directorios</h2>
     <div class="row">
@@ -248,6 +323,91 @@
 <script type='text/javascript' src='assets/js/admDirectorio.js'>
 </script>
 <script>
+var esp =  {
+                "decimal": "",
+                "emptyTable": "No hay datos",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
+                "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+                "infoFiltered": "(Filtro de _MAX_ total registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Registros",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron coincidencias",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": Activar orden de columna ascendente",
+                    "sortDescending": ": Activar orden de columna desendente"
+                }
+            };
+var mitab = {}; //Global
+var ajaxDirectorios = "";
+    $(document).ready(function()
+    {
+        mitab.tablaBaja = $('#tblDirectorios').DataTable({
+            ajax: {
+                url: ajaxDirectorios,
+                dataSrc: "",
+            },
+            dom: 'B<lf>rtip',
+            buttons: [{
+                    extend: 'copy',
+                    text: 'Copiar',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5],
+                    },
+                    className: 'btn btn-info',
+                },
+                {
+                    extend: 'csv',
+                    text: 'CSV',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5],
+                    },
+                    className: 'btn btn-info',
+                },
+                {
+                    extend: 'excel',
+                    text: 'EXCEL',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5],
+                    },
+                    className: 'btn btn-info',
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5],
+                    },
+                    className: 'btn btn-info',
+                },
+                {
+                    extend: 'print',
+                    text: 'Imprimir',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5],
+                    },
+                    className: 'btn btn-info',
+                },
+            ],
+            columns:[
+                {
+                    data: 'NOMBRE',
+                },
+            ],
+            language: esp,
+        });
+        $('#tblUsuarios tbody').on('click', 'button', function() {
+            var data = mitab.tablaAlta.row($(this).parents('tr')).data();
+            document.getElementById("nombreModal").value = data['NOMBRE'];
 
-
+    });
 </script>

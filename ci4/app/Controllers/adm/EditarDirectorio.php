@@ -37,6 +37,70 @@ class editarDirectorio extends BaseController
         echo view( '/admin/directorios');
         return       view( 'templates/footer' );
     }
+    //====================================================================
+    public function ajaxListMateria()
+    {
+        $listarMaterias = (new ModeloMateria() )->listarMaterias();
+        echo json_encode($listarMaterias);
+    }
+    public function ajaxListSemestre()
+    {
+        $listarSemestres = (new ModeloSemestre() )->listarSemestres();
+        echo json_encode($listarSemestres);
+    }
+    public function ajaxListCarrera()
+    {
+        $listarCarreras = (new ModeloCarrera() )->listarCarreras();
+        echo json_encode($listarCarreras);
+    }
+    public function ajaxListFacultad()
+    {
+        $listarFacultades = (new ModeloFacultad() )->listarFacultades();
+        echo json_encode($listarFacultades);
+    }
+    public function ajaxListGestion()
+    {
+        $listarGestiones = (new ModeloGestion() )->listarGestiones();
+        echo json_encode($listarGestiones);
+    }
+    public function ajaxListCiudad()
+    {
+        $listarCiudades = (new ModeloCiudad() )->listarCiudades();
+        echo json_encode($listarCiudades);
+    }
+    // ================================Baja para ABAJO ==================================================================
+    public function ajaxListMateriaBaja()
+    {
+        $listarMaterias = (new ModeloMateria() )->listarMateriasBaja();
+        echo json_encode($listarMaterias);
+    }
+    public function ajaxListSemestreBaja()
+    {
+        $listarSemestres = (new ModeloSemestre() )->listarSemestresBaja();
+        echo json_encode($listarSemestres);
+    }
+    public function ajaxListCarreraBaja()
+    {
+        $listarCarreras = (new ModeloCarrera() )->listarCarrerasBaja();
+        echo json_encode($listarCarreras);
+    }
+    public function ajaxListFacultadBaja()
+    {
+        $listarFacultades = (new ModeloFacultad() )->listarFacultadesBaja();
+        echo json_encode($listarFacultades);
+    }
+    public function ajaxListGestionBaja()
+    {
+        $listarGestiones = (new ModeloGestion() )->listarGestionesBaja();
+        echo json_encode($listarGestiones);
+    }
+    public function ajaxListCiudadBaja()
+    {
+        $listarCiudades = (new ModeloCiudad() )->listarCiudadesBaja();
+        echo json_encode($listarCiudades);
+    }
+    //====================================================================
+
     public function insertarCiudad()
     {
         if ( $this->request->isAJAX() ) {

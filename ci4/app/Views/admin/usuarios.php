@@ -4,7 +4,7 @@
     <div id='crear'>
         <div class='row'>
             <div class='col-md-12'>
-
+                <div class='table table-bordered bg-dark text-light'>
                     <table id="insertar" class='col-12 table table-dark'>
                         <thead class='thead-dark'>
                             <tr>
@@ -19,40 +19,42 @@
                             </tr>
                         </thead>
                         <form class='' action='/ListarUsuarios' method='post'>
-                            <tbody>
-                                <tr>
-                                    <td><input type='text' name='nombre' class='form-control'></input></td>
-                                    <td><input type='text' name='apellido' class='form-control'></input></td>
-                                    <td><input autocomplete="username" type='text' name='login'
-                                            class='form-control'></input></td>
-                                    <td><input autocomplete="email" type='text' name='email'
-                                            class='form-control'></input></td>
-                                    <td><input autocomplete="current-password" type='password' name='password'
-                                            class='form-control'></input></td>
-                                    <!-- SUS-->
-                                    <td><select class='form-control' name='suscrito'>
-                                            <option value='1'>SUSCRITO
-                                            </option>
-                                            <option value='0'> NO SUSCRITO
-                                            </option>
-                                        </select></td>
-                                    <!-- SUS-->
-                                    <!-- Nivel-->
-                                    <td><select class='form-control' name='nivel'>
-                                            <?php foreach ($nivel as $niveles): ?>
-                                            <option
-                                                value="<?=$niveles['ID'];?>">
-                                                <?=$niveles['NIVEL'];?>
-                                            </option>
-                                            <?php endforeach; ?>
-                                        </select></td>
-                                    <!-- Nivel-->
-                                    <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
-                                </tr>
-                            </tbody>
+                            <div class="form-group">
+                                <tbody>
+                                    <tr>
+                                        <td><input type='text' name='nombre' class='form-control'></input></td>
+                                        <td><input type='text' name='apellido' class='form-control'></input></td>
+                                        <td><input autocomplete="username" type='text' name='login'
+                                                class='form-control'></input></td>
+                                        <td><input autocomplete="email" type='text' name='email'
+                                                class='form-control'></input></td>
+                                        <td><input autocomplete="current-password" type='password' name='password'
+                                                class='form-control'></input></td>
+                                        <!-- SUS-->
+                                        <td><select class='form-control' name='suscrito'>
+                                                <option value='1'>SUSCRITO
+                                                </option>
+                                                <option value='0'> NO SUSCRITO
+                                                </option>
+                                            </select></td>
+                                        <!-- SUS-->
+                                        <!-- Nivel-->
+                                        <td><select class='form-control' name='nivel'>
+                                                <?php foreach ($nivel as $niveles): ?>
+                                                <option
+                                                    value="<?=$niveles['ID'];?>">
+                                                    <?=$niveles['NIVEL'];?>
+                                                </option>
+                                                <?php endforeach; ?>
+                                            </select></td>
+                                        <!-- Nivel-->
+                                        <td><button type='submit' class='btn btn-success form-control'>Enviar</td>
+                                    </tr>
+                                </tbody>
+                            </div>
                         </form>
                     </table>
-                
+                </div>
             </div>
         </div>
     </div>
@@ -212,7 +214,7 @@ endif;
         mitab.tablaBaja = $('#tblUsuariosBaja').DataTable({
             ajax: {
                 url: ajaxListBaja,
-                dataSrc:"",
+                dataSrc: "",
             },
             dom: 'B<lf>rtip', //Magico y sencillazango
             buttons: [{
@@ -339,7 +341,7 @@ endif;
         mitab.tablaAlta = $('#tblUsuarios').DataTable({
             ajax: {
                 url: ajaxList,
-                dataSrc:"",
+                dataSrc: "",
             },
             dom: 'B<lf>rtip',
             buttons: [{
@@ -383,7 +385,7 @@ endif;
                     className: 'btn btn-info',
                 },
             ],
-            
+
             columns: [{
                     data: 'NOMBRE'
                 },

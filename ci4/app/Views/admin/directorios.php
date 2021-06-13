@@ -7,7 +7,7 @@
     <div id="myModal" class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
+                <h3 class="modal-title" id="labelEditQue">Editar Usuario</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -20,46 +20,18 @@
                                 <th>Nombre</th>
                             </tr>
                         </thead>
-                        <form action='/ListarUsuarios/guardar' method='post' autocomplete="off">
+                        <form autocomplete="off">
                             <tbody>
                                 <tr>
                                     <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
                                             class='form-control'></input></td>
-                                    <td><input id="apellidoModal" autocomplete="off" type='text' name='apellido'
-                                            class='form-control'></input></td>
-                                    <td><input id="loginModal" autocomplete="off" type='text' name='login'
-                                            class='form-control'></input></td>
-                                    <td><input id="emailModal" autocomplete="off" type='text' name='email'
-                                            class='form-control'></input>
-                                    </td>
-                                    <td><input id="passwordModal" autocomplete="off" type='password' name='password'
-                                            class='form-control'></input></td>
-                                    <!-- SUS-->
-                                    <td><select id="suscritoModal" class='form-control' name='suscrito'>
-                                            <option value='1'>SUSCRITO
-                                            </option>
-                                            <option value='0'> NO SUSCRITO
-                                            </option>
-                                        </select></td>
-                                    <!-- SUS-->
-                                    <!-- Nivel-->
-                                    <td><select id="nivelModal" class='form-control' name='nivel'>
-                                            <?php foreach ($nivel as $niveles): ?>
-                                            <option
-                                                value="<?=$niveles['ID'];?>">
-                                                <?=$niveles['NIVEL'];?>
-                                            </option>
-                                            <?php endforeach; ?>
-                                        </select></td>
-                                    <!-- Nivel-->
-                                    <td><button id="btnModal" name="btnModal" value="" type='submit'
+                                    <td><button id="btnModal" name="btnModal" value="" type='button'
                                             class='btn btn-success form-control'>Enviar
                                     </td>
                                 </tr>
                             </tbody>
                         </form>
                     </table>
-                    <h3>NOTA: Deja la contraseña en blanco a no ser que desees actualizarla</h3>
                 </div>
             </div>
             <div class="modal-footer">

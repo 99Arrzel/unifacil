@@ -196,4 +196,15 @@ class admin extends BaseController {
             }
         }
     }
+    public function ajaxList()
+    {
+        $datosUsuario = ( new ModeloUsuarioADM() )->traerUsuariosActivos();
+        //$datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
+        echo json_encode($datosUsuario);
+    }
+    public function ajaxListBaja()
+    {
+        $datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
+        echo json_encode($datosUsuarioBaja);
+    }
 }

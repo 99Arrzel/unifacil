@@ -61,3 +61,5 @@ Options All -Indexes
 # Disable server signature end
 #Development habilitado
 SetEnv CI_ENVIRONMENT development
+#Allow cross origin, XD, falta investigar más de esto
+Header set Access-Control-Allow-Origin "*"

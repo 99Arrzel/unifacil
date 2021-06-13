@@ -112,7 +112,7 @@ endif;
                                     <td><input id="loginModal" autocomplete="off" type='text' name='login'
                                             class='form-control'></input></td>
                                     <td><input id="emailModal" autocomplete="off" type='text' name='email'
-                                            class='form-control' disabled></input>
+                                            class='form-control'></input>
                                     </td>
                                     <td><input id="passwordModal" autocomplete="off" type='password' name='password'
                                             class='form-control'></input></td>
@@ -152,10 +152,10 @@ endif;
 <!-- FIN de modal para insertar usuario -->
 <!-- Insertar arriba -->
 <br>
-<div class='container-fluid' id="listadealta">
+<div class='container-fluid'>
     <h1 class="text-center">Lista de Usuarios</h1>
     <h3 id="anuncio" class="text-center">De alta</h3>
-    <div class='col-12'>
+    <div class='col-12' id="listadealta">
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
                 <table class="table table-hover" id="tblUsuarios">
@@ -175,11 +175,7 @@ endif;
             </div>
         </div>
     </div>
-</div>
-<div class='container-fluid' id="listadebaja">
-    <h1 class="text-center">Lista de Usuarios</h1>
-    <h3 id="anuncio" class="text-center">De baja</h3>
-    <div class='col-12'>
+    <div class='col-12' id="listadebaja">
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
                 <table class="table table-hover" id="tblUsuariosBaja">
@@ -203,6 +199,7 @@ endif;
 <script>
     $(document).ready(function() {
         setTimeout(function() {
+            document.title = "Usuarios de UNIFACIL";
             document.getElementById("listadebaja").hidden = true;
         }, 200);
 
@@ -214,17 +211,21 @@ endif;
             document.getElementById("botonOcultar").className = "btn btn-success";
             document.getElementById("listadealta").hidden = true;
             document.getElementById("listadebaja").hidden = false;
+            document.getElementById("anuncio").innerHTML = "De baja";
+
+
         } else {
             document.getElementById("botonOcultar").innerHTML = "Mostrar de baja";
             document.getElementById("botonOcultar").className = "btn btn-primary";
             document.getElementById("listadealta").hidden = false;
             document.getElementById("listadebaja").hidden = true;
+            document.getElementById("anuncio").innerHTML = "De alta";
         }
     }
 </script>
 
 <script>
-    //Script para activos
+    //Script para inactivos
     $(document).ready(function() {
         var tabla = $('#tblUsuariosBaja').DataTable({
             data: <?php echo json_encode($usuarioBaja)?> ,
@@ -233,6 +234,10 @@ endif;
                 "data": null,
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
             columns: [{
                     data: 'IDUSER',
                     visible: false,
@@ -253,13 +258,20 @@ endif;
                     data: 'NIVEL'
                 },
                 {
-                    data: 'SUSCRITO'
+                    data: 'SUSCRITO',
+                    render: function(data) {
+                        if (data == "1") {
+                            return "SI";
+                        } else {
+                            return "NO";
+                        }
+                    },
                 },
             ],
             language: {
                 "decimal": "",
                 "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
                 "infoEmpty": "Mostrando 0 a 0 de 0 registros",
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",
@@ -308,6 +320,10 @@ endif;
                 "data": null,
                 "defaultContent": "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>"
             }],
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
             columns: [{
                     data: 'IDUSER',
                     visible: false,
@@ -328,7 +344,14 @@ endif;
                     data: 'NIVEL'
                 },
                 {
-                    data: 'SUSCRITO'
+                    data: 'SUSCRITO',
+                    render: function(data) {
+                        if (data == "1") {
+                            return "SI";
+                        } else {
+                            return "NO";
+                        }
+                    },
                 },
             ],
             language: {
@@ -339,7 +362,7 @@ endif;
                 "infoFiltered": "(Filtro de _MAX_ total registros)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ registros",
+                "lengthMenu": "Mostrar _MENU_ Registros",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscar:",

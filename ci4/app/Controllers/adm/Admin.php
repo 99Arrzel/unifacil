@@ -6,6 +6,8 @@ use App\Models\ModeloUsuario;
 use App\Controllers\BaseController;
 class admin extends BaseController {
     public function usuarios() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         helper( ['form'] );
         $data = [];
         //Limpiar espacios en blanco
@@ -71,6 +73,8 @@ class admin extends BaseController {
         return view( 'templates/footer' );
     }
     public function eliminarID() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
             $model = new ModeloUsuario();
@@ -83,6 +87,8 @@ class admin extends BaseController {
         }
     }
     public function restaurarID() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
             $model = new ModeloUsuario();
@@ -95,6 +101,8 @@ class admin extends BaseController {
         }
     }
     public function suscritoID() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
             $estadoSub = $this->request->getPost( 'estadoSub' );
@@ -108,6 +116,8 @@ class admin extends BaseController {
         }
     }
     public function guardarUsuarios() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         if ( $this->request->getMethod() == 'post' ) {
         //if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'btnModal' );
@@ -140,6 +150,8 @@ class admin extends BaseController {
         }
     }
     public function crearUsuario() {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         helper( ['form'] );
         //Limpiar espacios en blanco
         function formatearString( $str ) {
@@ -198,6 +210,8 @@ class admin extends BaseController {
     }
     public function ajaxList()
     {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         $datosUsuario = ( new ModeloUsuarioADM() )->traerUsuariosActivos();
         //$datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
         //Ok ,para usar JSONP necesitas devolver un valor, como de una sessión, supongo que es para
@@ -205,6 +219,8 @@ class admin extends BaseController {
     }
     public function ajaxListBaja()
     {
+        header('Access-Control-Allow-Origin: https://www.proyecto3.tk//ListarUsuarios/ajaxList, https://www.proyecto3.tk//ListarUsuarios/ajaxListBaja');
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
         $datosUsuarioBaja = ( new ModeloUsuarioADM() )->traerUsuariosInactivos();
         echo json_encode($datosUsuarioBaja);
     }

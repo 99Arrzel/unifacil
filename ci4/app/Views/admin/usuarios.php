@@ -1,6 +1,10 @@
 <?php
-echo $_SERVER['HTTP_REFERER'];
-echo "-----------";
+$http_origin = $_SERVER['HTTP_REFERER'];
+
+if ($http_origin == "https://www.proyecto3.tk" || $http_origin == "https://proyecto3.tk")
+{  
+    header("Access-Control-Allow-Origin: $http_origin");
+}
 ?>
 <br>
 <div class='container-fluid'>

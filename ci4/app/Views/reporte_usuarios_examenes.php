@@ -27,7 +27,7 @@
                             <td><?php echo $key['login']?></td>
                             <td><?php echo $key['email']?></td>
                             <td><?php echo $key['fecha']?></td>
-                            <td><?php echo $key['nombreLibro']?></td>
+                            <td><?php echo $key['nombreExamen']?></td>
                             <td><a href="<?php echo $key['dirDoc']?>">Enlace</a></td>
                         </tr>
                         <?php endforeach; ?>

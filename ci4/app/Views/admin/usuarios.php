@@ -231,33 +231,42 @@ endif;
             data: <?php echo json_encode($usuarioBaja)?> ,
             dom: 'Bfrtip',
             buttons: [{
-                    extend: 'copy',
+                    extend: 'copyHtml5',
                     text: 'Copiar',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
             ],
-            columns: [
-                {
+            columns: [{
                     data: 'NOMBRE'
                 },
                 {
@@ -338,27 +347,37 @@ endif;
             buttons: [{
                     extend: 'copy',
                     text: 'Copiar',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'csv',
                     text: 'CSV',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'excel',
                     text: 'EXCEL',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
                 {
                     extend: 'print',
                     text: 'Imprimir',
-                    exportOptions: [0, 1, 2, 3, 4],
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4],
+                    },
                 },
             ],
             columns: [{

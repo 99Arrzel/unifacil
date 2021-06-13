@@ -27,14 +27,14 @@
                     </select>
                     <label>Autores</label> <br>
                     <select name="IDAutor" id="IDAutor" class="form-control" >
-                        <option selected>seleccione uno o varios Autores</option>
+                        <option selected>Seleccione un Autor principal</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Tags</label> <br>
                     <select name="IDTag" id="IDTag" class="form-control" >
-                        <option selected>seleccione uno o varios Tags</option>
+                        <option selected>Seleccione un Tag principal</option>
                         <?php foreach ($tag as $tagData): ?>
                         <option value="<?= $tagData['IDTag']?>"><?=$tagData['nombreTag'];?></option>
                         <?php endforeach; ?>
@@ -59,6 +59,10 @@
                        
                 </form>
             </div>
+        </div>
+
+        <div>
+        <a class="btn btn-primary btn-lg btn-block" href="/librorelacion" role="button">Añadir mas autores y tags a un libro</a>
         </div>
         <?php /*if (session()->get('exitoso')): ?>
         <div class="alert alert-success" role="alert">

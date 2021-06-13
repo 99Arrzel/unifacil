@@ -322,6 +322,48 @@ endif;
             //alert(data['NOMBRE'] + "id");
             console.log(data);
         });
+
+        function restaurar(id) {
+            var formData = {
+                miid: id
+            };
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/restaurar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, chequea el script amiguito");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                tablaBaja.reload();
+                tablaAlta.reload();
+            })
+        }
+
+        function baja(id) {
+            var formData = {
+                miid: id
+            };
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/eliminar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, chequea el script amiguito");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                tablaBaja.reload();
+                tablaAlta.reload();
+            })
+        }
     });
     //Script para activos
     $(document).ready(function() {
@@ -440,49 +482,49 @@ endif;
             //alert(data['NOMBRE'] + "id");
             console.log(data);
         });
+
+        function restaurar(id) {
+            var formData = {
+                miid: id
+            };
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/restaurar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, chequea el script amiguito");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                tablaBaja.reload();
+                tablaAlta.reload();
+            })
+        }
+
+        function baja(id) {
+            var formData = {
+                miid: id
+            };
+            $.ajax({
+                type: "POST",
+                url: "/ListarUsuarios/eliminar",
+                data: formData,
+                dataType: "json",
+                statusCode: {
+                    500: function() {
+                        alert("Error 500, chequea el script amiguito");
+                    }
+                },
+                encode: true,
+            }).done(function(resultado) {
+                tablaBaja.reload();
+                tablaAlta.reload();
+            })
+        }
     });
-
-    function restaurar(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/restaurar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            tablaBaja.reload();
-            tablaAlta.reload();
-        })
-    }
-
-    function baja(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/ListarUsuarios/eliminar",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            tablaBaja.reload();
-            tablaAlta.reload();
-        })
-    }
 
     function mostrar() {
         if (document.getElementById("botonOcultar").innerHTML == "Mostrar de baja") {

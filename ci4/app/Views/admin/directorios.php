@@ -429,7 +429,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.dirBaja(" + data +
+                    return "<button onclick='dirBaja(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -501,7 +501,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEdi(" + data +
+                    return "<button onclick='gesEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -509,7 +509,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEli(" + data +
+                    return "<button onclick='gesEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -581,7 +581,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.ciuEdi(" + data +
+                    return "<button onclick='ciuEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -589,7 +589,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.ciuEli(" + data +
+                    return "<button onclick='ciuEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -661,7 +661,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.facEdi(" + data +
+                    return "<button onclick='facEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -669,7 +669,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.facEli(" + data +
+                    return "<button onclick='facEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -741,7 +741,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.carEdi(" + data +
+                    return "<button onclick='carEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -749,7 +749,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.carEli(" + data +
+                    return "<button onclick='carEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -821,7 +821,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.semEdi(" + data +
+                    return "<button onclick='semEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -829,7 +829,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.semEli(" + data +
+                    return "<button onclick='semEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -901,7 +901,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.matEdi(" + data +
+                    return "<button onclick='matEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -909,7 +909,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.matEli(" + data +
+                    return "<button onclick='matEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -1055,139 +1055,147 @@ function insertarMateria() {
 
     });
 }
-ops = {
-    dirBaja: function(id) {
-			var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaDirectorio",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-					setTimeout(() => {  mitab.tablaDir.ajax.reload(); }, 100);
-        })
-    },
-    gesEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaGestion",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
-    ciuEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaCiudad",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
-    facEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaFacultad",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
-    carEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaCarrera",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
-    semEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaSemestre",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
-    matEli: function(id) {
-        var formData = {
-            miid: id
-        };
-        $.ajax({
-            type: "POST",
-            url: "/adm-dir/bajaMateria",
-            data: formData,
-            dataType: "json",
-            statusCode: {
-                500: function() {
-                    alert("Error 500, chequea el script amiguito");
-                }
-            },
-            encode: true,
-        }).done(function(resultado) {
-            mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
-        })
-    },
+
+function dirBaja(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaDirectorio",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        setTimeout(() => {
+            mitab.tablaDir.ajax.reload();
+        }, 100);
+    })
 }
+
+function gesEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaGestion",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
+function ciuEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaCiudad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
+function facEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaFacultad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
+function carEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaCarrera",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
+function semEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaSemestre",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
+function matEli(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/bajaMateria",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+    })
+}
+
 </script>

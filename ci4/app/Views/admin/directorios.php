@@ -1070,10 +1070,9 @@ ops = {
                     alert("Error 500, chequea el script amiguito");
                 }
             },
-						success: mitab.tablaDir.ajax.reload(),
             encode: true,
         }).done(function(resultado) {
-//            mitab.tablaDir.ajax.reload();
+					setTimeout(() => {  mitab.tablaDir.ajax.reload(); }, 100);
         })
     },
     gesEli: function(id) {

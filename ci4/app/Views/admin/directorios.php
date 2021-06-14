@@ -1070,9 +1070,10 @@ ops = {
                     alert("Error 500, chequea el script amiguito");
                 }
             },
+						success:mitab.tablaDirectorio.ajax.reload(),
             encode: true,
         }).done(function(resultado) {
-            mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
+            
         })
     },
     gesEli: function(id) {

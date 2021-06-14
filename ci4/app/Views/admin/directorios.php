@@ -47,18 +47,18 @@
         <div class="col-md-12">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
-                <table class="table table-hover" id="tblDirectorios">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th>Ciudad</th>
-                        <th>Gestión</th>
-                        <th>Facultad</th>
-                        <th>Carrera</th>
-                        <th>Semestre</th>
-                        <th>Materia</th>
-                        <th>Dar de baja</th>
-                    </tr>
-                </thead>
+                    <table class="table table-hover" id="tblDirectorios">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Ciudad</th>
+                                <th>Gestión</th>
+                                <th>Facultad</th>
+                                <th>Carrera</th>
+                                <th>Semestre</th>
+                                <th>Materia</th>
+                                <th>Dar de baja</th>
+                            </tr>
+                        </thead>
                 </div>
             </div>
             </table>
@@ -178,15 +178,19 @@
     </div>
     <div class="row">
         <div id="MIS_GESTIONES" class="col-md-4">
-            <table id="tblGestion" class="table table-hover table-bordered table-dark">
-                <thead class='thead-dark'>
-                    <tr>
-                        <th>Año Gestión</th>
-                        <th>Editar</th>
-                        <th>De Baja</th>
-                    </tr>
-                </thead>
-            </table>
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="table-responsive">
+                    <table id="tblGestion" class="table table-hover table-bordered table-dark">
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th>Año Gestión</th>
+                                <th>Editar</th>
+                                <th>De Baja</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
         </div>
         <div id="MIS_CIUDADES" class="col-md-4">
             <table id="tblCiudad" class="table table-hover table-bordered table-dark" data-toggle="table"
@@ -314,213 +318,210 @@
             };*/
 var mitab = {}; //Global
 
-    $(document).ready(function(){
-        //==Directorio abajo
-        document.title = "Lista de directorios UNIFRANZ";
-        const ajaxDirectorio = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
-        const ajaxGestion = "https://proyecto3.tk/adm-dir/ajaxListGestion";
-        const ajaxCiudades = "https://proyecto3.tk/adm-dir/ajaxListCiudad";
-        const ajaxFacultad = "https://proyecto3.tk/adm-dir/ajaxListFacultad";
-        const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
-        const ajaxSemestre= "https://proyecto3.tk/adm-dir/ajaxListSemestre";
-        const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
-        mitab.tablaBaja = $('#tblDirectorios').DataTable({
-            ajax: {
-                url: ajaxDirectorio,
-                dataSrc: "",
+$(document).ready(function() {
+    //==Directorio abajo
+    document.title = "Lista de directorios UNIFRANZ";
+    const ajaxDirectorio = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
+    const ajaxGestion = "https://proyecto3.tk/adm-dir/ajaxListGestion";
+    const ajaxCiudades = "https://proyecto3.tk/adm-dir/ajaxListCiudad";
+    const ajaxFacultad = "https://proyecto3.tk/adm-dir/ajaxListFacultad";
+    const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
+    const ajaxSemestre = "https://proyecto3.tk/adm-dir/ajaxListSemestre";
+    const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
+    mitab.tablaBaja = $('#tblDirectorios').DataTable({
+        ajax: {
+            url: ajaxDirectorio,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
             },
-            dom: 'B<lf>rtip',
-            buttons: [{
-                    extend: 'copy',
-                    text: 'Copiar',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                    className: 'btn btn-info',
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
                 },
-                {
-                    extend: 'csv',
-                    text: 'CSV',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'excel',
-                    text: 'EXCEL',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'pdf',
-                    text: 'PDF',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'print',
-                    text: 'Imprimir',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4, 5],
-                    },
-                    className: 'btn btn-info',
-                },
-            ],
-            columns:[
-                {
-                    data: 'CIUDAD',
-                },
-                {
-                    data: 'GESTION',
-                },
-                {
-                    data: 'FACULTAD',
-                },
-                {
-                    data: 'CARRERA',
-                },
-                {
-                    data: 'SEMESTRE',
-                },
-                {
-                    data: 'MATERIA',
-                },
-                {
-                    data: 'ID',
-                    orderable: false,
-                    render: function(data) {
-                        return "<button onclick='ops.re(" + data +
-                            ")' class='btn btn-danger form-control'>Dar de baja</button>";
-                    },
-                },
-            ],
-            language: {
-                "decimal": "",
-                "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-                "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-                "infoFiltered": "(Filtro de _MAX_ total registros)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Registros",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "No se encontraron coincidencias",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                },
-                "aria": {
-                    "sortAscending": ": Activar orden de columna ascendente",
-                    "sortDescending": ": Activar orden de columna desendente"
-                }
+                className: 'btn btn-info',
             },
-        });
-        //==Ciudad abajo
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+            },
+        ],
+        columns: [{
+                data: 'CIUDAD',
+            },
+            {
+                data: 'GESTION',
+            },
+            {
+                data: 'FACULTAD',
+            },
+            {
+                data: 'CARRERA',
+            },
+            {
+                data: 'SEMESTRE',
+            },
+            {
+                data: 'MATERIA',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function(data) {
+                    return "<button onclick='ops.re(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay datos",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
+            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+            "infoFiltered": "(Filtro de _MAX_ total registros)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Registros",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "No se encontraron coincidencias",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+            "aria": {
+                "sortAscending": ": Activar orden de columna ascendente",
+                "sortDescending": ": Activar orden de columna desendente"
+            }
+        },
+    });
+    //==Ciudad abajo
 
-        mitab.tablaBaja = $('#tblGestion').DataTable({
-            ajax: {
-                url: ajaxGestion,
-                dataSrc: "",
+    mitab.tablaBaja = $('#tblGestion').DataTable({
+        ajax: {
+            url: ajaxGestion,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
             },
-            dom: 'B<lf>rtip',
-            buttons: [{
-                    extend: 'copy',
-                    text: 'Copiar',
-                    exportOptions: {
-                        columns: [0],
-                    },
-                    className: 'btn btn-info',
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
                 },
-                {
-                    extend: 'csv',
-                    text: 'CSV',
-                    exportOptions: {
-                        columns: [0],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'excel',
-                    text: 'EXCEL',
-                    exportOptions: {
-                        columns: [0],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'pdf',
-                    text: 'PDF',
-                    exportOptions: {
-                        columns: [0],
-                    },
-                    className: 'btn btn-info',
-                },
-                {
-                    extend: 'print',
-                    text: 'Imprimir',
-                    exportOptions: {
-                        columns: [0],
-                    },
-                    className: 'btn btn-info',
-                },
-            ],
-            columns:[
-                {
-                    data: 'NOMBRE',
-                },
-                {
-                    data: 'ID',
-                    orderable: false,
-                    render: function(data) {
-                        return "<button onclick='ops.gesEdi(" + data +
-                            ")' class='btn btn-warning form-control'>Dar de baja</button>";
-                    },
-                },
-                {
-                    data: 'ID',
-                    orderable: false,
-                    render: function(data) {
-                        return "<button onclick='ops.gesEli(" + data +
-                            ")' class='btn btn-danger form-control'>Dar de baja</button>";
-                    },
-                },
-            ],
-            language: {
-                "decimal": "",
-                "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-                "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-                "infoFiltered": "(Filtro de _MAX_ total registros)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Registros",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "No se encontraron coincidencias",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                },
-                "aria": {
-                    "sortAscending": ": Activar orden de columna ascendente",
-                    "sortDescending": ": Activar orden de columna desendente"
-                }
+                className: 'btn btn-info',
             },
-        });
-
-
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function(data) {
+                    return "<button onclick='ops.gesEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Dar de baja</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function(data) {
+                    return "<button onclick='ops.gesEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay datos",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
+            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+            "infoFiltered": "(Filtro de _MAX_ total registros)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Registros",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "No se encontraron coincidencias",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+            "aria": {
+                "sortAscending": ": Activar orden de columna ascendente",
+                "sortDescending": ": Activar orden de columna desendente"
+            }
+        },
     });
 
+
+});
 </script>

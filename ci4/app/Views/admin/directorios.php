@@ -339,12 +339,12 @@ $(document).ready(function() {
     document.title = "Lista de directorios UNIFRANZ";
     const ajaxDirectorio = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
     const ajaxGestion = "https://proyecto3.tk/adm-dir/ajaxListGestion";
-    const ajaxCiudades = "https://proyecto3.tk/adm-dir/ajaxListCiudad";
+    const ajaxCiudad = "https://proyecto3.tk/adm-dir/ajaxListCiudad";
     const ajaxFacultad = "https://proyecto3.tk/adm-dir/ajaxListFacultad";
     const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
     const ajaxSemestre = "https://proyecto3.tk/adm-dir/ajaxListSemestre";
     const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
-    mitab.tablaBaja = $('#tblDirectorios').DataTable({
+    mitab.tablaDirectorio = $('#tblDirectorios').DataTable({
         ajax: {
             url: ajaxDirectorio,
             dataSrc: "",
@@ -444,7 +444,7 @@ $(document).ready(function() {
         },
     });
     //==Gestion abajo
-    mitab.tablaBaja = $('#tblGestion').DataTable({
+    mitab.tablaGestion = $('#tblGestion').DataTable({
         ajax: {
             url: ajaxGestion,
             dataSrc: "",
@@ -537,7 +537,7 @@ $(document).ready(function() {
         },
     });
     //Ciudad abajo
-    mitab.tablaBaja = $('#tblCiudad').DataTable({
+    mitab.tablaCiudad = $('#tblCiudad').DataTable({
         ajax: {
             url: ajaxCiudad,
             dataSrc: "",
@@ -591,7 +591,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEdi(" + data +
+                    return "<button onclick='ops.ciuEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -599,7 +599,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEli(" + data +
+                    return "<button onclick='ops.ciuEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -630,7 +630,7 @@ $(document).ready(function() {
         },
     });
     //facultad abajo
-    mitab.tablaBaja = $('#tblFacultad').DataTable({
+    mitab.tablaFacultad = $('#tblFacultad').DataTable({
         ajax: {
             url: ajaxFacultad,
             dataSrc: "",
@@ -684,7 +684,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEdi(" + data +
+                    return "<button onclick='ops.facEdi(" + data +
                         ")' class='btn btn-warning form-control'>Editar</button>";
                 },
             },
@@ -692,7 +692,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.gesEli(" + data +
+                    return "<button onclick='ops.facEli(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -723,7 +723,7 @@ $(document).ready(function() {
         },
     });
     //Carrera abajo
-    mitab.tablaBaja = $('#tblCarrera').DataTable({
+    mitab.tablaCarrera = $('#tblCarrera').DataTable({
         ajax: {
             url: ajaxCarrera,
             dataSrc: "",
@@ -816,9 +816,9 @@ $(document).ready(function() {
         },
     });
     //Semestre abajo
-    mitab.tablaBaja = $('#tblMateria').DataTable({
+    mitab.tablaSemestre = $('#tblSemestre').DataTable({
         ajax: {
-            url: ajaxMateria,
+            url: ajaxSemestre,
             dataSrc: "",
         },
         dom: 'B<lf>rtip',
@@ -909,7 +909,7 @@ $(document).ready(function() {
         },
     });
     //Materia abajo
-    mitab.tablaBaja = $('#tblFacultad').DataTable({
+    mitab.tablaMateria = $('#tblMateria').DataTable({
         ajax: {
             url: ajaxFacultad,
             dataSrc: "",
@@ -1001,6 +1001,5 @@ $(document).ready(function() {
             }
         },
     });
-
 });
 </script>

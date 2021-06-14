@@ -335,7 +335,8 @@ var esp =  {
 var mitab = {}; //Global
 const tiempo = Date.now();
 const hoy = new Date(tiempo);
-var impFecha = hoy.toLocaleString();
+const esaFecha = hoy.toDateString();
+const impFecha = esaFecha.toLocaleString();
 $(document).ready(function() {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";

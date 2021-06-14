@@ -12,7 +12,7 @@
         <div class="col-sm-12">
             <form action="<?php echo base_url().'/crearAutor'?>" method="POST">
                 <label>Autor</label>
-                <input type="text" name="nombreAutor" id="nombreAutor" class="form-control" required pattern="[a-z]">
+                <input type="text" name="nombreAutor" id="nombreAutor" class="form-control" required pattern="[a-zA-Z]+">
                 <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>
                         <option value="0">Activo</option>

@@ -839,7 +839,7 @@ $(document).ready(function() {
     //Materia abajo
     mitab.tablaMateria = $('#tblMateria').DataTable({
         ajax: {
-            url: ajaxFacultad,
+            url: ajaxMateria,
             dataSrc: "",
         },
         dom: 'B<lf>rtip',
@@ -935,9 +935,10 @@ function insertarCiudad() {
         },
         encode: true,
     }).done(function(resultado) {
-			mitab.tablaCiudad.ajax.reload();
+        mitab.tablaCiudad.ajax.reload();
     });
 }
+
 function insertarGestion() {
     var formData = {
         nombre: document.getElementById("gestion").value,
@@ -955,9 +956,10 @@ function insertarGestion() {
         },
         encode: true,
     }).done(function(resultado) {
-			mitab.tablaGestion.ajax.reload();
+        mitab.tablaGestion.ajax.reload();
     });
 }
+
 function insertarFacultad() {
     var formData = {
         nombre: document.getElementById("facultad").value,
@@ -975,9 +977,10 @@ function insertarFacultad() {
         },
         encode: true,
     }).done(function(resultado) {
-			mitab.tablaFacultad.ajax.reload();
+        mitab.tablaFacultad.ajax.reload();
     });
 }
+
 function insertarCarrera() {
     var formData = {
         nombre: document.getElementById("carrera").value,
@@ -995,9 +998,10 @@ function insertarCarrera() {
         },
         encode: true,
     }).done(function(resultado) {
-			mitab.tablaCarrera.ajax.reload();
+        mitab.tablaCarrera.ajax.reload();
     });
 }
+
 function insertarSemestre() {
     var formData = {
         nombre: document.getElementById("semestre").value,
@@ -1015,9 +1019,10 @@ function insertarSemestre() {
         },
         encode: true,
     }).done(function(resultado) {
-			mitab.tablaSemestre.ajax.reload();
+        mitab.tablaSemestre.ajax.reload();
     });
 }
+
 function insertarMateria() {
     var formData = {
         nombre: document.getElementById("materia").value,

@@ -47,7 +47,7 @@
         <div class="col-md-12">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
-                <table class="table table-hover" id="tblUsuarios">
+                <table class="table table-hover" id="tblDirectorios">
                     <thead class="thead-dark">
                     <tr>
                         <th>Ciudad</th>

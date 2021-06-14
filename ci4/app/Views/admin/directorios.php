@@ -308,7 +308,7 @@
 </div>
 </div>
 <script>
-/*var esp =  {
+var esp =  {
                 "decimal": "",
                 "emptyTable": "No hay datos",
                 "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
@@ -331,7 +331,7 @@
                     "sortAscending": ": Activar orden de columna ascendente",
                     "sortDescending": ": Activar orden de columna desendente"
                 }
-            };*/
+            };
 var mitab = {}; //Global
 
 $(document).ready(function() {
@@ -418,30 +418,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //==Gestion abajo
     mitab.tablaGestion = $('#tblGestion').DataTable({

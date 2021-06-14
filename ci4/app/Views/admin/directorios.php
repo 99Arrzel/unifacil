@@ -1070,14 +1070,15 @@ function dirBaja(id) {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+        success: mitab.tablaDir.ajax.reload(),
         encode: true,
     }).done(function(resultado) {
-        setTimeout(() => {
-            mitab.tablaDir.ajax.reload();
-        }, 100);
+
+        mitab.tablaDir.ajax.reload();
+
     })
 }
- 
+
 function gesEli(id) {
     var formData = {
         miid: id
@@ -1092,6 +1093,7 @@ function gesEli(id) {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+
         encode: true,
     }).done(function(resultado) {
         mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
@@ -1197,5 +1199,4 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     })
 }
-
 </script>

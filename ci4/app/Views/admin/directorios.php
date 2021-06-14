@@ -428,7 +428,7 @@ var mitab = {}; //Global
 
         mitab.tablaBaja = $('#tblGestion').DataTable({
             ajax: {
-                url: ajaxDirectorio,
+                url: ajaxGestion,
                 dataSrc: "",
             },
             dom: 'B<lf>rtip',

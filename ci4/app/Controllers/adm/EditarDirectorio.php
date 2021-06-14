@@ -190,7 +190,7 @@ class editarDirectorio extends BaseController
             $id = $this->request->getPost( 'miid' );
             $model = new ModeloDirectorio();
             $dir = [
-                'idtblfiltroFinal' => $id,
+                'idfiltroFinal' => $id,
                 'estado' => "0",
             ];
             $model->save( $dir );

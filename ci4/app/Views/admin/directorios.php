@@ -488,30 +488,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //Ciudad abajo
     mitab.tablaCiudad = $('#tblCiudad').DataTable({
@@ -581,30 +558,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //facultad abajo
     mitab.tablaFacultad = $('#tblFacultad').DataTable({
@@ -674,30 +628,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //Carrera abajo
     mitab.tablaCarrera = $('#tblCarrera').DataTable({
@@ -767,30 +698,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //Semestre abajo
     mitab.tablaSemestre = $('#tblSemestre').DataTable({
@@ -860,30 +768,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
     //Materia abajo
     mitab.tablaMateria = $('#tblMateria').DataTable({
@@ -953,30 +838,7 @@ $(document).ready(function() {
                 },
             },
         ],
-        language: {
-            "decimal": "",
-            "emptyTable": "No hay datos",
-            "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-            "infoFiltered": "(Filtro de _MAX_ total registros)",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "Mostrar _MENU_ Registros",
-            "loadingRecords": "Cargando...",
-            "processing": "Procesando...",
-            "search": "Buscar:",
-            "zeroRecords": "No se encontraron coincidencias",
-            "paginate": {
-                "first": "Primero",
-                "last": "Ultimo",
-                "next": "Siguiente",
-                "previous": "Anterior"
-            },
-            "aria": {
-                "sortAscending": ": Activar orden de columna ascendente",
-                "sortDescending": ": Activar orden de columna desendente"
-            }
-        },
+        language: esp,
     });
 });
 </script>

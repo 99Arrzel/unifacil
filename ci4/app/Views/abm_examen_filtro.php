@@ -61,7 +61,7 @@
         </div>
         <br>
         <div>
-        <a class="btn btn-primary btn-lg btn-block" href="/examenrelacion" role="button">Añadir mas autores y tags a un examen</a>
+        <a class="btn btn-primary btn-lg btn-block" href="/examenrelacion" role="button">Añadir tags y direcciones a un examen</a>
         </div>
         <?php /*if (session()->get('exitoso')): ?>
         <div class="alert alert-success" role="alert">

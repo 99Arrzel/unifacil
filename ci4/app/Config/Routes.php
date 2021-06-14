@@ -151,6 +151,10 @@ $routes->post('/crearAutorRelacion','LibroRelacion::crearAutorRelacion');//
 $routes->post('/crearTagRelacion','LibroRelacion::crearTagRelacion');//
 $routes->post('/crearFiltroRelacion','LibroRelacion::crearFiltroRelacion');//
 
+$routes->get('/examenrelacion','ExamenRelacion::index');//
+$routes->post('/crearTagRelacion','ExamenRelacion::crearTagRelacion');//
+$routes->post('/crearFiltroRelacion','ExamenRelacion::crearFiltroRelacion');//
+
 $routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');//
 

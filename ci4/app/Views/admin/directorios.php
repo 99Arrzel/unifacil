@@ -1072,11 +1072,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaDirectorio.ajax.reloac(); //Recargas la tabla después de eliminar
         })
     },
     gesEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1091,11 +1091,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     ciuEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1110,11 +1110,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     facEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1129,11 +1129,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     carEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1148,11 +1148,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     semEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1167,11 +1167,11 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     matEli: function(id) {
-			var formData = {
+        var formData = {
             miid: id
         };
         $.ajax({
@@ -1186,7 +1186,7 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-					mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
 }

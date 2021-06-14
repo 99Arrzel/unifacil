@@ -933,11 +933,11 @@ function insertarCiudad() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-				success: document.getElementById("ciudad").value = "",
+        success: document.getElementById("ciudad").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCiudad.ajax.reload();
-				
+
     });
 }
 
@@ -956,11 +956,11 @@ function insertarGestion() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-				success: document.getElementById("gestion").value = "",
+        success: document.getElementById("gestion").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaGestion.ajax.reload();
-				
+
     });
 }
 
@@ -979,11 +979,11 @@ function insertarFacultad() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-				success: document.getElementById("facultad").value = "",
+        success: document.getElementById("facultad").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaFacultad.ajax.reload();
-				
+
     });
 }
 
@@ -1002,11 +1002,11 @@ function insertarCarrera() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-				success: document.getElementById("carrera").value = "",
+        success: document.getElementById("carrera").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCarrera.ajax.reload();
-				
+
     });
 }
 
@@ -1026,10 +1026,10 @@ function insertarSemestre() {
             }
         },
         encode: true,
-				success: document.getElementById("semestre").value = "",
+        success: document.getElementById("semestre").value = "",
     }).done(function(resultado) {
         mitab.tablaSemestre.ajax.reload();
-				
+
     });
 }
 
@@ -1048,11 +1048,50 @@ function insertarMateria() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-				success: document.getElementById("materia").value = "",
+        success: document.getElementById("materia").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaMateria.ajax.reload();
-				
+
     });
+}
+ops = {
+    dirBaja: function(id) {
+        var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaDir",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
+        })
+    },
+    gesEli: function(id) {
+
+    },
+    ciuEli: function(id) {
+
+    },
+    facEli: function(id) {
+
+    },
+    carEli: function(id) {
+
+    },
+    semEli: function(id) {
+
+    },
+    matEli: function(id) {
+
+    },
 }
 </script>

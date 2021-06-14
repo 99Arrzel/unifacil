@@ -183,4 +183,86 @@ class editarDirectorio extends BaseController
             echo'{"baja":true}';
         }
     }
+    //Request de baja abajo
+
+
+    
+    public function bajaCiudad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCiudad();
+            $ciudad = [
+                'idtblCiudad' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function bajaGestion()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost('miid');
+            $model = new ModeloGestion();
+            $ciudad = [
+                'idtblGestion' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function bajaFacultad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloFacultad();
+            $ciudad = [
+                'idtblFacultad' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function bajaCarrera()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCarrera();
+            $ciudad = [
+                'idtblCarrera' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function bajaSemestre()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloSemestre();
+            $ciudad = [
+                'idtblSemestre' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function bajaMateria()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloMateria();
+            $ciudad = [
+                'idtblMateria' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
 }

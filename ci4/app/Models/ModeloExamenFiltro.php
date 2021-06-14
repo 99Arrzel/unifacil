@@ -68,10 +68,10 @@ class ModeloExamenFiltro extends Model
 
     public function actualizarExamen($data,$idtblExamen)
     {
-        $nExamenes = $this->db->table('tblExamen');
-        $nExamenes->set($data);//funcion update
-        $nExamenes->where('idtblExamen',$idtblExamen);
-        return $nExamenes->update();
+        $Examenes = $this->db->table('tblExamen');
+        $Examenes->set($data);//funcion update
+        $Examenes->where('idtblExamen',$idtblExamen);
+        return $Examenes->update();
     }
 
 

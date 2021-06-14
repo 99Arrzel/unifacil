@@ -66,8 +66,12 @@
                         value="<?php echo $idtblAutor ?>">
 
                     <label for="nombreAutor">Nombre del Autor</label>
-                    <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo $nombreAutor ?>">   
+                    <select name="tblAutor_idtblAutor" id="tblAutor_idtblAutor" class="form-control" required>
+                        <option selected>seleccione un autor</option>
+                        <?php foreach ($datosaut as $key):?>
+                        <option value="<?php echo $key['idtblAutor']?>"><?php echo $key['nombreAutor']?></option>
+                        <?php endforeach; ?>
+                    </select>  
                     
                     <input type="text" id="idtblTag" name="idtblTag" hidden=""
                         value="<?php echo $idtblTag ?>">

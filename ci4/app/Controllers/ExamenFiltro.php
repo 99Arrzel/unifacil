@@ -115,18 +115,19 @@ class ExamenFiltro extends BaseController
             "year"=>$_POST['year'],
             "paralelo"=>$_POST['paralelo'],
             "dirDoc"=>$_POST['dirDoc'],
-            "estado"=>$_POST['estado']
+            "estado"=>$_POST['estado'],
+            "tblAutor_idtblAutor"=>$_POST['tblAutor_idtblAutor']
             //nombre del campo de la base=> nombre o id del input
         ];//PARA CADA TABLA ANIADIR UN ARRAY
         $datosimg = [
             "idtblImagen"=>$_POST['idtblImagen'],
             "nombreImagen"=>$_POST['nombreImagen']
         ];
-
+        /*
         $datosaut =[
             "idtblAutor"=>$_POST['idtblAutor'],
             "nombreAutor"=>$_POST['nombreAutor']
-        ];
+        ]; */
 
         $datostag =[
             "idtblTag"=>$_POST['idtblTag'],
@@ -146,16 +147,17 @@ class ExamenFiltro extends BaseController
         $imagen = new ModeloExamenFiltro();
         $imagen->actualizarImagen($datosimg,$idtblImagen);
 
+        /*
         $idtblAutor=$_POST['idtblAutor'];
         $autor = new ModeloExamenFiltro();
-        $autor->actualizarAutor($datosaut,$idtblAutor);
+        $autor->actualizarAutor($datosaut,$idtblAutor); */
 
         $idtblTag=$_POST['idtblTag'];
         $tag = new ModeloExamenFiltro();
         $tag->actualizarTag($datostag,$idtblTag);
 
         $idfiltroFinal=$_POST['idfiltroFinal'];
-        $filtro = new ModeloExamenFiltro();
+        $filtro = new ModeloExamenFiltro(); 
         $filtro->actualizarFiltro($datosfil,$idfiltroFinal);
 
         if($respuesta){//if true

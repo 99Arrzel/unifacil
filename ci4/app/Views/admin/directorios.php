@@ -1,7 +1,6 @@
 <?php if (session()->get('nivel') != 1) {
     header('Location: https://proyecto3.tk/');
 }?>
-
 <div class="modal fade" id="dropEdit" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div id="myModal" class="modal-dialog modal-xl">
@@ -308,33 +307,38 @@
 </div>
 </div>
 <script>
-var esp =  {
-                "decimal": "",
-                "emptyTable": "No hay datos",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
-                "infoEmpty": "Mostrando 0 a 0 de 0 registros",
-                "infoFiltered": "(Filtro de _MAX_ total registros)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Registros",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "No se encontraron coincidencias",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                },
-                "aria": {
-                    "sortAscending": ": Activar orden de columna ascendente",
-                    "sortDescending": ": Activar orden de columna desendente"
-                }
-            };
+var esp = {
+    "decimal": "",
+    "emptyTable": "No hay datos",
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ Registros",
+    "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+    "infoFiltered": "(Filtro de _MAX_ total registros)",
+    "infoPostFix": "",
+    "thousands": ",",
+    "lengthMenu": "Mostrar _MENU_ Registros",
+    "loadingRecords": "Cargando...",
+    "processing": "Procesando...",
+    "search": "Buscar:",
+    "zeroRecords": "No se encontraron coincidencias",
+    "paginate": {
+        "first": "Primero",
+        "last": "Ultimo",
+        "next": "Siguiente",
+        "previous": "Anterior"
+    },
+    "aria": {
+        "sortAscending": ": Activar orden de columna ascendente",
+        "sortDescending": ": Activar orden de columna desendente"
+    }
+};
 var mitab = {}; //Global
 const hoy = new Date();
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+};
 const impFecha = hoy.toLocaleDateString('es-ES', options);
 $(document).ready(function() {
     //==Directorio abajo
@@ -359,8 +363,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios de alta -" + impFecha,
-                messageTop: "Reporte Directorios  alta -" + impFecha,
+                filename: "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -369,7 +373,7 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios de alta -" + impFecha,
+                filename: "Reporte Directorios de alta -" + impFecha,
                 messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
@@ -379,7 +383,7 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios de alta -" + impFecha,
+                filename: "Reporte Directorios de alta -" + impFecha,
                 messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
@@ -389,7 +393,7 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios de alta -" + impFecha,
+                filename: "Reporte Directorios de alta -" + impFecha,
                 messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
@@ -399,9 +403,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios de alta -" + impFecha,
+                filename: "Reporte Directorios de alta -" + impFecha,
                 messageTop: "Reporte Directorios de alta -" + impFecha,
-
             },
         ],
         columns: [{
@@ -426,7 +429,7 @@ $(document).ready(function() {
                 data: 'ID',
                 orderable: false,
                 render: function(data) {
-                    return "<button onclick='ops.re(" + data +
+                    return "<button onclick='ops.dirBaja(" + data +
                         ")' class='btn btn-danger form-control'>Dar de baja</button>";
                 },
             },
@@ -447,7 +450,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Gestiones de alta -" + impFecha,
+                filename: "Reporte Gestiones de alta -" + impFecha,
                 messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
@@ -457,7 +460,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Gestiones de alta -" + impFecha,
+                filename: "Reporte Gestiones de alta -" + impFecha,
                 messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
@@ -467,7 +470,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Gestiones de alta -" + impFecha,
+                filename: "Reporte Gestiones de alta -" + impFecha,
                 messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
@@ -477,7 +480,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Gestiones de alta -" + impFecha,
+                filename: "Reporte Gestiones de alta -" + impFecha,
                 messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
@@ -487,7 +490,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Gestiones de alta -" + impFecha,
+                filename: "Reporte Gestiones de alta -" + impFecha,
                 messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
         ],
@@ -527,7 +530,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Ciudades de alta -" + impFecha,
+                filename: "Reporte Ciudades de alta -" + impFecha,
                 messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
@@ -537,7 +540,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Ciudades de alta -" + impFecha,
+                filename: "Reporte Ciudades de alta -" + impFecha,
                 messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
@@ -547,7 +550,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Ciudades de alta -" + impFecha,
+                filename: "Reporte Ciudades de alta -" + impFecha,
                 messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
@@ -557,7 +560,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Ciudades de alta -" + impFecha,
+                filename: "Reporte Ciudades de alta -" + impFecha,
                 messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
@@ -567,7 +570,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Ciudades de alta -" + impFecha,
+                filename: "Reporte Ciudades de alta -" + impFecha,
                 messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
         ],
@@ -607,7 +610,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Facultades de alta -" + impFecha,
+                filename: "Reporte Facultades de alta -" + impFecha,
                 messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
@@ -617,7 +620,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Facultades de alta -" + impFecha,
+                filename: "Reporte Facultades de alta -" + impFecha,
                 messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
@@ -627,7 +630,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Facultades de alta -" + impFecha,
+                filename: "Reporte Facultades de alta -" + impFecha,
                 messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
@@ -637,7 +640,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Facultades de alta -" + impFecha,
+                filename: "Reporte Facultades de alta -" + impFecha,
                 messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
@@ -647,7 +650,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Facultades de alta -" + impFecha,
+                filename: "Reporte Facultades de alta -" + impFecha,
                 messageTop: "Reporte Facultades de alta -" + impFecha,
             },
         ],
@@ -687,7 +690,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Carreras de alta -" + impFecha,
+                filename: "Reporte Carreras de alta -" + impFecha,
                 messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
@@ -697,7 +700,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Carreras de alta -" + impFecha,
+                filename: "Reporte Carreras de alta -" + impFecha,
                 messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
@@ -707,7 +710,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Carreras de alta -" + impFecha,
+                filename: "Reporte Carreras de alta -" + impFecha,
                 messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
@@ -717,7 +720,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Carreras de alta -" + impFecha,
+                filename: "Reporte Carreras de alta -" + impFecha,
                 messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
@@ -727,7 +730,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Carreras de alta -" + impFecha,
+                filename: "Reporte Carreras de alta -" + impFecha,
                 messageTop: "Reporte Carreras de alta -" + impFecha,
             },
         ],
@@ -767,7 +770,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Semestres de alta -" + impFecha,
+                filename: "Reporte Semestres de alta -" + impFecha,
                 messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
@@ -777,7 +780,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Semestres de alta -" + impFecha,
+                filename: "Reporte Semestres de alta -" + impFecha,
                 messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
@@ -787,7 +790,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Semestres de alta -" + impFecha,
+                filename: "Reporte Semestres de alta -" + impFecha,
                 messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
@@ -797,7 +800,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Semestres de alta -" + impFecha,
+                filename: "Reporte Semestres de alta -" + impFecha,
                 messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
@@ -807,7 +810,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Semestres de alta -" + impFecha,
+                filename: "Reporte Semestres de alta -" + impFecha,
                 messageTop: "Reporte Semestres de alta -" + impFecha,
             },
         ],
@@ -847,7 +850,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Materias de alta -" + impFecha,
+                filename: "Reporte Materias de alta -" + impFecha,
                 messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
@@ -857,7 +860,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Materias de alta -" + impFecha,
+                filename: "Reporte Materias de alta -" + impFecha,
                 messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
@@ -867,7 +870,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Materias de alta -" + impFecha,
+                filename: "Reporte Materias de alta -" + impFecha,
                 messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
@@ -877,7 +880,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Materias de alta -" + impFecha,
+                filename: "Reporte Materias de alta -" + impFecha,
                 messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
@@ -887,7 +890,7 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Materias de alta -" + impFecha,
+                filename: "Reporte Materias de alta -" + impFecha,
                 messageTop: "Reporte Materias de alta -" + impFecha,
             },
         ],
@@ -914,4 +917,125 @@ $(document).ready(function() {
         language: esp,
     });
 });
+//Functions para insertar, borrar...
+function insertarCiudad() {
+    var formData = {
+        nombre: document.getElementById("ciudad").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarCiudad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+			mitab.tablaCiudad.ajax.reload();
+    });
+}
+function insertarGestion() {
+    var formData = {
+        nombre: document.getElementById("gestion").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarGestion",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+			mitab.tablaGestion.ajax.reload();
+    });
+}
+function insertarFacultad() {
+    var formData = {
+        nombre: document.getElementById("facultad").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarFacultad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+			mitab.tablaFacultad.ajax.reload();
+    });
+}
+function insertarCarrera() {
+    var formData = {
+        nombre: document.getElementById("carrera").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarCarrera",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+			mitab.tablaCarrera.ajax.reload();
+    });
+}
+function insertarSemestre() {
+    var formData = {
+        nombre: document.getElementById("semestre").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarSemestre",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+			mitab.tablaSemestre.ajax.reload();
+    });
+}
+function insertarMateria() {
+    var formData = {
+        nombre: document.getElementById("materia").value,
+    };
+    console.log(formData);
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/insertarMateria",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function() {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function(resultado) {
+        mitab.tablaMateria.ajax.reload();
+    });
+}
 </script>

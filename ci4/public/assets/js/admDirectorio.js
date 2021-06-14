@@ -5,7 +5,7 @@ function insertarCiudad() {
     console.log(formData);
     $.ajax({
         type: "POST",
-        url:   "/adm-dir/insertarCiudad",
+        url: "/adm-dir/insertarCiudad",
         data: formData,
         dataType: "json",
         statusCode: {
@@ -21,7 +21,7 @@ function insertarCiudad() {
         } else {
             swal("Fallo al cambiar");
         }
-    })
+    });
 }
 function insertarGestion() {
     var formData = {
@@ -30,7 +30,7 @@ function insertarGestion() {
     console.log(formData);
     $.ajax({
         type: "POST",
-        url:   "/adm-dir/insertarGestion",
+        url: "/adm-dir/insertarGestion",
         data: formData,
         dataType: "json",
         statusCode: {
@@ -46,7 +46,7 @@ function insertarGestion() {
         } else {
             swal("Fallo al cambiar");
         }
-    })
+    });
 }
 function insertarFacultad() {
     var formData = {
@@ -55,7 +55,7 @@ function insertarFacultad() {
     console.log(formData);
     $.ajax({
         type: "POST",
-        url:   "/adm-dir/insertarFacultad",
+        url: "/adm-dir/insertarFacultad",
         data: formData,
         dataType: "json",
         statusCode: {
@@ -71,7 +71,7 @@ function insertarFacultad() {
         } else {
             swal("Fallo al cambiar");
         }
-    })
+    });
 }
 function insertarCarrera() {
     var formData = {
@@ -80,7 +80,7 @@ function insertarCarrera() {
     console.log(formData);
     $.ajax({
         type: "POST",
-        url:   "/adm-dir/insertarCarrera",
+        url: "/adm-dir/insertarCarrera",
         data: formData,
         dataType: "json",
         statusCode: {
@@ -96,7 +96,7 @@ function insertarCarrera() {
         } else {
             swal("Fallo al cambiar");
         }
-    })
+    });
 }
 function insertarSemestre() {
     var formData = {
@@ -105,7 +105,7 @@ function insertarSemestre() {
     console.log(formData);
     $.ajax({
         type: "POST",
-        url:   "/adm-dir/insertarSemestre",
+        url: "/adm-dir/insertarSemestre",
         data: formData,
         dataType: "json",
         statusCode: {
@@ -121,7 +121,7 @@ function insertarSemestre() {
         } else {
             swal("Fallo al cambiar");
         }
-    })
+    });
 }
 function insertarMateria() {
     var formData = {
@@ -146,8 +146,10 @@ function insertarMateria() {
         } else {
             swal("Fallo al cambiar");
         }
-        $(document).ready(function() {$('#tblMateria').bootstrapTable("destroy");
-        $('#tblMateria').bootstrapTable();})
+        $(document).ready(function () {
+            $('#tblMateria').bootstrapTable("destroy");
+            $('#tblMateria').bootstrapTable();
+        });
         
-    })
+    });
 }

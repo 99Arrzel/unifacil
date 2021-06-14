@@ -281,7 +281,7 @@
                 <table id="tblSemestre" class="table table-hover table-bordered table-dark">
                     <thead class='thead-dark'>
                         <tr>
-                            th >Nombre Semestre</th>
+                            <th>Nombre Semestre</th>
                             <th>Editar</th>
                             <th>De Baja</th>
                         </tr>

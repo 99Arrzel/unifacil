@@ -65,14 +65,14 @@
                      <input type="text" id="idtblAutor" name="idtblAutor" hidden=""
                         value="<?php echo $idtblAutor ?>">
 
-                    <label for="nombreAutor">Nombre del/los Autores</label>
+                    <label for="nombreAutor">Nombre del Autor</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
                         value="<?php echo $nombreAutor ?>">   
                     
                     <input type="text" id="idtblTag" name="idtblTag" hidden=""
                         value="<?php echo $idtblTag ?>">
 
-                    <label for="nombreTag">Nombre del/los Tags</label>
+                    <label for="nombreTag">Nombre del Tag</label>
                     <input type="text" name="nombreTag" id="nombreTag" class="form-control"
                         value="<?php echo $nombreTag ?>">   
 

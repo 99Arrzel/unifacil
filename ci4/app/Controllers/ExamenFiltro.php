@@ -111,7 +111,7 @@ class ExamenFiltro extends BaseController
         print_r($_POST); 
         $datos = [
             "idtblExamen"=>$_POST['idtblExamen'],//el update es lo mismo que el insert pero hay que adjuntar el ID a modificar
-            "nombreLibro"=>$_POST['nombreLibro'],
+            "nombreExamen"=>$_POST['nombreExamen'],
             "year"=>$_POST['year'],
             "paralelo"=>$_POST['paralelo'],
             "dirDoc"=>$_POST['dirDoc'],
@@ -159,9 +159,9 @@ class ExamenFiltro extends BaseController
         $filtro->actualizarFiltro($datosfil,$idfiltroFinal);
 
         if($respuesta){//if true
-            return redirect()->to(base_url().'/librofiltro')->with('mensaje','2');
+            return redirect()->to(base_url().'/examenfiltro')->with('mensaje','2');
         }else {
-            return redirect()->to(base_url().'/librofiltro')->with('mensaje','3');
+            return redirect()->to(base_url().'/examenfiltro')->with('mensaje','3');
         }
     }
 

@@ -6,7 +6,7 @@ class ModeloExamenFiltro extends Model
 {
     public function ultimoID()
     {
-        $query = $this->db->query("SELECT MAX(idtblnExamen)+1 AS XD FROM tblnExamen");
+        $query = $this->db->query("SELECT MAX(idtblExamen)+1 AS XD FROM tblExamen");
         return $query->getResultArray();
     }
 

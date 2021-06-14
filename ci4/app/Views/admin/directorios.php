@@ -936,7 +936,7 @@ function insertarCiudad() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCiudad.ajax.reload();
-				document.getElementById("ciudad").value = "";
+				document.getElementById("ciudad").innerHTML = "";
     });
 }
 
@@ -958,7 +958,7 @@ function insertarGestion() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaGestion.ajax.reload();
-				document.getElementById("gestion").value = "";
+				document.getElementById("gestion").innerHTML = "";
     });
 }
 
@@ -980,7 +980,7 @@ function insertarFacultad() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaFacultad.ajax.reload();
-				document.getElementById("facultad").value = "";
+				document.getElementById("facultad").innerHTML = "";
     });
 }
 
@@ -1002,7 +1002,7 @@ function insertarCarrera() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCarrera.ajax.reload();
-				document.getElementById("carrera").value = "";
+				document.getElementById("carrera").innerHTML = "";
     });
 }
 
@@ -1024,7 +1024,7 @@ function insertarSemestre() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaSemestre.ajax.reload();
-				document.getElementById("semestre").value = "";
+				document.getElementById("semestre").innerHTML = "";
     });
 }
 
@@ -1046,7 +1046,7 @@ function insertarMateria() {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaMateria.ajax.reload();
-				document.getElementById("materia").value = "";
+				document.getElementById("materia").innerHTML = "";
     });
 }
 </script>

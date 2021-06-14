@@ -333,10 +333,9 @@ var esp =  {
                 }
             };
 var mitab = {}; //Global
-const tiempo = Date.now();
-const hoy = new Date(tiempo);
-const esaFecha = hoy.toDateString();
-const impFecha = esaFecha.toLocaleString();
+const hoy = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const impFecha = hoy.toLocaleDateString('es-ES', options);
 $(document).ready(function() {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";

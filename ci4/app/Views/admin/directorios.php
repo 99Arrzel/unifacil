@@ -333,7 +333,9 @@ var esp =  {
                 }
             };
 var mitab = {}; //Global
-
+const tiempo = Date.now();
+const hoy = new Date(tiempo);
+var impFecha = hoy.toDateString();
 $(document).ready(function() {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";
@@ -389,6 +391,9 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Directorios " + impFecha,
+                messageTop: "Reporte Directorios " + impFecha,
+
             },
         ],
         columns: [{

@@ -82,7 +82,7 @@ class ExamenFiltro extends BaseController
         ];
 
         $datosfil = [
-            "idfiltroFinal_Union"=>$_POST['IDFiltro'],
+            "idtblfiltroFinal_Union"=>$_POST['IDFiltro'],
             "idtblExamen_Union"=>$miId,
         ];
 

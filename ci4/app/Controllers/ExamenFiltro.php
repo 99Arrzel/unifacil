@@ -75,26 +75,20 @@ class ExamenFiltro extends BaseController
             //nombre del campo de la base=> nombre o id del input
         ];
 
-        $datosaut = [
-            "tblAutor_idtblAutor"=>$_POST['IDAutor'],
-            "tblLibro_idtblLibro"=>$miId,
-        ];
 
         $datostag = [
             "tblTag_idtblTag"=>$_POST['IDTag'],
-            "tblLibro_idtblLibro"=>$miId,
+            "tblExamen_idtblExamen"=>$miId,
         ];
 
         $datosfil = [
             "idfiltroFinal_Union"=>$_POST['IDFiltro'],
-            "idtblLibro_Union"=>$miId,
+            "idtblExamen_Union"=>$miId,
         ];
 
         $examen = new ModeloExamenFiltro(); // nuevo objeto examen
         $respuesta = $examen->insertarExamen($datos); //manda los datos al modelo
 
-        $autor = new ModeloExamenFiltro();
-        $autor->insertarAutor($datosaut);
 
         $tag = new ModeloExamenFiltro();
         $tag->insertarTag($datostag);

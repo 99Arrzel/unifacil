@@ -933,10 +933,11 @@ function insertarCiudad() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+				success: document.getElementById("ciudad").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCiudad.ajax.reload();
-				document.getElementById("ciudad").innerHTML = "";
+				
     });
 }
 
@@ -955,10 +956,11 @@ function insertarGestion() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+				success: document.getElementById("gestion").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaGestion.ajax.reload();
-				document.getElementById("gestion").innerHTML = "";
+				
     });
 }
 
@@ -977,10 +979,11 @@ function insertarFacultad() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+				success: document.getElementById("facultad").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaFacultad.ajax.reload();
-				document.getElementById("facultad").innerHTML = "";
+				
     });
 }
 
@@ -999,10 +1002,11 @@ function insertarCarrera() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+				success: document.getElementById("carrera").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaCarrera.ajax.reload();
-				document.getElementById("carrera").innerHTML = "";
+				
     });
 }
 
@@ -1022,9 +1026,10 @@ function insertarSemestre() {
             }
         },
         encode: true,
+				success: document.getElementById("semestre").value = "",
     }).done(function(resultado) {
         mitab.tablaSemestre.ajax.reload();
-				document.getElementById("semestre").innerHTML = "";
+				
     });
 }
 
@@ -1043,10 +1048,11 @@ function insertarMateria() {
                 alert("Error 500, chequea el script amiguito");
             }
         },
+				success: document.getElementById("materia").value = "",
         encode: true,
     }).done(function(resultado) {
         mitab.tablaMateria.ajax.reload();
-				document.getElementById("materia").innerHTML = "";
+				
     });
 }
 </script>

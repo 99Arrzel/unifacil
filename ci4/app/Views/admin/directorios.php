@@ -45,8 +45,7 @@
     <h2>Listado de Directorios</h2>
     <div class="row">
         <div class="col-md-12">
-            <table id="tblDirectorios" class="table table-hover table-bordered table-dark" data-toggle="table"
-                data-pagination="true" data-search="true">
+            <table id="tblDirectorios" class="table table-hover table-bordered table-dark">
                 <thead class='thead-dark'>
                     <tr>
                         <th>Ciudad</th>
@@ -285,8 +284,6 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='assets/js/admDirectorio.js'>
-</script>
 <script>
 /*var esp =  {
                 "decimal": "",
@@ -314,8 +311,8 @@
             };*/
 var mitab = {}; //Global
 
-    $(document).ready(function()
-    {
+    $(document).ready(function(){
+        document.title = "Lista de directorios UNIFRANZ";
         const ajaxDirectorios = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
         mitab.tablaBaja = $('#tblDirectorios').DataTable({
             ajax: {
@@ -416,6 +413,7 @@ var mitab = {}; //Global
                 }
             },
         });
+    });
         /*$('#tblDirectorios tbody').on('click', 'button', function() {
             var data = mitab.tablaAlta.row($(this).parents('tr')).data();
             document.getElementById("nombreModal").value = data['NOMBRE'];

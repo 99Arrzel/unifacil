@@ -1072,6 +1072,7 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
+					$("#tblDirectorios").ajax.reload();
             mitab.tablaDir.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },

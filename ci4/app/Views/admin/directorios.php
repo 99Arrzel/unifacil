@@ -1057,7 +1057,7 @@ function insertarMateria() {
 }
 ops = {
     dirBaja: function(id) {
-        var formData = {
+			var formData = {
             miid: id
         };
         $.ajax({
@@ -1072,7 +1072,7 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-            mitab.tablaDirectorio.ajax.reload();
+            mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     gesEli: function(id) {

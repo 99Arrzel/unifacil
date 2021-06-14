@@ -15,6 +15,6 @@ class ModeloDirectorio extends Model
         return $query->getResultArray();
     }
     protected $table = 'filtroFinal';
-    protected $primaryKey = 'idtblfiltroFinal';
-    protected $allowedFields = ['idtblfiltroFinal','idtblMateria_Union','idtblSemestre_Union','estado'];
+    protected $primaryKey = 'idfiltroFinal';
+    protected $allowedFields = ['idfiltroFinal','idtblMateria_Union','idtblSemestre_Union','estado'];
 }

@@ -1062,7 +1062,7 @@ ops = {
         };
         $.ajax({
             type: "POST",
-            url: "/adm-dir/bajaDir",
+            url: "/adm-dir/bajaDirectorio",
             data: formData,
             dataType: "json",
             statusCode: {
@@ -1076,22 +1076,118 @@ ops = {
         })
     },
     gesEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaGestion",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
     ciuEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaCiudad",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
     facEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaFacultad",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
     carEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaCarrera",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
     semEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaSemestre",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
     matEli: function(id) {
-
+			var formData = {
+            miid: id
+        };
+        $.ajax({
+            type: "POST",
+            url: "/adm-dir/bajaMateria",
+            data: formData,
+            dataType: "json",
+            statusCode: {
+                500: function() {
+                    alert("Error 500, chequea el script amiguito");
+                }
+            },
+            encode: true,
+        }).done(function(resultado) {
+					mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+        })
     },
 }
 </script>

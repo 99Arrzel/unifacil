@@ -66,6 +66,7 @@ $routes->match(['post'], '/adm-dir/insertarCarrera', 'adm/EditarDirectorio::inse
 $routes->match(['post'], '/adm-dir/insertarSemestre', 'adm/EditarDirectorio::insertarSemestre');
 $routes->match(['post'], '/adm-dir/insertarMateria', 'adm/EditarDirectorio::insertarMateria');
 //eliminar
+$routes->match(['post'], '/adm-dir/bajaDirectorio', 'adm/EditarDirectorio::bajaDirectorio');
 $routes->match(['post'], '/adm-dir/bajaCiudad', 'adm/EditarDirectorio::bajaCiudad');
 $routes->match(['post'], '/adm-dir/bajaGestion', 'adm/EditarDirectorio::bajaGestion');
 $routes->match(['post'], '/adm-dir/bajaFacultad', 'adm/EditarDirectorio::bajaFacultad');

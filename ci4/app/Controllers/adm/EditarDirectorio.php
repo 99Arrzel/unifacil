@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers\adm;
-use App\Models\ModeloADM\ModeloDirectorio;
+use App\Models\ModeloADM\ModeloDirectorio; //Include de tablas de filtro
 // =================== ACÁ PARA MODELOS DE TABLAS SIMPLES
 use App\Models\ModeloCiudad;
 use App\Models\ModeloGestion;
@@ -183,10 +183,19 @@ class editarDirectorio extends BaseController
             echo'{"baja":true}';
         }
     }
-    //Request de baja abajo
-
-
-    
+    //Request de baja abajo ====================================================================
+    public function bajaDirectorio()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloDirectorio();
+            $dir = [
+                'idtblfiltroFinal' => $id,
+                'estado' => "0",
+            ];
+            $model->save( $dir );
+        }
+    }
     public function bajaCiudad()
     {
         if ( $this->request->isAJAX() ) {

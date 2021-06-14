@@ -31,7 +31,7 @@ class ExamenRelacion extends BaseController
 
     }
 
-    public function crearTagRelacion(){
+    public function crearTagRelacionExamen(){
         $datostag = [
             "tblTag_idtblTag"=>$_POST['IDTag'],
             "tblExamen_idtblExamen"=>$_POST['idtblExamen']
@@ -47,7 +47,7 @@ class ExamenRelacion extends BaseController
         }
 
     }
-    public function crearFiltroRelacion(){
+    public function crearFiltroRelacionExamen(){
         $datosfil = [
             "idtblfiltroFinal_Union"=>$_POST['IDFiltro'],
             "idtblExamen_Union"=>$_POST['idtblExamen']

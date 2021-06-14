@@ -8,7 +8,7 @@
             <h3>Seleccione un tag y un examen para que sea asignado a dicho examen</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="<?php echo base_url() . '/crearTagRelacion' ?>" method="POST">
+                    <form action="<?php echo base_url() . '/crearTagRelacionExamen' ?>" method="POST">
                         <label>Examen</label>
                         <select name="idtblExamen" id="idtblExamen" class="form-control">
                             <option selected>Seleccione un Examen</option>
@@ -39,7 +39,7 @@
             <h3>Seleccione un directorio y un examen para que sea asignado a dicho directorio</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="<?php echo base_url() . '/crearFiltroRelacion' ?>" method="POST">
+                    <form action="<?php echo base_url() . '/crearFiltroRelacionExamen' ?>" method="POST">
                         <label>Examen</label>
                         <select name="idtblExamen" id="idtblExamen" class="form-control">
                             <option selected>Seleccione un Examen</option>

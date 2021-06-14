@@ -142,6 +142,8 @@ $routes->post('/actualizarLibroFiltro','LibroFiltro::actualizarLibroFiltro');//r
 
 $routes->get('/examenfiltro','ExamenFiltro::index');//ruta libro
 $routes->get('/obtenerNombreExamenFiltro/(:any)','ExamenFiltro::obtenerNombreExamenFiltro/$1');
+$routes->post('/crearExamenFiltro','ExamenFiltro::crearExamenFiltro');//ruta para insert imagen
+$routes->post('/actualizarExamenFiltro','ExamenFiltro::actualizarExamenFiltro');//ruta para update imagen
 
 
 $routes->get('/librorelacion','LibroRelacion::index');//

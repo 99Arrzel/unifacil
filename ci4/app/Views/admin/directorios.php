@@ -1055,7 +1055,7 @@ function insertarMateria() {
 
     });
 }
-
+//Bajas abajo, no funciona dirbaja por alguna razón
 function dirBaja(id) {
     var formData = {
         miid: id
@@ -1077,7 +1077,7 @@ function dirBaja(id) {
         }, 100);
     })
 }
-
+ 
 function gesEli(id) {
     var formData = {
         miid: id

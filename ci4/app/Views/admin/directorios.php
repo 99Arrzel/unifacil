@@ -350,7 +350,7 @@ $(document).ready(function() {
     const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
     const ajaxSemestre = "https://proyecto3.tk/adm-dir/ajaxListSemestre";
     const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
-    mitab.tablaDirectorio = $('#tblDirectorios').DataTable({
+    mitab.tablaDir = $('#tblDirectorios').DataTable({
         ajax: {
             url: ajaxDirectorio,
             dataSrc: "",
@@ -1072,7 +1072,7 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-            mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
+            mitab.tablaDir.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     gesEli: function(id) {

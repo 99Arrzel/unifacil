@@ -1072,7 +1072,7 @@ ops = {
             },
             encode: true,
         }).done(function(resultado) {
-            mitab.tablaDirectorio.ajax.reloac(); //Recargas la tabla después de eliminar
+            mitab.tablaDirectorio.ajax.reload(); //Recargas la tabla después de eliminar
         })
     },
     gesEli: function(id) {

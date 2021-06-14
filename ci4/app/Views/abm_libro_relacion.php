@@ -10,7 +10,7 @@
                 <div class="col-sm-12">
                     <form action="<?php echo base_url() . '/crearAutorRelacion' ?>" method="POST">
                         <label>Libro</label>
-                        <select name="idtblLibro" id="idtblLibro" class="form-control">
+                        <select name="idtblLibro" id="idtblLibro" class="form-control" required>
                             <option selected>Seleccione un Libro</option>
                             <?php foreach ($libro as $libroData) : ?>
                             <?php if(($libroData['estado'])==0): ?>
@@ -19,7 +19,7 @@
                             <?php endforeach; ?>
                         </select>
                         <label>Autor</label> <br>
-                        <select name="IDAutor" id="IDAutor" class="form-control">
+                        <select name="IDAutor" id="IDAutor" class="form-control" required>
                             <option selected>Seleccione un Autor</option>
                             <?php foreach ($autor as $autorData) : ?>
                                 <option value="<?= $autorData['IDAutor'] ?>"><?= $autorData['nombreAutor']; ?></option>
@@ -38,7 +38,7 @@
                 <div class="col-sm-12">
                     <form action="<?php echo base_url() . '/crearTagRelacion' ?>" method="POST">
                         <label>Libro</label>
-                        <select name="idtblLibro" id="idtblLibro" class="form-control">
+                        <select name="idtblLibro" id="idtblLibro" class="form-control" required>
                             <option selected>Seleccione un Libro</option>
                             <?php foreach ($libro as $libroData) : ?>
                             <?php if(($libroData['estado'])==0): ?>
@@ -47,7 +47,7 @@
                             <?php endforeach; ?>
                         </select>
                         <label>Autor</label> <br>
-                        <select name="IDTag" id="IDTag" class="form-control">
+                        <select name="IDTag" id="IDTag" class="form-control" required>
                             <option selected>Seleccione un Tag</option>
                             <?php foreach ($tag as $tagData) : ?>
                                 <option value="<?= $tagData['IDTag'] ?>"><?= $tagData['nombreTag']; ?></option>
@@ -69,7 +69,7 @@
                 <div class="col-sm-12">
                     <form action="<?php echo base_url() . '/crearFiltroRelacion' ?>" method="POST">
                         <label>Libro</label>
-                        <select name="idtblLibro" id="idtblLibro" class="form-control">
+                        <select name="idtblLibro" id="idtblLibro" class="form-control" required>
                             <option selected>Seleccione un Libro</option>
                             <?php foreach ($libro as $libroData) : ?>
                             <?php if(($libroData['estado'])==0): ?>
@@ -78,7 +78,7 @@
                             <?php endforeach; ?>
                         </select>
                         <label>Filtro</label> <br>
-                        <select name="IDFiltro" id="IDFiltro" class="form-control" >
+                        <select name="IDFiltro" id="IDFiltro" class="form-control" required>
                             <option selected>Seleccione un Directorio</option>
                             <?php foreach ($filtro as $filtroData): ?>
                             <?php if(($filtroData['ESTADO'])==1): ?>

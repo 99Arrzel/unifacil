@@ -23,9 +23,9 @@
                     <!--poner los mismos nombres de las tablas para evitar confusion-->
                     <label for="nombreImagen">Nombre de la Imagen</label>
                     <input type="text" name="nombreImagen" id="nombreImagen" class="form-control"
-                        value="<?php echo $nombreImagen ?>">
+                        value="<?php echo $nombreImagen ?>" required pattern="([A-zÀ-ž0-9\s]){2,}">
                     <label for="dirImagen">URL de la Imagen</label>
-                    <input type="text" name="dirImagen" id="dirImagen" class="form-control"
+                    <input type="url" name="dirImagen" id="dirImagen" class="form-control"
                         value="<?php echo $dirImagen ?>">
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado" class="form-control" required>

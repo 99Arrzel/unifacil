@@ -10,7 +10,7 @@
                 <div class="col-sm-12">
                     <form action="<?php echo base_url() . '/crearTagRelacionExamen' ?>" method="POST">
                         <label>Examen</label>
-                        <select name="idtblExamen" id="idtblExamen" class="form-control">
+                        <select name="idtblExamen" id="idtblExamen" class="form-control" required>
                             <option selected>Seleccione un Examen</option>
                             <?php foreach ($examen as $examenData) : ?>
                             <?php if(($examenData['estado'])==0): ?>
@@ -19,7 +19,7 @@
                             <?php endforeach; ?>
                         </select>
                         <label>Tag</label> <br>
-                        <select name="IDTag" id="IDTag" class="form-control">
+                        <select name="IDTag" id="IDTag" class="form-control" required>
                             <option selected>Seleccione un Tag</option>
                             <?php foreach ($tag as $tagData) : ?>
                                 <option value="<?= $tagData['IDTag'] ?>"><?= $tagData['nombreTag']; ?></option>

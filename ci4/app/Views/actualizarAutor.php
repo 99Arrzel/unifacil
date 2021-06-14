@@ -22,7 +22,7 @@
                     <!--poner los mismos nombres de las tablas para evitar confusion-->
                     <label for="nombreAutor">Nombre</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo $nombreAutor ?>">
+                        value="<?php echo $nombreAutor ?>" required pattern="([A-zÀ-ž\s]){2,}">
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>

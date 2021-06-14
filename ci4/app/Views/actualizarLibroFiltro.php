@@ -34,7 +34,7 @@
 
                     <label for="nombreLibro">Nombre del Libro</label>
                     <input type="text" name="nombreLibro" id="nombreLibro" class="form-control"
-                        value="<?php echo $nombreLibro?>">
+                        value="<?php echo $nombreLibro?>" required pattern="([A-zÀ-ž\s]){2,}">
 
                     <label for="year">Año</label>
                     <input type="text" name="year" id="year" class="form-control"
@@ -42,10 +42,10 @@
 
                     <label for="edicion">Edicion</label>
                     <input type="text" name="edicion" id="edicion" class="form-control"
-                        value="<?php echo $edicion ?>">
+                        value="<?php echo $edicion ?>" required pattern="([A-zÀ-ž\s]){2,}">
 
                     <label for="dirDoc">URL del Libro</label>
-                    <input type="text" name="dirDoc" id="dirDoc" class="form-control"
+                    <input type="url" name="dirDoc" id="dirDoc" class="form-control"
                         value="<?php echo $dirDoc ?>">
 
                     <label for="estado">Estado del Libro</label>
@@ -60,21 +60,21 @@
 
                     <label for="nombreImagen">Nombre de la imagen</label>
                     <input type="text" name="nombreImagen" id="nombreImagen" class="form-control"
-                        value="<?php echo $nombreImagen ?>">
+                        value="<?php echo $nombreImagen ?>" required pattern="([A-zÀ-ž0-9\s]){2,}">
 
                      <input type="text" id="idtblAutor" name="idtblAutor" hidden=""
                         value="<?php echo $idtblAutor ?>">
 
-                    <label for="nombreAutor">Nombre del/los Autores</label>
+                    <label for="nombreAutor">Nombre del Autor Principal</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo $nombreAutor ?>">   
+                        value="<?php echo $nombreAutor ?>" required pattern="([A-zÀ-ž\s]){2,}">   
                     
                     <input type="text" id="idtblTag" name="idtblTag" hidden=""
                         value="<?php echo $idtblTag ?>">
 
-                    <label for="nombreTag">Nombre del/los Tags</label>
+                    <label for="nombreTag">Nombre del Tag</label>
                     <input type="text" name="nombreTag" id="nombreTag" class="form-control"
-                        value="<?php echo $nombreTag ?>">   
+                        value="<?php echo $nombreTag ?>" required pattern="([A-zÀ-ž\s]){2,}">   
 
                     <label for="nombreTag">Direccion del filtro</label>
                     <input type="text" name="idfiltroFinal" id="idFiltroFinal" class="form-control"

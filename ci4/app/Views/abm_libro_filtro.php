@@ -10,36 +10,36 @@
             <div class="col-sm-12">
                 <form action="<?php echo base_url().'/crearLibroFiltro'?>" method="POST">
                     <label>Libro</label>
-                    <input type="text" name="nombreLibro" id="nombreLibro" class="form-control">
+                    <input type="text" name="nombreLibro" id="nombreLibro" class="form-control" required pattern="([A-zÀ-ž\s]){2,}">
                     <label>Año</label>
-                    <input type="text" name="year" id="year" class="form-control">
+                    <input type="text" name="year" id="year" class="form-control" required pattern="([0-9\s]){4,}">
                     <label>Edicion</label>
-                    <input type="text" name="edicion" id="edicion" class="form-control">
+                    <input type="text" name="edicion" id="edicion" class="form-control" required pattern="([A-zÀ-ž\s]){2,}">
                     <label>Direccion</label>
-                    <input type="text" name="dirDoc" id="dirDoc" class="form-control">
+                    <input type="url" name="dirDoc" id="dirDoc" class="form-control">
                     <label>Imagen</label> <br>
-                    <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-control">
+                    <select name="tblImagen_idtblImagen" id="tblImagen_idtblImagen" class="form-control" required>
                         <option selected>seleccione una imagen</option>
                         <?php foreach ($imagen as $imagenData): ?>
                         <option value="<?= $imagenData['IDimagen']?>"><?=$imagenData['nombreImagen'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Autores</label> <br>
-                    <select name="IDAutor" id="IDAutor" class="form-control" >
+                    <select name="IDAutor" id="IDAutor" class="form-control" required>
                         <option selected>Seleccione un Autor principal</option>
                         <?php foreach ($autor as $autorData): ?>
                         <option value="<?= $autorData['IDAutor']?>"><?=$autorData['nombreAutor'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Tags</label> <br>
-                    <select name="IDTag" id="IDTag" class="form-control" >
+                    <select name="IDTag" id="IDTag" class="form-control" required>
                         <option selected>Seleccione un Tag principal</option>
                         <?php foreach ($tag as $tagData): ?>
                         <option value="<?= $tagData['IDTag']?>"><?=$tagData['nombreTag'];?></option>
                         <?php endforeach; ?>
                     </select>
                     <label>Filtro</label> <br>
-                    <select name="IDFiltro" id="IDFiltro" class="form-control" >
+                    <select name="IDFiltro" id="IDFiltro" class="form-control" required>
                         <option selected>seleccione un Directorio</option>
                         <?php foreach ($filtro as $filtroData): ?>
                             <?php if(($filtroData['ESTADO'])==1): ?>

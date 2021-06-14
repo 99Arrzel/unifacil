@@ -17,19 +17,19 @@
 
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" value="">
+                        <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" value="" required pattern="([A-zÀ-ž\s]){2,}">
                     </div>
 
 
                     <div class="form-group">
                         <label>Apellido</label>
-                        <input type="text" name="apellido" class="form-control" id="apellido" value="">
+                        <input type="text" name="apellido" class="form-control" id="apellido" value="" required pattern="([A-zÀ-ž\s]){2,}">
                     </div>
 
 
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="text" name="login" class="form-control" id="login" value="">
+                        <input type="text" name="login" class="form-control" id="login" value="" required pattern="([A-zÀ-ž\s]){2,}">
                     </div>
 
 

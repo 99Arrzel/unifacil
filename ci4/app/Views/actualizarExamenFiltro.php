@@ -34,19 +34,19 @@
 
                     <label for="nombreExamen">Nombre del Examen</label>
                     <input type="text" name="nombreExamen" id="nombreExamen" class="form-control"
-                        value="<?php echo $nombreExamen?>">
+                        value="<?php echo $nombreExamen?>" required pattern="([A-zÀ-ž\s]){2,}">
 
                     <label for="year">Año</label>
                     <input type="text" name="year" id="year" class="form-control"
-                        value="<?php echo $year ?>">
+                        value="<?php echo $year ?>" required pattern="([0-9\s]){2,}">
 
                     <label for="paralelo">Paralelo</label>
                     <input type="text" name="paralelo" id="paralelo" class="form-control"
-                        value="<?php echo $paralelo ?>">
+                        value="<?php echo $paralelo ?>" required pattern="([0-9\s]){1,}">
 
                     <label for="dirDoc">URL del Examen</label>
-                    <input type="text" name="dirDoc" id="dirDoc" class="form-control"
-                        value="<?php echo $dirDoc ?>">
+                    <input type="url" name="dirDoc" id="dirDoc" class="form-control"
+                        value="<?php echo $dirDoc ?>" required>
 
                     <label for="estado">Estado del Examen</label>
                     <select name="estado" id="estado" class="form-control" required>
@@ -60,25 +60,25 @@
 
                     <label for="nombreImagen">Nombre de la imagen</label>
                     <input type="text" name="nombreImagen" id="nombreImagen" class="form-control"
-                        value="<?php echo $nombreImagen ?>">
+                        value="<?php echo $nombreImagen ?>" required>
 
                      <input type="text" id="idtblAutor" name="idtblAutor" hidden=""
                         value="<?php echo $idtblAutor ?>">
 
                     <label for="nombreAutor">Nombre del Autor</label>
                     <input type="text" name="nombreAutor" id="nombreAutor" class="form-control"
-                        value="<?php echo $nombreAutor ?>">   
+                        value="<?php echo $nombreAutor ?>" required>   
                     
                     <input type="text" id="idtblTag" name="idtblTag" hidden=""
                         value="<?php echo $idtblTag ?>">
 
                     <label for="nombreTag">Nombre del Tag</label>
                     <input type="text" name="nombreTag" id="nombreTag" class="form-control"
-                        value="<?php echo $nombreTag ?>">   
+                        value="<?php echo $nombreTag ?>" required>   
 
                     <label for="nombreTag">Direccion del filtro</label>
                     <input type="text" name="idfiltroFinal" id="idFiltroFinal" class="form-control"
-                        value="<?php echo $idfiltroFinal ?>">   
+                        value="<?php echo $idfiltroFinal ?>" required >   
 
                     <br>
                     <button class="btn btn-warning">Guardar</button>

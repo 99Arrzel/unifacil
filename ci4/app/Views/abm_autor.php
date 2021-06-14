@@ -209,3 +209,11 @@ function generate() {
     doc.save('Marks_Of_Students.pdf');  
 }  
 </script>  
+<!-- 
+Lugar para guardar los patterns
+
+([A-zÀ-ž\s]){2,}
+caracteres permitidos,\s = espacios {2,} almenos 2 caracteres
+simbolo+ para mas de un caracter
+
+-->

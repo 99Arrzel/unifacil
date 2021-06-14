@@ -18,11 +18,11 @@
                     <form method="post">
                         <div class="form-group">
                             <h3>Nombre de usuario:</h3>
-                            <input type="text" name="login" class="form-control"/>
+                            <input type="text" name="login" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <h3>Contraseña:</h3>
-                            <input type="password" name="password" class="form-control"/>
+                            <input type="password" name="password" class="form-control" required/>
                         </div>
                         <div class="form-group">
                             <input id="button" type="submit" value="Ingresar" class="btn btn-primary">

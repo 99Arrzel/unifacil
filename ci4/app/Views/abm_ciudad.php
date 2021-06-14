@@ -11,7 +11,7 @@
                     action="<?php echo base_url() . '/crear'?>"
                     method="POST">
                     <label>Nombre</label>
-                    <input type="text" name="nombreCiudad" id="nombreCiudad" class="form-control" required>
+                    <input type="text" name="nombreCiudad" id="nombreCiudad" class="form-control" required pattern="([A-zÀ-ž\s]){2,}">
                     <br>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>

@@ -11,7 +11,7 @@
             <div class="col-sm-12">
                 <form action="<?php echo base_url().'/crearTag'?>" method="POST">
                     <label>Tag</label>
-                    <input type="text" name="nombreTag" id="nombreTag" class="form-control">
+                    <input type="text" name="nombreTag" id="nombreTag" class="form-control" required pattern="([A-zÀ-ž\s]){2,}">
                     <label>Estado</label>
                     <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>

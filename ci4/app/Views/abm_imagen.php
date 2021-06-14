@@ -11,7 +11,7 @@
             <div class="col-sm-12">
                 <form action="<?php echo base_url().'/crearImagen'?>" method="POST">
                     <label>Imagen</label>
-                    <input type="text" name="nombreImagen" id="nombreImagen" class="form-control" required>
+                    <input type="text" name="nombreImagen" id="nombreImagen" class="form-control" required pattern="([A-zÀ-ž0-9\s]){2,}">
                     <label>URL Imagen</label>
                     <input type="url" name="dirImagen" id="dirImagen" class="form-control" required>
                     <label>Estado</label>

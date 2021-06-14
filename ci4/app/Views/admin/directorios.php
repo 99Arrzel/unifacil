@@ -359,6 +359,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios  alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -367,6 +369,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -375,6 +379,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -383,6 +389,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -391,8 +399,8 @@ $(document).ready(function() {
                     columns: [0, 1, 2, 3, 4, 5],
                 },
                 className: 'btn btn-info',
-                filename : "Reporte Directorios " + impFecha,
-                messageTop: "Reporte Directorios " + impFecha,
+                filename : "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
 
             },
         ],
@@ -439,6 +447,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Gestiones de alta -" + impFecha,
+                messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -447,6 +457,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Gestiones de alta -" + impFecha,
+                messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -455,6 +467,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Gestiones de alta -" + impFecha,
+                messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -463,6 +477,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Gestiones de alta -" + impFecha,
+                messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -471,6 +487,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Gestiones de alta -" + impFecha,
+                messageTop: "Reporte Gestiones de alta -" + impFecha,
             },
         ],
         columns: [{
@@ -509,6 +527,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -517,6 +537,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -525,6 +547,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -533,6 +557,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -541,6 +567,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
             },
         ],
         columns: [{
@@ -579,6 +607,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -587,6 +617,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -595,6 +627,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -603,6 +637,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -611,6 +647,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
             },
         ],
         columns: [{
@@ -649,6 +687,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -657,6 +697,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -665,6 +707,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -673,6 +717,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -681,6 +727,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
             },
         ],
         columns: [{
@@ -719,6 +767,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -727,6 +777,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -735,6 +787,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -743,6 +797,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -751,6 +807,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
             },
         ],
         columns: [{
@@ -789,6 +847,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
                 extend: 'csv',
@@ -797,6 +857,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
                 extend: 'excel',
@@ -805,6 +867,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
                 extend: 'pdf',
@@ -813,6 +877,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
             },
             {
                 extend: 'print',
@@ -821,6 +887,8 @@ $(document).ready(function() {
                     columns: [0],
                 },
                 className: 'btn btn-info',
+                filename : "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
             },
         ],
         columns: [{

@@ -140,10 +140,20 @@ $routes->get('/obtenerNombreLibroFiltro/(:any)','LibroFiltro::obtenerNombreLibro
 $routes->post('/crearLibroFiltro','LibroFiltro::crearLibroFiltro');//ruta para insert imagen
 $routes->post('/actualizarLibroFiltro','LibroFiltro::actualizarLibroFiltro');//ruta para update imagen
 
+$routes->get('/examenfiltro','ExamenFiltro::index');//ruta libro
+$routes->get('/obtenerNombreExamenFiltro/(:any)','ExamenFiltro::obtenerNombreExamenFiltro/$1');
+$routes->post('/crearExamenFiltro','ExamenFiltro::crearExamenFiltro');//ruta para insert imagen
+$routes->post('/actualizarExamenFiltro','ExamenFiltro::actualizarExamenFiltro');//ruta para update imagen
+
+
 $routes->get('/librorelacion','LibroRelacion::index');//
 $routes->post('/crearAutorRelacion','LibroRelacion::crearAutorRelacion');//
 $routes->post('/crearTagRelacion','LibroRelacion::crearTagRelacion');//
 $routes->post('/crearFiltroRelacion','LibroRelacion::crearFiltroRelacion');//
+
+$routes->get('/examenrelacion','ExamenRelacion::index');//
+$routes->post('/crearTagRelacionExamen','ExamenRelacion::crearTagRelacionExamen');//
+$routes->post('/crearFiltroRelacionExamen','ExamenRelacion::crearFiltroRelacionExamen');//
 
 $routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');//

@@ -5,16 +5,16 @@
         }?>
 <body>
     <div class="container">
-        <h1>ABM Libro</h1>
+        <h1>ABM Examen</h1>
         <div class="row">
             <div class="col-sm-12">
-                <form action="<?php echo base_url().'/crearLibroFiltro'?>" method="POST">
-                    <label>Libro</label>
-                    <input type="text" name="nombreLibro" id="nombreLibro" class="form-control">
+                <form action="<?php echo base_url().'/crearExamenFiltro'?>" method="POST">
+                    <label>Examen</label>
+                    <input type="text" name="nombreExamen" id="nombreExamen" class="form-control">
                     <label>Año</label>
                     <input type="text" name="year" id="year" class="form-control">
-                    <label>Edicion</label>
-                    <input type="text" name="edicion" id="edicion" class="form-control">
+                    <label>Paralelo</label>
+                    <input type="text" name="paralelo" id="paralelo" class="form-control">
                     <label>Direccion</label>
                     <input type="text" name="dirDoc" id="dirDoc" class="form-control">
                     <label>Imagen</label> <br>
@@ -61,55 +61,55 @@
         </div>
         <br>
         <div>
-        <a class="btn btn-primary btn-lg btn-block" href="/librorelacion" role="button">Añadir mas autores y tags a un libro</a>
+        <a class="btn btn-primary btn-lg btn-block" href="/examenrelacion" role="button">Añadir tags y direcciones a un examen</a>
         </div>
         <?php /*if (session()->get('exitoso')): ?>
         <div class="alert alert-success" role="alert">
             <?= session()->get('exitoso') 
         </div> */?>
 
-        <?php //print_r($libro[0]['idtblAutor']);
+        <?php //print_r($examen[0]['idtblAutor']);
            /*         
-             $IDsAutores = $integerIDs = array_map('intval', explode(',', $libro[0]['idtblAutor']));       
+             $IDsAutores = $integerIDs = array_map('intval', explode(',', $examen[0]['idtblAutor']));       
                         ?>
                         <?php print_r($IDsAutores);
-                        foreach ($libro as $ids) {
-                            array_push($libro[$ids],$IDsAutores) ;
+                        foreach ($examen as $ids) {
+                            array_push($examen[$ids],$IDsAutores) ;
                         } */
                             ?>
         <br>
-        <h2>Listado de Libros</h2>
-        <?php //print_r($libro )?>
+        <h2>Listado de Examenes</h2>
+        <?php //print_r($examen )?>
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">
                     <table class="table table-hover table-bordered table-dark">
                         <tr>
-                            <th>Libro</th>
+                            <th>Examen</th>
                             <th>Año</th>
-                            <th>Edicion</th>
+                            <th>Paralelo</th>
                             <th>Direccion</th>
                             <th>Imagen</th>
-                            <th>Autor(es)</th>
-                            <th>Tag(S)</th>
+                            <th>Autor</th>
+                            <th>Tag(s)</th>
                             <th>Filtro(s)</th>
                             <th>Editar</th>
                            <!-- <th>Eliminar</th> -->
                         </tr>
                         
                         <tr>
-                        <?php foreach ($libro as $key): ?>
+                        <?php foreach ($examen as $key): ?>
                             <?php if(($key['estado'])==0): ?>
-                            <td><?php echo $key['nombreLibro'] ?> </td>
+                            <td><?php echo $key['nombreExamen'] ?> </td>
                             <td><?php echo $key['year'] ?> </td>
-                            <td><?php echo $key['edicion'] ?> </td>
+                            <td><?php echo $key['paralelo'] ?> </td>
                             <td><a href="<?php echo $key['dirDoc'] ?>">Enlace</a></td>
                             <td><a href="<?php echo $key['dirImagen']?>"><?php echo $key['nombreImagen'] ?></a></td>
-                            <td><?php echo $key['autores'] ?></td>
+                            <td><?php echo $key['nombreAutor'] ?></td>
                             <td><?php echo $key['tags'] ?></td>
                             <td><?php echo $key['filtros']?></td>
                             <td>
-                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key['idtblLibro'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
+                                <a href="<?php echo base_url().'/obtenerNombreExamenFiltro/'.$key['idtblExamen'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
                                     class="btn btn-warning btn-small">Editar</a>
                             </td> <!-- esto es lo que explicaba el sujeto, que los controladores reciben parametros -->
                            <!-- <td>
@@ -123,36 +123,36 @@
             </div>
         </div>
 
-        <h2>Listado de Libros eliminados</h2>                        
+        <h2>Listado de Examenes eliminados</h2>                        
         <div class="row">
             <div class="col-sm-12">
                 <div class="table table-responsive">
                     <table class="table table-hover table-bordered table-dark">
                         <tr>
-                            <th>Libro</th>
+                            <th>Examen</th>
                             <th>Año</th>
-                            <th>Edicion</th>
+                            <th>Paralelo</th>
                             <th>Direccion</th>
                             <th>Imagen</th>
-                            <th>Autor(es)</th>
+                            <th>Autor</th>
                             <th>Tag(S)</th>
                             <th>Filtro(s)</th>
                             <th>Editar</th>
                         </tr>
                         
                         <tr>
-                        <?php foreach ($libro as $key): ?>
+                        <?php foreach ($examen as $key): ?>
                             <?php if(($key['estado'])==1): ?>
-                            <td><?php echo $key['nombreLibro'] ?> </td>
+                            <td><?php echo $key['nombreExamen'] ?> </td>
                             <td><?php echo $key['year'] ?> </td>
-                            <td><?php echo $key['edicion'] ?> </td>
+                            <td><?php echo $key['paralelo'] ?> </td>
                             <td><a href="<?php echo $key['dirDoc'] ?>">Enlace</a></td>
                             <td><a href="<?php echo $key['dirImagen']?>"><?php echo $key['nombreImagen'] ?></a></td>
-                            <td><?php echo $key['autores'] ?></td>
+                            <td><?php echo $key['nombreAutor'] ?></td>
                             <td><?php echo $key['tags'] ?></td>
                             <td><?php echo $key['filtros']?></td>
                             <td>
-                            <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key['idtblLibro'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
+                            <a href="<?php echo base_url().'/obtenerNombreExamenFiltro/'.$key['idtblExamen'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
                                     class="btn btn-warning btn-small">Editar</a>
                             </td>
                            <!-- <td>

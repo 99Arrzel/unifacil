@@ -12,7 +12,7 @@
         <div class="col-sm-12">
             <form action="<?php echo base_url().'/crearAutor'?>" method="POST">
                 <label>Autor</label>
-                <input type="text" name="nombreAutor" id="nombreAutor" class="form-control">
+                <input type="text" name="nombreAutor" id="nombreAutor" class="form-control" required pattern="([A-zÀ-ž\s]){2,}">
                 <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>
                         <option value="0">Activo</option>
@@ -89,14 +89,14 @@
             </div>
         </div>
     <a class="btn btn-primary btn-lg btn-block" href="/tag" role="button">Continuar a Tags</a>
-
+<!--
     <div class="buttonContainer">
         <button class="btn" id="jsPDF" >Export PDF with jsPDF</button>
         <button class="btn" id="browserPrint" >Export PDF with browser print</button>
         <input class="btn btn-primary" type="button" onclick="generate()" value="Export To PDF" /> 
      </div>
       <iframe id="txtArea1" style="display:none"></iframe>
-      <button id="btnExport" onclick="fnExcelReport();"> EXPORT </button>
+      <button id="btnExport" onclick="fnExcelReport();"> EXPORT </button> -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
     //sweet alert para que se vea mas bonito
     </script>

@@ -1072,7 +1072,7 @@ function dirBaja(id) {
         },
         encode: true,
     }).done(function(resultado) {
-        mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaDir.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 

@@ -1073,7 +1073,8 @@ function dirBaja(id) {
         encode: true,
     }).done(function(resultado) {
         mitab.tablaDir.ajax.reload();
-        mitab.tablaDir.ajax.reload();
+
+        console.log("Prueba");
     })
 }
 

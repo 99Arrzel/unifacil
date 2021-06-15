@@ -1070,7 +1070,10 @@ function dirBaja(id) {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-        success: mitab.tablaDir.ajax.reload(),
+        success: function() {
+            setTimeOut(200);
+            mitab.tablaDir.ajax.reload();
+        },
         encode: true,
     }).done(function(resultado) {
 

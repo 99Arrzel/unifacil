@@ -1072,10 +1072,8 @@ function dirBaja(id) {
         },
         encode: true,
     }).done(function(resultado) {
-        mitab.tablaDir.ajax.reload();
-
-        console.log("Prueba");
-    })
+        mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+    });
 }
 
 function gesEli(id) {

@@ -194,6 +194,7 @@ class editarDirectorio extends BaseController
                 'estado' => "0",
             ];
             $model->save( $dir );
+            echo'{"baja":true}';
         }
     }
     public function bajaCiudad()

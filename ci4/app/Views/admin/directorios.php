@@ -42,11 +42,25 @@
 <!-- ============================== MODAL ARRIBA ==========================-->
 <div class="container-fluid" id="todoMenu">
     <h2>Listado de Directorios</h2>
+    <button id='botonOcultar' type='button' onclick='mostrarDir()' class='btn btn-primary'>Mostrar de baja</button>
     <div class="row">
         <div class="col-md-12">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
                     <table class="table table-hover" id="tblDirectorios">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Ciudad</th>
+                                <th>Gestión</th>
+                                <th>Facultad</th>
+                                <th>Carrera</th>
+                                <th>Semestre</th>
+                                <th>Materia</th>
+                                <th>Dar de baja</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table table-hover" id="tblDirectoriosBaja" >
                         <thead class="thead-dark">
                             <tr>
                                 <th>Ciudad</th>
@@ -1196,4 +1210,5 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     })
 }
+//Edit functions abajo
 </script>

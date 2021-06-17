@@ -358,12 +358,100 @@ $(document).ready(function() {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";
     const ajaxDirectorio = "https://proyecto3.tk/adm-dir/ajaxListDirectorio";
+    const ajaxDirectorioBaja = "https://proyecto3.tk/adm-dir/ajaxListDirectorioBaja";
     const ajaxGestion = "https://proyecto3.tk/adm-dir/ajaxListGestion";
     const ajaxCiudad = "https://proyecto3.tk/adm-dir/ajaxListCiudad";
     const ajaxFacultad = "https://proyecto3.tk/adm-dir/ajaxListFacultad";
     const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
     const ajaxSemestre = "https://proyecto3.tk/adm-dir/ajaxListSemestre";
     const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
+    mitabBaja.tablaDir = $('#tblDirectoriosBaja').DataTable({
+        ajax: {
+            url: ajaxDirectorioBaja,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Directorios de baja -" + impFecha,
+                messageTop: "Reporte Directorios de baja -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Directorios de alta -" + impFecha,
+                messageTop: "Reporte Directorios de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'CIUDAD',
+            },
+            {
+                data: 'GESTION',
+            },
+            {
+                data: 'FACULTAD',
+            },
+            {
+                data: 'CARRERA',
+            },
+            {
+                data: 'SEMESTRE',
+            },
+            {
+                data: 'MATERIA',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function(data) {
+                    return "<button onclick='dirBaja(" + data +
+                        ")' class='btn btn-success form-control'>Dar de alta</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
+
     mitab.tablaDir = $('#tblDirectorios').DataTable({
         ajax: {
             url: ajaxDirectorio,

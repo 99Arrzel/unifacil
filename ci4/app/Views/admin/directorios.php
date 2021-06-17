@@ -63,10 +63,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12" id = "listaDeBajaDir">
+        <div class="col-md-12" id = "listaDeBajaDir" hidden>
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
-                    <table class="table table-hover" id="tblDirectoriosBaja" hidden>
+                    <table class="table table-hover" id="tblDirectoriosBaja">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Ciudad</th>

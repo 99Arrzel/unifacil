@@ -69,7 +69,7 @@
                                 <th>Carrera</th>
                                 <th>Semestre</th>
                                 <th>Materia</th>
-                                <th>Dar de baja</th>
+                                <th>Dar de alta</th>
                             </tr>
                         </thead>
                     </table>
@@ -365,7 +365,7 @@ $(document).ready(function() {
     const ajaxCarrera = "https://proyecto3.tk/adm-dir/ajaxListCarrera";
     const ajaxSemestre = "https://proyecto3.tk/adm-dir/ajaxListSemestre";
     const ajaxMateria = "https://proyecto3.tk/adm-dir/ajaxListMateria";
-    mitabBaja.tablaDir = $('#tblDirectoriosBaja').DataTable({
+    mitab.tablaDirBaja = $('#tblDirectoriosBaja').DataTable({
         ajax: {
             url: ajaxDirectorioBaja,
             dataSrc: "",

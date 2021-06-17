@@ -42,7 +42,7 @@
 <!-- ============================== MODAL ARRIBA ==========================-->
 <div class="container-fluid" id="todoMenu">
     <h2>Listado de Directorios</h2>
-    <button id='botonOcultar' type='button' onclick='mostrarDir()' class='btn btn-primary'>Mostrar de baja</button>
+    <button id='botonOcultarDir' type='button' onclick='mostrarDir()' class='btn btn-primary'>Mostrar de baja</button>
     <div class="row">
         <div class="col-md-12">
             <div class='table table-bordered bg-dark text-light'>
@@ -60,7 +60,7 @@
                             </tr>
                         </thead>
                     </table>
-                    <table class="table table-hover" id="tblDirectoriosBaja" >
+                    <table class="table table-hover" id="tblDirectoriosBaja" hidden>
                         <thead class="thead-dark">
                             <tr>
                                 <th>Ciudad</th>
@@ -1298,5 +1298,20 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     })
 }
+function mostrarDir() {
+        if (document.getElementById("botonOcultarDir").innerHTML == "Mostrar de baja") {
+            document.getElementById("botonOcultarDir").innerHTML = "Mostrar de alta";
+            document.getElementById("botonOcultarDir").className = "btn btn-success";
+            document.getElementById("tblDirectorios").hidden = true;
+            document.getElementById("tblDirectoriosBaja").hidden = false;
+            document.title = "Directorios de baja UNIFACIL";
+        } else {
+            document.getElementById("botonOcultarDir").innerHTML = "Mostrar de baja";
+            document.getElementById("botonOcultarDir").className = "btn btn-primary";
+            document.getElementById("tblDirectorios").hidden = false;
+            document.getElementById("tblDirectoriosBaja").hidden = true;
+            document.title = "Directorios de alta UNIFACIL";
+        }
+    }
 //Edit functions abajo
 </script>

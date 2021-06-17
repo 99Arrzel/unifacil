@@ -44,7 +44,7 @@
     <h2>Listado de Directorios</h2>
     <button id='botonOcultarDir' type='button' onclick='mostrarDir()' class='btn btn-primary'>Mostrar de baja</button>
     <div class="row">
-        <div class="col-md-12" id = "listaDeAltaDir">
+        <div class="col-md-12" id="listaDeAltaDir">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
                     <table class="table table-hover" id="tblDirectorios">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12" id = "listaDeBajaDir" hidden>
+        <div class="col-md-12" id="listaDeBajaDir">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
                     <table class="table table-hover" id="tblDirectoriosBaja">
@@ -950,6 +950,10 @@ $(document).ready(function() {
         ],
         language: esp,
     });
+    //Timeouts
+    setTimeout(function() {
+        document.getElementById("listaDeBajaDir").hidden = true;
+    }, 200);
 });
 //Functions para insertar, borrar...
 function insertarCiudad() {

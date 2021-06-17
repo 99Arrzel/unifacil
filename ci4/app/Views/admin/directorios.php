@@ -44,7 +44,7 @@
     <h2>Listado de Directorios</h2>
     <button id='botonOcultarDir' type='button' onclick='mostrarDir()' class='btn btn-primary'>Mostrar de baja</button>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id = "listaDeAltaDir">
             <div class='table table-bordered bg-dark text-light'>
                 <div class="table-responsive">
                     <table class="table table-hover" id="tblDirectorios">
@@ -60,6 +60,12 @@
                             </tr>
                         </thead>
                     </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" id = "listaDeBajaDir">
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="table-responsive">
                     <table class="table table-hover" id="tblDirectoriosBaja" hidden>
                         <thead class="thead-dark">
                             <tr>
@@ -76,83 +82,9 @@
                 </div>
             </div>
         </div>
-        <!-- =============== Dropdowns abajo ============ -->
-        <h2>Escoge una combinación de directorio</h2>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown">
-                        Action
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item disabled" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                            action</a> <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+    <!-- =============== Dropdowns abajo ============ -->
+    <h2>Escoge una combinación de directorio</h2>
 </div>
 <!-- =============== Dropdowns arriba ============ -->
 <div class="row">
@@ -1298,20 +1230,21 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     })
 }
+
 function mostrarDir() {
-        if (document.getElementById("botonOcultarDir").innerHTML == "Mostrar de baja") {
-            document.getElementById("botonOcultarDir").innerHTML = "Mostrar de alta";
-            document.getElementById("botonOcultarDir").className = "btn btn-success";
-            document.getElementById("tblDirectorios").hidden = true;
-            document.getElementById("tblDirectoriosBaja").hidden = false;
-            document.title = "Directorios de baja UNIFACIL";
-        } else {
-            document.getElementById("botonOcultarDir").innerHTML = "Mostrar de baja";
-            document.getElementById("botonOcultarDir").className = "btn btn-primary";
-            document.getElementById("tblDirectorios").hidden = false;
-            document.getElementById("tblDirectoriosBaja").hidden = true;
-            document.title = "Directorios de alta UNIFACIL";
-        }
+    if (document.getElementById("botonOcultarDir").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarDir").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarDir").className = "btn btn-success";
+        document.getElementById("listaDeAltaDir").hidden = true;
+        document.getElementById("listaDeBajaDir").hidden = false;
+        document.title = "Directorios de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarDir").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarDir").className = "btn btn-primary";
+        document.getElementById("listaDeAltaDir").hidden = false;
+        document.getElementById("listaDeBajaDir").hidden = true;
+        document.title = "Directorios de alta UNIFACIL";
     }
+}
 //Edit functions abajo
 </script>

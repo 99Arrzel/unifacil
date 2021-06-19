@@ -39,14 +39,15 @@
                         <?php endforeach; ?>
                     </select>
                     <label>Filtro</label> <br>
-                    <select name="IDFiltro" id="IDFiltro" class="form-control" required>
+                    <input list="IDFiltro">
+                    <datalist name="IDFiltro" id="IDFiltro" class="form-control" required>
                         <option selected>seleccione un Directorio</option>
                         <?php foreach ($filtro as $filtroData): ?>
                             <?php if(($filtroData['ESTADO'])==1): ?>
                         <option value="<?= $filtroData['ID']?>"><?=$filtroData['CIUDAD'].'/'.$filtroData['GESTION'].'/'.$filtroData['FACULTAD'].'/'.$filtroData['CARRERA'].'/'.$filtroData['SEMESTRE'].'/'.$filtroData['MATERIA'];?></option>
                         <?php endif; ?>
                         <?php endforeach; ?>
-                    </select>
+                    </datalist>
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>

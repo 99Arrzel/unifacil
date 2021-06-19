@@ -1600,8 +1600,8 @@ function dirRes(id) {
         },
         encode: true,
     }).done(function (resultado) {
-        mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
-        mitab.tablaMateriaBaja.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaDir.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaDirBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 // undefined

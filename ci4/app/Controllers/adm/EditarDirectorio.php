@@ -353,7 +353,7 @@ class editarDirectorio extends BaseController
             echo'{"baja":true}';
         }
     }
-    public function resaMateria()
+    public function resMateria()
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );

@@ -98,7 +98,7 @@
                 </div>
             </div>
         </form>
-    <button id='botonOcultarDir' type='button' onclick='mostrarGes()' class='btn btn-primary'>Mostrar de baja</button>
+    <button id='botonOcultarGes' type='button' onclick='mostrarGes()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
     <div class="col-md-4">
         <form role="form">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </form>
-        <button id='botonOcultarDir' type='button' onclick='mostrarCiu()' class='btn btn-primary'>Mostrar de baja</button>
+        <button id='botonOcultarCiu' type='button' onclick='mostrarCiu()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
     <div class="col-md-4">
         <form role="form">
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </form>
-        <button id='botonOcultarDir' type='button' onclick='mostrarFac()' class='btn btn-primary'>Mostrar de baja</button>
+        <button id='botonOcultarFac' type='button' onclick='mostrarFac()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
 </div>
 <div class="row">
@@ -228,6 +228,7 @@
                 </div>
             </div>
         </form>
+        <button id='botonOcultarCar' type='button' onclick='mostrarCar()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
     <div class="col-md-4">
         <form role="form">
@@ -239,6 +240,7 @@
                 </div>
             </div>
         </form>
+        <button id='botonOcultarSem' type='button' onclick='mostrarSem()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
     <div class="col-md-4">
         <form role="form">
@@ -250,6 +252,7 @@
                 </div>
             </div>
         </form>
+        <button id='botonOcultarMat' type='button' onclick='mostrarMat()' class='btn btn-primary'>Mostrar de baja</button>
     </div>
 </div>
 <div class="row">
@@ -257,6 +260,21 @@
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
                 <table id="tblCarrera" class="table table-hover table-bordered table-dark">
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>Nombre Carrera</th>
+                            <th>Editar</th>
+                            <th>De Baja</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="MIS_CARRERASBAJA" class="col-md-4">
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table id="tblCarreraBaja" class="table table-hover table-bordered table-dark">
                     <thead class='thead-dark'>
                         <tr>
                             <th>Nombre Carrera</th>
@@ -283,6 +301,21 @@
             </div>
         </div>
     </div>
+    <div id="MIS_SEMESTRESBAJA" class="col-md-4">
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table id="tblSemestreBaja" class="table table-hover table-bordered table-dark">
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>Nombre Semestre</th>
+                            <th>Editar</th>
+                            <th>De Baja</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
     <div id="MIS_MATERIAS" class="col-md-4">
         <div class='table table-bordered bg-dark text-light'>
             <div class="table-responsive">
@@ -298,6 +331,21 @@
             </div>
         </div>
     </div>
+    <div id="MIS_MATERIASBAJA" class="col-md-4">
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table id="tblMateriaBaja" class="table table-hover table-bordered table-dark">
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>Nombre Materia</th>
+                            <th>Editar</th>
+                            <th>De Baja</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+
 <script type="text/javascript" src="https://proyecto3.tk/assets/js/admDirectorio.js"></script>

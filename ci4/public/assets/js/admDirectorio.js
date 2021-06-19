@@ -302,7 +302,6 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-
     mitab.tablaGestionBaja = $('#tblGestionBaja').DataTable({
         ajax: {
             url: ajaxGestionBaja,
@@ -382,12 +381,90 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-
-
     //Ciudad abajo
     mitab.tablaCiudad = $('#tblCiudad').DataTable({
         ajax: {
             url: ajaxCiudad,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Ciudades de alta -" + impFecha,
+                messageTop: "Reporte Ciudades de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='ciuEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Editar</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='ciuEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
+
+    mitab.tablaCiudadBaja = $('#tblCiudadBaja').DataTable({
+        ajax: {
+            url: ajaxCiudadBaja,
             dataSrc: "",
         },
         dom: 'B<lf>rtip',
@@ -544,10 +621,168 @@ $(document).ready(function () {
         ],
         language: esp,
     });
+    mitab.tablaFacultadBaja = $('#tblFacultadBaja').DataTable({
+        ajax: {
+            url: ajaxFacultadBaja,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Facultades de alta -" + impFecha,
+                messageTop: "Reporte Facultades de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='facEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Editar</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='facEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
     //Carrera abajo
     mitab.tablaCarrera = $('#tblCarrera').DataTable({
         ajax: {
             url: ajaxCarrera,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Carreras de alta -" + impFecha,
+                messageTop: "Reporte Carreras de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='carEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Editar</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='carEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
+    mitab.tablaCarreraBaja = $('#tblCarreraBaja').DataTable({
+        ajax: {
+            url: ajaxCarreraBaja,
             dataSrc: "",
         },
         dom: 'B<lf>rtip',
@@ -704,10 +939,168 @@ $(document).ready(function () {
         ],
         language: esp,
     });
+    mitab.tablaSemestreBaja = $('#tblSemestreBaja').DataTable({
+        ajax: {
+            url: ajaxSemestreBaja,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Semestres de alta -" + impFecha,
+                messageTop: "Reporte Semestres de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='semEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Editar</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='semEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
     //Materia abajo
     mitab.tablaMateria = $('#tblMateria').DataTable({
         ajax: {
             url: ajaxMateria,
+            dataSrc: "",
+        },
+        dom: 'B<lf>rtip',
+        buttons: [{
+                extend: 'copy',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0],
+                },
+                className: 'btn btn-info',
+                filename: "Reporte Materias de alta -" + impFecha,
+                messageTop: "Reporte Materias de alta -" + impFecha,
+            },
+        ],
+        columns: [{
+                data: 'NOMBRE',
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='matEdi(" + data +
+                        ")' class='btn btn-warning form-control'>Editar</button>";
+                },
+            },
+            {
+                data: 'ID',
+                orderable: false,
+                render: function (data) {
+                    return "<button onclick='matEli(" + data +
+                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                },
+            },
+        ],
+        language: esp,
+    });
+    mitab.tablaMateriaBaja = $('#tblMateriaBaja').DataTable({
+        ajax: {
+            url: ajaxMateriaBaja,
             dataSrc: "",
         },
         dom: 'B<lf>rtip',
@@ -1066,7 +1459,7 @@ function matEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
-    });
+    })
 }
 
 function mostrarDir() {

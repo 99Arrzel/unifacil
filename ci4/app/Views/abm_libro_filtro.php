@@ -39,15 +39,14 @@
                         <?php endforeach; ?>
                     </select>
                     <label>Filtro</label> <br>
-                    <input list="IDFiltro">
-                    <datalist name="IDFiltro" id="IDFiltro" class="form-control" required>
+                    <select name="IDFiltro" id="IDFiltro" class="form-control" required>
                         <option selected>seleccione un Directorio</option>
                         <?php foreach ($filtro as $filtroData): ?>
                             <?php if(($filtroData['ESTADO'])==1): ?>
                         <option value="<?= $filtroData['ID']?>"><?=$filtroData['CIUDAD'].'/'.$filtroData['GESTION'].'/'.$filtroData['FACULTAD'].'/'.$filtroData['CARRERA'].'/'.$filtroData['SEMESTRE'].'/'.$filtroData['MATERIA'];?></option>
                         <?php endif; ?>
                         <?php endforeach; ?>
-                    </datalist>
+                    </select>
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado" class="form-control" required>
                         <option selected>seleccione un estado</option>
@@ -198,4 +197,15 @@
         }
 
     </script>
+
+<script type="text/javascript" src="selectize.js"></script>
+          <link rel="stylesheet" type="text/css" href="selectize.css" />
+          <script>
+            $(function () {
+              $("select").selectize(options);
+            });
+          </script>
+
+
+
 </body>

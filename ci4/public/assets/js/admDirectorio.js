@@ -129,7 +129,7 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='dirBaja(" + data +
+                    return "<button onclick='dirRes(" + data +
                         ")' class='btn btn-success form-control'>Dar de alta</button>";
                 },
             },
@@ -1575,4 +1575,144 @@ function mostrarMat() {
         document.title = "Materias de alta UNIFACIL";
     }
 }
-//Edit functions abajo 
+//Restaurar functions abajo 
+function dirRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resDirectorio",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}
+// undefined
+function gesRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resGestion",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}
+
+function ciuRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resCiudad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}
+
+function facRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resFacultad",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de Resminar
+    });
+}
+
+function carRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resCarrera",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}
+
+function semRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resSemestre",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}
+
+function matRes(id) {
+    var formData = {
+        miid: id
+    };
+    $.ajax({
+        type: "POST",
+        url: "/adm-dir/resMateria",
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function (resultado) {
+        mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+    });
+}

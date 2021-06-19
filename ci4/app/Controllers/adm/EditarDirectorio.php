@@ -275,4 +275,95 @@ class editarDirectorio extends BaseController
             echo'{"baja":true}';
         }
     }
+    public function resDirectorio()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloDirectorio();
+            $dir = [
+                'idfiltroFinal' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $dir );
+            echo'{"baja":true}';
+        }
+    }
+    public function resGestion()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost('miid');
+            $model = new ModeloGestion();
+            $ciudad = [
+                'idtblGestion' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function resCiudad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCiudad();
+            $ciudad = [
+                'idtblCiudad' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function resFacultad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloFacultad();
+            $ciudad = [
+                'idtblFacultad' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function resCarrera()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCarrera();
+            $ciudad = [
+                'idtblCarrera' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function resSemestre()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloSemestre();
+            $ciudad = [
+                'idtblSemestre' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function resaMateria()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloMateria();
+            $ciudad = [
+                'idtblMateria' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
 }

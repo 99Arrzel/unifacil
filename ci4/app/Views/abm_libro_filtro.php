@@ -198,15 +198,15 @@
 
     </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/selectize.min.js" integrity="sha512-JiDSvppkBtWM1f9nPRajthdgTCZV3wtyngKUqVHlAs0d5q72n5zpM3QMOLmuNws2vkYmmLn4r1KfnPzgC/73Mw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
-<script class="show">
-    $("#IDFiltro").selectize({
-      create: true,
-      sortField: "text",
-    });
-  </script>
+<script type="text/javascript">
+$(document).ready(function () {
+//change selectboxes to selectize mode to be searchable
+   $("select").select2();
+});
 
-
-
+</script>
 </body>

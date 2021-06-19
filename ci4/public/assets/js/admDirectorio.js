@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+
 var esp = {
     "decimal": "",
     "emptyTable": "No hay datos",
@@ -31,7 +32,8 @@ const options = {
     month: 'long',
     day: 'numeric'
 };
-const impFecha = hoy.toLocaleDateString('es-ES', options);
+
+
 $(document).ready(function () {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";
@@ -1180,6 +1182,13 @@ $(document).ready(function () {
     //Timeouts
     setTimeout(function () {
         document.getElementById("listaDeBajaDir").hidden = true;
+        document.getElementById("MIS_GESTIONESBAJA").hidden = true;
+        document.getElementById("MIS_CIUDADESBAJA").hidden = true;
+        document.getElementById("MIS_FACULTADESBAJA").hidden = true;
+        document.getElementById("MIS_CARRERASBAJA").hidden = true;
+        document.getElementById("MIS_SEMESTRESBAJA").hidden = true;
+        document.getElementById("MIS_MATERIASBAJA").hidden = true;
+
     }, 200);
 });
 //Functions para insertar, borrar...
@@ -1459,7 +1468,7 @@ function matEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
-    })
+    });
 }
 
 function mostrarDir() {

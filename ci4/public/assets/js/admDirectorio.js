@@ -32,8 +32,7 @@ const options = {
     month: 'long',
     day: 'numeric'
 };
-
-
+const impFecha = hoy.toLocaleDateString('es-ES', options);
 $(document).ready(function () {
     //==Directorio abajo
     document.title = "Lista de directorios UNIFRANZ";

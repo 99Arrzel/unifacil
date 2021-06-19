@@ -1500,6 +1500,81 @@ function mostrarGes() {
         document.title = "Gestiones de alta UNIFACIL";
     }
 }
+function mostrarCiu() {
+    if (document.getElementById("botonOcultarCiu").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarCiu").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarCiu").className = "btn btn-success";
+        document.getElementById("MIS_CIUDADES").hidden = true;
+        document.getElementById("MIS_CIUDADESBAJA").hidden = false;
+        document.title = "Ciudades de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarCiu").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarCiu").className = "btn btn-primary";
+        document.getElementById("MIS_CIUDADES").hidden = false;
+        document.getElementById("MIS_CIUDADESBAJA").hidden = true;
+        document.title = "Ciudades de alta UNIFACIL";
+    }
+}
+function mostrarFac() {
+    if (document.getElementById("botonOcultarFac").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarFac").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarFac").className = "btn btn-success";
+        document.getElementById("MIS_FACULTADES").hidden = true;
+        document.getElementById("MIS_FACULTADESBAJA").hidden = false;
+        document.title = "Facultades de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarFac").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarFac").className = "btn btn-primary";
+        document.getElementById("MIS_FACULTADES").hidden = false;
+        document.getElementById("MIS_FACULTADESBAJA").hidden = true;
+        document.title = "Facultades de alta UNIFACIL";
+    }
+}
+function mostrarCar() {
+    if (document.getElementById("botonOcultarCar").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarCar").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarCar").className = "btn btn-success";
+        document.getElementById("MIS_CARRERAS").hidden = true;
+        document.getElementById("MIS_CARRERASBAJA").hidden = false;
+        document.title = "Carreras de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarCar").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarCar").className = "btn btn-primary";
+        document.getElementById("MIS_CARRERAS").hidden = false;
+        document.getElementById("MIS_CARRERASBAJA").hidden = true;
+        document.title = "Carreras de alta UNIFACIL";
+    }
+}
+function mostrarSem() {
+    if (document.getElementById("botonOcultarSem").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarSem").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarSem").className = "btn btn-success";
+        document.getElementById("MIS_SEMESTRES").hidden = true;
+        document.getElementById("MIS_SEMESTRESBAJA").hidden = false;
+        document.title = "Semestres de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarSem").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarSem").className = "btn btn-primary";
+        document.getElementById("MIS_SEMESTRES").hidden = false;
+        document.getElementById("MIS_SEMESTRESBAJA").hidden = true;
+        document.title = "Semestres de alta UNIFACIL";
+    }
+}
+function mostrarMat() {
+    if (document.getElementById("botonOcultarMat").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarMat").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarMat").className = "btn btn-success";
+        document.getElementById("MIS_MATERIAS").hidden = true;
+        document.getElementById("MIS_MATERIASBAJA").hidden = false;
+        document.title = "Materias de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarMat").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarMat").className = "btn btn-primary";
+        document.getElementById("MIS_MATERIAS").hidden = false;
+        document.getElementById("MIS_MATERIASBAJA").hidden = true;
+        document.title = "Materias de alta UNIFACIL";
+    }
+}
 //Edit functions abajo 
 /* 
 document.getElementById("listaDeBajaDir").hidden = true;

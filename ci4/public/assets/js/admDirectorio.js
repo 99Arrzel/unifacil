@@ -375,7 +375,7 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='gesEli(" + data +
+                    return "<button onclick='gesRes(" + data +
                         ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
@@ -535,8 +535,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='ciuEli(" + data +
-                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    return "<button onclick='ciuRes(" + data +
+                        ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
@@ -694,8 +694,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='facEli(" + data +
-                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    return "<button onclick='facRes(" + data +
+                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
@@ -853,8 +853,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='carEli(" + data +
-                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    return "<button onclick='carRes(" + data +
+                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
@@ -1012,8 +1012,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='semEli(" + data +
-                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    return "<button onclick='semRes(" + data +
+                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
@@ -1171,8 +1171,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='matEli(" + data +
-                        ")' class='btn btn-danger form-control'>Dar de baja</button>";
+                    return "<button onclick='matRes(" + data +
+                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
@@ -1576,11 +1576,3 @@ function mostrarMat() {
     }
 }
 //Edit functions abajo 
-/* 
-document.getElementById("listaDeBajaDir").hidden = true;
-        document.getElementById("MIS_GESTIONESBAJA").hidden = true;
-        document.getElementById("MIS_CIUDADESBAJA").hidden = true;
-        document.getElementById("MIS_FACULTADESBAJA").hidden = true;
-        document.getElementById("MIS_CARRERASBAJA").hidden = true;
-        document.getElementById("MIS_SEMESTRESBAJA").hidden = true;
-        document.getElementById("MIS_MATERIASBAJA").hidden = true;*/

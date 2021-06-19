@@ -8,7 +8,9 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
-        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
+        <div class="col-sm-4">
+      <input type="search" placeholder="Start typing.." name="search" class="form-control searchbox-input" required="">
+    </div>
         <div class='container' style='margin-top:3em;'>
             <div class='card-columns custom-columns'>
                 <?php foreach ($libros as $libro) : ?>
@@ -42,21 +44,13 @@
 
 </body>
 <script type="text/javascript">
-function myFunction() {
-    var input, filter, cards, cardContainer, h5, title, i;
-    input = document.getElementById("myFilter");
-    filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("myItems");
-    cards = cardContainer.getElementsByClassName("card");
-    for (i = 0; i < cards.length; i++) {
-        title = cards[i].querySelector(".card-body h5.card-title");
-        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-            cards[i].style.display = "";
-        } else {
-            cards[i].style.display = "none";
-        }
-    }
-}
+$('.searchbox-input').on('keyup',function () {
+  console.log(filter);
+    //$('.card').show();
+	var filter = $(this).val(); // get the value of the input, which we filter on
+  console.log(filter);
+    $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display','none');
+});
 </script>
 <footer>
     <hr>

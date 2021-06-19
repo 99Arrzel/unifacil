@@ -8,6 +8,7 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="text-center display-5">LIBROS</h1>
         </div>
+        <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
         <div class='container' style='margin-top:3em;'>
             <div class='card-columns custom-columns'>
                 <?php foreach ($libros as $libro) : ?>
@@ -40,6 +41,23 @@
     <!-- OK--------------------->
 
 </body>
+<script type="text/javascript">
+function myFunction() {
+    var input, filter, cards, cardContainer, h5, title, i;
+    input = document.getElementById("myFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("myItems");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-body h5.card-title");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
 <footer>
     <hr>
     <a class="nav-link" href="/contacto">Contactanos si tienes alguna sugerencia o algun problema<span class="sr-only">(current)</span></a>

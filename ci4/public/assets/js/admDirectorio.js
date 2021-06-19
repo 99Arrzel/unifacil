@@ -1346,6 +1346,7 @@ function dirBaja(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaDir.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaDirBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1367,6 +1368,7 @@ function gesEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1387,6 +1389,7 @@ function ciuEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1407,6 +1410,7 @@ function facEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1427,6 +1431,7 @@ function carEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1447,6 +1452,8 @@ function semEli(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
+
     });
 }
 
@@ -1466,6 +1473,7 @@ function matEli(id) {
         },
         encode: true,
     }).done(function (resultado) {
+        mitab.tablaMateriaBaja.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
@@ -1593,6 +1601,7 @@ function dirRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaMateriaBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 // undefined
@@ -1614,6 +1623,8 @@ function gesRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
+
     });
 }
 
@@ -1634,6 +1645,8 @@ function ciuRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
+
     });
 }
 
@@ -1654,6 +1667,8 @@ function facRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de Resminar
+        mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de Resminar
+
     });
 }
 
@@ -1674,6 +1689,8 @@ function carRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
+
     });
 }
 
@@ -1694,6 +1711,7 @@ function semRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
 
@@ -1714,5 +1732,6 @@ function matRes(id) {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
+        mitab.tablaMateriaBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }

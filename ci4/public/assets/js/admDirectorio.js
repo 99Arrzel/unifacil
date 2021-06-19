@@ -1485,4 +1485,27 @@ function mostrarDir() {
         document.title = "Directorios de alta UNIFACIL";
     }
 }
-//Edit functions abajo
+function mostrarGes() {
+    if (document.getElementById("botonOcultarGes").innerHTML == "Mostrar de baja") {
+        document.getElementById("botonOcultarGes").innerHTML = "Mostrar de alta";
+        document.getElementById("botonOcultarGes").className = "btn btn-success";
+        document.getElementById("MIS_GESTIONES").hidden = true;
+        document.getElementById("MIS_GESTIONESBAJA").hidden = false;
+        document.title = "Gestiones de baja UNIFACIL";
+    } else {
+        document.getElementById("botonOcultarGes").innerHTML = "Mostrar de baja";
+        document.getElementById("botonOcultarGes").className = "btn btn-primary";
+        document.getElementById("MIS_GESTIONES").hidden = false;
+        document.getElementById("MIS_GESTIONESBAJA").hidden = true;
+        document.title = "Gestiones de alta UNIFACIL";
+    }
+}
+//Edit functions abajo 
+/* 
+document.getElementById("listaDeBajaDir").hidden = true;
+        document.getElementById("MIS_GESTIONESBAJA").hidden = true;
+        document.getElementById("MIS_CIUDADESBAJA").hidden = true;
+        document.getElementById("MIS_FACULTADESBAJA").hidden = true;
+        document.getElementById("MIS_CARRERASBAJA").hidden = true;
+        document.getElementById("MIS_SEMESTRESBAJA").hidden = true;
+        document.getElementById("MIS_MATERIASBAJA").hidden = true;*/

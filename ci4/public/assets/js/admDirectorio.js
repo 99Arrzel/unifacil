@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-
+/*jshint sub:true*/
 var esp = {
     "decimal": "",
     "emptyTable": "No hay datos",
@@ -136,7 +136,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-
+    //Onclick
     mitab.tablaDir = $('#tblDirectorios').DataTable({
         ajax: {
             url: ajaxDirectorio,
@@ -288,8 +288,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='gesEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -302,6 +302,13 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    //Onclick
+    $('#tblGestion tbody').on('click', 'button', function() {
+        var data = mitab.tablaGestion.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("btnModal").value = data['ID'];
+        console.log(data);
     });
     mitab.tablaGestionBaja = $('#tblGestionBaja').DataTable({
         ajax: {
@@ -367,8 +374,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='gesEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -381,6 +388,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblGestionBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaGestionBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     //Ciudad abajo
     mitab.tablaCiudad = $('#tblCiudad').DataTable({
@@ -447,8 +459,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='ciuEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -462,7 +474,11 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-
+    $('#tblCiudad tbody').on('click', 'button', function() {
+        var data = mitab.tablaCiudad.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
+    });
     mitab.tablaCiudadBaja = $('#tblCiudadBaja').DataTable({
         ajax: {
             url: ajaxCiudadBaja,
@@ -527,8 +543,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='ciuEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -541,6 +557,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblCiudadBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaCiudadBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     //facultad abajo
     mitab.tablaFacultad = $('#tblFacultad').DataTable({
@@ -607,8 +628,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='facEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -621,6 +642,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblFacultad tbody').on('click', 'button', function() {
+        var data = mitab.tablaFacultad.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     mitab.tablaFacultadBaja = $('#tblFacultadBaja').DataTable({
         ajax: {
@@ -686,8 +712,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='facEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -700,6 +726,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblFacultadBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaFacultadBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     //Carrera abajo
     mitab.tablaCarrera = $('#tblCarrera').DataTable({
@@ -766,8 +797,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='carEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -780,6 +811,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblCarrera tbody').on('click', 'button', function() {
+        var data = mitab.tablaCarrera.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     mitab.tablaCarreraBaja = $('#tblCarreraBaja').DataTable({
         ajax: {
@@ -845,8 +881,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='carEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -859,6 +895,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblCarreraBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaCarreraBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     //Semestre abajo
     mitab.tablaSemestre = $('#tblSemestre').DataTable({
@@ -925,8 +966,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='semEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -939,6 +980,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblSemestre tbody').on('click', 'button', function() {
+        var data = mitab.tablaSemestre.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     mitab.tablaSemestreBaja = $('#tblSemestreBaja').DataTable({
         ajax: {
@@ -1004,8 +1050,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='semEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -1018,6 +1064,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblSemestreBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaSemestreBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     //Materia abajo
     mitab.tablaMateria = $('#tblMateria').DataTable({
@@ -1084,8 +1135,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='matEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -1098,6 +1149,11 @@ $(document).ready(function () {
             },
         ],
         language: esp,
+    });
+    $('#tblMateria tbody').on('click', 'button', function() {
+        var data = mitab.tablaMateria.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
     });
     mitab.tablaMateriaBaja = $('#tblMateriaBaja').DataTable({
         ajax: {
@@ -1163,8 +1219,8 @@ $(document).ready(function () {
                 data: 'ID',
                 orderable: false,
                 render: function (data) {
-                    return "<button onclick='matEdi(" + data +
-                        ")' class='btn btn-warning form-control'>Editar</button>";
+                    document.getElementById("btnModal").value = data;
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {
@@ -1178,6 +1234,11 @@ $(document).ready(function () {
         ],
         language: esp,
     });
+    $('#tblMateriaBaja tbody').on('click', 'button', function() {
+        var data = mitab.tablaMateriaBaja.row($(this).parents('tr')).data();
+        document.getElementById("nombreModal").value = data['NOMBRE'];
+        console.log(data);
+    });
     //Timeouts
     setTimeout(function () {
         document.getElementById("listaDeBajaDir").hidden = true;
@@ -1187,7 +1248,6 @@ $(document).ready(function () {
         document.getElementById("MIS_CARRERASBAJA").hidden = true;
         document.getElementById("MIS_SEMESTRESBAJA").hidden = true;
         document.getElementById("MIS_MATERIASBAJA").hidden = true;
-
     }, 200);
 });
 //Functions para insertar, borrar...
@@ -1210,10 +1270,8 @@ function insertarCiudad() {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCiudad.ajax.reload();
-
     });
 }
-
 function insertarGestion() {
     var formData = {
         nombre: document.getElementById("gestion").value,
@@ -1233,10 +1291,8 @@ function insertarGestion() {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaGestion.ajax.reload();
-
     });
 }
-
 function insertarFacultad() {
     var formData = {
         nombre: document.getElementById("facultad").value,
@@ -1256,10 +1312,8 @@ function insertarFacultad() {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaFacultad.ajax.reload();
-
     });
 }
-
 function insertarCarrera() {
     var formData = {
         nombre: document.getElementById("carrera").value,
@@ -1279,10 +1333,8 @@ function insertarCarrera() {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaCarrera.ajax.reload();
-
     });
 }
-
 function insertarSemestre() {
     var formData = {
         nombre: document.getElementById("semestre").value,
@@ -1302,10 +1354,8 @@ function insertarSemestre() {
         success: document.getElementById("semestre").value = "",
     }).done(function (resultado) {
         mitab.tablaSemestre.ajax.reload();
-
     });
 }
-
 function insertarMateria() {
     var formData = {
         nombre: document.getElementById("materia").value,
@@ -1325,7 +1375,6 @@ function insertarMateria() {
         encode: true,
     }).done(function (resultado) {
         mitab.tablaMateria.ajax.reload();
-
     });
 }
 //Bajas abajo, no funciona dirbaja por alguna razón
@@ -1349,7 +1398,6 @@ function dirBaja(id) {
         mitab.tablaDirBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function gesEli(id) {
     var formData = {
         miid: id
@@ -1364,14 +1412,12 @@ function gesEli(id) {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-
         encode: true,
     }).done(function (resultado) {
         mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function ciuEli(id) {
     var formData = {
         miid: id
@@ -1392,7 +1438,6 @@ function ciuEli(id) {
         mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function facEli(id) {
     var formData = {
         miid: id
@@ -1413,7 +1458,6 @@ function facEli(id) {
         mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function carEli(id) {
     var formData = {
         miid: id
@@ -1434,7 +1478,6 @@ function carEli(id) {
         mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function semEli(id) {
     var formData = {
         miid: id
@@ -1453,10 +1496,8 @@ function semEli(id) {
     }).done(function (resultado) {
         mitab.tablaSemestre.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
-
     });
 }
-
 function matEli(id) {
     var formData = {
         miid: id
@@ -1477,7 +1518,6 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function mostrarDir() {
     if (document.getElementById("botonOcultarDir").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarDir").innerHTML = "Mostrar de alta";
@@ -1583,7 +1623,7 @@ function mostrarMat() {
         document.title = "Materias de alta UNIFACIL";
     }
 }
-//Restaurar functions abajo 
+//Restaurar functions abajo
 function dirRes(id) {
     var formData = {
         miid: id
@@ -1619,15 +1659,12 @@ function gesRes(id) {
                 alert("Error 500, chequea el script amiguito");
             }
         },
-
         encode: true,
     }).done(function (resultado) {
         mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
-
     });
 }
-
 function ciuRes(id) {
     var formData = {
         miid: id
@@ -1646,10 +1683,8 @@ function ciuRes(id) {
     }).done(function (resultado) {
         mitab.tablaCiudad.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
-
     });
 }
-
 function facRes(id) {
     var formData = {
         miid: id
@@ -1668,10 +1703,8 @@ function facRes(id) {
     }).done(function (resultado) {
         mitab.tablaFacultad.ajax.reload(); //Recargas la tabla después de Resminar
         mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de Resminar
-
     });
 }
-
 function carRes(id) {
     var formData = {
         miid: id
@@ -1690,10 +1723,8 @@ function carRes(id) {
     }).done(function (resultado) {
         mitab.tablaCarrera.ajax.reload(); //Recargas la tabla después de eliminar
         mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
-
     });
 }
-
 function semRes(id) {
     var formData = {
         miid: id
@@ -1714,7 +1745,6 @@ function semRes(id) {
         mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
-
 function matRes(id) {
     var formData = {
         miid: id
@@ -1735,3 +1765,4 @@ function matRes(id) {
         mitab.tablaMateriaBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+//Ahora si editar abajo zzz

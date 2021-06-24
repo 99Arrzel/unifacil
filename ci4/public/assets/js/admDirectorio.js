@@ -289,7 +289,8 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     document.getElementById("btnModal").value = data;
-                    return "<button onclick='editGestion"+ data +"' class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
+                    document.getElementById("labelEditQue").value = "Editar Gestion";
+                    return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
             {

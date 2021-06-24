@@ -1796,7 +1796,7 @@ function matRes(id) {
 function editRequest() {
     var formData = {
         miid: document.getElementById("btnModal").value,
-        nombre: document.getElementById("nombreModal").value,
+        nombre: document.getElementById("nombreModal").innerHTML,
     };
     var murl = document.getElementById("direccionEditar").innerHTML;
     $.ajax({

@@ -1,9 +1,8 @@
 
-    <?php if (session()->get('nivel') >= 1) 
-        {
+    <?php 
             header('Location: http://proyecto3.tk/');
              $name = session()->get('nombreUsuario');
-        }
+        
         
         ?>
 <body>

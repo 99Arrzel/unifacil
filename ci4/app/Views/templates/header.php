@@ -109,6 +109,9 @@
                 </a>
                 <a href="/gatoPiola">Acerca de Nosotros
                 </a>
+                <?php if(session()->get('isLoggedIn')){
+                    echo '<a href="/reporteusuariolibropersonal">Historial de Libros Descargados</a>';
+                } ?> 
                 <?php if (session()->get('nivel') == 1) {
     echo '<a href="/ListarUsuarios">Lista de Usuarios</a>';
     echo '<a href="/adm-dir">Listado Directorios</a>';

@@ -21,10 +21,6 @@
                         <tr>
                         <?php foreach ($usuario as $key): ?>
                         <?php if (($key['nombreUsuario'])==$name): ?>
-                            <td><?php echo $key['nombreUsuario']?></td>
-                            <td><?php echo $key['apellido']?></td>
-                            <td><?php echo $key['login']?></td>
-                            <td><?php echo $key['email']?></td>
                             <td><?php echo $key['fecha']?></td>
                             <td><?php echo $key['nombreLibro']?></td>
                             <td><a href="<?php echo $key['dirDoc']?>">Enlace</a></td>

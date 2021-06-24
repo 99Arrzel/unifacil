@@ -308,7 +308,7 @@ $(document).ready(function () {
     $('#tblGestion tbody').on('click', 'button', function() {
         var data = mitab.tablaGestion.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
-        document.getElementById("btnModal").value = data['ID'];
+        //document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaGestionBaja = $('#tblGestionBaja').DataTable({

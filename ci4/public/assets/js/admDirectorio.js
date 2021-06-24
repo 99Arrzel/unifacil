@@ -289,7 +289,6 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     document.getElementById("btnModal").value = data;
-                    document.getElementById("labelEditQue").value = "Editar Gestion";
                     return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
@@ -308,6 +307,7 @@ $(document).ready(function () {
     $('#tblGestion tbody').on('click', 'button', function() {
         var data = mitab.tablaGestion.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML  = "Editar Gestion";
         document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });

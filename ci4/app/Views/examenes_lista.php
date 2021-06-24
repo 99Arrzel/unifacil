@@ -8,6 +8,9 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="text-center display-5">EXAMENES</h1>
         </div>
+        <div class="col-sm-4">
+            <input type="search" placeholder="Start typing.." name="search" class="form-control searchbox-input" required="">
+        </div>
         <div class='container' style='margin-top:3em;'>
             <div class='card-columns custom-columns'>
                 <?php foreach ($examenes as $examen) : ?>
@@ -30,7 +33,7 @@
                             </div>
                         </div>
                     </form> <!-- form trolazo -->
-                    <?php endforeach; ?>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -41,13 +44,13 @@
 
 </body>
 <script type="text/javascript">
-$('.searchbox-input').on('keyup',function () {
-  console.log(filter);
-    //$('.card').show();
-	var filter = $(this).val(); // get the value of the input, which we filter on
-  console.log(filter);
-    $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display','none');
-});
+    $('.searchbox-input').on('keyup', function() {
+        console.log(filter);
+        //$('.card').show();
+        var filter = $(this).val(); // get the value of the input, which we filter on
+        console.log(filter);
+        $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display', 'none');
+    });
 </script>
 <footer>
     <hr>

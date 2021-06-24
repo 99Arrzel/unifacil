@@ -14,10 +14,6 @@
                 <div class="table table-responsive">
                     <table class="table table-hover table-bordered table-dark" id="reporteusuariolibro">
                         <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Usuario</th><!-- ward:  $id= session()->get('idtblUsuario'); echo $id  -->
-                            <th>Email</th>
                             <th>Fecha y Hora</th>
                             <th>Nombre del Libro</th>
                             <th>Enlace</th>
@@ -119,27 +115,14 @@ function generate() {
         theme: 'striped',  
         columnStyles: {  
             0: {  
-                cellWidth: 60,  
+                cellWidth: 100,  
             },  
             1: {  
-                cellWidth: 60,  
+                cellWidth: 100,  
             },  
             2: {  
-                cellWidth: 60,  
-            },
-            3: {
-                cellWidth: 60,
-            },
-            4: {
-                cellWidth: 90,
-            }
-            ,
-            5: {
-                cellWidth: 90,
-            },
-            6: {
-                cellWidth: 90,
-            }        
+                cellWidth: 100,  
+            }     
         },  
         styles: {  
             minCellHeight: 40  

@@ -46,6 +46,23 @@
         Bienvenido a UNIFACIL
     </title>
     <style>
+    body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("https://thumbs.dreamstime.com/b/libros-en-estante-de-madera-del-escritorio-de-la-tabla-del-grunge-en-biblioteca-de-nuevo-fondo-de-la-escuela-con-el-espacio-de-76258975.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
+    <style>
         body {
             font-family: "Lato", sans-serif;
         }
@@ -102,6 +119,7 @@
 </head>
 
 <body>
+<div class="bg">
     <div class="d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div id="mySidenav" class="sidenav">

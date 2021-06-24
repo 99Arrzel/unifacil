@@ -40,6 +40,15 @@
     <!-- OK--------------------->
 
 </body>
+<script type="text/javascript">
+$('.searchbox-input').on('keyup',function () {
+  console.log(filter);
+    //$('.card').show();
+	var filter = $(this).val(); // get the value of the input, which we filter on
+  console.log(filter);
+    $('.container').find(".card-title:not(:contains(" + filter + "))").parent().css('display','none');
+});
+</script>
 <footer>
     <hr>
     <a class="nav-link" href="/contacto">Contactanos si tienes alguna sugerencia o algun problema<span class="sr-only">(current)</span></a>

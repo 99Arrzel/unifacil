@@ -1,7 +1,7 @@
 <div class='container' style='margin-top:3em;'>
     <div class='card-columns custom-columns'>
         <?php foreach ($semestre as $zzz): ?>
-        <div class='card'>
+        <div class='card border-success mb-3'>
             
             <div class='card-body'>
                 <h5 class='card-title' align='center'><?= $zzz?> semestre</h5>

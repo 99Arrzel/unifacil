@@ -385,10 +385,11 @@ class editarDirectorio extends BaseController
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
+            $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloCiudad();
             $ciudad = [
                 'idtblCiudad' => $id,
-                'estado' => "1",
+                'nombreCiudad' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';
@@ -398,10 +399,11 @@ class editarDirectorio extends BaseController
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
+            $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloFacultad();
             $ciudad = [
                 'idtblFacultad' => $id,
-                'estado' => "1",
+                'nombreFacultad' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';
@@ -411,10 +413,11 @@ class editarDirectorio extends BaseController
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
+            $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloCarrera();
             $ciudad = [
                 'idtblCarrera' => $id,
-                'estado' => "1",
+                'nombreCarrera' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';
@@ -424,10 +427,11 @@ class editarDirectorio extends BaseController
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
+            $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloSemestre();
             $ciudad = [
                 'idtblSemestre' => $id,
-                'estado' => "1",
+                'nombreSemestre' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';
@@ -437,10 +441,11 @@ class editarDirectorio extends BaseController
     {
         if ( $this->request->isAJAX() ) {
             $id = $this->request->getPost( 'miid' );
+            $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloMateria();
             $ciudad = [
                 'idtblMateria' => $id,
-                'estado' => "1",
+                'nombreMateria' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';

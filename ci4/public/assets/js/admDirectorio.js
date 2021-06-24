@@ -395,7 +395,9 @@ $(document).ready(function () {
         var data = mitab.tablaGestionBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         document.getElementById("labelEditQue").innerHTML = "Editar Gestion";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editGestion";
         document.getElementById("btnModal").value = data['ID'];
+        console.log(data);
     });
     //Ciudad abajo
     mitab.tablaCiudad = $('#tblCiudad').DataTable({
@@ -480,6 +482,9 @@ $(document).ready(function () {
     $('#tblCiudad tbody').on('click', 'button', function () {
         var data = mitab.tablaCiudad.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Ciudad";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editCiudad";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaCiudadBaja = $('#tblCiudadBaja').DataTable({
@@ -564,6 +569,9 @@ $(document).ready(function () {
     $('#tblCiudadBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaCiudadBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Ciudad";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editCiudad";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     //facultad abajo
@@ -649,6 +657,9 @@ $(document).ready(function () {
     $('#tblFacultad tbody').on('click', 'button', function () {
         var data = mitab.tablaFacultad.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Facultad";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editFacultad";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaFacultadBaja = $('#tblFacultadBaja').DataTable({
@@ -733,6 +744,9 @@ $(document).ready(function () {
     $('#tblFacultadBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaFacultadBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Facultad";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editFacultad";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     //Carrera abajo
@@ -818,6 +832,9 @@ $(document).ready(function () {
     $('#tblCarrera tbody').on('click', 'button', function () {
         var data = mitab.tablaCarrera.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Carrera";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editCarrera";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaCarreraBaja = $('#tblCarreraBaja').DataTable({
@@ -902,6 +919,9 @@ $(document).ready(function () {
     $('#tblCarreraBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaCarreraBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Carrera";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editCarrera";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     //Semestre abajo
@@ -987,6 +1007,9 @@ $(document).ready(function () {
     $('#tblSemestre tbody').on('click', 'button', function () {
         var data = mitab.tablaSemestre.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Semestre";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editSemestre";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaSemestreBaja = $('#tblSemestreBaja').DataTable({
@@ -1071,6 +1094,9 @@ $(document).ready(function () {
     $('#tblSemestreBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaSemestreBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Semestre";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editSemestre";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     //Materia abajo
@@ -1156,6 +1182,9 @@ $(document).ready(function () {
     $('#tblMateria tbody').on('click', 'button', function () {
         var data = mitab.tablaMateria.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Materia";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editMateria";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     mitab.tablaMateriaBaja = $('#tblMateriaBaja').DataTable({
@@ -1240,6 +1269,9 @@ $(document).ready(function () {
     $('#tblMateriaBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaMateriaBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
+        document.getElementById("labelEditQue").innerHTML = "Editar Materia";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editMateria";
+        document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
     //Timeouts

@@ -165,7 +165,7 @@ $routes->post('/crearFiltroRelacionExamen','ExamenRelacion::crearFiltroRelacionE
 $routes->get('/reporteusuariolibro','Libros_lista::ReporteUsuario');//
 $routes->get('/reporteusuariolibropersonal','Libros_lista::ReporteUsuarioPersonal');//
 
-$routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');//
+$routes->post('/crearUsuarioLibro','Libros_lista::crearUsuarioLibro');// 
 
 $routes->get('/reporteusuarioexamen','Examenes_lista::ReporteUsuario');//
 $routes->post('/crearUsuarioExamen','Examenes_lista::crearUsuarioExamen');//

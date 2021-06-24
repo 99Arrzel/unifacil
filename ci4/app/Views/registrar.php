@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                         <label>Usuario</label>
-                        <input type="text" name="login" class="form-control" id="login" value="" required pattern="([A-zÀ-ž\s]){2,}">
+                        <input type="text" name="login" class="form-control" id="login" value="" required pattern="([A-zÀ-ž0-9\s]){2,}">
                     </div>
 
 

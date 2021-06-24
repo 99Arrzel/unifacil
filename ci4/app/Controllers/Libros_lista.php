@@ -26,6 +26,19 @@ class Libros_lista extends BaseController
         return view('reporte_usuarios_libros',$data);
 	}
 
+	public function ReporteUsuarioPersonal()
+	{
+		$usuario= new ModeloLibros();
+        $datosusuario = $usuario->listarUsuariosLibros();
+       // $mensaje = session('mensaje');
+
+        $data = [
+            "usuario" => $datosusuario
+        ];
+        echo view('templates/header');//navbar
+        return view('reporte_usuarios_libros_personal',$data);
+	}
+
 	public function crearUsuarioLibro(){
         $datosuslib = [
             "tblUsuario_idtblUsuario"=>$_POST['idtblUsuario'],

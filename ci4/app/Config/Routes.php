@@ -73,8 +73,14 @@ $routes->match(['post'], '/adm-dir/bajaFacultad', 'adm/EditarDirectorio::bajaFac
 $routes->match(['post'], '/adm-dir/bajaCarrera', 'adm/EditarDirectorio::bajaCarrera');
 $routes->match(['post'], '/adm-dir/bajaSemestre', 'adm/EditarDirectorio::bajaSemestre');
 $routes->match(['post'], '/adm-dir/bajaMateria', 'adm/EditarDirectorio::bajaMateria');
-
-
+//Restaurar
+$routes->match(['post'], '/adm-dir/resDirectorio', 'adm/EditarDirectorio::resDirectorio');
+$routes->match(['post'], '/adm-dir/resCiudad', 'adm/EditarDirectorio::resCiudad');
+$routes->match(['post'], '/adm-dir/resGestion', 'adm/EditarDirectorio::resGestion');
+$routes->match(['post'], '/adm-dir/resFacultad', 'adm/EditarDirectorio::resFacultad');
+$routes->match(['post'], '/adm-dir/resCarrera', 'adm/EditarDirectorio::resCarrera');
+$routes->match(['post'], '/adm-dir/resSemestre', 'adm/EditarDirectorio::resSemestre');
+$routes->match(['post'], '/adm-dir/resMateria', 'adm/EditarDirectorio::resMateria');
 
 $routes->get('/', 'Vistas::index');
 $routes->get('/universidades/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Vistas::miEspacio/$1/$2/$3/$4/$5/$6'); //Universidades con ciudad, facultad, carrera y materia

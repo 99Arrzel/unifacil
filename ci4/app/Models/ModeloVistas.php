@@ -13,7 +13,7 @@ class ModeloVistas extends Model
     }
     public function agarrarGestionPorCiudad(string $ciudad)
     {
-        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE CIUDAD = '".$ciudad."'");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE CIUDAD = '".$ciudad."' GROUP BY GESTION");
         return $query->getResultArray();
     }
 

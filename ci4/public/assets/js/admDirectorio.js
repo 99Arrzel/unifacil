@@ -289,6 +289,7 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     document.getElementById("btnModal").value = data;
+                    document.getElementById("labelEditQue").value = "Editar Gestion";
                     return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },
@@ -1766,3 +1767,5 @@ function matRes(id) {
     });
 }
 //Ahora si editar abajo zzz
+//var data = custTable.row('#customer-' + customerObj.customerId, 0).data(); Select data in cell
+ 

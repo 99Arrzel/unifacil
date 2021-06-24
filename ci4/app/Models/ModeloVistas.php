@@ -8,30 +8,30 @@ class ModeloVistas extends Model
 {
     public function agarrarCiudades()
     {
-        $query = $this->db->query('SELECT CIUDAD FROM `CIUDAD` GROUP BY CIUDAD');
+        $query = $this->db->query('SELECT CIUDAD FROM `DIRECTORIO` GROUP BY CIUDAD');
         return $query->getResultArray();
     }
     public function agarrarGestionPorCiudad(string $ciudad)
     {
-        $query = $this->db->query("SELECT * FROM `CIUDAD_GESTION` WHERE `CIUDAD` = '".$ciudad."'");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE CIUDAD = '".$ciudad."'");
         return $query->getResultArray();
     }
 
     public function agarrarFacultadPorCiudad(string $ciudad, string $Gestion)
     {
-        $query = $this->db->query("SELECT * FROM `CIUDAD_GESTION_FACULTAD` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' ");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' ");
         return $query->getResultArray();
     }
 
     public function agarrarCarrerasPorCiudad(string $ciudad, string $Gestion, string $facultad)
     {
-        $query = $this->db->query("SELECT * FROM `CIUDAD_GESTION_FACULTAD_CARRERA` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' ");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' ");
         return $query->getResultArray();
     }
 
     public function agarrarSemestrePorCarrera(string $ciudad, string $Gestion, string $facultad, string $carrera)
     {
-        $query = $this->db->query("SELECT * FROM `CIUDAD_GESTION_FACULTAD_CARRERA_SEMESTRE`  WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' AND `CARRERA` = '".$carrera."'");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO`  WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' AND `CARRERA` = '".$carrera."'");
         return $query->getResultArray();
     }
 

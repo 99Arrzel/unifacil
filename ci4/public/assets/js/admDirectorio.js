@@ -289,7 +289,7 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     document.getElementById("btnModal").value = data;
-                    document.getElementById("labelEditQue").value = "Editar Gestion";
+                    document.getElementById("labelEditQue").innerHTML  = "Editar Gestion";
                     return "<button class='btn btn-warning form-control' data-toggle='modal' data-target='#dropEdit'>Editar</button>";
                 },
             },

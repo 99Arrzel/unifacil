@@ -370,7 +370,7 @@ class editarDirectorio extends BaseController
     public function editGestion()
     {
         if ( $this->request->isAJAX() ) {
-            $id = $this->request->getPost( 'btnModal' );
+            $id = $this->request->getPost( 'miid' );
             $nombre = $this->request->getPost( 'nombre' );
             $model = new ModeloGestion();
             $ciudad = [

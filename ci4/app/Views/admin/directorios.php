@@ -19,13 +19,14 @@
                                 <th>Nombre</th>
                             </tr>
                         </thead>
+                        <h3 class="modal-title" id="direccionEditar" hidden></h5>
                         <form autocomplete="off">
                             <tbody>
                                 <tr>
                                     <td><input id="nombreModal" autocomplete="off" type='text' name='nombre'
                                             class='form-control'></input></td>
-                                    <td><button id="btnModal" name="btnModal" value="" type='button'
-                                            class='btn btn-success form-control'>Enviar
+                                    <td><button id="btnModal" name="btnModal" value="" type='submit'
+                                            class='btn btn-success form-control' data-dismiss="modal" onclick="editRequest()">Enviar
                                     </td>
                                 </tr>
                             </tbody>

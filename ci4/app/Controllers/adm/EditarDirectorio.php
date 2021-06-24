@@ -366,4 +366,86 @@ class editarDirectorio extends BaseController
             echo'{"baja":true}';
         }
     }
+    //Para editar nombres
+    public function editGestion()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'btnModal' );
+            $nombre = $this->request->getPost( 'nombre' );
+            $model = new ModeloGestion();
+            $ciudad = [
+                'idtblGestion' => $id,
+                'nombre' => $nombre,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function editCiudad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCiudad();
+            $ciudad = [
+                'idtblCiudad' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function editFacultad()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloFacultad();
+            $ciudad = [
+                'idtblFacultad' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function editCarrera()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloCarrera();
+            $ciudad = [
+                'idtblCarrera' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function editSemestre()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloSemestre();
+            $ciudad = [
+                'idtblSemestre' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+    public function editMateria()
+    {
+        if ( $this->request->isAJAX() ) {
+            $id = $this->request->getPost( 'miid' );
+            $model = new ModeloMateria();
+            $ciudad = [
+                'idtblMateria' => $id,
+                'estado' => "1",
+            ];
+            $model->save( $ciudad );
+            echo'{"baja":true}';
+        }
+    }
+
 }

@@ -304,10 +304,11 @@ $(document).ready(function () {
         language: esp,
     });
     //Onclick
-    $('#tblGestion tbody').on('click', 'button', function() {
+    $('#tblGestion tbody').on('click', 'button', function () {
         var data = mitab.tablaGestion.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
-        document.getElementById("labelEditQue").innerHTML  = "Editar Gestion";
+        document.getElementById("labelEditQue").innerHTML = "Editar Gestion";
+        document.getElementById("direccionEditar").innerHTML = "/adm-dir/editGestion";
         document.getElementById("btnModal").value = data['ID'];
         console.log(data);
     });
@@ -390,10 +391,11 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblGestionBaja tbody').on('click', 'button', function() {
+    $('#tblGestionBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaGestionBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
-        console.log(data);
+        document.getElementById("labelEditQue").innerHTML = "Editar Gestion";
+        document.getElementById("btnModal").value = data['ID'];
     });
     //Ciudad abajo
     mitab.tablaCiudad = $('#tblCiudad').DataTable({
@@ -475,7 +477,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblCiudad tbody').on('click', 'button', function() {
+    $('#tblCiudad tbody').on('click', 'button', function () {
         var data = mitab.tablaCiudad.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -559,7 +561,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblCiudadBaja tbody').on('click', 'button', function() {
+    $('#tblCiudadBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaCiudadBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -644,7 +646,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblFacultad tbody').on('click', 'button', function() {
+    $('#tblFacultad tbody').on('click', 'button', function () {
         var data = mitab.tablaFacultad.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -722,13 +724,13 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     return "<button onclick='facRes(" + data +
-                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
+                        ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
         language: esp,
     });
-    $('#tblFacultadBaja tbody').on('click', 'button', function() {
+    $('#tblFacultadBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaFacultadBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -813,7 +815,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblCarrera tbody').on('click', 'button', function() {
+    $('#tblCarrera tbody').on('click', 'button', function () {
         var data = mitab.tablaCarrera.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -891,13 +893,13 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     return "<button onclick='carRes(" + data +
-                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
+                        ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
         language: esp,
     });
-    $('#tblCarreraBaja tbody').on('click', 'button', function() {
+    $('#tblCarreraBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaCarreraBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -982,7 +984,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblSemestre tbody').on('click', 'button', function() {
+    $('#tblSemestre tbody').on('click', 'button', function () {
         var data = mitab.tablaSemestre.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -1060,13 +1062,13 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     return "<button onclick='semRes(" + data +
-                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
+                        ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
         language: esp,
     });
-    $('#tblSemestreBaja tbody').on('click', 'button', function() {
+    $('#tblSemestreBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaSemestreBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -1151,7 +1153,7 @@ $(document).ready(function () {
         ],
         language: esp,
     });
-    $('#tblMateria tbody').on('click', 'button', function() {
+    $('#tblMateria tbody').on('click', 'button', function () {
         var data = mitab.tablaMateria.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -1229,13 +1231,13 @@ $(document).ready(function () {
                 orderable: false,
                 render: function (data) {
                     return "<button onclick='matRes(" + data +
-                    ")' class='btn btn-success form-control'>Dar de Alta</button>";
+                        ")' class='btn btn-success form-control'>Dar de Alta</button>";
                 },
             },
         ],
         language: esp,
     });
-    $('#tblMateriaBaja tbody').on('click', 'button', function() {
+    $('#tblMateriaBaja tbody').on('click', 'button', function () {
         var data = mitab.tablaMateriaBaja.row($(this).parents('tr')).data();
         document.getElementById("nombreModal").value = data['NOMBRE'];
         console.log(data);
@@ -1273,6 +1275,7 @@ function insertarCiudad() {
         mitab.tablaCiudad.ajax.reload();
     });
 }
+
 function insertarGestion() {
     var formData = {
         nombre: document.getElementById("gestion").value,
@@ -1294,6 +1297,7 @@ function insertarGestion() {
         mitab.tablaGestion.ajax.reload();
     });
 }
+
 function insertarFacultad() {
     var formData = {
         nombre: document.getElementById("facultad").value,
@@ -1315,6 +1319,7 @@ function insertarFacultad() {
         mitab.tablaFacultad.ajax.reload();
     });
 }
+
 function insertarCarrera() {
     var formData = {
         nombre: document.getElementById("carrera").value,
@@ -1336,6 +1341,7 @@ function insertarCarrera() {
         mitab.tablaCarrera.ajax.reload();
     });
 }
+
 function insertarSemestre() {
     var formData = {
         nombre: document.getElementById("semestre").value,
@@ -1357,6 +1363,7 @@ function insertarSemestre() {
         mitab.tablaSemestre.ajax.reload();
     });
 }
+
 function insertarMateria() {
     var formData = {
         nombre: document.getElementById("materia").value,
@@ -1399,6 +1406,7 @@ function dirBaja(id) {
         mitab.tablaDirBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function gesEli(id) {
     var formData = {
         miid: id
@@ -1419,6 +1427,7 @@ function gesEli(id) {
         mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function ciuEli(id) {
     var formData = {
         miid: id
@@ -1439,6 +1448,7 @@ function ciuEli(id) {
         mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function facEli(id) {
     var formData = {
         miid: id
@@ -1459,6 +1469,7 @@ function facEli(id) {
         mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function carEli(id) {
     var formData = {
         miid: id
@@ -1479,6 +1490,7 @@ function carEli(id) {
         mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function semEli(id) {
     var formData = {
         miid: id
@@ -1499,6 +1511,7 @@ function semEli(id) {
         mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function matEli(id) {
     var formData = {
         miid: id
@@ -1519,6 +1532,7 @@ function matEli(id) {
         mitab.tablaMateria.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function mostrarDir() {
     if (document.getElementById("botonOcultarDir").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarDir").innerHTML = "Mostrar de alta";
@@ -1534,6 +1548,7 @@ function mostrarDir() {
         document.title = "Directorios de alta UNIFACIL";
     }
 }
+
 function mostrarGes() {
     if (document.getElementById("botonOcultarGes").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarGes").innerHTML = "Mostrar de alta";
@@ -1549,6 +1564,7 @@ function mostrarGes() {
         document.title = "Gestiones de alta UNIFACIL";
     }
 }
+
 function mostrarCiu() {
     if (document.getElementById("botonOcultarCiu").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarCiu").innerHTML = "Mostrar de alta";
@@ -1564,6 +1580,7 @@ function mostrarCiu() {
         document.title = "Ciudades de alta UNIFACIL";
     }
 }
+
 function mostrarFac() {
     if (document.getElementById("botonOcultarFac").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarFac").innerHTML = "Mostrar de alta";
@@ -1579,6 +1596,7 @@ function mostrarFac() {
         document.title = "Facultades de alta UNIFACIL";
     }
 }
+
 function mostrarCar() {
     if (document.getElementById("botonOcultarCar").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarCar").innerHTML = "Mostrar de alta";
@@ -1594,6 +1612,7 @@ function mostrarCar() {
         document.title = "Carreras de alta UNIFACIL";
     }
 }
+
 function mostrarSem() {
     if (document.getElementById("botonOcultarSem").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarSem").innerHTML = "Mostrar de alta";
@@ -1609,6 +1628,7 @@ function mostrarSem() {
         document.title = "Semestres de alta UNIFACIL";
     }
 }
+
 function mostrarMat() {
     if (document.getElementById("botonOcultarMat").innerHTML == "Mostrar de baja") {
         document.getElementById("botonOcultarMat").innerHTML = "Mostrar de alta";
@@ -1666,6 +1686,7 @@ function gesRes(id) {
         mitab.tablaGestionBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function ciuRes(id) {
     var formData = {
         miid: id
@@ -1686,6 +1707,7 @@ function ciuRes(id) {
         mitab.tablaCiudadBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function facRes(id) {
     var formData = {
         miid: id
@@ -1706,6 +1728,7 @@ function facRes(id) {
         mitab.tablaFacultadBaja.ajax.reload(); //Recargas la tabla después de Resminar
     });
 }
+
 function carRes(id) {
     var formData = {
         miid: id
@@ -1726,6 +1749,7 @@ function carRes(id) {
         mitab.tablaCarreraBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function semRes(id) {
     var formData = {
         miid: id
@@ -1746,6 +1770,7 @@ function semRes(id) {
         mitab.tablaSemestreBaja.ajax.reload(); //Recargas la tabla después de eliminar
     });
 }
+
 function matRes(id) {
     var formData = {
         miid: id
@@ -1768,4 +1793,35 @@ function matRes(id) {
 }
 //Ahora si editar abajo zzz
 //var data = custTable.row('#customer-' + customerObj.customerId, 0).data(); Select data in cell
- 
+function editRequest() {
+    var formData = {
+        miid: document.getElementById("btnModal").value,
+        nombre: document.getElementById("nombreModal").value,
+    };
+    var murl = document.getElementById("direccionEditar").innerHTML;
+    $.ajax({
+        type: "POST",
+        url: murl,
+        data: formData,
+        dataType: "json",
+        statusCode: {
+            500: function () {
+                alert("Error 500, chequea el script amiguito");
+            }
+        },
+        encode: true,
+    }).done(function () {
+        mitab.tablaGestion.ajax.reload(); //Recargas la tabla después de editar
+        mitab.tablaGestionBaja.ajax.reload();
+        mitab.tablaCiudad.ajax.reload();
+        mitab.tablaCiudadBaja.ajax.reload();
+        mitab.tablaFacultad.ajax.reload();
+        mitab.tablaFacultadBaja.ajax.reload();
+        mitab.tablaCarrera.ajax.reload();
+        mitab.tablaCarreraBaja.ajax.reload();
+        mitab.tablaSemestre.ajax.reload();
+        mitab.tablaSemestreBaja.ajax.reload();
+        mitab.tablaMateria.ajax.reload();
+        mitab.tablaMateriaBaja.ajax.reload();
+    });
+}

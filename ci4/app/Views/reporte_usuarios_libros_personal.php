@@ -1,6 +1,6 @@
 
     <?php 
-            header('Location: http://proyecto3.tk/');
+           // header('Location: http://proyecto3.tk/');
              $name = session()->get('nombreUsuario');
         
         

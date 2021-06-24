@@ -375,8 +375,7 @@ class editarDirectorio extends BaseController
             $model = new ModeloGestion();
             $ciudad = [
                 'idtblGestion' => $id,
-                'nombre' => $nombre,
-                'estado' => "1",
+                'nombreGestion' => $nombre,
             ];
             $model->save( $ciudad );
             echo'{"baja":true}';

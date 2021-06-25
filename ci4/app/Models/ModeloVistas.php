@@ -19,7 +19,7 @@ class ModeloVistas extends Model
 
     public function agarrarFacultadPorCiudad(string $ciudad, string $Gestion)
     {
-        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' ");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' GROUP BY FACULTAD" );
         return $query->getResultArray();
     }
 

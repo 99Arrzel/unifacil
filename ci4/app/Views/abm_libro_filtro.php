@@ -266,9 +266,8 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
-                data: 'idtblLibro',
                 render: function(data, type, row, meta){
-                    return: "<a href=" + baseURL + row.data().idtblLibro +'/' + row.data().idtblImagen +'/'+ row.data().idtblAutor+ '/'+row.data().idtblTag +'/'+row.data().filtros + "class='btn btn-warning btn-small'>Editar</a>";
+                    return "<a href=" + baseURL + row.data().idtblLibro +'/' + row.data().idtblImagen +'/'+ row.data().idtblAutor+ '/'+row.data().idtblTag +'/'+row.data().filtros + "class='btn btn-warning btn-small'>Editar</a>";
                 }
             },
             

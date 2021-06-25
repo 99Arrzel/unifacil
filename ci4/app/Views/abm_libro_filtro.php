@@ -266,9 +266,9 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
-                data: {'idtblLibro', 'tags'},
-                render: function(data, type, full){
-                    console.log(data);
+                data: 'tags'
+                render: function(data, type, row){
+                    console.log(row.autores);
                     return "<a href=";
                 }
             },

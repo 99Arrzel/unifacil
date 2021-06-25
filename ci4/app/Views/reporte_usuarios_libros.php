@@ -1,14 +1,14 @@
 <?php if (session()->get('nivel') > 2) {
     header('Location: http://proyecto3.tk/');
 }?>
-<body>
-    <div class="container">
-        <h1>Reporte de Libros-Usuarios</h1>
-        <?php //print_r($libro);?>
-        <div class="row">
-            <div class="col-sm-12">
-                <table class="table table-hover table-bordered table-dark" id="reporteusuariolibro">
-                    <div class="table table-responsive">
+<div class="container">
+    <h1>Reporte de Libros-Usuarios</h1>
+    <?php //print_r($libro);?>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class='table table-bordered bg-dark text-light'>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="reporteusuariolibro">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Nombre</th>
@@ -20,12 +20,12 @@
                                 <th>Enlace</th>
                             </tr>
                         </thead>
-                </table>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-</body>
+</div>
 <script type="text/javascript">
     var datos = <?php echo json_encode($usuario); ?> ;
     var tabla_reporte = $('#reporteusuariolibro').DataTable({
@@ -93,7 +93,7 @@
             {
                 data: 'dirDoc',
                 orderable: false,
-                render: function (data) {
+                render: function(data) {
                     return "<a href=" + data +
                         ">Enlace</a>";
                 },

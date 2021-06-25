@@ -291,9 +291,9 @@
                     data: 'tags',
                     render: function(data, type, row) {
                         //console.log(row.idtblLibro);
-                        return "<a href=" + baseURL + row.idtblLibro + '/' + row.idtblImagen + '/' + row
+                        return "<a href='" + baseURL + row.idtblLibro + '/' + row.idtblImagen + '/' + row
                             .idtblAutor + '/' + row.idtblTag + '/' + row.filtros +
-                            "class='btn btn-warning btn-small'>Editar</a>";
+                            "' class='btn btn-warning btn-small'>Editar</a>";
 
                     }
                 },

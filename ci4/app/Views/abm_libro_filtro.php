@@ -266,7 +266,7 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
-                data: 'idtblLibro, tags',
+                data: 'idtblLibro',
                 render: function(data){
                     console.log(data);
                     return "<a href=";

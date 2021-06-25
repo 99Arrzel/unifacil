@@ -50,5 +50,4 @@ class ModeloVistas extends Model
         $query = $this->db->query("CALL LISTAEXAMENES('".$ciudad."', '".$gestion."','".$facultad."','".$carrera."','".$semestre."','".$materia."',1)");
         return $query->getResultArray();
     }
-    
 }

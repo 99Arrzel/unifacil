@@ -266,8 +266,10 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
+                
                 render: function(data){
-                    return "<a href=" + baseURL + data['idtblLibro'];
+                    console.log(data);
+                    return "<a href=";
                 }
             },
             

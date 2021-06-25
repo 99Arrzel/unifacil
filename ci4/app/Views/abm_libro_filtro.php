@@ -268,7 +268,7 @@ $(document).ready(function () {
             {
                 data: 'idtblLibro',
                 render: function(data){
-                    console.log(data);
+                    console.log(data.autores);
                     return "<a href=";
                 }
             },

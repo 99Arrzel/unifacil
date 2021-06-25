@@ -266,7 +266,7 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
-                data: 'tags'
+                data: 'tags',
                 render: function(data, type, row){
                     console.log(row.autores);
                     return "<a href=";

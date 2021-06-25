@@ -270,7 +270,7 @@ $(document).ready(function () {
                 data: 'tags',
             },
             {
-                data: 'null',
+                data: 'idtblLibro',
                 render: function(data, type, row, meta){
                     return: "<a href=" + baseURL + .row.idtblLibro +'/' + row.idtblImagen +'/'+ row.idtblAutor+ '/'+row.idtblTag +'/'+row.filtros + "class='btn btn-warning btn-small'>Editar</a>"
                 }

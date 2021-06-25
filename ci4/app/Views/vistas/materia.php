@@ -1,7 +1,7 @@
 <div class='container' style='margin-top:3em;'>
     <div class='card-columns custom-columns'>
         <?php foreach ($materia as $zzz): ?>
-            <div class='card w-175 card text-white bg-dark mb-3'>
+        <div class='card'>
             
             <div class='card-body'>
                 <h5 class='card-title' align='center'><?= $zzz?></h5>

@@ -91,7 +91,12 @@
                 data: 'nombreLibro'
             },
             {
-                data: 'dirdoc'
+                data: 'dirDoc',
+                orderable: false,
+                render: function (data) {
+                    return "<a href=" + data +
+                        ">Enlace</a>";
+                },
             },
         ],
         language: {

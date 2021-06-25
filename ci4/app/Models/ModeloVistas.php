@@ -25,13 +25,13 @@ class ModeloVistas extends Model
 
     public function agarrarCarrerasPorCiudad(string $ciudad, string $Gestion, string $facultad)
     {
-        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' ");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO` WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' GROUP BY CARRERA");
         return $query->getResultArray();
     }
 
     public function agarrarSemestrePorCarrera(string $ciudad, string $Gestion, string $facultad, string $carrera)
     {
-        $query = $this->db->query("SELECT * FROM `DIRECTORIO`  WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' AND `CARRERA` = '".$carrera."'");
+        $query = $this->db->query("SELECT * FROM `DIRECTORIO`  WHERE `CIUDAD` = '".$ciudad."' AND `GESTION` = '".$Gestion."' AND `FACULTAD` = '".$facultad."' AND `CARRERA` = '".$carrera."' GROUP BY SEMESTRE");
         return $query->getResultArray();
     }
 

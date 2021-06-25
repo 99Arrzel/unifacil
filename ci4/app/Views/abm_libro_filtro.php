@@ -80,10 +80,10 @@
         <br>
         <h2>Listado de Libros</h2>
         <?php //print_r($libro )?>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="table table-responsive">
-                    <table class="table table-hover table-bordered table-dark">
+        <div class='table table-bordered bg-dark text-light'>
+            <div class="table-responsive">
+                <table id="tblLibrosAlta" class="table table-hover table-bordered table-dark">
+                    <thead class='thead-dark'>
                         <tr>
                             <th>Libro</th>
                             <th>Año</th>
@@ -96,28 +96,6 @@
                             <th>Editar</th>
                            <!-- <th>Eliminar</th> -->
                         </tr>
-                        
-                        <tr>
-                        <?php foreach ($libro as $key): ?>
-                            <?php if(($key['estado'])==0): ?>
-                            <td><?php echo $key['nombreLibro'] ?> </td>
-                            <td><?php echo $key['year'] ?> </td>
-                            <td><?php echo $key['edicion'] ?> </td>
-                            <td><a href="<?php echo $key['dirDoc'] ?>">Enlace</a></td>
-                            <td><a href="<?php echo $key['dirImagen']?>"><?php echo $key['nombreImagen'] ?></a></td>
-                            <td><?php echo $key['autores'] ?></td>
-                            <td><?php echo $key['tags'] ?></td>
-                            <td><?php echo $key['filtros']?></td>
-                            <td>
-                                <a href="<?php echo base_url().'/obtenerNombreLibroFiltro/'.$key['idtblLibro'].'/'.$key['idtblImagen'].'/'.$key['idtblAutor'].'/'.$key['idtblTag'].'/'.$key['filtros']?>"
-                                    class="btn btn-warning btn-small">Editar</a>
-                            </td> <!-- esto es lo que explicaba el sujeto, que los controladores reciben parametros -->
-                           <!-- <td>
-                                <a href="<?php //echo base_url().'/eliminarLibroLogic/'.$key->idtblLibro?>" class="btn btn-danger btn-small">Eliminar</a>
-                            </td> -->
-                        </tr>
-                        <?php endif; ?>
-                        <?php endforeach; ?>
                     </table>
                 </div>
             </div>
@@ -208,5 +186,121 @@ $(document).ready(function () {
    $("select").select2();
 });
 
+</script>
+<script type="text/javascript">
+    var baseURL = "<?php echo base_url().'/obtenerNombreLibroFiltro/'?>";
+    var datos = <?php echo json_encode($libro); ?> ;
+    var tabla_reporte = $('#tblLibrosAlta').DataTable({
+        data: datos,
+        dom: 'B<lf>rtip', //Magico y sencillazango
+        buttons: [{
+                extend: 'copyHtml5',
+                text: 'Copiar',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5, 6],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'csv',
+                text: 'CSV',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5, 6],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'excel',
+                text: 'EXCEL',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5, 6],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'pdf',
+                text: 'PDF',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5, 6],
+                },
+                className: 'btn btn-info',
+            },
+            {
+                extend: 'print',
+                text: 'Imprimir',
+                exportOptions: {
+                    columns: [0, 1, 2, 3, 4, 5, 6],
+                },
+                className: 'btn btn-info',
+            },
+        ],
+        columns: [{
+                data: 'nombreLibro'
+            },
+            {
+                data: 'year'
+            },
+            {
+                data: 'edicion'
+            },
+            {
+                data: 'dirDoc',
+                orderable: false,
+                render: function(data) {
+                    return "<a href=" + data +
+                        ">Enlace</a>";
+                },
+            },
+            {
+                data: 'dirImagen',
+                orderable: false,
+                render: function(data) {
+                    return "<a href=" + data +
+                        ">Enlace</a>";
+                },
+            },
+            {
+                data: 'autores'
+            },
+            {
+                data: 'tags',
+            },
+            ,
+            {
+                data: 'tags',
+            },
+            {
+                data: 'null',
+                render: function(data, type, row, meta){
+                    return: "<a href=" + baseURL + .row.idtblLibro +'/' + row.idtblImagen +'/'+ row.idtblAutor+ '/'+row.idtblTag +'/'+row.filtros + "class='btn btn-warning btn-small'>Editar</a>"
+                }
+            }
+            
+        ],
+        language: {
+            "decimal": "",
+            "emptyTable": "No hay datos",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+            "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+            "infoFiltered": "(Filtro de _MAX_ total registros)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "No se encontraron coincidencias",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+            "aria": {
+                "sortAscending": ": Activar orden de columna ascendente",
+                "sortDescending": ": Activar orden de columna desendente"
+            }
+        }
+    });
 </script>
 </body>

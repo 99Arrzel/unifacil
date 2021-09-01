@@ -1,3 +1,6 @@
+
+/*
+
 function sendEmail(){
     var name = $("#name");
     var email = $("#email");
@@ -32,4 +35,4 @@ function isNotEmpty(caller){
         caller.css('border','');
         return true;    
     }
-}
+} */

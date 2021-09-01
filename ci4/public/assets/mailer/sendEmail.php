@@ -1,4 +1,4 @@
-<?php
+<?php /*
 use PHPMailer\PHPMailer\PHPMailer;
 
     if (isset($_POST['name']) && isset($_POST['email'])) {
@@ -22,7 +22,7 @@ use PHPMailer\PHPMailer\PHPMailer;
             $mail->Username = "cargut13prueb13@gmail.com";
             $mail->Password = "cc12cc12";
             $mail->Port= 465;
-            $mail->SMTPSecure = "ssl";*/
+            $mail->SMTPSecure = "ssl";
             $mail->isSMTP();
             $mail->Host = "localhost";
             $mail->Port = 25;
@@ -53,4 +53,4 @@ use PHPMailer\PHPMailer\PHPMailer;
         } catch (Exception $e) {
             echo "paso algo malo {$mail->ErrorInfo}";
         }
-    }
+    } */
